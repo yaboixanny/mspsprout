@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSP Sprout | The Website That Wins New MSP Clients</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- core palette ---- */
+    --navy:#1F1C35;            /* header / dark section bg */
+    --navy-deep:#141223;       /* footer bg */
+    --heading-navy:#22355F;    /* heading text color */
+    --text-gray:#6D6E71;       /* body copy gray */
+    --pink:#FF34A4;
+    --orange:#FF6E47;
+    --blue:#03A2E9;
+    --blue-bright:#0BB4FF;
+    --green:#6DDB8B;
+    --red:#FF4F51;
+    --cream:#FEF9F3;
+    --lavender:#F1F3FE;
+    --lavender-2:#F1F6FE;
+    --lightblue-bg:#F0F6F9;
+    --border-gray:#D6D8D9;
+    --white:#ffffff;
+
+    /* ---- MSP Sprout brand green (replaces the old purple accent) ---- */
+    --sprout:#1E9E52;
+    --sprout-dark:#147A3F;
+    --sprout-light:#8FE3A8;
+    --sprout-lime:#9AD84B;
+    --sprout-mint-bg:#F4FBF6;
+    --sprout-mint-border:#B9E6C6;
+
+    --grad-pink-yellow: linear-gradient(90deg, #FF34A4 0%, #FEBC24 180%);
+    --grad-sprout: linear-gradient(90deg, #147A3F 0%, #9AD84B 100%);
+    --grad-green-blue: linear-gradient(90deg, #6DDB8B 0%, #0BB4FF 100%);
+
+    --font-head:'Poppins', sans-serif;
+    --font-body:'Poppins', sans-serif;
+    --font-quote:'Merriweather', serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:#111;
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  .wrap{max-width:1170px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3,h4,h5,h6{font-family:var(--font-head);margin:0;font-weight:700;color:var(--heading-navy);}
+  p{margin:0;line-height:1.6;}
+
+  /* ---------- gradient button ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;flex-direction:column;
+    gap:2px;
+    font-family:var(--font-head);
+    font-weight:600;
+    color:#fff;
+    padding:18px 44px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    text-align:center;
+    transition:transform .25s ease, box-shadow .25s ease;
+    line-height:1.2;
+  }
+  .btn span.sub{display:block;font-size:14px;font-weight:400;opacity:.85;margin-top:4px;}
+  .btn:hover{transform:translateY(-2px) scale(1.02);}
+  .btn-pink-yellow{background:var(--grad-pink-yellow);}
+  .btn-sprout{background:var(--grad-sprout);}
+  .btn-outline{
+    background:transparent;border:2px solid rgba(0,0,0,.15);color:var(--heading-navy);
+    padding:12px 28px;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.5px;
+  }
+
+  /* ---------- top announcement bar ---------- */
+  .announce{background:var(--navy);color:#fff;text-align:center;padding:10px 20px;font-size:14px;}
+  .announce strong{font-weight:700;color:var(--sprout-light);}
+
+  /* ---------- header ---------- */
+  header.site-header{background:var(--navy);padding:18px 0;position:relative;z-index:50;}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-word{font-size:20px;font-weight:700;color:#fff;letter-spacing:.2px;}
+  .logo-word .accent{
+    background-image:var(--grad-sprout);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  nav.main-nav ul{display:flex;align-items:center;gap:6px;}
+  nav.main-nav a{
+    color:#fff;font-size:15px;font-weight:500;padding:10px 16px;display:block;
+    transition:color .2s ease;white-space:nowrap;
+  }
+  nav.main-nav a:hover{color:var(--sprout-light);}
+  nav.main-nav li.cta-item a{
+    background:var(--grad-pink-yellow);
+    color:#fff;border-radius:50px;padding:10px 28px;font-weight:600;
+  }
+  nav.main-nav li.login-item a{
+    border:2px solid transparent;
+    background:linear-gradient(#1F1C35,#1F1C35) padding-box, var(--grad-sprout) border-box;
+    color:var(--sprout-light);border-radius:50px;padding:9px 26px;font-weight:600;
+  }
+  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
+
+  @media (max-width:900px){
+    nav.main-nav ul{
+      position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;height:100vh;
+      background:rgba(0,0,0,.92);flex-direction:column;align-items:flex-start;
+      padding:80px 30px;gap:6px;transform:translateX(100%);transition:transform .3s ease;
+    }
+    nav.main-nav ul.open{transform:translateX(0);}
+    nav.main-nav a{width:100%;padding:12px 0;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:80px 20px;background:#fff;}
+  .hero .wrap{display:flex;align-items:center;gap:60px;}
+  .hero-copy{flex:1 1 46%;}
+  .hero-copy h1{font-size:44px;line-height:1.25;font-weight:700;margin-bottom:20px;}
+  .hero-copy p{font-size:18px;color:#333;margin-bottom:14px;}
+  .hero-copy p em{color:#555;}
+  .hero-copy .btn{margin-top:30px;}
+  .hero-img{flex:1 1 54%;position:relative;}
+  @media (max-width:900px){
+    .hero .wrap{flex-direction:column;}
+    .hero-copy h1{font-size:30px;}
+    .hero-mock-badge{display:none;}
+  }
+
+  /* ---------- hero mock graphic (no stock photo / no real person) ---------- */
+  .hero-mock{background:#fff;border-radius:20px;box-shadow:0 30px 60px rgba(20,40,30,.16);overflow:hidden;border:1px solid #eef2ee;}
+  .hero-mock-topbar{background:#F3F5F3;padding:12px 16px;display:flex;gap:6px;}
+  .hero-mock-topbar span{width:10px;height:10px;border-radius:50%;display:block;}
+  .hero-mock-topbar span:nth-child(1){background:var(--orange);}
+  .hero-mock-topbar span:nth-child(2){background:#FEBC24;}
+  .hero-mock-topbar span:nth-child(3){background:var(--sprout-light);}
+  .hero-mock-body{padding:38px 34px 34px;}
+  .mock-line{height:14px;border-radius:7px;background:#EDF3EE;}
+  .mock-line.w-70{width:70%;margin-bottom:12px;}
+  .mock-line.w-40{width:40%;margin-bottom:30px;}
+  .mock-chart{display:flex;align-items:flex-end;gap:14px;height:150px;}
+  .mock-chart .bar{flex:1;border-radius:8px 8px 0 0;background:var(--grad-sprout);}
+  .mock-chart .bar:nth-child(even){opacity:.7;}
+  .hero-mock-badge{
+    position:absolute;top:-14px;right:14px;background:#fff;border-radius:14px;padding:10px 18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--heading-navy);
+    display:flex;align-items:center;gap:8px;
+  }
+  .hero-mock-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--sprout);}
+
+  /* ---------- sections generic ---------- */
+  section{padding:80px 20px;}
+  .section-lavender{background:var(--lavender);}
+  .section-cream{background:var(--cream);}
+  .section-lightblue{background:var(--lightblue-bg);}
+  .section-navy{background:var(--navy);color:#fff;}
+  .section-navy h2,.section-navy h3,.section-navy p{color:#fff;}
+  .center{text-align:center;}
+  .eyebrow{font-size:15px;font-weight:600;color:var(--sprout);text-transform:uppercase;letter-spacing:1px;}
+  .section-head{max-width:820px;margin:0 auto 50px;text-align:center;}
+  .section-head h2{font-size:34px;line-height:1.3;margin-bottom:16px;}
+  .section-head p{font-size:17px;color:var(--text-gray);}
+
+  /* ---------- placeholder video grid ---------- */
+  .video-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px;}
+  .video-cell{border-radius:16px;overflow:hidden;aspect-ratio:9/16;}
+  .video-placeholder{
+    width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    background:linear-gradient(160deg, rgba(30,158,82,.92), rgba(20,40,30,.96));color:#fff;
+  }
+  .video-placeholder .play{
+    width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.14);
+    border:2px solid rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;
+  }
+  .video-placeholder .play::after{content:"";border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent #fff;margin-left:3px;}
+  .video-placeholder span{font-size:12px;opacity:.85;text-align:center;padding:0 8px;}
+  @media (max-width:900px){.video-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ---------- two-col narrative ---------- */
+  .two-col{display:flex;gap:60px;align-items:flex-start;}
+  .two-col > div{flex:1;}
+  @media (max-width:900px){.two-col{flex-direction:column;}}
+
+  .photo-placeholder{
+    border:2px dashed var(--sprout-mint-border);border-radius:16px;background:var(--sprout-mint-bg);
+    padding:60px 20px;text-align:center;color:var(--sprout-dark);font-weight:600;font-size:14px;margin-bottom:30px;
+  }
+  .photo-placeholder .icon{font-size:28px;display:block;margin-bottom:10px;}
+
+  .stat-cards{display:flex;gap:24px;margin-top:20px;}
+  .stat-card{background:#fff;border-radius:20px;padding:36px;flex:1;box-shadow:0 10px 40px rgba(34,53,95,.08);}
+  .stat-card h4{color:var(--sprout);font-size:20px;margin-bottom:16px;}
+  .stat-card ul li{padding-left:32px;position:relative;margin-bottom:14px;font-size:15px;line-height:1.5;}
+  .stat-card ul li::before{
+    content:"✓";position:absolute;left:0;top:0;
+    width:22px;height:22px;border-radius:6px;background:var(--grad-green-blue);
+    color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;
+  }
+  @media (max-width:900px){.stat-cards{flex-direction:column;}}
+
+  /* ---------- archetype gallery ---------- */
+  .archetype-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px;}
+  .archetype-card{
+    position:relative;border-radius:14px;overflow:hidden;background:#fff;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+  }
+  .archetype-card .a-icon{display:flex;align-items:center;gap:10px;padding:20px 20px 0;}
+  .archetype-card .a-icon img{width:26px;height:26px;}
+  .archetype-card .a-icon h4{font-size:19px;color:var(--heading-navy);}
+  .archetype-card .a-thumb{padding:14px 20px;}
+  .archetype-card .a-thumb img{border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);}
+  .archetype-card .a-body{padding:0 20px 20px;}
+  .archetype-card .a-body p{font-size:14px;color:#444;margin-bottom:14px;}
+  .archetype-card .a-body a{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#999;border-bottom:1px solid #ddd;padding-bottom:2px;}
+  .archetype-card .a-flip{
+    position:absolute;inset:0;background:var(--grad-pink-yellow);color:#fff;
+    padding:26px 22px;opacity:0;visibility:hidden;transform:translateX(-8%);
+    transition:all .4s cubic-bezier(.4,0,.2,1);
+  }
+  .archetype-card:nth-child(3n+2) .a-flip{background:var(--grad-green-blue);}
+  .archetype-card:nth-child(3n) .a-flip{background:var(--grad-sprout);}
+  .archetype-card:hover .a-flip{opacity:1;visibility:visible;transform:translateX(0);}
+  .archetype-card .a-flip h3{color:#fff;font-size:20px;margin-bottom:12px;}
+  .archetype-card .a-flip ul li{margin-bottom:10px;font-size:13.5px;line-height:1.45;padding-left:16px;position:relative;}
+  .archetype-card .a-flip ul li::before{content:"•";position:absolute;left:0;}
+  .archetype-card .a-flip a{display:inline-block;margin-top:8px;color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid rgba(255,255,255,.6);}
+  @media (max-width:900px){.archetype-grid{grid-template-columns:1fr;}}
+
+  /* ---------- testimonial cards ---------- */
+  .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:50px;}
+  .testi-card{
+    background:#fff;border-radius:18px;padding:40px;
+    box-shadow:9px 8px 40px rgba(34,53,95,.12);position:relative;
+  }
+  .testi-card p.quote{font-family:var(--font-quote);font-style:italic;color:var(--text-gray);font-size:16px;line-height:1.6;}
+  .testi-author{display:flex;gap:14px;align-items:center;margin-top:22px;}
+  .testi-avatar{
+    width:56px;height:56px;border-radius:14px;background:var(--grad-sprout);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;flex-shrink:0;
+  }
+  .testi-author h4{font-size:17px;margin-bottom:2px;}
+  .testi-author p{font-size:12.5px;color:var(--text-gray);}
+  @media (max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+
+  /* ---------- feature blocks (icon + copy + button) ---------- */
+  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;}
+  .feature-card{background:#fff;border-radius:14px;padding:36px 28px;}
+  .feature-card .icon-btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:8px 20px;border-radius:6px;background:#dedede;font-weight:700;
+    font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;
+  }
+  .feature-card h4{font-size:20px;margin-bottom:12px;line-height:1.35;}
+  .feature-card p{font-size:15px;color:#333;}
+  @media (max-width:900px){.feature-grid{grid-template-columns:1fr;}}
+
+  /* ---------- playbook section (dark) ---------- */
+  .playbook-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px;}
+  .playbook-card{
+    border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:34px 28px;
+    background:rgba(255,255,255,.02);backdrop-filter:blur(2px);
+  }
+  .playbook-card .svg-badge{
+    width:40px;height:40px;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+    background:var(--grad-sprout);color:#fff;font-size:18px;
+  }
+  .playbook-card:nth-child(1) .svg-badge{background:var(--grad-pink-yellow);}
+  .playbook-card:nth-child(2) .svg-badge{background:var(--grad-sprout);}
+  .playbook-card:nth-child(3) .svg-badge{background:var(--grad-green-blue);}
+  .playbook-card h4{color:#fff;font-size:18px;margin-bottom:12px;}
+  .playbook-card p{color:#cfcfe0;font-size:14.5px;}
+  @media (max-width:900px){.playbook-grid{grid-template-columns:1fr;}}
+
+  /* ---------- pricing ---------- */
+  .pricing-toggle-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:36px 0 10px;font-weight:600;color:var(--heading-navy);}
+  .switch{position:relative;width:54px;height:28px;background:#ddd;border-radius:20px;cursor:pointer;transition:background .25s;}
+  .switch.on{background:var(--grad-sprout);}
+  .switch::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:left .25s;}
+  .switch.on::after{left:29px;}
+  .toggle-note{text-align:center;color:var(--text-gray);font-size:13px;margin-bottom:40px;}
+
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;}
+  .price-card{
+    background:#fff;border-radius:20px;padding:40px 30px;
+    box-shadow:0 10px 40px rgba(34,53,95,.08);border:2px solid transparent;
+    display:flex;flex-direction:column;
+  }
+  .price-card.featured{border-color:var(--sprout);box-shadow:0 20px 50px rgba(30,158,82,.15);position:relative;}
+  .price-card.featured::before{
+    content:"BEST VALUE";position:absolute;top:-14px;right:24px;background:var(--grad-sprout);
+    color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:6px 14px;border-radius:20px;
+  }
+  .price-card h3{font-size:24px;margin-bottom:6px;}
+  .price-card .price{font-size:42px;font-weight:700;color:#111;margin:14px 0 4px;}
+  .price-card .price span{font-size:14px;font-weight:500;color:#777;}
+  .price-card .setup-fee{font-size:13px;color:var(--text-gray);margin-bottom:20px;}
+  .price-card ul{margin:20px 0 30px;flex:1;}
+  .price-card ul li{font-size:14px;padding-left:26px;position:relative;margin-bottom:10px;line-height:1.4;}
+  .price-card ul li::before{content:"✓";position:absolute;left:0;color:var(--sprout);font-weight:700;}
+  .price-card .btn{width:100%;padding:14px;border-radius:50px;}
+  @media (max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+
+  /* ---------- guarantee ---------- */
+  .guarantee{background:#fff;border-radius:22px;border:2px dashed var(--sprout-light);padding:50px;display:flex;gap:40px;align-items:center;}
+  .guarantee img{width:130px;flex-shrink:0;}
+  .guarantee h2{font-size:28px;margin-bottom:16px;}
+  .guarantee p{color:#333;font-size:16px;}
+  @media (max-width:700px){.guarantee{flex-direction:column;text-align:center;padding:32px;}}
+
+  /* ---------- CTA dark ---------- */
+  .cta-dark{
+    background:var(--navy);color:#fff;text-align:center;padding:90px 20px;position:relative;overflow:hidden;
+  }
+  .cta-dark::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(30deg, rgba(30,158,82,.16) 0%, rgba(20,40,30,.22) 100%);
+  }
+  .cta-dark .wrap{position:relative;z-index:1;}
+  .cta-dark h2{color:#fff;font-size:32px;max-width:800px;margin:0 auto 20px;line-height:1.35;}
+  .cta-dark p{color:#e8e8f0;max-width:640px;margin:0 auto 34px;font-size:16px;}
+
+  /* ---------- footer ---------- */
+  .footer-fail{background:var(--lavender);padding:70px 20px;text-align:center;}
+  .footer-fail h2{font-size:26px;margin-bottom:8px;}
+  .footer-fail p{max-width:720px;margin:16px auto 0;color:#333;font-size:15px;}
+
+  .footer-legal{background:var(--navy);color:#cfcfe0;padding:60px 20px 30px;}
+  .footer-legal .btn{display:block;width:fit-content;margin:0 auto 40px;}
+  .footer-legal p{font-size:12px;line-height:1.7;color:#9a9ab8;max-width:900px;margin:0 auto 14px;}
+  .footer-legal p strong{color:#cfcfe0;}
+
+  .footer-bottom{background:var(--navy-deep);color:#fff;padding:22px 20px;text-align:center;font-size:13px;}
+  .footer-bottom span{color:#5e7e9f;}
+  .footer-bottom a{margin:0 4px;}
+  .footer-bottom a:hover{color:var(--sprout-light);}
+  .social-row{display:flex;justify-content:center;gap:16px;margin-bottom:14px;}
+  .social-row a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+
+  .text-gradient{
+    background-image:var(--grad-sprout);
+    -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">Welcome early adopters! Use code <strong>EARLY</strong> at checkout for 10% off through the end of September.</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="sproutMark" x1="0" y1="28" x2="26" y2="2" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#147A3F"/>
+            <stop offset="1" stop-color="#9AD84B"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 28V16" stroke="url(#sproutMark)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M15 16C15 16 5.5 15.5 5.5 6C15 6.5 15 16 15 16Z" fill="url(#sproutMark)"/>
+        <path d="M15 16C15 16 24.5 13 24.5 3.5C15 4.5 15 16 15 16Z" fill="url(#sproutMark)" opacity=".85"/>
+      </svg>
+      <span class="logo-word">MSP <span class="accent">Sprout</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="main-nav">
+      <ul id="navList">
+        <li><a href="#why">Who We Are</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#playbook">Playbook</a></li>
+        <li class="login-item"><a href="#">Log In</a></li>
+        <li class="cta-item"><a href="#cta">Growth Call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>The Realistic Way to Get New Clients For Your MSP</h1>
+      <p>Instead of renting marketing … we install the entire <strong>client-getting system</strong> inside your business, and work with you for 12 months to operate and refine it until it reliably turns into new clients.</p>
+      <p><em>We only onboard 10 MSPs per month so we can work closely with each one.</em></p>
+      <button class="btn btn-sprout">Schedule a Growth Call<span class="sub">Yes! I want more clients</span></button>
+    </div>
+    <div class="hero-img">
+      <div class="hero-mock-badge"><span class="dot"></span> Leads Trending Up</div>
+      <div class="hero-mock">
+        <div class="hero-mock-topbar"><span></span><span></span><span></span></div>
+        <div class="hero-mock-body">
+          <div class="mock-line w-70"></div>
+          <div class="mock-line w-40"></div>
+          <div class="mock-chart">
+            <div class="bar" style="height:35%"></div>
+            <div class="bar" style="height:55%"></div>
+            <div class="bar" style="height:45%"></div>
+            <div class="bar" style="height:75%"></div>
+            <div class="bar" style="height:65%"></div>
+            <div class="bar" style="height:92%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-lightblue">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>See What Clients Are Saying</h2>
+      <p style="font-size:13px;margin-top:10px;">(Placeholder video tiles below &mdash; swap in your own client testimonial clips.)</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-cell"><div class="video-placeholder"><span class="play"></span><span>Client Story</span></div></div>
+      <div class="video-cell"><div class="video-placeholder"><span class="play"></span><span>Client Story</span></div></div>
+      <div class="video-cell"><div class="video-placeholder"><span class="play"></span><span>Client Story</span></div></div>
+      <div class="video-cell"><div class="video-placeholder"><span class="play"></span><span>Client Story</span></div></div>
+      <div class="video-cell"><div class="video-placeholder"><span class="play"></span><span>Client Story</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="section-lavender">
+  <div class="wrap">
+    <div class="section-head" style="max-width:900px;">
+      <h2>Work with the Experts in MSP Lead Generation</h2>
+    </div>
+    <div class="two-col">
+      <div>
+        <p style="font-size:19px;line-height:1.7;">We get it.</p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;">With so many marketing "experts" out there, it&rsquo;s hard to know who to trust.</p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;">The truth? <strong>We&rsquo;ve been exactly where you are now.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;">When we first started in MSP marketing, we struggled with <strong>getting high-quality leads, standing out in a crowded market, and turning website visitors into actual clients.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;">But after working with <strong>MSPs across the country</strong>, we've realized something big:</p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most MSP websites don&rsquo;t actually generate leads.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most marketing strategies MSPs try don&rsquo;t work long-term.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most agencies don&rsquo;t understand the MSP space at all.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;">So, we made it our mission to <strong>fix this problem once and for all.</strong></p>
+      </div>
+      <div>
+        <div class="photo-placeholder">
+          <span class="icon">🌱</span>
+          Add your team or founder photo here
+        </div>
+        <div class="stat-card">
+          <h4>Built by MSPs, For MSPs</h4>
+          <p style="font-size:15px;color:#333;">We've spent years in the trenches of MSP marketing&mdash;testing <strong>paid ads, SEO, email marketing, chatbots, and automation&mdash;so you don't have to start from scratch.</strong> Every part of the system is built on what we've proven actually works.</p>
+        </div>
+      </div>
+    </div>
+    <div class="stat-cards" style="margin-top:40px;">
+      <div class="stat-card">
+        <h4>The result?</h4>
+        <ul>
+          <li><strong>[X,XXX]</strong> sales appointments generated for MSPs like you.</li>
+          <li>Clients see new leads starting within the first 90 days.</li>
+          <li>Our clients rank higher in Google for the IT-services keywords that matter in their local market.</li>
+        </ul>
+        <p style="font-weight:600;">This isn&rsquo;t a theory. It&rsquo;s a battle-tested, data-driven system that works.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section-cream">
+  <div class="wrap">
+    <div class="section-head" style="text-align:left;max-width:none;">
+      <h2 style="font-size:32px;">So, What Is an MSP Site?</h2>
+    </div>
+    <div class="two-col">
+      <div>
+        <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a9f73eb4dbe00a65aaf896.png" alt="MSP Site diagram" style="margin-bottom:24px;">
+      </div>
+      <div>
+        <h3 style="font-size:22px;margin-bottom:14px;">An MSP Site Puts You in Control</h3>
+        <p style="color:#333;font-size:16px;">It&rsquo;s a high-performance lead machine, built to capture and convert visitors instantly. With live chat, easy booking, and automated follow-ups, every prospect becomes an opportunity. Plus, we give you the tools to attract the right businesses&mdash;those actively searching for IT support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cream" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The Smarter Way to Build Your MSP Website</h2>
+      <h3 style="font-size:20px;color:var(--sprout);margin-top:10px;">Discover Your MSP&rsquo;s Unique Archetype</h3>
+      <p style="margin-top:14px;">We studied the top MSP websites we manage directly, tracking every click, call, and lead. That research became our <strong>MSP brand archetype frameworks</strong>&mdash;proven foundations we use to design and build your site from the ground up.</p>
+    </div>
+
+    <div class="archetype-grid">
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Warrior</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/68dd28b0111a1dc429ec1345.png" alt="The Warrior template"></div>
+        <div class="a-body"><p>Conveys strength and resilience, ideal for MSPs specializing in cybersecurity and defense against digital threats.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Coming soon</li></ul></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Sage</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ffab621e99988621ab8f32.png" alt="The Sage template"></div>
+        <div class="a-body"><p>Designed for MSPs focused on strategy and delivering measurable business outcomes.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Support-focused design that emphasizes client care and dependable service.</li><li>Intuitive navigation that helps clients find solutions quickly.</li><li>Inclusive content that fosters a sense of partnership.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Hero</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/689a194906592d80137731a5.png" alt="The Hero template"></div>
+        <div class="a-body"><p>For MSPs focused on security and protection, demonstrating strength and reliability.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Security-centric layout that communicates trustworthiness.</li><li>Clear safety messaging via testimonials, certifications, and case studies.</li><li>Robust visuals that emphasize security services.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Caregiver</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ac8bb208b8242eacd3e473.png" alt="The Caregiver template"></div>
+        <div class="a-body"><p>Reflects reliability, appealing to MSPs positioned as trusted extensions of their clients&rsquo; internal teams.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Data-driven design that emphasizes ROI with case studies.</li><li>Insightful content that educates clients on IT&rsquo;s strategic value.</li><li>Strategic callouts aligned with clients&rsquo; business goals.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Explorer</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ffab62fb08651b0f4512e1.png" alt="The Explorer template"></div>
+        <div class="a-body"><p>Appeals to MSPs offering exploratory consulting services, helping clients discover new technology paths.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Executive look and feel suitable for C-level decision-makers.</li><li>Service depth that reinforces the MSP&rsquo;s authority.</li><li>Strategic trust elements like testimonials and case studies.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Rebel</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ac8a0ebcbaf48b5fb90d06.png" alt="The Rebel template"></div>
+        <div class="a-body"><p>Embodies The Rebel, appealing to MSPs looking to stand out with innovative and unconventional approaches.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Simple layout that minimizes complexity for smaller businesses.</li><li>Personalized messaging that builds rapport and trust.</li><li>Clear service offerings most relevant to solopreneurs.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Innocent</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ac8bb208b8245594d3e470.png" alt="The Innocent template"></div>
+        <div class="a-body"><p>Offers a clean, uncomplicated design ideal for solopreneurs and MSPs focused on supporting small businesses.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Flexible service presentation for customized, exploratory options.</li><li>Adaptive design that showcases versatility.</li><li>Discovery-focused calls-to-action.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Ruler</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ac8bb3f991b2745403e9e5.png" alt="The Ruler template"></div>
+        <div class="a-body"><p>Embodies authority and structure, ideal for MSPs positioned as the reliable extension of their clients&rsquo; internal IT.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Welcoming design that connects with a broad audience.</li><li>Value-oriented, highlighting cost-effectiveness.</li><li>User-friendly navigation for easy answers.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+
+      <div class="archetype-card">
+        <div class="a-icon"><h4>The Everyman</h4></div>
+        <div class="a-thumb"><img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67ffab62fb08651b0f4512e1.png" alt="The Everyman template"></div>
+        <div class="a-body"><p>Approachable and trustworthy, appealing to clients looking for straightforward, honest service.</p><a href="#">[ preview template ]</a></div>
+        <div class="a-flip"><h3>Benefits</h3><ul><li>Bold branding that sets the MSP apart from competitors.</li><li>Dynamic layout that keeps visitors engaged.</li><li>High-impact CTAs for trailblazing MSPs.</li></ul><a href="#">[ preview template ]</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-lightblue">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The World&rsquo;s Leading MSP Marketers Love MSP Sprout</h2>
+      <p style="font-size:13px;margin-top:10px;">(Placeholder testimonials below &mdash; swap in quotes from your own real clients.)</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">"MSP Sprout has completely changed the way we think about our online presence. The tools are genuinely built for lead generation&mdash;it bridges the gap between a professional website and a real sales engine."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AR</div>
+          <div><h4>Alex Rivera</h4><p>Owner, Summit IT Solutions</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"What MSP Sprout offers isn&rsquo;t just a website&mdash;it&rsquo;s a full platform for handling and nurturing leads. It&rsquo;s become one of the most valuable parts of how we market."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JB</div>
+          <div><h4>Jordan Blake</h4><p>Founder, Northline Networks</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"MSP Sprout sets a new bar for what an MSP website should do. The automation and lead-gen tools mean traffic actually turns into booked calls."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">ME</div>
+          <div><h4>Morgan Ellis</h4><p>Managing Partner, Vantage MSP</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"The team behind MSP Sprout has helped us grow steadily since we switched over&mdash;we&rsquo;ve added new clients every quarter since launch."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CN</div>
+          <div><h4>Casey Nguyen</h4><p>President, Beacon Technology Group</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-dark" id="cta">
+  <div class="wrap">
+    <h2>You already have what it takes to grow your MSP; you just need the system to unlock it.</h2>
+    <button class="btn btn-sprout">Schedule a Growth Call<span class="sub">Yes! I want more clients</span></button>
+  </div>
+</section>
+
+<section class="section-lavender">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How MSP Sprout Helps You Win New Clients</h2>
+      <p>Most MSPs waste months trying to piece together websites, tools, and campaigns. MSP Sprout gives you everything in one system: built to generate leads, book appointments, and help you close deals, so you can grow without the guesswork.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="icon-btn" style="color:var(--orange);">Blog</span>
+        <h4>Turn Visitors into Prospects</h4>
+        <p>Your website should do more than look good &mdash; it should bring you clients. We build a professional, custom site designed to attract local businesses and turn visitors into real prospects.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon-btn" style="color:var(--blue);">Chat</span>
+        <h4>Engage Every Visitor</h4>
+        <p>Don&rsquo;t let leads slip away. Our live chat agents talk to your visitors in real time, answer their questions, and book appointments on your calendar.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon-btn" style="color:var(--sprout);">Ads</span>
+        <h4>Win Clients with Proven Campaigns</h4>
+        <p>From Windows end-of-life to cybersecurity risks, MSP Sprout gives you ready-to-run campaigns built around the issues local businesses care about most.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon-btn" style="color:var(--orange);">Email</span>
+        <h4>Stay Top of Mind</h4>
+        <p>Most MSPs lose leads because they don&rsquo;t follow up enough. Our system sends timely, personalized emails and texts to keep you top of mind.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon-btn" style="color:var(--sprout);">Web</span>
+        <h4>Nurture Every Lead</h4>
+        <p>Not every prospect is ready to buy today. MSP Sprout keeps you in front of them with email, newsletters, and LinkedIn.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon-btn" style="color:var(--blue);">SEO</span>
+        <h4>Attract More Local Business</h4>
+        <p>We run proven SEO and ad campaigns that bring local businesses straight to your website instead of waiting on referrals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="playbook" class="section-navy">
+  <div class="wrap">
+    <div class="section-head">
+      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">The Playbook</h3>
+      <h2>The Proven Playbook Behind MSP Sprout</h2>
+      <p>The <strong style="color:var(--orange);">MSP Get Clients Playbook</strong> is the system we&rsquo;ve built after years of generating leads for MSPs. Whether you run it yourself with our coaching, or have us run it for you, every part of MSP Sprout ties back to this Playbook.</p>
+    </div>
+    <div class="playbook-grid">
+      <div class="playbook-card">
+        <div class="svg-badge">&#9737;</div>
+        <h4>Real-World Strategies<br>That Work</h4>
+        <p>This isn&rsquo;t just theory. We use the exact strategies that have helped MSPs consistently win new clients.</p>
+      </div>
+      <div class="playbook-card">
+        <div class="svg-badge">&#8635;</div>
+        <h4>Live Coaching Twice<br>Per Week</h4>
+        <p>Join our expert-led coaching sessions every Tuesday and Thursday to get personalized support, ask questions, and refine your strategy.</p>
+      </div>
+      <div class="playbook-card">
+        <div class="svg-badge">&#9733;</div>
+        <h4>Comprehensive Training Library</h4>
+        <p>Our comprehensive training course <strong style="color:#fff;">The MSP Lead Gen Playbook</strong> walks you through exactly how to win new clients using the MSP Sprout system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-lightblue">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pricing</h2>
+      <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
+    </div>
+
+    <div class="pricing-toggle-row">
+      <span>Billed Monthly</span>
+      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
+      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price"><span class="amt" data-monthly="199" data-annual="166">$199</span><span> USD / month</span></div>
+        <p class="setup-fee">One time setup fee: $1,999</p>
+        <ul>
+          <li>MSP Lead Generation Website</li>
+          <li>Easy SEO Optimization</li>
+          <li>Drag and Drop Page Builder</li>
+          <li>Self-Managed Website Chat</li>
+          <li>Free Hosting / Free SSL</li>
+          <li>Unlimited Website Visits</li>
+          <li>Website Analytics</li>
+          <li>MSP Marketing Resources Vault</li>
+          <li>Unlimited Support</li>
+          <li>30 Day Money Back Guarantee</li>
+        </ul>
+        <button class="btn btn-outline">Get Started</button>
+      </div>
+
+      <div class="price-card featured">
+        <h3>Essentials</h3>
+        <div class="price"><span class="amt" data-monthly="299" data-annual="249">$299</span><span> USD / month</span></div>
+        <p class="setup-fee">One time setup fee: $1,999</p>
+        <ul>
+          <li>Everything in Starter, plus:</li>
+          <li>Call Tracking / Recording</li>
+          <li>2-Way SMS Marketing</li>
+          <li>Outbound Dialing</li>
+          <li>Automated Lead Followup</li>
+          <li>Unlimited Workflows</li>
+          <li>Appointment Scheduling</li>
+          <li>Social Media Scheduling</li>
+          <li>Google Review Management</li>
+          <li>Email Newsletters</li>
+          <li>Opportunity Pipeline</li>
+          <li>PSA / RMM Integrations</li>
+        </ul>
+        <button class="btn btn-sprout">Sign Up Now</button>
+      </div>
+
+      <div class="price-card">
+        <h3>Lead Gen</h3>
+        <div class="price"><span class="amt" data-monthly="479" data-annual="399">$479</span><span> USD / month</span></div>
+        <p class="setup-fee">One time setup fee: $1,999</p>
+        <ul>
+          <li>Everything in Essentials, plus:</li>
+          <li>Live Human Website Appointment Booking Agent</li>
+          <li>Advanced Call Tracking / Recording</li>
+          <li>Custom Marketing Integrations</li>
+          <li>Custom Lead Dashboard</li>
+        </ul>
+        <button class="btn btn-outline">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cream">
+  <div class="wrap">
+    <div class="guarantee">
+      <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a22e01746e6c2ca1770fb5.svg" alt="Guarantee badge">
+      <div>
+        <h2>The &ldquo;All Reward, No Risk&rdquo; Guarantee</h2>
+        <p>We believe your website should be an investment, not a gamble. That&rsquo;s why the risk is on us. If you&rsquo;re not completely happy within 30 days, we&rsquo;ll refund you 100%&mdash;no hassle, no questions. Just results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-dark">
+  <div class="wrap">
+    <h3 style="color:var(--sprout-light);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">Imagine &hellip;</h3>
+    <h2>having a <strong>website that</strong> doesn&rsquo;t just sit there&mdash;it <strong>works for you</strong>, 24/7, capturing leads, scheduling calls, and converting visitors into clients.</h2>
+    <p>With MSP Sprout, you&rsquo;re not just getting a website; you&rsquo;re getting a complete growth engine for your MSP.</p>
+    <button class="btn btn-pink-yellow">I&rsquo;m Ready to Grow.<span class="sub">Let&rsquo;s Do This!</span></button>
+  </div>
+</section>
+
+<section class="footer-fail">
+  <div class="wrap">
+    <h2>You Don&rsquo;t Fail From Doing the Wrong Thing &hellip;</h2>
+    <h2 style="color:var(--sprout);">You Fail From Doing Nothing</h2>
+    <p>There are two costs in business: what you pay and what you miss out on by not acting. If your MSP isn't generating leads consistently, it's not a matter of &ldquo;if&rdquo; you need this&mdash;it's a matter of how much longer you're willing to pay the price of doing nothing.</p>
+  </div>
+</section>
+
+<footer class="footer-legal">
+  <div class="wrap">
+    <button class="btn btn-pink-yellow">I&rsquo;m Ready to Grow.<span class="sub">Let&rsquo;s Do This!</span></button>
+    <h4 style="color:#fff;text-align:center;margin-bottom:14px;">IMPORTANT NOTICE</h4>
+    <p>MSP Sprout provides sales and marketing tools, consulting services, and educational resources designed to help managed service providers (MSPs) grow their businesses. Success in business requires consistent effort, implementation, and a wide range of factors that vary from one business to another.</p>
+    <p><strong>DISCLAIMER:</strong> While we share strategies that have worked for other MSPs, MSP Sprout cannot and does not guarantee specific outcomes, lead generation results, or financial performance. Your success depends entirely on your own efforts, the way you implement our tools and training, and your unique business environment.</p>
+    <p>All case studies, success stories, and testimonials shared on our website reflect individual experiences. They are not promises of future performance or typical results.</p>
+    <p>MSP Sprout does not provide legal, financial, tax, or accounting advice. All materials are intended for informational and educational purposes only.</p>
+    <p>This website uses cookies &mdash; including third-party cookies &mdash; for essential functionality, analytics, and advertising. Please refer to our Privacy Policy for more information.</p>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="social-row">
+    <a href="#" aria-label="Instagram">IG</a>
+    <a href="#" aria-label="Facebook">FB</a>
+    <a href="#" aria-label="LinkedIn">IN</a>
+  </div>
+  &copy; Copyright MSP Sprout. <span>|</span>
+  <a href="#">Privacy Policy</a> <span>|</span>
+  <a href="#">Terms of Service</a> <span>|</span>
+  <a href="#">Platform</a> <span>|</span>
+  Call Us: [Add Your Phone Number]
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navList');
+  menuToggle.addEventListener('click', () => navList.classList.toggle('open'));
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navList.classList.remove('open')));
+
+  const sw = document.getElementById('billingSwitch');
+  const amts = document.querySelectorAll('.amt');
+  let annual = false;
+  function renderPricing(){
+    amts.forEach(el => {
+      el.textContent = '$' + el.dataset[annual ? 'annual' : 'monthly'];
+    });
+    sw.classList.toggle('on', annual);
+  }
+  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
+  renderPricing();
+</script>
+
+</body>
+</html>
