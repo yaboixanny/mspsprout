@@ -60,7 +60,14 @@ function buildSitemap(pages) {
 }
 
 function buildRobots() {
-  return `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
+  // Standard crawlers get a blanket allow. AI/answer-engine crawlers are
+  // listed explicitly (rather than relying on the wildcard) so it's clear
+  // and future-proof that this marketing site wants to be indexed by them
+  // too — being cited in AI answers is part of 2026 SEO, not just classic
+  // organic search.
+  const aiBots = ['GPTBot', 'OAI-SearchBot', 'Google-Extended', 'PerplexityBot', 'ClaudeBot', 'CCBot', 'anthropic-ai'];
+  const aiBlock = aiBots.map(bot => `User-agent: ${bot}\nAllow: /\n`).join('\n');
+  return `User-agent: *\nAllow: /\n\n${aiBlock}\nSitemap: ${SITE_URL}/sitemap.xml\n`;
 }
 
 try {
