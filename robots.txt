@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mspsprout.netlify.app/sitemap.xml
