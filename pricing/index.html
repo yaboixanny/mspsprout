@@ -85,10 +85,6 @@
     padding:12px 28px;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.5px;
   }
 
-  /* ---------- top announcement bar ---------- */
-  .announce{background:var(--navy);color:#fff;text-align:center;padding:10px 20px;font-size:14px;}
-  .announce strong{font-weight:700;color:var(--sprout-light);}
-
   /* ---------- header ---------- */
   header.site-header{background:var(--navy);padding:18px 0;position:relative;z-index:50;}
   .header-inner{display:flex;align-items:center;justify-content:space-between;}
@@ -97,9 +93,9 @@
   .logo-word .accent{
     background-image:var(--grad-sprout);-webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  nav.main-nav ul{display:flex;align-items:center;gap:6px;}
+  nav.main-nav ul{display:flex;align-items:center;gap:2px;}
   nav.main-nav a{
-    color:#fff;font-size:15px;font-weight:500;padding:10px 16px;display:block;
+    color:#fff;font-size:15px;font-weight:500;padding:10px 13px;display:block;
     transition:color .2s ease;white-space:nowrap;
   }
   nav.main-nav a:hover{color:var(--sprout-light);}
@@ -107,22 +103,51 @@
     background:var(--grad-pink-yellow);
     color:#fff;border-radius:50px;padding:10px 28px;font-weight:600;
   }
-  nav.main-nav li.login-item a{
-    border:2px solid transparent;
-    background:linear-gradient(#1F1C35,#1F1C35) padding-box, var(--grad-sprout) border-box;
-    color:var(--sprout-light);border-radius:50px;padding:9px 26px;font-weight:600;
-  }
   .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
+  .menu-close-item{display:none;}
+
+  /* ---------- services dropdown ---------- */
+  nav.main-nav li.has-sub{position:relative;}
+  nav.main-nav .sub-toggle{
+    background:none;border:none;font:inherit;color:#fff;font-size:15px;font-weight:500;
+    padding:10px 13px;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap;
+  }
+  nav.main-nav .sub-toggle:hover{color:var(--sprout-light);}
+  nav.main-nav .sub-toggle .caret{font-size:10px;transition:transform .2s ease;}
+  nav.main-nav .sub-menu{
+    position:absolute;top:100%;left:0;min-width:230px;background:#1F1C35;
+    border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:8px;margin-top:6px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);opacity:0;visibility:hidden;
+    transform:translateY(6px);transition:opacity .2s ease, transform .2s ease, visibility .2s ease;z-index:60;
+  }
+  nav.main-nav li.has-sub:hover .sub-menu,
+  nav.main-nav li.has-sub.open .sub-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  nav.main-nav li.has-sub:hover .sub-toggle .caret{transform:rotate(180deg);}
+  nav.main-nav .sub-menu li{width:100%;}
+  nav.main-nav .sub-menu a{padding:9px 12px;border-radius:6px;font-size:14px;}
+  nav.main-nav .sub-menu a:hover{background:rgba(255,255,255,.07);}
 
   @media (max-width:900px){
     nav.main-nav ul{
-      position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;height:100vh;
-      background:rgba(0,0,0,.92);flex-direction:column;align-items:flex-start;
-      padding:80px 30px;gap:6px;transform:translateX(100%);transition:transform .3s ease;
+      position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;height:100vh;overflow-y:auto;
+      background:rgba(17,16,28,.98);flex-direction:column;align-items:flex-start;
+      padding:24px 30px 80px;gap:2px;transform:translateX(100%);transition:transform .3s ease;
     }
     nav.main-nav ul.open{transform:translateX(0);}
     nav.main-nav a{width:100%;padding:12px 0;}
     .menu-toggle{display:block;}
+    .menu-close-item{display:block;width:100%;text-align:right;margin-bottom:10px;}
+    .menu-close{background:none;border:none;color:#fff;font-size:30px;line-height:1;cursor:pointer;padding:6px;}
+    .menu-close:hover{color:var(--sprout-light);}
+    nav.main-nav li.has-sub{width:100%;}
+    nav.main-nav .sub-toggle{width:100%;justify-content:space-between;padding:12px 0;}
+    nav.main-nav .sub-menu{
+      position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+      border:none;background:transparent;margin:0 0 6px;padding:0 0 0 14px;display:none;
+    }
+    nav.main-nav li.has-sub.open .sub-menu{display:block;}
+    nav.main-nav li.has-sub.open .sub-toggle .caret{transform:rotate(180deg);}
+    nav.main-nav .sub-menu a{padding:9px 0;}
   }
 
   /* ---------- hero ---------- */
@@ -343,10 +368,12 @@
   .footer-legal p{font-size:12px;line-height:1.7;color:#9a9ab8;max-width:900px;margin:0 auto 14px;}
   .footer-legal p strong{color:#cfcfe0;}
 
-  .footer-sitemap{text-align:center;margin:0 auto 34px;}
-  .footer-sitemap .label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:#6f6f95;margin-bottom:12px;}
-  .footer-sitemap a{display:inline-block;color:#cfcfe0;font-size:14px;font-weight:600;margin:0 14px;}
+  .footer-sitemap{display:flex;flex-wrap:wrap;justify-content:center;gap:60px;margin:0 auto 40px;text-align:left;}
+  .footer-sitemap .footer-col{display:flex;flex-direction:column;gap:11px;min-width:180px;}
+  .footer-sitemap .label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#6f6f95;margin-bottom:4px;}
+  .footer-sitemap a{color:#cfcfe0;font-size:14px;font-weight:600;}
   .footer-sitemap a:hover{color:var(--sprout-light);}
+  @media (max-width:700px){.footer-sitemap{justify-content:flex-start;gap:40px;}}
 
   .footer-bottom{background:var(--navy-deep);color:#fff;padding:22px 20px;text-align:center;font-size:13px;}
   .footer-bottom span{color:#5e7e9f;}
@@ -362,8 +389,6 @@
 </style>
 </head>
 <body>
-
-<div class="announce">Welcome early adopters! Use code <strong>EARLY</strong> at checkout for 10% off through the end of September.</div>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -382,13 +407,27 @@
       <span class="logo-word">MSP <span class="accent">Sprout</span></span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
-    <nav class="main-nav">
+        <nav class="main-nav">
       <ul id="navList">
+        <li class="menu-close-item"><button type="button" class="menu-close" id="menuClose" aria-label="Close menu">&times;</button></li>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="#why">Who We Are</a></li>
-        <li><a href="#how">How It Works</a></li>
-        <li><a href="#playbook">Playbook</a></li>
-        <li class="login-item"><a href="#">Log In</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false">Services <span class="caret">&#9662;</span></button>
+          <ul class="sub-menu">
+            <li><a href="../web-design/index.html">Web Design</a></li>
+            <li><a href="../google-ads-ppc/index.html">Google Ads &amp; PPC</a></li>
+            <li><a href="../seo/index.html">SEO</a></li>
+            <li><a href="../cold-email-outreach/index.html">Cold Email Outreach</a></li>
+            <li><a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a></li>
+            <li><a href="../appointment-setting/index.html">Appointment Setting</a></li>
+            <li><a href="../demand-generation/index.html">Demand Generation</a></li>
+          </ul>
+        </li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="../case-studies/index.html">Case Studies</a></li>
+        <li><a href="../results/index.html">Results</a></li>
+        <li><a href="index.html">Pricing</a></li>
+        <li><a href="../packages/index.html">Packages</a></li>
         <li class="cta-item"><a href="#cta">Growth Call</a></li>
       </ul>
     </nav>
@@ -791,21 +830,26 @@
   <div class="wrap">
     <button class="btn btn-pink-yellow">I&rsquo;m Ready to Grow.<span class="sub">Let&rsquo;s Do This!</span></button>
 
-    <nav class="footer-sitemap">
-      <span class="label">Site Pages</span>
-      <a href="../index.html">Home</a>
-      <a href="../web-design/index.html">Web Design</a>
-      <a href="../google-ads-ppc/index.html">Google Ads &amp; PPC</a>
-      <a href="../seo/index.html">SEO</a>
-      <a href="../cold-email-outreach/index.html">Cold Email Outreach</a>
-      <a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
-      <a href="../appointment-setting/index.html">Appointment Setting</a>
-      <a href="../demand-generation/index.html">Demand Generation</a>
-      <a href="../case-studies/index.html">Case Studies</a>
-      <a href="../results/index.html">Results</a>
-      <a href="../about/index.html">About</a>
-      <a href="index.html">Pricing</a>
-      <a href="../packages/index.html">Packages</a>
+        <nav class="footer-sitemap">
+      <div class="footer-col">
+        <span class="label">Company</span>
+        <a href="../index.html">Home</a>
+        <a href="../about/index.html">About</a>
+        <a href="../case-studies/index.html">Case Studies</a>
+        <a href="../results/index.html">Results</a>
+        <a href="index.html">Pricing</a>
+        <a href="../packages/index.html">Packages</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Services</span>
+        <a href="../web-design/index.html">Web Design</a>
+        <a href="../google-ads-ppc/index.html">Google Ads &amp; PPC</a>
+        <a href="../seo/index.html">SEO</a>
+        <a href="../cold-email-outreach/index.html">Cold Email Outreach</a>
+        <a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
+        <a href="../appointment-setting/index.html">Appointment Setting</a>
+        <a href="../demand-generation/index.html">Demand Generation</a>
+      </div>
     </nav>
 
     <h4 style="color:#fff;text-align:center;margin-bottom:14px;">IMPORTANT NOTICE</h4>
@@ -819,9 +863,9 @@
 
 <div class="footer-bottom">
   <div class="social-row">
-    <a href="#" aria-label="Instagram">IG</a>
-    <a href="#" aria-label="Facebook">FB</a>
-    <a href="#" aria-label="LinkedIn">IN</a>
+    <a href="#" aria-label="YouTube">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5l6.3 3.5-6.3 3.5Z"/></svg>
+    </a>
   </div>
   &copy; Copyright MSP Sprout. <span>|</span>
   <a href="#">Privacy Policy</a> <span>|</span>
@@ -833,8 +877,17 @@
 <script>
   const menuToggle = document.getElementById('menuToggle');
   const navList = document.getElementById('navList');
+  const menuClose = document.getElementById('menuClose');
   menuToggle.addEventListener('click', () => navList.classList.toggle('open'));
+  menuClose.addEventListener('click', () => navList.classList.remove('open'));
   navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navList.classList.remove('open')));
+  document.querySelectorAll('.sub-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('.has-sub');
+      const isOpen = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
 
   const sw = document.getElementById('billingSwitch');
   const amts = document.querySelectorAll('.amt');
