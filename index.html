@@ -298,6 +298,36 @@
   .feature-card p{font-size:15px;color:#333;}
   @media (max-width:900px){.feature-grid{grid-template-columns:1fr;}}
 
+  /* ---------- homepage services grid ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px;}
+  .service-card{
+    position:relative;background:#fff;border-radius:18px;padding:38px 32px;
+    box-shadow:0 10px 40px rgba(34,53,95,.08);border:2px solid transparent;
+    display:flex;flex-direction:column;overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .service-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:4px;
+    background:var(--s-accent, var(--grad-sprout));
+    transform:scaleX(0);transform-origin:left;transition:transform .35s ease;
+  }
+  .service-card:hover{transform:translateY(-8px);box-shadow:0 26px 55px rgba(34,53,95,.16);border-color:var(--sprout-light);}
+  .service-card:hover::before{transform:scaleX(1);}
+  .service-card .s-badge{
+    display:inline-flex;align-items:center;justify-content:center;width:fit-content;
+    padding:9px 18px;border-radius:8px;background:var(--s-accent, var(--grad-sprout));
+    color:#fff;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px;
+    margin-bottom:22px;
+  }
+  .service-card h3{font-size:21px;margin-bottom:12px;line-height:1.3;}
+  .service-card p{font-size:14.5px;color:var(--text-gray);line-height:1.55;flex:1;margin-bottom:22px;}
+  .service-card a.s-link{
+    font-size:13px;font-weight:700;color:var(--heading-navy);display:inline-flex;align-items:center;gap:6px;
+    transition:gap .2s ease, color .2s ease;
+  }
+  .service-card a.s-link:hover{color:var(--sprout-dark);gap:10px;}
+  @media (max-width:900px){.services-grid{grid-template-columns:1fr;}}
+
   /* ---------- playbook section (dark) ---------- */
   .playbook-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px;}
   .playbook-card{
@@ -497,6 +527,58 @@
           <li>Our clients rank higher in Google for the IT-services keywords that drive inbound leads in their local market.</li>
         </ul>
         <p style="font-weight:600;">This isn&rsquo;t a theory. It&rsquo;s a battle-tested, data-driven system that works.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-lightblue">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Our MSP Lead Gen Services</h2>
+      <p>Six core channels, run by one team, all pointing back to the same lead generation system.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" style="--s-accent:var(--grad-sprout);">
+        <span class="s-badge">Web Design</span>
+        <h3>MSP Website Design</h3>
+        <p>Fast, modern lead-generation websites built specifically for MSPs&mdash;not another templated agency showcase.</p>
+        <a class="s-link" href="web-design/index.html">Explore Web Design &rarr;</a>
+      </div>
+
+      <div class="service-card" style="--s-accent:var(--grad-green-blue);">
+        <span class="s-badge">SEO</span>
+        <h3>SEO for MSPs</h3>
+        <p>Rank for the local IT-services searches that actually turn into booked calls, not vanity keywords.</p>
+        <a class="s-link" href="seo/index.html">Explore SEO &rarr;</a>
+      </div>
+
+      <div class="service-card" style="--s-accent:var(--grad-pink-yellow);">
+        <span class="s-badge">AI SEO / GEO</span>
+        <h3>AI SEO &amp; GEO</h3>
+        <p>Get named by ChatGPT, Gemini, Claude, and Perplexity when local buyers ask an AI who to hire.</p>
+        <a class="s-link" href="ai-seo/index.html">Explore AI SEO &rarr;</a>
+      </div>
+
+      <div class="service-card" style="--s-accent:var(--grad-sprout);">
+        <span class="s-badge">Google Ads &amp; PPC</span>
+        <h3>Google Ads &amp; PPC</h3>
+        <p>Paid campaigns built to bring in qualified leads immediately, not just clicks and impressions.</p>
+        <a class="s-link" href="google-ads-ppc/index.html">Explore Google Ads &rarr;</a>
+      </div>
+
+      <div class="service-card" style="--s-accent:var(--grad-green-blue);">
+        <span class="s-badge">Cold Email</span>
+        <h3>Cold Email Outreach</h3>
+        <p>Direct outbound campaigns that start real conversations with the exact accounts you want as clients.</p>
+        <a class="s-link" href="cold-email-outreach/index.html">Explore Cold Email &rarr;</a>
+      </div>
+
+      <div class="service-card" style="--s-accent:var(--grad-pink-yellow);">
+        <span class="s-badge">LinkedIn</span>
+        <h3>LinkedIn Lead Generation</h3>
+        <p>Targeted LinkedIn outreach that puts your MSP in front of the decision-makers who actually buy.</p>
+        <a class="s-link" href="linkedin-lead-generation/index.html">Explore LinkedIn &rarr;</a>
       </div>
     </div>
   </div>
