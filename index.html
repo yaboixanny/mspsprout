@@ -683,8 +683,7 @@
     <div class="pricing-grid">
       <div class="price-card">
         <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="199" data-annual="166">$199</span><span> USD / month</span></div>
-        <p class="setup-fee">One time setup fee: $1,999</p>
+        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
         <ul>
           <li>MSP Lead Generation Website</li>
           <li>Easy SEO Optimization</li>
@@ -702,8 +701,7 @@
 
       <div class="price-card featured">
         <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="299" data-annual="249">$299</span><span> USD / month</span></div>
-        <p class="setup-fee">One time setup fee: $1,999</p>
+        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
         <ul>
           <li>Everything in Starter, plus:</li>
           <li>Call Tracking / Recording</li>
@@ -723,8 +721,7 @@
 
       <div class="price-card">
         <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="479" data-annual="399">$479</span><span> USD / month</span></div>
-        <p class="setup-fee">One time setup fee: $1,999</p>
+        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
         <ul>
           <li>Everything in Essentials, plus:</li>
           <li>Live Human Website Appointment Booking Agent</li>
@@ -835,7 +832,7 @@
   let annual = false;
   function renderPricing(){
     amts.forEach(el => {
-      el.textContent = '$' + el.dataset[annual ? 'annual' : 'monthly'];
+      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
     });
     sw.classList.toggle('on', annual);
   }
