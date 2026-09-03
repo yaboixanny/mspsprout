@@ -314,6 +314,50 @@
   .playbook-card p{color:#cfcfe0;font-size:14.5px;}
   @media (max-width:900px){.playbook-grid{grid-template-columns:1fr;}}
 
+  /* ---------- why-run-ads flow section ---------- */
+  .why-ads{background:var(--navy);position:relative;overflow:hidden;}
+  .why-ads::before{
+    content:"";position:absolute;top:-40%;right:-10%;width:60%;height:140%;
+    background:radial-gradient(circle, rgba(30,158,82,.18) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .why-ads::after{
+    content:"";position:absolute;bottom:-40%;left:-10%;width:50%;height:120%;
+    background:radial-gradient(circle, rgba(255,52,164,.12) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .why-ads .wrap{position:relative;z-index:1;}
+  .why-flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;margin-top:60px;}
+  .why-flow-card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:18px;
+    padding:34px 26px;position:relative;transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .why-flow-card:hover{transform:translateY(-8px);border-color:var(--sprout-light);background:rgba(255,255,255,.08);}
+  .why-flow-num{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:15px;color:#fff;margin-bottom:22px;background:var(--grad-sprout);
+    box-shadow:0 8px 24px rgba(30,158,82,.4);
+  }
+  .why-flow-card:nth-child(2) .why-flow-num{background:var(--grad-pink-yellow);box-shadow:0 8px 24px rgba(255,52,164,.35);}
+  .why-flow-card:nth-child(3) .why-flow-num{background:var(--grad-green-blue);box-shadow:0 8px 24px rgba(11,180,255,.35);}
+  .why-flow-card:nth-child(4) .why-flow-num{background:var(--grad-sprout);box-shadow:0 8px 24px rgba(30,158,82,.4);}
+  .why-flow-card h4{color:#fff;font-size:18px;margin-bottom:10px;line-height:1.35;}
+  .why-flow-card p{color:#cfcfe0;font-size:14px;line-height:1.6;}
+  .why-flow-arrow{
+    position:absolute;top:23px;right:-38px;width:32px;height:14px;z-index:2;
+    animation:arrowNudge 1.6s ease-in-out infinite;
+  }
+  .why-flow-arrow svg{width:100%;height:100%;display:block;}
+  @keyframes arrowNudge{
+    0%,100%{transform:translateX(0);opacity:.55;}
+    50%{transform:translateX(6px);opacity:1;}
+  }
+  @media (max-width:1100px){.why-flow-grid{grid-template-columns:repeat(2,1fr);}.why-flow-card:nth-child(2) .why-flow-arrow{display:none;}}
+  @media (max-width:900px){
+    .why-flow-grid{grid-template-columns:1fr;gap:30px;}
+    .why-flow-arrow{display:none;}
+  }
+
   /* ---------- pricing ---------- */
   .pricing-toggle-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:36px 0 10px;font-weight:600;color:var(--heading-navy);}
   .switch{position:relative;width:54px;height:28px;background:#ddd;border-radius:20px;cursor:pointer;transition:background .25s;}
@@ -639,69 +683,45 @@
   </div>
 </section>
 
-<section class="section-lightblue">
+<section class="why-ads">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pricing</h2>
-      <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
+      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">The Case for Paid Search</h3>
+      <h2 style="color:#fff;">Why Run Google Ads For Your MSP</h2>
+      <p style="color:#cfcfe0;">SEO builds momentum over months. Google Ads puts your MSP in front of buyers who are searching for IT support right now.</p>
     </div>
-
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
-        <ul>
-          <li>MSP Lead Generation Website</li>
-          <li>Easy SEO Optimization</li>
-          <li>Drag and Drop Page Builder</li>
-          <li>Self-Managed Website Chat</li>
-          <li>Free Hosting / Free SSL</li>
-          <li>Unlimited Website Visits</li>
-          <li>Website Analytics</li>
-          <li>MSP Marketing Resources Vault</li>
-          <li>Unlimited Support</li>
-          <li>30 Day Money Back Guarantee</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
+    <div class="why-flow-grid">
+      <div class="why-flow-card">
+        <div class="why-flow-num">01</div>
+        <h4>Immediate Pipeline</h4>
+        <p>Your ads can go live and start generating calls within days&mdash;no waiting on rankings to climb.</p>
+        <span class="why-flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#8FE3A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
       </div>
 
-      <div class="price-card featured">
-        <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Starter, plus:</li>
-          <li>Call Tracking / Recording</li>
-          <li>2-Way SMS Marketing</li>
-          <li>Outbound Dialing</li>
-          <li>Automated Lead Followup</li>
-          <li>Unlimited Workflows</li>
-          <li>Appointment Scheduling</li>
-          <li>Social Media Scheduling</li>
-          <li>Google Review Management</li>
-          <li>Email Newsletters</li>
-          <li>Opportunity Pipeline</li>
-          <li>PSA / RMM Integrations</li>
-        </ul>
-        <button class="btn btn-sprout">Sign Up Now</button>
+      <div class="why-flow-card">
+        <div class="why-flow-num">02</div>
+        <h4>Local Buyer Intent</h4>
+        <p>Target the exact &ldquo;IT support near me&rdquo; and &ldquo;managed IT services [city]&rdquo; searches buyers run when they&rsquo;re ready to switch.</p>
+        <span class="why-flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#FF9FD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
       </div>
 
-      <div class="price-card">
-        <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Essentials, plus:</li>
-          <li>Live Human Website Appointment Booking Agent</li>
-          <li>Advanced Call Tracking / Recording</li>
-          <li>Custom Marketing Integrations</li>
-          <li>Custom Lead Dashboard</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
+      <div class="why-flow-card">
+        <div class="why-flow-num">03</div>
+        <h4>Full Attribution</h4>
+        <p>Every call and form fill is tracked back to the exact ad and keyword, so you always know your real cost per lead.</p>
+        <span class="why-flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#7DD6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="why-flow-card">
+        <div class="why-flow-num">04</div>
+        <h4>Budget You Control</h4>
+        <p>Scale spend up or down monthly based on what&rsquo;s actually converting&mdash;no long-term ad commitment required.</p>
       </div>
     </div>
   </div>
@@ -781,18 +801,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
