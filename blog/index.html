@@ -110,7 +110,7 @@
   .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
   .menu-close-item{display:none;}
 
-  /* ---------- services dropdown ---------- */
+  /* ---------- services dropdown (mega menu) ---------- */
   nav.main-nav li.has-sub{position:relative;}
   nav.main-nav .sub-toggle{
     background:none;border:none;font:inherit;color:#fff;font-size:15px;font-weight:500;
@@ -119,15 +119,21 @@
   nav.main-nav .sub-toggle:hover{color:var(--sprout-light);}
   nav.main-nav .sub-toggle .caret{font-size:10px;transition:transform .2s ease;}
   nav.main-nav .sub-menu{
-    display:block;position:absolute;top:100%;left:0;min-width:230px;background:#1F1C35;
-    border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:8px;margin-top:6px;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);opacity:0;visibility:hidden;
-    transform:translateY(6px);transition:opacity .2s ease, transform .2s ease, visibility .2s ease;z-index:60;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:4px 30px;
+    position:absolute;top:100%;left:50%;width:min(760px,92vw);
+    background:#1F1C35;border:1px solid rgba(255,255,255,.12);border-radius:14px;
+    padding:26px 28px;margin-top:10px;box-shadow:0 24px 50px rgba(0,0,0,.4);
+    opacity:0;visibility:hidden;transform:translate(-50%,6px);
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;z-index:60;
   }
   nav.main-nav li.has-sub:hover .sub-menu,
-  nav.main-nav li.has-sub.open .sub-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  nav.main-nav li.has-sub.open .sub-menu{opacity:1;visibility:visible;transform:translate(-50%,0);}
   nav.main-nav li.has-sub:hover .sub-toggle .caret{transform:rotate(180deg);}
-  nav.main-nav .sub-menu li{width:100%;}
+  nav.main-nav .sub-menu-col{display:flex;flex-direction:column;}
+  nav.main-nav .sub-menu-heading{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    color:var(--sprout-light);padding:0 12px;margin-bottom:8px;
+  }
   nav.main-nav .sub-menu a{padding:9px 12px;border-radius:6px;font-size:14px;}
   nav.main-nav .sub-menu a:hover{background:rgba(255,255,255,.07);}
 
@@ -148,8 +154,11 @@
     nav.main-nav .sub-menu{
       position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
       border:none;background:transparent;margin:0 0 6px;padding:0 0 0 14px;display:none;
+      grid-template-columns:1fr;width:auto;gap:0;
     }
-    nav.main-nav li.has-sub.open .sub-menu{display:block;}
+    nav.main-nav li.has-sub.open .sub-menu{display:flex;flex-direction:column;}
+    nav.main-nav .sub-menu-col{margin-bottom:12px;}
+    nav.main-nav .sub-menu-heading{color:#8a8ab0;}
     nav.main-nav li.has-sub.open .sub-toggle .caret{transform:rotate(180deg);}
     nav.main-nav .sub-menu a{padding:9px 0;}
   }
@@ -421,22 +430,34 @@
         <li><a href="../index.html">Home</a></li>
         <li class="has-sub">
           <button type="button" class="sub-toggle" aria-expanded="false">Services <span class="caret">&#9662;</span></button>
-          <ul class="sub-menu">
-            <li><a href="../web-design/index.html">Web Design</a></li>
-            <li><a href="../google-ads-ppc/index.html">Google Ads</a></li>
-            <li><a href="../facebook-ads/index.html">Facebook Ads</a></li>
-            <li><a href="../bing-ads/index.html">Bing Ads</a></li>
-            <li><a href="../seo/index.html">SEO</a></li>
-            <li><a href="../ai-seo/index.html">AI SEO</a></li>
-            <li><a href="../chatgpt-ads/index.html">ChatGPT Ads</a></li>
-            <li><a href="../google-business-profile/index.html">Google Business Profile</a></li>
-            <li><a href="../content-marketing/index.html">Content Marketing</a></li>
-            <li><a href="../cold-email-outreach/index.html">Cold Email Outreach</a></li>
-            <li><a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a></li>
-            <li><a href="../linkedin-ads/index.html">LinkedIn Ads</a></li>
-            <li><a href="../appointment-setting/index.html">Appointment Setting</a></li>
-            <li><a href="../demand-generation/index.html">Demand Generation</a></li>
-          </ul>
+          <div class="sub-menu">
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">SEO</span>
+              <a href="../seo/index.html">SEO</a>
+              <a href="../ai-seo/index.html">AI SEO</a>
+              <a href="../google-business-profile/index.html">Google Business Profile</a>
+              <a href="../content-marketing/index.html">Content Marketing</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Paid Media</span>
+              <a href="../google-ads-ppc/index.html">Google Ads</a>
+              <a href="../facebook-ads/index.html">Facebook Ads</a>
+              <a href="../bing-ads/index.html">Bing Ads</a>
+              <a href="../chatgpt-ads/index.html">ChatGPT Ads</a>
+              <a href="../linkedin-ads/index.html">LinkedIn Ads</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Outbound</span>
+              <a href="../cold-email-outreach/index.html">Cold Email Outreach</a>
+              <a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
+              <a href="../appointment-setting/index.html">Appointment Setting</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Website &amp; Growth</span>
+              <a href="../web-design/index.html">Web Design</a>
+              <a href="../demand-generation/index.html">Demand Generation</a>
+            </div>
+          </div>
         </li>
         <li><a href="../about/index.html">About</a></li>
         <li><a href="../results/index.html">Results</a></li>
