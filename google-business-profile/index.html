@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cold Email Outreach for MSPs | MSP Sprout</title>
-<meta name="description" content="Done-for-you cold email outreach for MSPs. Reach decision-makers directly and fill your calendar with qualified sales appointments.">
+<title>Google Business Profile Optimization for MSPs | MSP Sprout</title>
+<meta name="description" content="Google Business Profile optimization built for managed service providers. Rank in the local map pack and turn nearby searches into booked calls.">
 <link rel="icon" href="../assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
@@ -314,6 +314,76 @@
   .playbook-card p{color:#cfcfe0;font-size:14.5px;}
   @media (max-width:900px){.playbook-grid{grid-template-columns:1fr;}}
 
+  /* ---------- why-run-ads flow section ---------- */
+  .why-ads{background:var(--navy);position:relative;overflow:hidden;}
+  .why-ads::before{
+    content:"";position:absolute;top:-40%;right:-10%;width:60%;height:140%;
+    background:radial-gradient(circle, rgba(30,158,82,.18) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .why-ads::after{
+    content:"";position:absolute;bottom:-40%;left:-10%;width:50%;height:120%;
+    background:radial-gradient(circle, rgba(255,52,164,.12) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .why-ads .wrap{position:relative;z-index:1;}
+  .why-flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;margin-top:60px;}
+  .why-flow-card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:18px;
+    padding:34px 26px;position:relative;transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .why-flow-card:hover{transform:translateY(-8px);border-color:var(--sprout-light);background:rgba(255,255,255,.08);}
+  .why-flow-num{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:15px;color:#fff;margin-bottom:22px;background:var(--grad-sprout);
+    box-shadow:0 8px 24px rgba(30,158,82,.4);
+  }
+  .why-flow-card:nth-child(2) .why-flow-num{background:var(--grad-pink-yellow);box-shadow:0 8px 24px rgba(255,52,164,.35);}
+  .why-flow-card:nth-child(3) .why-flow-num{background:var(--grad-green-blue);box-shadow:0 8px 24px rgba(11,180,255,.35);}
+  .why-flow-card:nth-child(4) .why-flow-num{background:var(--grad-sprout);box-shadow:0 8px 24px rgba(30,158,82,.4);}
+  .why-flow-card h4{color:#fff;font-size:18px;margin-bottom:10px;line-height:1.35;}
+  .why-flow-card p{color:#cfcfe0;font-size:14px;line-height:1.6;}
+  .why-flow-arrow{
+    position:absolute;top:23px;right:-38px;width:32px;height:14px;z-index:2;
+    animation:arrowNudge 1.6s ease-in-out infinite;
+  }
+  .why-flow-arrow svg{width:100%;height:100%;display:block;}
+  @keyframes arrowNudge{
+    0%,100%{transform:translateX(0);opacity:.55;}
+    50%{transform:translateX(6px);opacity:1;}
+  }
+  @media (max-width:1100px){.why-flow-grid{grid-template-columns:repeat(2,1fr);}.why-flow-card:nth-child(2) .why-flow-arrow{display:none;}}
+  @media (max-width:900px){
+    .why-flow-grid{grid-template-columns:1fr;gap:30px;}
+    .why-flow-arrow{display:none;}
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  .faq-list{max-width:820px;margin:50px auto 0;display:flex;flex-direction:column;gap:14px;}
+  .faq-item{
+    background:#fff;border-radius:14px;padding:6px 26px;box-shadow:0 6px 20px rgba(34,53,95,.06);
+    border:1px solid transparent;transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  .faq-item[open]{border-color:var(--sprout-light);box-shadow:0 14px 34px rgba(34,53,95,.1);}
+  .faq-item summary{
+    list-style:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;
+    gap:20px;font-weight:600;font-size:16.5px;color:var(--heading-navy);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item .faq-toggle{
+    flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--lavender);
+    display:flex;align-items:center;justify-content:center;position:relative;transition:background .25s ease, transform .3s ease;
+  }
+  .faq-item .faq-toggle::before,.faq-item .faq-toggle::after{
+    content:"";position:absolute;background:var(--sprout-dark);border-radius:2px;transition:transform .3s ease, opacity .3s ease;
+  }
+  .faq-item .faq-toggle::before{width:12px;height:2px;}
+  .faq-item .faq-toggle::after{width:2px;height:12px;}
+  .faq-item[open] .faq-toggle{background:var(--grad-sprout);}
+  .faq-item[open] .faq-toggle::before,.faq-item[open] .faq-toggle::after{background:#fff;}
+  .faq-item[open] .faq-toggle::after{transform:rotate(90deg);opacity:0;}
+  .faq-item .faq-answer{padding:0 0 24px;font-size:15px;color:var(--text-gray);line-height:1.65;}
+
   /* ---------- pricing ---------- */
   .pricing-toggle-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:36px 0 10px;font-weight:600;color:var(--heading-navy);}
   .switch{position:relative;width:54px;height:28px;background:#ddd;border-radius:20px;cursor:pointer;transition:background .25s;}
@@ -415,9 +485,9 @@
             <li><a href="../seo/index.html">SEO</a></li>
             <li><a href="../ai-seo/index.html">AI SEO</a></li>
             <li><a href="../chatgpt-ads/index.html">ChatGPT Ads</a></li>
-            <li><a href="../google-business-profile/index.html">Google Business Profile</a></li>
+            <li><a href="index.html">Google Business Profile</a></li>
             <li><a href="../content-marketing/index.html">Content Marketing</a></li>
-            <li><a href="index.html">Cold Email Outreach</a></li>
+            <li><a href="../cold-email-outreach/index.html">Cold Email Outreach</a></li>
             <li><a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a></li>
             <li><a href="../linkedin-ads/index.html">LinkedIn Ads</a></li>
             <li><a href="../appointment-setting/index.html">Appointment Setting</a></li>
@@ -437,10 +507,10 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <h1>Cold Email Outreach Built Specifically for MSPs</h1>
-      <p>Instead of generic mass-blast email tools &hellip; we build targeted cold email campaigns aimed at the decision-makers most likely to need IT support, so every send turns into <strong>real replies</strong>, not spam-folder casualties.</p>
-      <p><em>We only run outreach for 2-3 new MSPs per month so every campaign gets real attention.</em></p>
-      <button class="btn btn-sprout">Get My Outreach Campaign Built<span class="sub">Talk to an Outreach Specialist</span></button>
+      <h1>Google Business Profile Optimization for MSPs</h1>
+      <p>Instead of an outdated, unclaimed listing &hellip; we fully optimize your Google Business Profile so your MSP shows up in the map pack when nearby businesses search for IT support, turning local searches into <strong>booked calls</strong>, not missed opportunities.</p>
+      <p><em>We only onboard 2-3 new MSPs per month for GBP optimization so every profile gets real attention.</em></p>
+      <button class="btn btn-sprout">Get My Google Profile Optimized<span class="sub">Talk to a Local SEO Specialist</span></button>
     </div>
     <div class="hero-img">
       <div class="hero-mock-badge"><span class="dot"></span> Leads Trending Up</div>
@@ -466,18 +536,18 @@
 <section id="why" class="section-lavender">
   <div class="wrap">
     <div class="section-head" style="max-width:900px;">
-      <h2>Work with the Experts in MSP Cold Email Outreach</h2>
+      <h2>Work with the Experts in MSP Google Business Profile Optimization</h2>
     </div>
     <div class="two-col">
       <div>
         <p style="font-size:19px;line-height:1.7;">We get it.</p>
         <p style="font-size:19px;line-height:1.7;margin-top:15px;">With so many marketing "experts" out there, it&rsquo;s hard to know who to trust.</p>
         <p style="font-size:19px;line-height:1.7;margin-top:15px;">The truth? <strong>We&rsquo;ve been exactly where you are now.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">When we first started working with MSPs, we saw the same pattern everywhere: <strong>getting cold email replies instead of landing in spam or getting ignored by decision-makers.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;">When we first started working with MSPs, we saw the same pattern everywhere: <strong>getting into the local map pack for the exact &ldquo;IT support near me&rdquo; searches that convert, instead of staying buried on page two.</strong></p>
         <p style="font-size:19px;line-height:1.7;margin-top:15px;">But after working with <strong>MSPs across the country</strong>, we&rsquo;ve realized something big:</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most cold email tools blast the same message to thousands of the wrong contacts.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most &ldquo;outreach experts&rdquo; don&rsquo;t know how to write to an IT decision-maker.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most agencies torch domain reputations with bad sending practices.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most MSP Google Business Profiles are unclaimed, outdated, or missing basic information.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most agencies set up a profile once and never touch it again.</strong></p>
+        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most MSPs have no idea how many calls and direction requests their profile is losing them.</strong></p>
         <p style="font-size:19px;line-height:1.7;margin-top:15px;">So, we made it our mission to <strong>fix this problem once and for all.</strong></p>
       </div>
       <div>
@@ -487,7 +557,7 @@
         </div>
         <div class="stat-card">
           <h4>Built by MSPs, For MSPs</h4>
-          <p style="font-size:15px;color:#333;">We&rsquo;ve spent years building cold email campaigns for MSPs&mdash;list building, deliverability, and messaging all built around what actually gets a decision-maker to reply, not just open.</p>
+          <p style="font-size:15px;color:#333;">We&rsquo;ve spent years optimizing Google Business Profiles specifically for MSPs&mdash;categories, services, posts, and review strategy built around what actually moves map pack rankings, so you don&rsquo;t have to guess what Google rewards.</p>
         </div>
       </div>
     </div>
@@ -495,9 +565,9 @@
       <div class="stat-card">
         <h4>The result?</h4>
         <ul>
-          <li><strong>[X,XXX]</strong> qualified replies generated for MSPs like you.</li>
-          <li>Clients typically see their first booked calls within the first 30 days.</li>
-          <li>Our clients maintain healthy sender reputations while scaling outbound volume.</li>
+          <li><strong>[X,XXX]</strong> map pack impressions generated for MSPs like you.</li>
+          <li>Clients typically see map pack movement within the first 30-60 days.</li>
+          <li>Our clients see more calls and direction requests directly from their profile.</li>
         </ul>
         <p style="font-weight:600;">This isn&rsquo;t a theory. It&rsquo;s a battle-tested, data-driven system that works.</p>
       </div>
@@ -508,15 +578,15 @@
 <section id="how" class="section-cream">
   <div class="wrap">
     <div class="section-head" style="text-align:left;max-width:none;">
-      <h2 style="font-size:32px;">So, How Does Our Cold Email Outreach Actually Work?</h2>
+      <h2 style="font-size:32px;">So, How Does Our Google Business Profile Optimization Actually Work?</h2>
     </div>
     <div class="two-col">
       <div>
-        <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a9f73eb4dbe00a65aaf896.png" alt="Cold email outreach funnel diagram" style="margin-bottom:24px;">
+        <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a9f73eb4dbe00a65aaf896.png" alt="Google Business Profile map pack ranking diagram" style="margin-bottom:24px;">
       </div>
       <div>
-        <h3 style="font-size:22px;margin-bottom:14px;">Built Around Deliverability and Real Replies</h3>
-        <p style="color:#333;font-size:16px;">We start by building and warming dedicated sending domains, then target the decision-makers most likely to need IT support with messaging that reads like a real person wrote it&mdash;not a mail-merge template. Every campaign is monitored for deliverability so your reputation stays clean.</p>
+        <h3 style="font-size:22px;margin-bottom:14px;">Built Around What Moves the Map Pack</h3>
+        <p style="color:#333;font-size:16px;">We start with a full profile audit&mdash;categories, service areas, photos, and existing reviews&mdash;then rebuild everything around the signals Google actually weighs for local ranking. From there we run an ongoing posting and review-generation cadence so your profile keeps earning trust instead of going stale.</p>
       </div>
     </div>
   </div>
@@ -525,46 +595,46 @@
 <section class="section-cream" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head">
-      <h2>The Smarter Way to Run Cold Email for an MSP</h2>
-      <h3 style="font-size:20px;color:var(--sprout);margin-top:10px;">What&rsquo;s Included in Every Outreach Campaign</h3>
-      <p style="margin-top:14px;">We handle every piece of cold email that determines whether a message gets read or ignored&mdash;from the list to the inbox to the follow-up.</p>
+      <h2>The Smarter Way to Optimize a Google Business Profile for an MSP</h2>
+      <h3 style="font-size:20px;color:var(--sprout);margin-top:10px;">What&rsquo;s Included in Every GBP Program</h3>
+      <p style="margin-top:14px;">We manage every layer of your Google Business Profile&mdash;from setup to ongoing management&mdash;so it keeps earning map pack visibility instead of sitting untouched.</p>
     </div>
 
     <div class="archetype-grid">
       <div class="archetype-card">
-        <div class="a-icon"><h4>Targeted List Building</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We build lists of the exact decision-makers&mdash;IT directors, office managers, owners&mdash;most likely to need IT support.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Verified, targeted contact lists</li><li>Firmographic &amp; technographic filtering</li><li>Ongoing list refresh &amp; cleaning</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-icon"><h4>Profile Claim &amp; Full Setup</h4></div>
+        <div class="a-body" style="padding-top:6px;"><p>We claim, verify, and fully build out your profile with accurate categories, services, and business information.</p></div>
+        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Profile claim &amp; verification</li><li>Primary &amp; secondary category optimization</li><li>Complete service &amp; attribute setup</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Domain Setup &amp; Deliverability</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We set up and warm dedicated sending domains so your primary domain&rsquo;s reputation is never at risk.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Dedicated sending domain setup</li><li>SPF, DKIM &amp; DMARC configuration</li><li>Ongoing inbox placement monitoring</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-icon"><h4>Photo &amp; Visual Optimization</h4></div>
+        <div class="a-body" style="padding-top:6px;"><p>We add and organize the photos Google rewards, from team shots to office and service photos.</p></div>
+        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Professional photo uploads</li><li>Regular photo refresh cadence</li><li>Logo &amp; cover image optimization</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Messaging That Reads Like a Person</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We write copy that sounds like a real message, not a mail-merge template, so it earns a reply instead of a delete.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Personalized opening lines</li><li>Short, direct, no-fluff copy</li><li>Multiple angle &amp; offer testing</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-icon"><h4>Review Generation Strategy</h4></div>
+        <div class="a-body" style="padding-top:6px;"><p>We build a system to consistently generate new Google reviews instead of leaving it to chance.</p></div>
+        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Automated review request sequences</li><li>Review response management</li><li>Reputation monitoring</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Automated Follow-Up Sequences</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>Most replies come from the second or third touch, so every campaign includes a built-in follow-up sequence.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Multi-step follow-up sequences</li><li>Auto-pause on reply</li><li>Reply sentiment routing</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-icon"><h4>Google Posts &amp; Updates</h4></div>
+        <div class="a-body" style="padding-top:6px;"><p>We publish regular posts and offers to keep your profile active&mdash;a signal Google rewards in local rankings.</p></div>
+        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Weekly or biweekly Google Posts</li><li>Service &amp; offer highlights</li><li>Event &amp; update posting</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>A/B Testing &amp; Optimization</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We test subject lines, angles, and send times so performance keeps improving campaign over campaign.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Subject line &amp; copy A/B testing</li><li>Send-time optimization</li><li>Weekly performance reviews</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-icon"><h4>Local Citation Consistency</h4></div>
+        <div class="a-body" style="padding-top:6px;"><p>We make sure your business information matches exactly across every directory and listing Google checks.</p></div>
+        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>NAP consistency audits</li><li>Directory listing cleanup</li><li>Duplicate listing removal</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Reply Handling &amp; Handoff</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>Qualified replies are flagged and handed off so your team can focus on the conversation, not the inbox.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Reply qualification &amp; routing</li><li>Calendar link handoff on interest</li><li>Full reply reporting</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-icon"><h4>Ranking &amp; Call Tracking</h4></div>
+        <div class="a-body" style="padding-top:6px;"><p>We track map pack rankings, calls, and direction requests every month so you can see exactly what&rsquo;s working.</p></div>
+        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Local rank tracking</li><li>Call &amp; direction-request tracking</li><li>Monthly performance reviews</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
     </div>
   </div>
@@ -580,135 +650,115 @@
 <section class="section-lavender">
   <div class="wrap">
     <div class="section-head">
-      <h2>How MSP Sprout&rsquo;s Cold Email Program Wins You New Clients</h2>
-      <p>Most MSPs either avoid cold email after a bad experience or run it themselves with tools that torch their domain reputation. MSP Sprout builds outreach the right way from the start.</p>
+      <h2>How MSP Sprout&rsquo;s GBP Program Wins You New Clients</h2>
+      <p>Most MSPs have a Google Business Profile they claimed once and forgot about. MSP Sprout treats it as an active local lead-generation channel.</p>
     </div>
     <div class="feature-grid">
       <div class="feature-card">
-        <span class="icon-btn" style="color:var(--orange);">List</span>
-        <h4>Targeted Contact Lists</h4>
-        <p>Verified lists of the decision-makers most likely to actually need IT support.</p>
+        <span class="icon-btn" style="color:var(--orange);">Setup</span>
+        <h4>Full Profile Optimization</h4>
+        <p>Categories, services, and business info fully built out around what Google actually rewards.</p>
       </div>
       <div class="feature-card">
-        <span class="icon-btn" style="color:var(--blue);">Deliver</span>
-        <h4>Deliverability-First Setup</h4>
-        <p>Dedicated, warmed sending domains so your primary domain&rsquo;s reputation stays protected.</p>
+        <span class="icon-btn" style="color:var(--blue);">Photos</span>
+        <h4>Ongoing Photo Refresh</h4>
+        <p>Regular photo updates that keep your profile looking active and trustworthy.</p>
       </div>
       <div class="feature-card">
-        <span class="icon-btn" style="color:var(--sprout);">Copy</span>
-        <h4>Copy That Gets Replies</h4>
-        <p>Messaging written to read like a real person, not a mail-merge template.</p>
+        <span class="icon-btn" style="color:var(--sprout);">Reviews</span>
+        <h4>Review Generation System</h4>
+        <p>An automated system to consistently generate new Google reviews instead of leaving it to chance.</p>
       </div>
       <div class="feature-card">
-        <span class="icon-btn" style="color:var(--orange);">Follow</span>
-        <h4>Built-In Follow-Up</h4>
-        <p>Multi-step sequences that capture the replies that come after the first touch.</p>
+        <span class="icon-btn" style="color:var(--orange);">Posts</span>
+        <h4>Regular Google Posts</h4>
+        <p>Weekly or biweekly posts that signal an active, well-managed profile.</p>
       </div>
       <div class="feature-card">
-        <span class="icon-btn" style="color:var(--sprout);">Test</span>
-        <h4>Constant A/B Testing</h4>
-        <p>Subject lines, angles, and send times tested and optimized campaign over campaign.</p>
+        <span class="icon-btn" style="color:var(--sprout);">Citations</span>
+        <h4>Local Citation Consistency</h4>
+        <p>Your business info kept consistent across every directory Google checks.</p>
       </div>
       <div class="feature-card">
-        <span class="icon-btn" style="color:var(--blue);">Hand-off</span>
-        <h4>Clean Reply Hand-Off</h4>
-        <p>Qualified replies routed straight to your team so nothing sits in an inbox.</p>
+        <span class="icon-btn" style="color:var(--blue);">Track</span>
+        <h4>Ranking &amp; Call Tracking</h4>
+        <p>Monthly reporting on map pack rankings, calls, and direction requests.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="playbook" class="section-navy">
+<section class="why-ads">
   <div class="wrap">
     <div class="section-head">
-      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">The Playbook</h3>
-      <h2>The Proven Playbook Behind MSP Sprout</h2>
-      <p>The <strong style="color:var(--orange);">MSP Get Clients Playbook</strong> is the system we&rsquo;ve built after years of generating leads for MSPs. Whether you run it yourself with our coaching, or have us run it for you, every part of MSP Sprout ties back to this Playbook.</p>
+      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">The Case for Local Search</h3>
+      <h2 style="color:#fff;">Why Optimize Your Google Business Profile</h2>
+      <p style="color:#cfcfe0;">The map pack is the first thing buyers see for local searches&mdash;before any website, before any ad. If you&rsquo;re not in it, you&rsquo;re invisible to the searches that convert fastest.</p>
     </div>
-    <div class="playbook-grid">
-      <div class="playbook-card">
-        <div class="svg-badge">&#9737;</div>
-        <h4>Real-World Strategies<br>That Work</h4>
-        <p>This isn&rsquo;t just theory. We use the exact strategies that have helped MSPs consistently win new clients.</p>
+    <div class="why-flow-grid">
+      <div class="why-flow-card">
+        <div class="why-flow-num">01</div>
+        <h4>Map Pack Visibility</h4>
+        <p>The 3-pack map results sit above organic listings for nearly every local IT-support search.</p>
+        <span class="why-flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#8FE3A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
       </div>
-      <div class="playbook-card">
-        <div class="svg-badge">&#8635;</div>
-        <h4>Live Coaching Twice<br>Per Week</h4>
-        <p>Join our expert-led coaching sessions every Tuesday and Thursday to get personalized support, ask questions, and refine your strategy.</p>
+
+      <div class="why-flow-card">
+        <div class="why-flow-num">02</div>
+        <h4>Free, Compounding Visibility</h4>
+        <p>Unlike ads, a well-optimized profile keeps generating calls without a per-click cost.</p>
+        <span class="why-flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#FF9FD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
       </div>
-      <div class="playbook-card">
-        <div class="svg-badge">&#9733;</div>
-        <h4>Comprehensive Training Library</h4>
-        <p>Our comprehensive training course <strong style="color:#fff;">The MSP Lead Gen Playbook</strong> walks you through exactly how to win new clients using the MSP Sprout system.</p>
+
+      <div class="why-flow-card">
+        <div class="why-flow-num">03</div>
+        <h4>Trust Before First Contact</h4>
+        <p>Reviews and photos build credibility before a prospect ever visits your website.</p>
+        <span class="why-flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#7DD6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="why-flow-card">
+        <div class="why-flow-num">04</div>
+        <h4>Fastest Local Win Available</h4>
+        <p>Profile improvements can move map pack rankings faster than most on-site SEO changes.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-lightblue">
+<section class="section-cream">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pricing</h2>
-      <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
+      <h2>Google Business Profile Questions, Answered</h2>
+      <p>The questions we hear most from MSPs before starting a GBP optimization program with us.</p>
     </div>
-
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
-        <ul>
-          <li>MSP Lead Generation Website</li>
-          <li>Easy SEO Optimization</li>
-          <li>Drag and Drop Page Builder</li>
-          <li>Self-Managed Website Chat</li>
-          <li>Free Hosting / Free SSL</li>
-          <li>Unlimited Website Visits</li>
-          <li>Website Analytics</li>
-          <li>MSP Marketing Resources Vault</li>
-          <li>Unlimited Support</li>
-          <li>30 Day Money Back Guarantee</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-
-      <div class="price-card featured">
-        <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Starter, plus:</li>
-          <li>Call Tracking / Recording</li>
-          <li>2-Way SMS Marketing</li>
-          <li>Outbound Dialing</li>
-          <li>Automated Lead Followup</li>
-          <li>Unlimited Workflows</li>
-          <li>Appointment Scheduling</li>
-          <li>Social Media Scheduling</li>
-          <li>Google Review Management</li>
-          <li>Email Newsletters</li>
-          <li>Opportunity Pipeline</li>
-          <li>PSA / RMM Integrations</li>
-        </ul>
-        <button class="btn btn-sprout">Sign Up Now</button>
-      </div>
-
-      <div class="price-card">
-        <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Essentials, plus:</li>
-          <li>Live Human Website Appointment Booking Agent</li>
-          <li>Advanced Call Tracking / Recording</li>
-          <li>Custom Marketing Integrations</li>
-          <li>Custom Lead Dashboard</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>We already have a Google Business Profile&mdash;why does it need work?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Having a profile and having an optimized one are very different things. Most MSP profiles are missing service categories, have stale photos, and get few if any new reviews&mdash;all signals Google weighs heavily for map pack ranking. An audit almost always turns up several quick, high-impact fixes.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How long before we see movement in the map pack?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Most clients see initial ranking movement within 30-60 days, though the exact timeline depends on how competitive your local market is and how far behind the starting profile was.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can you help us get more Google reviews?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Yes&mdash;review generation is a core part of the program. We set up automated request sequences that make it easy for happy clients to leave a review, and we manage responses to the ones you get.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this the same as SEO?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">It&rsquo;s related but distinct. SEO covers your website&rsquo;s rankings in organic search results; Google Business Profile optimization is specifically about your map pack and local pack visibility, which is a separate ranking system with its own signals.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you require a long-term contract?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">No. GBP optimization is managed month to month, though most clients stay on since ongoing posting and review generation are what keep a profile actively ranking.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -754,9 +804,9 @@
         <a href="../seo/index.html">SEO</a>
         <a href="../ai-seo/index.html">AI SEO</a>
         <a href="../chatgpt-ads/index.html">ChatGPT Ads</a>
-        <a href="../google-business-profile/index.html">Google Business Profile</a>
+        <a href="index.html">Google Business Profile</a>
         <a href="../content-marketing/index.html">Content Marketing</a>
-        <a href="index.html">Cold Email Outreach</a>
+        <a href="../cold-email-outreach/index.html">Cold Email Outreach</a>
         <a href="../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
         <a href="../linkedin-ads/index.html">LinkedIn Ads</a>
         <a href="../appointment-setting/index.html">Appointment Setting</a>
@@ -793,18 +843,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
