@@ -458,7 +458,7 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <h1>Built by MSPs, For MSPs</h1>
+      <h1>The Only MSP Marketing Agency You&rsquo;ll Never Need</h1>
       <p>Instead of a generic marketing agency that treats every industry the same &hellip; MSP Sprout is built specifically around how managed service providers actually win new clients, so every strategy is <strong>relevant from day one</strong>, not a guessing game.</p>
       <p><em>We only onboard 2-3 new MSPs per month so every partnership gets real attention.</em></p>
       <button class="btn btn-sprout">Get to Know MSP Sprout<span class="sub">Talk to Our Team</span></button>
@@ -666,74 +666,6 @@
   </div>
 </section>
 
-<section class="section-lightblue">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Pricing</h2>
-      <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
-    </div>
-
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
-        <ul>
-          <li>MSP Lead Generation Website</li>
-          <li>Easy SEO Optimization</li>
-          <li>Drag and Drop Page Builder</li>
-          <li>Self-Managed Website Chat</li>
-          <li>Free Hosting / Free SSL</li>
-          <li>Unlimited Website Visits</li>
-          <li>Website Analytics</li>
-          <li>MSP Marketing Resources Vault</li>
-          <li>Unlimited Support</li>
-          <li>30 Day Money Back Guarantee</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-
-      <div class="price-card featured">
-        <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Starter, plus:</li>
-          <li>Call Tracking / Recording</li>
-          <li>2-Way SMS Marketing</li>
-          <li>Outbound Dialing</li>
-          <li>Automated Lead Followup</li>
-          <li>Unlimited Workflows</li>
-          <li>Appointment Scheduling</li>
-          <li>Social Media Scheduling</li>
-          <li>Google Review Management</li>
-          <li>Email Newsletters</li>
-          <li>Opportunity Pipeline</li>
-          <li>PSA / RMM Integrations</li>
-        </ul>
-        <button class="btn btn-sprout">Sign Up Now</button>
-      </div>
-
-      <div class="price-card">
-        <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Essentials, plus:</li>
-          <li>Live Human Website Appointment Booking Agent</li>
-          <li>Advanced Call Tracking / Recording</li>
-          <li>Custom Marketing Integrations</li>
-          <li>Custom Lead Dashboard</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="cta-dark">
   <div class="wrap">
     <h3 style="color:var(--sprout-light);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">Imagine &hellip;</h3>
@@ -814,18 +746,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
