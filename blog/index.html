@@ -174,7 +174,8 @@
 
   /* ---------- blog placeholder grid ---------- */
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;}
-  .blog-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.06);}
+  .blog-card{display:block;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.06);transition:transform .25s ease, box-shadow .25s ease;}
+  a.blog-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.1);}
   .blog-card .blog-thumb{
     aspect-ratio:16/10;background:var(--lavender);display:flex;align-items:center;justify-content:center;
     font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--sprout-dark);
@@ -524,14 +525,14 @@
         </div>
       </div>
 
-      <div class="blog-card">
-        <div class="blog-thumb">Coming Soon</div>
+      <a class="blog-card" href="how-to-run-google-ads-for-your-msp/index.html">
+        <div class="blog-thumb">Watch &amp; Read</div>
         <div class="blog-body">
           <span class="blog-tag">Paid Ads</span>
-          <h4>Post title coming soon</h4>
-          <p>We&rsquo;re putting the finishing touches on this one&mdash;check back shortly.</p>
+          <h4>How to Run Google Ads for Your MSP (Step-by-Step)</h4>
+          <p>Campaign structure, bidding, keyword research, ad copy, budget, and extensions&mdash;the full setup walkthrough.</p>
         </div>
-      </div>
+      </a>
 
       <div class="blog-card">
         <div class="blog-thumb">Coming Soon</div>
@@ -626,18 +627,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
