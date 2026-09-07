@@ -441,6 +441,17 @@
   .feature-card p{font-size:15px;color:#333;}
   @media (max-width:900px){.feature-grid{grid-template-columns:1fr;}}
 
+  /* ---------- comparison table ---------- */
+  .compare-wrap{overflow-x:auto;margin-top:50px;border-radius:20px;box-shadow:0 10px 40px rgba(34,53,95,.08);}
+  .compare-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;min-width:560px;}
+  .compare-table th,.compare-table td{padding:18px 20px;text-align:center;font-size:14.5px;border-bottom:1px solid var(--border-gray);}
+  .compare-table tr:last-child td{border-bottom:none;}
+  .compare-table th{background:var(--navy);color:#fff;font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;}
+  .compare-table th.featured{background:var(--grad-sprout);}
+  .compare-table th:first-child,.compare-table td:first-child{text-align:left;font-weight:600;color:var(--heading-navy);white-space:nowrap;}
+  .compare-check{color:var(--sprout);font-weight:800;font-size:18px;}
+  .compare-x{color:#c7cbd1;font-weight:800;font-size:18px;}
+
   /* ---------- playbook section (dark) ---------- */
   .playbook-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px;}
   .playbook-card{
@@ -941,40 +952,58 @@
 <section class="section-lavender">
   <div class="wrap">
     <div class="section-head">
-      <h2>How a Great MSP Website Helps You Win New Clients</h2>
-      <p>Most MSPs waste months trying to piece together websites, tools, and campaigns. MSP Sprout gives you everything in one system: built to generate leads, book appointments, and help you close deals, so you can grow without the guesswork.</p>
+      <h2>Why an MSP Sprout Website Beats a Template or DIY Builder</h2>
+      <p>Not every website is built the same way. Here&rsquo;s exactly what you get with MSP Sprout that a generic template or a DIY site builder was never built to deliver.</p>
     </div>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--orange);">Blog</span>
-        <h4>Turn Visitors into Prospects</h4>
-        <p>Your website should do more than look good &mdash; it should bring you clients. We build a professional, custom site designed to attract local businesses and turn visitors into real prospects.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--blue);">Chat</span>
-        <h4>Engage Every Visitor</h4>
-        <p>Don&rsquo;t let leads slip away. Our live chat agents talk to your visitors in real time, answer their questions, and book appointments on your calendar.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--sprout);">Ads</span>
-        <h4>Win Clients with Proven Campaigns</h4>
-        <p>From Windows end-of-life to cybersecurity risks, MSP Sprout gives you ready-to-run campaigns built around the issues local businesses care about most.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--orange);">Email</span>
-        <h4>Stay Top of Mind</h4>
-        <p>Most MSPs lose leads because they don&rsquo;t follow up enough. Our system sends timely, personalized emails and texts to keep you top of mind.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--sprout);">Web</span>
-        <h4>Nurture Every Lead</h4>
-        <p>Not every prospect is ready to buy today. MSP Sprout keeps you in front of them with email, newsletters, and LinkedIn.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--blue);">SEO</span>
-        <h4>Attract More Local Business</h4>
-        <p>We run proven SEO and ad campaigns that bring local businesses straight to your website instead of waiting on referrals.</p>
-      </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>What You Get</th>
+            <th>Generic Template</th>
+            <th>DIY Builder</th>
+            <th class="featured">MSP Sprout</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Built specifically for MSPs</td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Lead capture built in (chat, forms, booking)</td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>SEO foundations included from day one</td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Fast, mobile-optimized by default</td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Built around real MSP conversion data</td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Ongoing updates &amp; support included</td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-x">&#10005;</span></td>
+            <td><span class="compare-check">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
