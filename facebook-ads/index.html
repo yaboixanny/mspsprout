@@ -169,6 +169,7 @@
   .hero-copy{flex:1 1 46%;}
   .hero-copy h1{font-size:44px;line-height:1.25;font-weight:700;margin-bottom:20px;}
   .hero-copy p{font-size:18px;color:#333;margin-bottom:14px;}
+  .hero-copy .hero-sub{font-size:20px;font-weight:600;color:var(--heading-navy);margin-bottom:18px;}
   .hero-copy p em{color:#555;}
   .hero-copy .btn{margin-top:30px;}
   .hero-img{flex:1 1 54%;position:relative;}
@@ -198,6 +199,73 @@
     display:flex;align-items:center;gap:8px;
   }
   .hero-mock-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--sprout);}
+
+  /* ---------- Facebook Ads process steps ---------- */
+  .fb-process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 40px;margin-top:44px;}
+  .fb-step{display:flex;gap:18px;align-items:flex-start;}
+  .fb-step-num{
+    flex-shrink:0;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:14px;color:#fff;background:var(--grad-sprout);
+  }
+  .fb-step:nth-child(3n+2) .fb-step-num{background:var(--grad-pink-yellow);}
+  .fb-step:nth-child(3n) .fb-step-num{background:var(--grad-green-blue);}
+  .fb-step h4{font-size:18px;margin-bottom:8px;}
+  .fb-step p{font-size:14.5px;color:#333;line-height:1.65;}
+  @media (max-width:900px){.fb-process-grid{grid-template-columns:1fr;}}
+
+  /* ---------- how-it-works step graphics (unique per step, no stock images) ---------- */
+  .step-card{background:#fff;border-radius:20px;box-shadow:0 30px 60px rgba(20,40,30,.16);border:1px solid #eef2ee;overflow:hidden;position:relative;}
+  .step-topbar{background:#F3F5F3;padding:12px 16px;display:flex;gap:6px;}
+  .step-topbar span{width:10px;height:10px;border-radius:50%;display:block;}
+  .step-topbar span:nth-child(1){background:var(--orange);}
+  .step-topbar span:nth-child(2){background:#FEBC24;}
+  .step-topbar span:nth-child(3){background:var(--sprout-light);}
+
+  /* step 1: ad-creative/targeting wireframe/blueprint mockup */
+  .ad-wireframe-body{padding:24px 24px 28px;}
+  .ad-wf-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#999;margin-bottom:6px;}
+  .ad-wf-row{display:flex;gap:8px;margin-bottom:18px;}
+  .ad-wf-box{border:2px dashed var(--border-gray);border-radius:6px;background:#FAFBFA;height:28px;flex:1;}
+  .ad-wf-box.desc{height:44px;}
+  .ad-wf-box.accent{border-color:var(--sprout-light);background:var(--sprout-mint-bg);}
+
+  /* step 2: capture mockup (landing page + chat + lead toast) */
+  .capture-mock-body{padding:34px 30px;}
+  .capture-chat{
+    position:absolute;bottom:18px;right:18px;width:44px;height:44px;border-radius:50%;
+    background:var(--grad-sprout);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(30,158,82,.4);
+  }
+  .capture-chat::after{content:"";width:16px;height:12px;border:2px solid #fff;border-radius:3px;border-top-left-radius:0;}
+  .capture-toast{
+    position:absolute;top:-14px;left:14px;background:#fff;border-radius:14px;padding:10px 16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--heading-navy);
+    display:flex;align-items:center;gap:8px;
+  }
+  .capture-toast .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);}
+
+  /* step 3: call-tracking phone mockup */
+  .phone-mock{
+    width:220px;margin:0 auto;background:var(--navy);border-radius:34px;padding:14px;
+    box-shadow:0 30px 60px rgba(20,40,30,.2);
+  }
+  .phone-mock-screen{background:#fff;border-radius:22px;padding:26px 20px;min-height:280px;}
+  .phone-mock-notch{width:60px;height:6px;border-radius:4px;background:var(--navy);margin:0 auto 22px;}
+  .call-avatar{width:56px;height:56px;border-radius:50%;background:var(--grad-sprout);margin:0 auto 14px;}
+  .call-caller{text-align:center;font-weight:700;font-size:15px;color:var(--heading-navy);}
+  .call-tracked{text-align:center;font-size:11px;color:var(--text-gray);margin:6px 0 26px;}
+  .call-buttons{display:flex;justify-content:center;gap:34px;}
+  .call-btn{width:44px;height:44px;border-radius:50%;}
+  .call-btn.decline{background:var(--red);}
+  .call-btn.answer{background:var(--sprout);}
+
+  /* step 4: cost-per-lead tracking mockup */
+  .track-mock-body{padding:30px 28px 28px;}
+  .track-stat-row{display:flex;gap:20px;margin-bottom:22px;}
+  .track-stat{flex:1;}
+  .track-stat .num{font-size:22px;font-weight:700;color:var(--heading-navy);}
+  .track-stat .lbl{font-size:11px;color:var(--text-gray);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
+  .track-line-chart{width:100%;height:110px;display:block;}
 
   /* ---------- sections generic ---------- */
   section{padding:80px 20px;}
@@ -528,6 +596,7 @@
   <div class="wrap">
     <div class="hero-copy">
       <h1>Facebook Ads for MSPs</h1>
+      <p class="hero-sub">Built for MSPs. We get your Meta ads in front of the business owners who make IT decisions, and turn that reach into booked calls.</p>
       <p>Instead of boosting posts and hoping &hellip; we build and manage Facebook and Instagram ad campaigns engineered around the local business owners who make IT-purchasing decisions, so your ad spend turns into <strong>qualified sales calls</strong>, not vanity likes.</p>
       <button class="btn btn-sprout">Get My Meta Ads Campaign Built<span class="sub">Talk to a Meta Ads Specialist</span></button>
     </div>
@@ -554,41 +623,104 @@
 
 <section id="why" class="section-lavender">
   <div class="wrap">
-    <div class="section-head" style="max-width:900px;">
-      <h2>Work with the Experts in MSP Facebook &amp; Instagram Ads</h2>
+    <div class="section-head" style="margin-bottom:60px;">
+      <h2 style="font-size:32px;">How We Run Meta Ads for MSP&rsquo;s That Actually Gets You Leads</h2>
     </div>
+
+    <div class="two-col" style="margin-bottom:70px;">
+      <div>
+        <h3 style="font-size:22px;margin-bottom:14px;">We Build Audiences and Creative Around Decision-Makers, Not a Template</h3>
+        <p style="color:#333;font-size:16px;">Before a single ad goes live, we map out custom and lookalike audiences built from the business owners and IT decision-makers in your service area, then build creative around the pain points that actually move them&mdash;not a generic template copied from another industry. Every element has a job to do before it ever spends a dollar.</p>
+      </div>
+      <div>
+        <div class="step-card">
+          <div class="step-topbar"><span></span><span></span><span></span></div>
+          <div class="ad-wireframe-body">
+            <div class="ad-wf-label">Audiences</div>
+            <div class="ad-wf-row">
+              <div class="ad-wf-box accent"></div>
+              <div class="ad-wf-box"></div>
+              <div class="ad-wf-box"></div>
+            </div>
+            <div class="ad-wf-label">Creative</div>
+            <div class="ad-wf-row">
+              <div class="ad-wf-box desc"></div>
+            </div>
+            <div class="ad-wf-label">Placements</div>
+            <div class="ad-wf-row" style="margin-bottom:0;">
+              <div class="ad-wf-box"></div>
+              <div class="ad-wf-box"></div>
+              <div class="ad-wf-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-bottom:70px;">
+      <div>
+        <div class="step-card">
+          <div class="capture-toast"><span class="dot"></span> New Lead!</div>
+          <div class="step-topbar"><span></span><span></span><span></span></div>
+          <div class="capture-mock-body">
+            <div class="mock-line w-70"></div>
+            <div class="mock-line w-40"></div>
+            <div class="mock-line w-70" style="margin-bottom:0;"></div>
+          </div>
+          <div class="capture-chat"></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:22px;margin-bottom:14px;">Every Scroll-Stopping Ad Lands on a Page Built to Convert</h3>
+        <p style="color:#333;font-size:16px;">Ads point to a dedicated landing page matched to the offer and the audience, not your homepage, so visitors convert into calls and form fills instead of bouncing back to their feed.</p>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-bottom:70px;">
+      <div>
+        <h3 style="font-size:22px;margin-bottom:14px;">Every Call Tracked Back to the Campaign That Generated It</h3>
+        <p style="color:#333;font-size:16px;">Dedicated tracking numbers and Meta Pixel &amp; Conversions API setup mean every phone call is tied back to the exact ad and audience that produced it, so you know exactly which creative and targeting are turning into real conversations.</p>
+      </div>
+      <div>
+        <div class="phone-mock">
+          <div class="phone-mock-screen">
+            <div class="phone-mock-notch"></div>
+            <div class="call-avatar"></div>
+            <div class="call-caller">Incoming Call</div>
+            <div class="call-tracked">Tracked via Facebook Ads</div>
+            <div class="call-buttons">
+              <div class="call-btn decline"></div>
+              <div class="call-btn answer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="two-col">
       <div>
-        <p style="font-size:19px;line-height:1.7;">We get it.</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">With so many marketing "experts" out there, it&rsquo;s hard to know who to trust.</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">The truth? <strong>We&rsquo;ve been exactly where you are now.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">When we first started working with MSPs, we saw the same pattern everywhere: <strong>getting Facebook and Instagram to produce real sales conversations instead of just page likes and impressions.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">But after working with <strong>MSPs across the country</strong>, we&rsquo;ve realized something big:</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most MSP Facebook accounts run broad &ldquo;boost post&rdquo; campaigns with no real targeting.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most agencies treat Meta ads like a branding exercise instead of a lead source.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most MSPs give up on Meta ads after one campaign that never converted.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">So, we made it our mission to <strong>fix this problem once and for all.</strong></p>
+        <div class="step-card">
+          <div class="step-topbar"><span></span><span></span><span></span></div>
+          <div class="track-mock-body">
+            <div class="track-stat-row">
+              <div class="track-stat"><div class="num">112</div><div class="lbl">Leads</div></div>
+              <div class="track-stat"><div class="num">$18.42</div><div class="lbl">Cost / Lead</div></div>
+            </div>
+            <svg class="track-line-chart" viewBox="0 0 260 110" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="0,90 40,78 80,82 120,55 160,60 200,28 260,15" fill="none" stroke="url(#trackGradFB)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="trackGradFB" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#147A3F"/>
+                  <stop offset="1" stop-color="#9AD84B"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
       </div>
       <div>
-        <div class="photo-placeholder">
-          <span class="icon">🌱</span>
-          Add your team or founder photo here
-        </div>
-        <div class="stat-card">
-          <h4>Built by MSPs, For MSPs</h4>
-          <p style="font-size:15px;color:#333;">We&rsquo;ve spent years running Meta campaigns built specifically for MSPs&mdash;testing audiences, creative, and landing pages so you don&rsquo;t have to learn Meta Ads Manager from scratch. Every campaign is built on what we&rsquo;ve proven actually converts.</p>
-        </div>
-      </div>
-    </div>
-    <div class="stat-cards" style="margin-top:40px;">
-      <div class="stat-card">
-        <h4>The result?</h4>
-        <ul>
-          <li><strong>[X,XXX]</strong> tracked calls and form fills generated for MSPs like you.</li>
-          <li>Clients see qualified leads within the first 30 days.</li>
-          <li>Our clients see a lower cost per lead than boosted posts or DIY campaigns.</li>
-        </ul>
-        <p style="font-weight:600;">This isn&rsquo;t a theory. It&rsquo;s a battle-tested, data-driven system that works.</p>
+        <h3 style="font-size:22px;margin-bottom:14px;">We Track Cost Per Lead, Not Just Reach</h3>
+        <p style="color:#333;font-size:16px;">Every form fill and booked call is tracked back to the campaign that generated it, so you always know your real cost per lead&mdash;and we shift budget toward whatever creative and audience is actually converting.</p>
       </div>
     </div>
   </div>
@@ -598,14 +730,56 @@
   <div class="wrap">
     <div class="section-head" style="text-align:left;max-width:none;">
       <h2 style="font-size:32px;">So, How Does Our Meta Ads Management Actually Work?</h2>
+      <p style="margin-top:14px;color:var(--text-gray);font-size:16px;">We&rsquo;ve run Facebook and Instagram ads for MSPs across the U.S. and Canada, in competitive metros and smaller markets alike. Here&rsquo;s how we deliver results, consistently.</p>
     </div>
-    <div class="two-col">
-      <div>
-        <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a9f73eb4dbe00a65aaf896.png" alt="Facebook and Instagram ad campaign performance diagram" style="margin-bottom:24px;">
+
+    <div class="fb-process-grid">
+      <div class="fb-step">
+        <div class="fb-step-num">1</div>
+        <div>
+          <h4>Strategy Before Spend</h4>
+          <p>We start by understanding your market, your ideal client profile, and what&rsquo;s already been tried&mdash;whether this is your first Meta campaign or your fifth agency. Every account is built around who actually buys from you, not a generic playbook.</p>
+        </div>
       </div>
-      <div>
-        <h3 style="font-size:22px;margin-bottom:14px;">Built Around Decision-Maker Targeting</h3>
-        <p style="color:#333;font-size:16px;">We start by building custom and lookalike audiences based on the actual business owners and IT decision-makers in your service area&mdash;not broad interest categories. Every campaign pairs sharp creative with a landing page built to convert, so scroll-stopping ads turn into booked calls.</p>
+
+      <div class="fb-step">
+        <div class="fb-step-num">2</div>
+        <div>
+          <h4>Custom &amp; Lookalike Audiences Built Around Your Best Clients</h4>
+          <p>We upload your client list to build lookalike audiences, then layer in local business-owner and job-title targeting so your budget only reaches real IT decision-makers&mdash;not broad interest categories that just look busy in a dashboard.</p>
+        </div>
+      </div>
+
+      <div class="fb-step">
+        <div class="fb-step-num">3</div>
+        <div>
+          <h4>Scroll-Stopping Creative, Tested Live</h4>
+          <p>We design multiple video and static creative variants built around real IT pain points, then test them against each other in-platform&mdash;so we know what&rsquo;s working with real spend, not a hunch.</p>
+        </div>
+      </div>
+
+      <div class="fb-step">
+        <div class="fb-step-num">4</div>
+        <div>
+          <h4>Landing Pages That Match the Ad</h4>
+          <p>Traffic goes to a message-matched landing page built for the specific offer and audience, not a throwaway &ldquo;ad-only&rdquo; page with nothing behind it. If you&rsquo;re on an MSP Sprout website, we tune it using our own lead-gen funnel system.</p>
+        </div>
+      </div>
+
+      <div class="fb-step">
+        <div class="fb-step-num">5</div>
+        <div>
+          <h4>We Launch Once Tracking and Creative Are Actually Ready</h4>
+          <p>Campaigns don&rsquo;t go live until the Meta Pixel, Conversions API, and call tracking are all in place. From there we&rsquo;re in the account weekly, refreshing creative and shifting budget based on what&rsquo;s actually converting&mdash;not a set-it-and-forget-it schedule.</p>
+        </div>
+      </div>
+
+      <div class="fb-step">
+        <div class="fb-step-num">6</div>
+        <div>
+          <h4>Monthly Reporting, Built for Scaling Decisions</h4>
+          <p>You get a monthly report and an optional growth call to walk through performance, trends, and where to double down. Most clients increase budget after their first one or two closed deals, once the math is proven.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -788,14 +962,6 @@
     <h2>having a <strong>website that</strong> doesn&rsquo;t just sit there&mdash;it <strong>works for you</strong>, 24/7, capturing leads, scheduling calls, and converting visitors into clients.</h2>
     <p>With MSP Sprout, you&rsquo;re not just getting a website; you&rsquo;re getting a complete growth engine for your MSP.</p>
     <button class="btn btn-pink-yellow">I&rsquo;m Ready to Grow.<span class="sub">Let&rsquo;s Do This!</span></button>
-  </div>
-</section>
-
-<section class="footer-fail">
-  <div class="wrap">
-    <h2>You Don&rsquo;t Fail From Doing the Wrong Thing &hellip;</h2>
-    <h2 style="color:var(--sprout);">You Fail From Doing Nothing</h2>
-    <p>There are two costs in business: what you pay and what you miss out on by not acting. If your MSP isn't generating leads consistently, it's not a matter of &ldquo;if&rdquo; you need this&mdash;it's a matter of how much longer you're willing to pay the price of doing nothing.</p>
   </div>
 </section>
 
