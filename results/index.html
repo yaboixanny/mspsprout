@@ -169,6 +169,7 @@
   .hero-copy{flex:1 1 46%;}
   .hero-copy h1{font-size:44px;line-height:1.25;font-weight:700;margin-bottom:20px;}
   .hero-copy p{font-size:18px;color:#333;margin-bottom:14px;}
+  .hero-copy .hero-sub{font-size:20px;font-weight:600;color:var(--heading-navy);margin-bottom:18px;}
   .hero-copy p em{color:#555;}
   .hero-copy .btn{margin-top:30px;}
   .hero-img{flex:1 1 54%;position:relative;}
@@ -395,6 +396,17 @@
   .social-row{display:flex;justify-content:center;gap:16px;margin-bottom:14px;}
   .social-row a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
 
+  /* ---------- coming soon ---------- */
+  .coming-soon{background:var(--lavender);padding:110px 20px;text-align:center;}
+  .coming-soon .badge{
+    display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:50px;
+    padding:10px 22px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    color:var(--sprout-dark);box-shadow:0 10px 30px rgba(34,53,95,.08);margin-bottom:26px;
+  }
+  .coming-soon .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--sprout);}
+  .coming-soon h2{font-size:36px;max-width:760px;margin:0 auto 18px;line-height:1.3;}
+  .coming-soon p{font-size:17px;color:var(--text-gray);max-width:600px;margin:0 auto 34px;}
+
   .text-gradient{
     background-image:var(--grad-sprout);
     -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;
@@ -459,8 +471,8 @@
   <div class="wrap">
     <div class="hero-copy">
       <h1>Results Built Specifically for MSPs</h1>
+      <p class="hero-sub">Real numbers from real MSP partners&mdash;tracked leads, booked calls, and cost per lead across every channel we run.</p>
       <p>Instead of empty promises &hellip; here are the numbers behind the MSP Sprout system, from sales appointments booked to leads generated across every channel we run.</p>
-      <p><em>Full results reporting updates as new MSP partners complete their first 90 days on the system.</em></p>
       <button class="btn btn-sprout">See What's Possible<span class="sub">Talk to Our Team</span></button>
     </div>
     <div class="hero-img">
@@ -484,270 +496,12 @@
   </div>
 </section>
 
-<section id="why" class="section-lavender">
+<section class="coming-soon">
   <div class="wrap">
-    <div class="section-head" style="max-width:900px;">
-      <h2>What Results Actually Look Like With MSP Sprout</h2>
-    </div>
-    <div class="two-col">
-      <div>
-        <p style="font-size:19px;line-height:1.7;">We get it.</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">With so many marketing "experts" out there, it&rsquo;s hard to know who to trust.</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">The truth? <strong>We&rsquo;ve been exactly where you are now.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">When we first started working with MSPs, we saw the same pattern everywhere: <strong>getting a straight answer on what results to actually expect from a marketing agency.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">But after working with <strong>MSPs across the country</strong>, we&rsquo;ve realized something big:</p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most agencies report on clicks and impressions instead of leads and booked calls.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most MSPs have no idea what a realistic 90-day result should look like.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;"><strong>&#128994; Most &ldquo;results pages&rdquo; online show cherry-picked wins with no context.</strong></p>
-        <p style="font-size:19px;line-height:1.7;margin-top:15px;">So, we made it our mission to <strong>fix this problem once and for all.</strong></p>
-      </div>
-      <div>
-        <div class="photo-placeholder">
-          <span class="icon">🌱</span>
-          Add your team or founder photo here
-        </div>
-        <div class="stat-card">
-          <h4>Built by MSPs, For MSPs</h4>
-          <p style="font-size:15px;color:#333;">We report on the same metrics every client sees in their own dashboard&mdash;tracked leads, booked calls, and cost per lead&mdash;so what you see here reflects what actually happens across our MSP partners.</p>
-        </div>
-      </div>
-    </div>
-    <div class="stat-cards" style="margin-top:40px;">
-      <div class="stat-card">
-        <h4>The result?</h4>
-        <ul>
-          <li><strong>[X,XXX]</strong> sales appointments generated across our MSP partners to date.</li>
-          <li>Clients typically see their first tracked leads within the first 90 days.</li>
-          <li>Results reporting updates as new MSP partners complete their first full engagement cycle.</li>
-        </ul>
-        <p style="font-weight:600;">This isn&rsquo;t a theory. It&rsquo;s a battle-tested, data-driven system that works.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how" class="section-cream">
-  <div class="wrap">
-    <div class="section-head" style="text-align:left;max-width:none;">
-      <h2 style="font-size:32px;">So, How Do We Measure These Results?</h2>
-    </div>
-    <div class="two-col">
-      <div>
-        <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a9f73eb4dbe00a65aaf896.png" alt="Results tracking dashboard diagram" style="margin-bottom:24px;">
-      </div>
-      <div>
-        <h3 style="font-size:22px;margin-bottom:14px;">Every Lead Tracked From Click to Close</h3>
-        <p style="color:#333;font-size:16px;">Every lead, call, and booked appointment is tracked back to the exact channel and campaign that generated it. That&rsquo;s what lets us report on real cost per lead and booked calls instead of vanity metrics like impressions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-cream" style="padding-top:0;">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>The Numbers Behind the MSP Sprout System</h2>
-      <h3 style="font-size:20px;color:var(--sprout);margin-top:10px;">What We Actually Measure</h3>
-      <p style="margin-top:14px;">Here&rsquo;s what we track for every MSP partner, and why each metric matters more than the vanity numbers most agencies report.</p>
-    </div>
-
-    <div class="archetype-grid">
-      <div class="archetype-card">
-        <div class="a-icon"><h4>Tracked Leads Generated</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>Every form fill, call, and chat is tracked back to the exact channel that produced it.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Channel-level lead attribution</li><li>No duplicate or unqualified counting</li><li>Monthly lead volume reporting</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
-      </div>
-
-      <div class="archetype-card">
-        <div class="a-icon"><h4>Booked &amp; Held Appointments</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We track not just booked calls but how many actually happen, since that&rsquo;s what really matters.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Booked vs. held rate tracking</li><li>Show-rate reporting</li><li>No-show recovery tracking</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
-      </div>
-
-      <div class="archetype-card">
-        <div class="a-icon"><h4>Cost Per Lead &amp; Cost Per Call</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We report real cost per lead and per booked call so you know the actual return on your spend.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Real cost-per-lead reporting</li><li>Cost-per-booked-call tracking</li><li>Channel-by-channel cost comparison</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
-      </div>
-
-      <div class="archetype-card">
-        <div class="a-icon"><h4>Ranking &amp; Traffic Growth</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>For SEO clients, we track ranking movement and organic traffic growth over time.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Keyword rank tracking</li><li>Organic traffic reporting</li><li>Local map pack visibility tracking</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
-      </div>
-
-      <div class="archetype-card">
-        <div class="a-icon"><h4>Pipeline &amp; Closed Deals</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>Where possible, we track leads all the way through to closed deals so you see the full revenue picture.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Pipeline stage tracking</li><li>Closed-deal attribution</li><li>Revenue-per-channel visibility</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
-      </div>
-
-      <div class="archetype-card">
-        <div class="a-icon"><h4>Time to First Result</h4></div>
-        <div class="a-body" style="padding-top:6px;"><p>We track how long it actually takes new partners to see their first tracked lead or booked call.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>First-lead timeline tracking</li><li>First-booked-call timeline tracking</li><li>Cohort comparisons across partners</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-dark" id="cta">
-  <div class="wrap">
-    <h2>You already have what it takes to grow your MSP; you just need the system to unlock it.</h2>
-    <button class="btn btn-sprout">Schedule a Growth Call<span class="sub">Yes! I want more clients</span></button>
-  </div>
-</section>
-
-<section class="section-lavender">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Why MSP Sprout&rsquo;s Reporting Is Different</h2>
-      <p>Most agencies report on clicks and impressions because that&rsquo;s all they can measure. MSP Sprout tracks leads, booked calls, and cost per lead across every channel.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--orange);">Leads</span>
-        <h4>Real Lead Tracking</h4>
-        <p>Every lead attributed to the exact channel and campaign that generated it.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--blue);">Shows</span>
-        <h4>Show-Rate Visibility</h4>
-        <p>We track not just booked calls but how many actually happen.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--sprout);">Cost</span>
-        <h4>True Cost Per Lead</h4>
-        <p>Real cost-per-lead and cost-per-call reporting, not vanity click metrics.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--orange);">Rank</span>
-        <h4>Ranking &amp; Traffic Data</h4>
-        <p>Keyword rank and organic traffic tracked over time for SEO clients.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--sprout);">Close</span>
-        <h4>Pipeline Visibility</h4>
-        <p>Leads tracked through to closed deals wherever possible.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon-btn" style="color:var(--blue);">Speed</span>
-        <h4>Time-to-Result Tracking</h4>
-        <p>Clear timelines on how long new partners take to see their first results.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="playbook" class="section-navy">
-  <div class="wrap">
-    <div class="section-head">
-      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">The Playbook</h3>
-      <h2>The Proven Playbook Behind MSP Sprout</h2>
-      <p>The <strong style="color:var(--orange);">MSP Get Clients Playbook</strong> is the system we&rsquo;ve built after years of generating leads for MSPs. Whether you run it yourself with our coaching, or have us run it for you, every part of MSP Sprout ties back to this Playbook.</p>
-    </div>
-    <div class="playbook-grid">
-      <div class="playbook-card">
-        <div class="svg-badge">&#9737;</div>
-        <h4>Real-World Strategies<br>That Work</h4>
-        <p>This isn&rsquo;t just theory. We use the exact strategies that have helped MSPs consistently win new clients.</p>
-      </div>
-      <div class="playbook-card">
-        <div class="svg-badge">&#8635;</div>
-        <h4>Live Coaching Twice<br>Per Week</h4>
-        <p>Join our expert-led coaching sessions every Tuesday and Thursday to get personalized support, ask questions, and refine your strategy.</p>
-      </div>
-      <div class="playbook-card">
-        <div class="svg-badge">&#9733;</div>
-        <h4>Comprehensive Training Library</h4>
-        <p>Our comprehensive training course <strong style="color:#fff;">The MSP Lead Gen Playbook</strong> walks you through exactly how to win new clients using the MSP Sprout system.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-lightblue">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Pricing</h2>
-      <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
-    </div>
-
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
-        <ul>
-          <li>MSP Lead Generation Website</li>
-          <li>Easy SEO Optimization</li>
-          <li>Drag and Drop Page Builder</li>
-          <li>Self-Managed Website Chat</li>
-          <li>Free Hosting / Free SSL</li>
-          <li>Unlimited Website Visits</li>
-          <li>Website Analytics</li>
-          <li>MSP Marketing Resources Vault</li>
-          <li>Unlimited Support</li>
-          <li>30 Day Money Back Guarantee</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-
-      <div class="price-card featured">
-        <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Starter, plus:</li>
-          <li>Call Tracking / Recording</li>
-          <li>2-Way SMS Marketing</li>
-          <li>Outbound Dialing</li>
-          <li>Automated Lead Followup</li>
-          <li>Unlimited Workflows</li>
-          <li>Appointment Scheduling</li>
-          <li>Social Media Scheduling</li>
-          <li>Google Review Management</li>
-          <li>Email Newsletters</li>
-          <li>Opportunity Pipeline</li>
-          <li>PSA / RMM Integrations</li>
-        </ul>
-        <button class="btn btn-sprout">Sign Up Now</button>
-      </div>
-
-      <div class="price-card">
-        <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Essentials, plus:</li>
-          <li>Live Human Website Appointment Booking Agent</li>
-          <li>Advanced Call Tracking / Recording</li>
-          <li>Custom Marketing Integrations</li>
-          <li>Custom Lead Dashboard</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-dark">
-  <div class="wrap">
-    <h3 style="color:var(--sprout-light);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">Imagine &hellip;</h3>
-    <h2>having a <strong>website that</strong> doesn&rsquo;t just sit there&mdash;it <strong>works for you</strong>, 24/7, capturing leads, scheduling calls, and converting visitors into clients.</h2>
-    <p>With MSP Sprout, you&rsquo;re not just getting a website; you&rsquo;re getting a complete growth engine for your MSP.</p>
-    <button class="btn btn-pink-yellow">I&rsquo;m Ready to Grow.<span class="sub">Let&rsquo;s Do This!</span></button>
-  </div>
-</section>
-
-<section class="footer-fail">
-  <div class="wrap">
-    <h2>You Don&rsquo;t Fail From Doing the Wrong Thing &hellip;</h2>
-    <h2 style="color:var(--sprout);">You Fail From Doing Nothing</h2>
-    <p>There are two costs in business: what you pay and what you miss out on by not acting. If your MSP isn't generating leads consistently, it's not a matter of &ldquo;if&rdquo; you need this&mdash;it's a matter of how much longer you're willing to pay the price of doing nothing.</p>
+    <div class="badge"><span class="dot"></span> Coming Soon</div>
+    <h2>Real Results, Coming Soon to This Page</h2>
+    <p>We&rsquo;re currently compiling tracked leads, booked calls, and cost-per-lead data from our MSP partners. Check back soon to see the full numbers behind the MSP Sprout system.</p>
+    <button class="btn btn-sprout">Talk to Our Team<span class="sub">Get Started Today</span></button>
   </div>
 </section>
 
@@ -821,18 +575,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
