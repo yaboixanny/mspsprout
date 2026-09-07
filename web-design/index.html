@@ -525,6 +525,15 @@
   .price-card ul li{font-size:14px;padding-left:26px;position:relative;margin-bottom:10px;line-height:1.4;}
   .price-card ul li::before{content:"✓";position:absolute;left:0;color:var(--sprout);font-weight:700;}
   .price-card .btn{width:100%;padding:14px;border-radius:50px;}
+  .price-card .price-combo{margin:14px 0 4px;}
+  .price-card .price-combo .amt-big{font-size:34px;font-weight:700;color:#111;}
+  .price-card .price-combo .price-line{font-size:15px;color:#555;margin-bottom:2px;}
+  .price-card .sub-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--sprout-dark);margin:22px 0 4px;}
+  .price-card .sub-label:first-of-type{margin-top:22px;}
+  .price-card .positioning-line{
+    font-family:var(--font-quote);font-style:italic;font-size:14.5px;color:var(--heading-navy);
+    line-height:1.5;border-top:1px solid var(--border-gray);padding-top:18px;margin-top:auto;margin-bottom:22px;
+  }
   @media (max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
 
   /* ---------- guarantee ---------- */
@@ -1044,61 +1053,51 @@
       <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
     </div>
 
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
-        <ul>
-          <li>MSP Lead Generation Website</li>
-          <li>Easy SEO Optimization</li>
-          <li>Drag and Drop Page Builder</li>
-          <li>Self-Managed Website Chat</li>
-          <li>Free Hosting / Free SSL</li>
-          <li>Unlimited Website Visits</li>
-          <li>Website Analytics</li>
-          <li>MSP Marketing Resources Vault</li>
-          <li>Unlimited Support</li>
-          <li>30 Day Money Back Guarantee</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-
+    <div class="pricing-grid" style="grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto;">
       <div class="price-card featured">
-        <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
+        <h3>Client Acquisition System</h3>
+        <div class="price-combo">
+          <div class="price-line"><span class="amt-big">$997</span> to launch</div>
+          <div class="price-line">+ <span class="amt-big">$297</span>/month</div>
+        </div>
+
+        <p class="sub-label">System Build (One-Time)</p>
         <ul>
-          <li>Everything in Starter, plus:</li>
-          <li>Call Tracking / Recording</li>
-          <li>2-Way SMS Marketing</li>
-          <li>Outbound Dialing</li>
-          <li>Automated Lead Followup</li>
-          <li>Unlimited Workflows</li>
-          <li>Appointment Scheduling</li>
-          <li>Social Media Scheduling</li>
-          <li>Google Review Management</li>
-          <li>Email Newsletters</li>
-          <li>Opportunity Pipeline</li>
-          <li>PSA / RMM Integrations</li>
+          <li>Full front-end acquisition site&mdash;not a brochure, a conversion engine built to turn visitors into booked calls</li>
+          <li>Strategic page architecture: home, service pages, proof/case study section, and a dedicated &ldquo;why us&rdquo; positioning page built around your niche</li>
+          <li>Conversion-focused layout&mdash;clear CTAs, trust signals, and a booking flow designed to move a visitor from landing to lead</li>
+          <li>Mobile-optimized and built for speed (slow load = lost leads)</li>
+          <li>Lead capture and routing set up from day one&mdash;forms feed straight into your CRM/inbox, no manual follow-up required</li>
+          <li>Foundational SEO and tracking installed, so every visitor is measurable, not just &ldquo;traffic&rdquo;</li>
         </ul>
+
+        <p class="sub-label">Ongoing System Management (Monthly)</p>
+        <ul>
+          <li>Hosting, uptime, and security fully managed</li>
+          <li>Conversion monitoring&mdash;we watch how the site performs, not just whether it&rsquo;s online</li>
+          <li>Monthly optimization pass: copy tweaks, CTA adjustments, page updates based on what&rsquo;s actually converting</li>
+          <li>SEO maintenance to keep organic visibility compounding, not stagnant</li>
+          <li>Priority support, 48-hour turnaround on requests</li>
+        </ul>
+
+        <p class="positioning-line">&ldquo;This isn&rsquo;t a website you pay to maintain&mdash;it&rsquo;s a client acquisition system you pay to keep improving.&rdquo;</p>
         <button class="btn btn-sprout">Sign Up Now</button>
       </div>
 
       <div class="price-card">
-        <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
+        <h3>Acquisition System, Fully Built</h3>
+        <div class="price"><span class="amt">$4,997</span><span> one-time</span></div>
         <ul>
-          <li>Everything in Essentials, plus:</li>
-          <li>Live Human Website Appointment Booking Agent</li>
-          <li>Advanced Call Tracking / Recording</li>
-          <li>Custom Marketing Integrations</li>
-          <li>Custom Lead Dashboard</li>
+          <li>Complete front-end acquisition system across 8&ndash;15 pages, including dedicated landing pages built for each service line or vertical you target</li>
+          <li>Full conversion architecture: proof sections, objection-handling content, staged CTAs, and booking flow built around how MSP buyers actually evaluate vendors</li>
+          <li>Deeper SEO and content strategy so the system compounds organic leads over time, not just paid</li>
+          <li>Tracking and analytics setup so every page&rsquo;s performance is visible to you</li>
+          <li>Resource/authority section that builds trust with technical buyers before they ever get on a call</li>
+          <li>One round of post-launch revisions</li>
+          <li>You own the entire system outright&mdash;no recurring fees</li>
         </ul>
+
+        <p class="positioning-line">&ldquo;Own your acquisition system outright&mdash;built once, working indefinitely.&rdquo;</p>
         <button class="btn btn-outline">Get Started</button>
       </div>
     </div>
@@ -1223,18 +1222,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
