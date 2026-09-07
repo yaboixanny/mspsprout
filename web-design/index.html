@@ -256,6 +256,60 @@
   .track-stat .lbl{font-size:11px;color:var(--text-gray);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
   .track-line-chart{width:100%;height:110px;display:block;}
 
+  /* ---------- stacked SaaS-style feature cards ---------- */
+  .saas-stack{display:flex;flex-direction:column;gap:44px;}
+  .saas-card{
+    background:#fff;border-radius:28px;padding:56px;box-shadow:0 20px 60px rgba(20,40,30,.08);
+    display:flex;align-items:center;gap:64px;
+  }
+  .saas-card:nth-child(even){flex-direction:row-reverse;}
+  .saas-card > div{flex:1;min-width:0;}
+  .saas-eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sprout);margin-bottom:14px;display:block;}
+  .saas-card h3{font-size:30px;line-height:1.25;margin-bottom:18px;}
+  .saas-card p{font-size:16px;color:#333;line-height:1.7;margin-bottom:28px;}
+  @media (max-width:900px){
+    .saas-card, .saas-card:nth-child(even){flex-direction:column;gap:36px;padding:36px 28px;}
+  }
+
+  /* campaign mockup (card 3) */
+  .campaign-mock-body{padding:0;}
+  .campaign-mock-banner{background:var(--grad-sprout);padding:20px 24px;color:#fff;font-weight:700;font-size:14px;}
+  .campaign-mock-content{padding:24px;}
+  .campaign-tag-row{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap;}
+  .campaign-tag{
+    font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;
+    background:var(--sprout-mint-bg);color:var(--sprout-dark);border:1px solid var(--sprout-mint-border);
+  }
+
+  /* follow-up sms mockup (card 4) */
+  .sms-bubble{max-width:85%;padding:10px 14px;border-radius:14px;font-size:12.5px;line-height:1.4;margin-bottom:10px;}
+  .sms-bubble.in{background:#EDF3EE;color:#333;border-bottom-left-radius:4px;}
+  .sms-bubble.out{background:var(--grad-sprout);color:#fff;margin-left:auto;border-bottom-right-radius:4px;}
+  .sms-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--sprout-dark);text-align:center;margin-bottom:14px;}
+
+  /* SEO/ads mockup (card 5) */
+  .serp-mock-body{padding:26px 24px 30px;}
+  .serp-search{
+    background:#F3F5F3;border-radius:30px;padding:11px 18px;font-size:13px;color:#666;
+    display:flex;align-items:center;gap:10px;margin-bottom:20px;
+  }
+  .serp-search .loupe{width:13px;height:13px;border-radius:50%;border:2px solid #999;flex-shrink:0;position:relative;}
+  .serp-search .loupe::after{content:"";position:absolute;width:6px;height:2px;background:#999;bottom:-3px;right:-5px;transform:rotate(45deg);}
+  .serp-result{border-radius:10px;padding:14px 16px;margin-bottom:12px;}
+  .serp-result.ad{background:var(--sprout-mint-bg);border:1px solid var(--sprout-mint-border);}
+  .serp-result .tag{
+    font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--sprout-dark);
+    background:#fff;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:8px;
+  }
+
+  /* nurture mockup (card 6) */
+  .nurture-mock-body{padding:34px 30px;}
+  .nurture-badge{
+    position:absolute;top:-14px;right:18px;width:36px;height:36px;border-radius:8px;
+    background:#0A66C2;color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(10,102,194,.35);
+  }
+
   /* ---------- problem/agitation (editorial) ---------- */
   .agitation{padding:100px 20px;background:var(--cream);}
   .agitation .agitation-inner{max-width:560px;margin:0 auto;position:relative;}
@@ -692,20 +746,149 @@
   </div>
 </section>
 
-<section id="how" class="section-cream">
+<section id="how" class="section-lightblue">
   <div class="wrap">
     <div class="section-head" style="margin-bottom:64px;">
       <h2 style="font-size:40px;margin-bottom:22px;">How a Website Built by MSP Sprout Helps You Win New Clients</h2>
       <p style="color:var(--heading-navy);font-size:20px;font-weight:600;line-height:1.6;">Most MSPs waste months cobbling together a website, a handful of disconnected tools, and campaigns that were never built to work together. MSP Sprout replaces all of it with one system&mdash;engineered to generate leads, book appointments, and move deals forward, so growth stops depending on guesswork.</p>
       <p style="margin-top:26px;color:var(--heading-navy);font-size:17px;font-weight:600;">Here&rsquo;s how a website built by MSP Sprout gives your MSP the edge:</p>
     </div>
-    <div class="two-col">
-      <div>
-        <img src="https://assets.cdn.filesafe.space/qWsFgFCWKkT3oabJK8mp/media/67a9f73eb4dbe00a65aaf896.png" alt="MSP Site diagram" style="margin-bottom:24px;">
+    <div class="saas-stack">
+      <div class="saas-card">
+        <div>
+          <span class="saas-eyebrow">Turn Visitors Into Prospects</span>
+          <h3>A Lead Generation Website Built for Your MSP</h3>
+          <p>Your website should do more than look good&mdash;it should bring you clients. We build a professional, custom site for your MSP, engineered to attract local businesses and turn visitors into real prospects.</p>
+          <button class="btn btn-sprout">Schedule a Growth Call</button>
+        </div>
+        <div>
+          <div class="hero-mock">
+            <div class="hero-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="hero-mock-body">
+              <div class="mock-line w-70"></div>
+              <div class="mock-line w-40"></div>
+              <div class="mock-chart">
+                <div class="bar" style="height:35%"></div>
+                <div class="bar" style="height:55%"></div>
+                <div class="bar" style="height:45%"></div>
+                <div class="bar" style="height:75%"></div>
+                <div class="bar" style="height:65%"></div>
+                <div class="bar" style="height:92%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3 style="font-size:22px;margin-bottom:14px;">An MSP Site Puts You in Control</h3>
-        <p style="color:#333;font-size:16px;">It&rsquo;s a high-performance lead machine, built to capture and convert visitors instantly. With live chat, easy booking, and automated follow-ups, every prospect becomes an opportunity. Plus, we give you the tools to attract the right businesses&mdash;those actively searching for IT support.</p>
+
+      <div class="saas-card">
+        <div>
+          <span class="saas-eyebrow">Engage Every Visitor</span>
+          <h3>Real Chat Agents Who Book Appointments From Your Site</h3>
+          <p>Don&rsquo;t let leads slip away. Our live chat agents talk with your visitors in real time, answer their questions, and get appointments straight onto your calendar, so you never miss an opportunity.</p>
+          <button class="btn btn-sprout">Schedule a Growth Call</button>
+        </div>
+        <div>
+          <div class="step-card">
+            <div class="capture-toast"><span class="dot"></span> Appointment Booked!</div>
+            <div class="step-topbar"><span></span><span></span><span></span></div>
+            <div class="capture-mock-body">
+              <div class="mock-line w-70"></div>
+              <div class="mock-line w-40"></div>
+              <div class="mock-line w-70" style="margin-bottom:0;"></div>
+            </div>
+            <div class="capture-chat"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="saas-card">
+        <div>
+          <span class="saas-eyebrow">Win Clients With Proven Campaigns</span>
+          <h3>Campaigns That Create Real Opportunities for Your MSP</h3>
+          <p>From Windows end-of-life to cybersecurity risk, MSP Sprout runs ready-to-launch campaigns built around the issues local businesses actually worry about. These campaigns start conversations, move prospects to act, and open the door to new client relationships.</p>
+          <button class="btn btn-sprout">Schedule a Growth Call</button>
+        </div>
+        <div>
+          <div class="step-card">
+            <div class="campaign-mock-body">
+              <div class="campaign-mock-banner">Is Your Business Ready for Windows 10 End-of-Life?</div>
+              <div class="campaign-mock-content">
+                <div class="mock-line w-70"></div>
+                <div class="mock-line w-40" style="margin-bottom:0;"></div>
+                <div class="campaign-tag-row">
+                  <span class="campaign-tag">Windows EOL</span>
+                  <span class="campaign-tag">Cyber Risk</span>
+                  <span class="campaign-tag">Compliance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="saas-card">
+        <div>
+          <span class="saas-eyebrow">Stay Top of Mind</span>
+          <h3>Automated Follow-Ups So No Lead Slips Away</h3>
+          <p>Most MSPs lose leads simply because they stop following up. Our system sends timely, personalized emails and texts that keep your name in front of prospects, so when they&rsquo;re finally ready, you&rsquo;re the one they call.</p>
+          <button class="btn btn-sprout">Schedule a Growth Call</button>
+        </div>
+        <div>
+          <div class="phone-mock">
+            <div class="phone-mock-screen">
+              <div class="phone-mock-notch"></div>
+              <div class="sms-badge">Automated Follow-Up</div>
+              <div class="sms-bubble out">Hi! Just following up on your IT consultation request&mdash;still a good time this week?</div>
+              <div class="sms-bubble in">Yes, Thursday works great.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="saas-card">
+        <div>
+          <span class="saas-eyebrow">Attract More Local Business</span>
+          <h3>SEO and Ads That Bring In More Local Business</h3>
+          <p>We run proven SEO and ad campaigns that put your MSP directly in front of local businesses searching for help. Instead of waiting on referrals, you get a consistent stream of real prospects who need IT support right now.</p>
+          <button class="btn btn-sprout">Schedule a Growth Call</button>
+        </div>
+        <div>
+          <div class="step-card">
+            <div class="step-topbar"><span></span><span></span><span></span></div>
+            <div class="serp-mock-body">
+              <div class="serp-search"><span class="loupe"></span> it support near me</div>
+              <div class="serp-result ad">
+                <span class="tag">Ad</span>
+                <div class="mock-line w-70"></div>
+                <div class="mock-line w-40" style="margin-bottom:0;"></div>
+              </div>
+              <div class="serp-result">
+                <div class="mock-line w-70"></div>
+                <div class="mock-line w-40" style="margin-bottom:0;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="saas-card">
+        <div>
+          <span class="saas-eyebrow">Nurture Every Lead</span>
+          <h3>Email, Newsletters, and LinkedIn to Nurture Prospects</h3>
+          <p>Not every prospect is ready to buy today. MSP Sprout keeps your MSP in front of them through email, newsletters, and LinkedIn, so when the timing&rsquo;s right, you&rsquo;re the name they already trust.</p>
+          <button class="btn btn-sprout">Schedule a Growth Call</button>
+        </div>
+        <div>
+          <div class="step-card">
+            <div class="nurture-badge">in</div>
+            <div class="step-topbar"><span></span><span></span><span></span></div>
+            <div class="nurture-mock-body">
+              <div class="mock-line w-70"></div>
+              <div class="mock-line w-40"></div>
+              <div class="mock-line w-70" style="margin-bottom:0;"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
