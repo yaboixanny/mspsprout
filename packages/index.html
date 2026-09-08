@@ -249,7 +249,7 @@
 
   .stat-cards{display:flex;gap:24px;margin-top:20px;}
   .stat-card{background:#fff;border-radius:20px;padding:36px;flex:1;box-shadow:0 10px 40px rgba(34,53,95,.08);}
-  .stat-card h4{color:var(--sprout);font-size:20px;margin-bottom:16px;}
+  .stat-card h3{color:var(--sprout);font-size:20px;margin-bottom:16px;}
   .stat-card ul li{padding-left:32px;position:relative;margin-bottom:14px;font-size:15px;line-height:1.5;}
   .stat-card ul li::before{
     content:"✓";position:absolute;left:0;top:0;
@@ -266,7 +266,7 @@
   }
   .archetype-card .a-icon{display:flex;align-items:center;gap:10px;padding:20px 20px 0;}
   .archetype-card .a-icon img{width:26px;height:26px;}
-  .archetype-card .a-icon h4{font-size:19px;color:var(--heading-navy);}
+  .archetype-card .a-icon h3{font-size:19px;color:var(--heading-navy);}
   .archetype-card .a-thumb{padding:14px 20px;}
   .archetype-card .a-thumb img{border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);}
   .archetype-card .a-body{padding:0 20px 20px;}
@@ -280,7 +280,7 @@
   .archetype-card:nth-child(3n+2) .a-flip{background:var(--grad-green-blue);}
   .archetype-card:nth-child(3n) .a-flip{background:var(--grad-sprout);}
   .archetype-card:hover .a-flip{opacity:1;visibility:visible;transform:translateX(0);}
-  .archetype-card .a-flip h3{color:#fff;font-size:20px;margin-bottom:12px;}
+  .archetype-card .a-flip .flip-label{color:#fff;font-size:20px;margin-bottom:12px;}
   .archetype-card .a-flip ul li{margin-bottom:10px;font-size:13.5px;line-height:1.45;padding-left:16px;position:relative;}
   .archetype-card .a-flip ul li::before{content:"•";position:absolute;left:0;}
   .archetype-card .a-flip a{display:inline-block;margin-top:8px;color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid rgba(255,255,255,.6);}
@@ -310,7 +310,7 @@
     padding:8px 20px;border-radius:6px;background:#dedede;font-weight:700;
     font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;
   }
-  .feature-card h4{font-size:20px;margin-bottom:12px;line-height:1.35;}
+  .feature-card h3{font-size:20px;margin-bottom:12px;line-height:1.35;}
   .feature-card p{font-size:15px;color:#333;}
   @media (max-width:900px){.feature-grid{grid-template-columns:1fr;}}
 
@@ -328,7 +328,7 @@
   .playbook-card:nth-child(1) .svg-badge{background:var(--grad-pink-yellow);}
   .playbook-card:nth-child(2) .svg-badge{background:var(--grad-sprout);}
   .playbook-card:nth-child(3) .svg-badge{background:var(--grad-green-blue);}
-  .playbook-card h4{color:#fff;font-size:18px;margin-bottom:12px;}
+  .playbook-card h3{color:#fff;font-size:18px;margin-bottom:12px;}
   .playbook-card p{color:#cfcfe0;font-size:14.5px;}
   @media (max-width:900px){.playbook-grid{grid-template-columns:1fr;}}
 
@@ -517,14 +517,14 @@
           Add your team or founder photo here
         </div>
         <div class="stat-card">
-          <h4>Built by MSPs, For MSPs</h4>
+          <h3>Built by MSPs, For MSPs</h3>
           <p style="font-size:15px;color:#333;">We built our packages around how channels actually reinforce each other&mdash;SEO compounding while PPC drives immediate volume, outbound filling the gaps while appointment setting protects the calendar.</p>
         </div>
       </div>
     </div>
     <div class="stat-cards" style="margin-top:40px;">
       <div class="stat-card">
-        <h4>The result?</h4>
+        <h3>The result?</h3>
         <ul>
           <li><strong>[X,XXX]</strong> MSPs running multi-channel packages instead of a single disconnected service.</li>
           <li>Clients on bundled packages typically see leads from more than one channel within 60 days.</li>
@@ -563,39 +563,39 @@
 
     <div class="archetype-grid">
       <div class="archetype-card">
-        <div class="a-icon"><h4>Visibility Package</h4></div>
+        <div class="a-icon"><h3>Visibility Package</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>Built for MSPs that need to show up when local businesses search, combining SEO with a lead-generation website.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>MSP lead generation website</li><li>Local &amp; on-page SEO</li><li>Google Business Profile optimization</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>MSP lead generation website</li><li>Local &amp; on-page SEO</li><li>Google Business Profile optimization</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Immediate Pipeline Package</h4></div>
+        <div class="a-icon"><h3>Immediate Pipeline Package</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>Built for MSPs that need leads flowing now, combining Google Ads with fast appointment setting.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Google Ads &amp; PPC management</li><li>Speed-to-lead appointment setting</li><li>Call tracking &amp; recording</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Google Ads &amp; PPC management</li><li>Speed-to-lead appointment setting</li><li>Call tracking &amp; recording</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Outbound Package</h4></div>
+        <div class="a-icon"><h3>Outbound Package</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>Built for MSPs that want to go after specific accounts directly instead of waiting for inbound.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Cold email outreach</li><li>LinkedIn lead generation</li><li>Unified reply handling</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Cold email outreach</li><li>LinkedIn lead generation</li><li>Unified reply handling</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Full-Funnel Demand Gen Package</h4></div>
+        <div class="a-icon"><h3>Full-Funnel Demand Gen Package</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>Our most complete package, combining every channel into one done-for-you system.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>SEO, PPC, email &amp; LinkedIn combined</li><li>Full appointment setting included</li><li>One team, one report</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>SEO, PPC, email &amp; LinkedIn combined</li><li>Full appointment setting included</li><li>One team, one report</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Website + SEO Package</h4></div>
+        <div class="a-icon"><h3>Website + SEO Package</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>For MSPs that just need the foundation done right before layering in paid channels later.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Custom lead generation website</li><li>Local &amp; technical SEO</li><li>Room to add channels later</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Custom lead generation website</li><li>Local &amp; technical SEO</li><li>Room to add channels later</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Custom Package</h4></div>
+        <div class="a-icon"><h3>Custom Package</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>Not every MSP fits a template&mdash;we&rsquo;ll build a package around exactly where you are and where you want to go.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Built around your current channels</li><li>Add or remove services as you grow</li><li>Same reporting &amp; guarantee as core packages</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Built around your current channels</li><li>Add or remove services as you grow</li><li>Same reporting &amp; guarantee as core packages</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
     </div>
   </div>
@@ -617,32 +617,32 @@
     <div class="feature-grid">
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--orange);">See</span>
-        <h4>Built for Visibility</h4>
+        <h3>Built for Visibility</h3>
         <p>SEO and website packages built to get you found when local businesses search.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--blue);">Now</span>
-        <h4>Built for Immediate Pipeline</h4>
+        <h3>Built for Immediate Pipeline</h3>
         <p>PPC and appointment setting packages built for MSPs that need leads flowing right away.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--sprout);">Reach</span>
-        <h4>Built for Outbound Reach</h4>
+        <h3>Built for Outbound Reach</h3>
         <p>Cold email and LinkedIn packages built for MSPs that want to go after specific accounts.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--orange);">All</span>
-        <h4>Built for Full-Funnel Growth</h4>
+        <h3>Built for Full-Funnel Growth</h3>
         <p>Every channel combined into one done-for-you system for MSPs ready to scale.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--sprout);">Fit</span>
-        <h4>Built to Fit Where You Are</h4>
+        <h3>Built to Fit Where You Are</h3>
         <p>Packages sized for solo operators up through established, multi-technician MSPs.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--blue);">Grow</span>
-        <h4>Built to Grow With You</h4>
+        <h3>Built to Grow With You</h3>
         <p>Add channels to your package over time as your MSP grows, without starting over.</p>
       </div>
     </div>
@@ -659,17 +659,17 @@
     <div class="playbook-grid">
       <div class="playbook-card">
         <div class="svg-badge">&#9737;</div>
-        <h4>Real-World Strategies<br>That Work</h4>
+        <h3>Real-World Strategies<br>That Work</h3>
         <p>This isn&rsquo;t just theory. We use the exact strategies that have helped MSPs consistently win new clients.</p>
       </div>
       <div class="playbook-card">
         <div class="svg-badge">&#8635;</div>
-        <h4>Live Coaching Twice<br>Per Week</h4>
+        <h3>Live Coaching Twice<br>Per Week</h3>
         <p>Join our expert-led coaching sessions every Tuesday and Thursday to get personalized support, ask questions, and refine your strategy.</p>
       </div>
       <div class="playbook-card">
         <div class="svg-badge">&#9733;</div>
-        <h4>Comprehensive Training Library</h4>
+        <h3>Comprehensive Training Library</h3>
         <p>Our comprehensive training course <strong style="color:#fff;">The MSP Lead Gen Playbook</strong> walks you through exactly how to win new clients using the MSP Sprout system.</p>
       </div>
     </div>

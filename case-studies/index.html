@@ -249,7 +249,7 @@
 
   .stat-cards{display:flex;gap:24px;margin-top:20px;}
   .stat-card{background:#fff;border-radius:20px;padding:36px;flex:1;box-shadow:0 10px 40px rgba(34,53,95,.08);}
-  .stat-card h4{color:var(--sprout);font-size:20px;margin-bottom:16px;}
+  .stat-card h3{color:var(--sprout);font-size:20px;margin-bottom:16px;}
   .stat-card ul li{padding-left:32px;position:relative;margin-bottom:14px;font-size:15px;line-height:1.5;}
   .stat-card ul li::before{
     content:"✓";position:absolute;left:0;top:0;
@@ -266,7 +266,7 @@
   }
   .archetype-card .a-icon{display:flex;align-items:center;gap:10px;padding:20px 20px 0;}
   .archetype-card .a-icon img{width:26px;height:26px;}
-  .archetype-card .a-icon h4{font-size:19px;color:var(--heading-navy);}
+  .archetype-card .a-icon h3{font-size:19px;color:var(--heading-navy);}
   .archetype-card .a-thumb{padding:14px 20px;}
   .archetype-card .a-thumb img{border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);}
   .archetype-card .a-body{padding:0 20px 20px;}
@@ -280,7 +280,7 @@
   .archetype-card:nth-child(3n+2) .a-flip{background:var(--grad-green-blue);}
   .archetype-card:nth-child(3n) .a-flip{background:var(--grad-sprout);}
   .archetype-card:hover .a-flip{opacity:1;visibility:visible;transform:translateX(0);}
-  .archetype-card .a-flip h3{color:#fff;font-size:20px;margin-bottom:12px;}
+  .archetype-card .a-flip .flip-label{color:#fff;font-size:20px;margin-bottom:12px;}
   .archetype-card .a-flip ul li{margin-bottom:10px;font-size:13.5px;line-height:1.45;padding-left:16px;position:relative;}
   .archetype-card .a-flip ul li::before{content:"•";position:absolute;left:0;}
   .archetype-card .a-flip a{display:inline-block;margin-top:8px;color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid rgba(255,255,255,.6);}
@@ -310,7 +310,7 @@
     padding:8px 20px;border-radius:6px;background:#dedede;font-weight:700;
     font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;
   }
-  .feature-card h4{font-size:20px;margin-bottom:12px;line-height:1.35;}
+  .feature-card h3{font-size:20px;margin-bottom:12px;line-height:1.35;}
   .feature-card p{font-size:15px;color:#333;}
   @media (max-width:900px){.feature-grid{grid-template-columns:1fr;}}
 
@@ -328,7 +328,7 @@
   .playbook-card:nth-child(1) .svg-badge{background:var(--grad-pink-yellow);}
   .playbook-card:nth-child(2) .svg-badge{background:var(--grad-sprout);}
   .playbook-card:nth-child(3) .svg-badge{background:var(--grad-green-blue);}
-  .playbook-card h4{color:#fff;font-size:18px;margin-bottom:12px;}
+  .playbook-card h3{color:#fff;font-size:18px;margin-bottom:12px;}
   .playbook-card p{color:#cfcfe0;font-size:14.5px;}
   @media (max-width:900px){.playbook-grid{grid-template-columns:1fr;}}
 
@@ -517,14 +517,14 @@
           Add your team or founder photo here
         </div>
         <div class="stat-card">
-          <h4>Built by MSPs, For MSPs</h4>
+          <h3>Built by MSPs, For MSPs</h3>
           <p style="font-size:15px;color:#333;">We track every channel we run for every client, which means every case study here reflects what actually happened&mdash;not a highlight reel written by a copywriter who never saw the data.</p>
         </div>
       </div>
     </div>
     <div class="stat-cards" style="margin-top:40px;">
       <div class="stat-card">
-        <h4>The result?</h4>
+        <h3>The result?</h3>
         <ul>
           <li><strong>[X,XXX]</strong> sales appointments generated across our MSP partners.</li>
           <li>New partners typically see their first tracked leads within the first 90 days.</li>
@@ -563,39 +563,39 @@
 
     <div class="archetype-grid">
       <div class="archetype-card">
-        <div class="a-icon"><h4>Regional MSP, Cybersecurity Focus</h4></div>
+        <div class="a-icon"><h3>Regional MSP, Cybersecurity Focus</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>A 12-person MSP was relying entirely on referrals and had no tracked marketing at all before working with us.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Built a full lead generation website</li><li>Layered in Google Ads within month one</li><li>First tracked leads within 45 days</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Built a full lead generation website</li><li>Layered in Google Ads within month one</li><li>First tracked leads within 45 days</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Solo MSP Scaling Its First Hires</h4></div>
+        <div class="a-icon"><h3>Solo MSP Scaling Its First Hires</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>A solo-operator MSP needed a consistent lead source to justify hiring its first technician.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Local SEO program launched</li><li>Appointment setting added at month two</li><li>Booked calls became consistent enough to hire</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Local SEO program launched</li><li>Appointment setting added at month two</li><li>Booked calls became consistent enough to hire</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>Established MSP, Stalled Growth</h4></div>
+        <div class="a-icon"><h3>Established MSP, Stalled Growth</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>A 25-person MSP had plateaued after years of relying on the same handful of referral partners.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Full demand generation system deployed</li><li>Cold email &amp; LinkedIn outreach launched</li><li>New client acquisition resumed within a quarter</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Full demand generation system deployed</li><li>Cold email &amp; LinkedIn outreach launched</li><li>New client acquisition resumed within a quarter</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>MSP Rebuilding After a Failed Agency</h4></div>
+        <div class="a-icon"><h3>MSP Rebuilding After a Failed Agency</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>A previous marketing agency had left an MSP with a damaged domain and no results to show for months of spend.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Domain reputation rebuilt from scratch</li><li>New website and tracked SEO program launched</li><li>Marketing spend became measurable again</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Domain reputation rebuilt from scratch</li><li>New website and tracked SEO program launched</li><li>Marketing spend became measurable again</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>MSP Expanding Into a New Region</h4></div>
+        <div class="a-icon"><h3>MSP Expanding Into a New Region</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>An established MSP needed a way to generate leads in a new service area with zero existing reputation.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Geo-targeted PPC campaign launched</li><li>Localized SEO content built for the new market</li><li>Early leads generated before any referral base existed</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Geo-targeted PPC campaign launched</li><li>Localized SEO content built for the new market</li><li>Early leads generated before any referral base existed</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
 
       <div class="archetype-card">
-        <div class="a-icon"><h4>MSP Replacing an In-House Marketer</h4></div>
+        <div class="a-icon"><h3>MSP Replacing an In-House Marketer</h3></div>
         <div class="a-body" style="padding-top:6px;"><p>An MSP had one internal hire trying to run every channel alone and getting stretched too thin.</p></div>
-        <div class="a-flip"><h3>What&rsquo;s Included</h3><ul><li>Full channel management taken over</li><li>Consistent reporting replaced ad-hoc updates</li><li>Internal hire redeployed to higher-value work</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
+        <div class="a-flip"><p class="flip-label">What&rsquo;s Included</p><ul><li>Full channel management taken over</li><li>Consistent reporting replaced ad-hoc updates</li><li>Internal hire redeployed to higher-value work</li></ul><a href="#cta">Talk to Our Team &rarr;</a></div>
       </div>
     </div>
   </div>
@@ -617,32 +617,32 @@
     <div class="feature-grid">
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--orange);">Track</span>
-        <h4>Real Tracked Numbers</h4>
+        <h3>Real Tracked Numbers</h3>
         <p>Every result shown comes from the same tracking every client sees in their own reporting.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--blue);">Full</span>
-        <h4>Full-Funnel Context</h4>
+        <h3>Full-Funnel Context</h3>
         <p>Case studies show every channel involved, not just a single cherry-picked win.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--sprout);">Time</span>
-        <h4>Real Timelines</h4>
+        <h3>Real Timelines</h3>
         <p>We show how long results actually took to show up, not an idealized best-case scenario.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--orange);">Range</span>
-        <h4>Every Stage of MSP</h4>
+        <h3>Every Stage of MSP</h3>
         <p>Case studies span solo operators to established, multi-technician MSPs.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--sprout);">Update</span>
-        <h4>Continuously Updated</h4>
+        <h3>Continuously Updated</h3>
         <p>New case studies are added as current partners complete new milestones.</p>
       </div>
       <div class="feature-card">
         <span class="icon-btn" style="color:var(--blue);">Honest</span>
-        <h4>Includes What Didn&rsquo;t Work</h4>
+        <h3>Includes What Didn&rsquo;t Work</h3>
         <p>We&rsquo;re upfront about what took longer or needed adjusting along the way, not just the wins.</p>
       </div>
     </div>
@@ -659,17 +659,17 @@
     <div class="playbook-grid">
       <div class="playbook-card">
         <div class="svg-badge">&#9737;</div>
-        <h4>Real-World Strategies<br>That Work</h4>
+        <h3>Real-World Strategies<br>That Work</h3>
         <p>This isn&rsquo;t just theory. We use the exact strategies that have helped MSPs consistently win new clients.</p>
       </div>
       <div class="playbook-card">
         <div class="svg-badge">&#8635;</div>
-        <h4>Live Coaching Twice<br>Per Week</h4>
+        <h3>Live Coaching Twice<br>Per Week</h3>
         <p>Join our expert-led coaching sessions every Tuesday and Thursday to get personalized support, ask questions, and refine your strategy.</p>
       </div>
       <div class="playbook-card">
         <div class="svg-badge">&#9733;</div>
-        <h4>Comprehensive Training Library</h4>
+        <h3>Comprehensive Training Library</h3>
         <p>Our comprehensive training course <strong style="color:#fff;">The MSP Lead Gen Playbook</strong> walks you through exactly how to win new clients using the MSP Sprout system.</p>
       </div>
     </div>
