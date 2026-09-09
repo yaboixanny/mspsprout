@@ -547,6 +547,8 @@
     line-height:1.45;border-top:1px solid var(--border-gray);padding-top:14px;margin-top:auto;margin-bottom:18px;
   }
   @media (max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+  .pricing-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:stretch;max-width:900px;margin:0 auto;}
+  @media (max-width:900px){.pricing-grid-2{grid-template-columns:1fr;}}
 
   /* ---------- guarantee ---------- */
   .guarantee{background:#fff;border-radius:22px;border:2px dashed var(--sprout-light);padding:50px;display:flex;gap:40px;align-items:center;}
@@ -1114,7 +1116,7 @@
       <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
     </div>
 
-    <div class="pricing-grid" style="grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto;">
+    <div class="pricing-grid-2">
       <div class="price-card featured">
         <h3>Client Acquisition System</h3>
         <div class="price-combo">

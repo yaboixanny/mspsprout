@@ -454,6 +454,8 @@
   .price-card ul li::before{content:"✓";position:absolute;left:0;color:var(--sprout);font-weight:700;}
   .price-card .btn{width:100%;padding:14px;border-radius:50px;}
   @media (max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+  .pricing-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:stretch;max-width:900px;margin:0 auto;}
+  @media (max-width:900px){.pricing-grid-2{grid-template-columns:1fr;}}
 
   /* ---------- guarantee ---------- */
   .guarantee{background:#fff;border-radius:22px;border:2px dashed var(--sprout-light);padding:50px;display:flex;gap:40px;align-items:center;}
@@ -931,64 +933,36 @@
       <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
     </div>
 
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid">
+    <div class="pricing-grid-2">
       <div class="price-card">
-        <h3>Starter</h3>
-        <div class="price"><span class="amt" data-monthly="1999" data-annual="1666">$1,999</span><span> USD / month</span></div>
+        <h3>GEO Setup</h3>
+        <div class="price"><span class="amt">$1,997</span><span> one-time</span></div>
+        <p class="setup-fee">GEO audit &amp; query mapping through cross-engine launch.</p>
         <ul>
-          <li>MSP Lead Generation Website</li>
-          <li>Easy SEO Optimization</li>
-          <li>Drag and Drop Page Builder</li>
-          <li>Self-Managed Website Chat</li>
-          <li>Free Hosting / Free SSL</li>
-          <li>Unlimited Website Visits</li>
-          <li>Website Analytics</li>
-          <li>MSP Marketing Resources Vault</li>
-          <li>Unlimited Support</li>
-          <li>30 Day Money Back Guarantee</li>
+          <li>GEO Audit &amp; Query Mapping</li>
+          <li>Entity &amp; Schema Foundations</li>
+          <li>Answer-Ready Content Buildout</li>
+          <li>Cross-Engine Testing &amp; Launch</li>
+          <li>Baseline Citation Report</li>
         </ul>
         <button class="btn btn-outline">Get Started</button>
       </div>
 
       <div class="price-card featured">
-        <h3>Essentials</h3>
-        <div class="price"><span class="amt" data-monthly="2999" data-annual="2499">$2,999</span><span> USD / month</span></div>
+        <h3>GEO Managed</h3>
+        <div class="price"><span class="amt">$1,997</span><span> USD / month</span></div>
+        <p class="setup-fee">Requires GEO Setup &middot; ongoing citation &amp; authority building</p>
         <ul>
-          <li>Everything in Starter, plus:</li>
-          <li>Call Tracking / Recording</li>
-          <li>2-Way SMS Marketing</li>
-          <li>Outbound Dialing</li>
-          <li>Automated Lead Followup</li>
-          <li>Unlimited Workflows</li>
-          <li>Appointment Scheduling</li>
-          <li>Social Media Scheduling</li>
-          <li>Google Review Management</li>
-          <li>Email Newsletters</li>
-          <li>Opportunity Pipeline</li>
-          <li>PSA / RMM Integrations</li>
+          <li>Everything in GEO Setup, plus:</li>
+          <li>Citation &amp; Authority Building</li>
+          <li>Monthly Citation Tracking Across ChatGPT, Gemini, Claude &amp; Perplexity</li>
+          <li>Ongoing Content Refreshes</li>
+          <li>Monthly Reporting</li>
         </ul>
         <button class="btn btn-sprout">Sign Up Now</button>
       </div>
-
-      <div class="price-card">
-        <h3>Lead Gen</h3>
-        <div class="price"><span class="amt" data-monthly="4799" data-annual="3999">$4,799</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Essentials, plus:</li>
-          <li>Live Human Website Appointment Booking Agent</li>
-          <li>Advanced Call Tracking / Recording</li>
-          <li>Custom Marketing Integrations</li>
-          <li>Custom Lead Dashboard</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
     </div>
+    <p style="text-align:center;color:var(--text-gray);font-size:13.5px;margin-top:30px;">We only take on 2&ndash;3 new AI SEO clients per month so every GEO strategy gets real attention.</p>
   </div>
 </section>
 
@@ -1107,17 +1081,6 @@
     });
   });
 
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
