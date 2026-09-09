@@ -470,6 +470,56 @@
   .faq-item[open] .faq-toggle::after{transform:rotate(90deg);opacity:0;}
   .faq-item .faq-answer{padding:0 0 24px;font-size:15px;color:var(--text-gray);line-height:1.65;}
 
+  /* ---------- 3-month roadmap ---------- */
+  .roadmap-section{background:var(--navy);position:relative;overflow:hidden;}
+  .roadmap-section::before{
+    content:"";position:absolute;top:-40%;right:-10%;width:60%;height:140%;
+    background:radial-gradient(circle, rgba(30,158,82,.18) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .roadmap-section::after{
+    content:"";position:absolute;bottom:-40%;left:-10%;width:50%;height:120%;
+    background:radial-gradient(circle, rgba(255,52,164,.12) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .roadmap-section .wrap{position:relative;z-index:1;}
+  .roadmap-cta{text-align:center;margin-top:54px;}
+  .roadmap-cta p{
+    color:#fff;font-size:19px;font-weight:600;line-height:1.4;
+    max-width:560px;margin:0 auto 24px;
+  }
+  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:60px;}
+  .roadmap-card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:18px;
+    padding:30px 24px;position:relative;transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .roadmap-card:hover{transform:translateY(-8px);border-color:var(--sprout-light);background:rgba(255,255,255,.08);}
+  .roadmap-num{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:14px;color:#fff;margin-bottom:18px;background:var(--grad-sprout);
+    box-shadow:0 8px 24px rgba(30,158,82,.4);
+  }
+  .roadmap-card:nth-child(2) .roadmap-num{background:var(--grad-pink-yellow);box-shadow:0 8px 24px rgba(255,52,164,.35);}
+  .roadmap-card:nth-child(3) .roadmap-num{background:var(--grad-green-blue);box-shadow:0 8px 24px rgba(11,180,255,.35);}
+  .roadmap-days{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sprout-light);margin-bottom:6px;}
+  .roadmap-card h3{color:#fff;font-size:18px;margin-bottom:14px;line-height:1.3;}
+  .roadmap-card ul{display:flex;flex-direction:column;gap:9px;}
+  .roadmap-card li{color:#cfcfe0;font-size:15px;line-height:1.55;padding-left:20px;position:relative;}
+  .roadmap-card li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--sprout-light);font-weight:700;font-size:11px;}
+  .roadmap-arrow{
+    position:absolute;top:23px;right:-28px;width:24px;height:14px;z-index:2;
+    animation:roadmapArrowNudge 1.6s ease-in-out infinite;
+  }
+  .roadmap-arrow svg{width:100%;height:100%;display:block;}
+  @keyframes roadmapArrowNudge{
+    0%,100%{transform:translateX(0);opacity:.55;}
+    50%{transform:translateX(6px);opacity:1;}
+  }
+  @media (max-width:900px){
+    .roadmap-grid{grid-template-columns:1fr;gap:26px;}
+    .roadmap-arrow{display:none;}
+  }
+
   /* ---------- pricing ---------- */
   .pricing-toggle-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:36px 0 10px;font-weight:600;color:var(--heading-navy);}
   .switch{position:relative;width:54px;height:28px;background:#ddd;border-radius:20px;cursor:pointer;transition:background .25s;}
@@ -1078,6 +1128,64 @@
         <summary>What does a good MSP Google Ads strategy actually look like?<span class="faq-toggle"></span></summary>
         <div class="faq-answer">A working MSP Google Ads strategy starts with tightly themed ad groups built around buyer-intent keywords, not a handful of broad terms competing with every IT company in your market. From there it&rsquo;s dedicated landing pages instead of your homepage, call tracking on every campaign, and a bidding strategy that shifts budget toward whatever&rsquo;s actually converting into booked calls, not just cheap clicks. We build that strategy around your specific market and service area rather than reusing a generic template.</div>
       </details>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">What Launching With Us Looks Like</h3>
+      <h2 style="color:#fff;">The 3-Month Google Ads Scaling Roadmap</h2>
+      <p style="color:#cfcfe0;">Here&rsquo;s how we take a fresh account from first click to a predictable cost per lead over your first 90 days.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <div class="roadmap-num">01</div>
+        <div class="roadmap-days">Days 1&ndash;30</div>
+        <h3>Controlled Launch</h3>
+        <ul>
+          <li>Build tightly themed ad groups by service, plus a brand-protection campaign</li>
+          <li>Set location targeting to &ldquo;Presence,&rdquo; with radius or zip-level targeting</li>
+          <li>Run 80% exact / 20% phrase match with a max CPC cap, not Smart Bidding yet</li>
+          <li>Launch RSAs across proven headline angles with full ad assets in place</li>
+        </ul>
+        <span class="roadmap-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#8FE3A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="roadmap-card">
+        <div class="roadmap-num">02</div>
+        <div class="roadmap-days">Days 31&ndash;60</div>
+        <h3>Negative Sculpting &amp; Smart Bidding</h3>
+        <ul>
+          <li>Audit search terms every 48 hours and build out master negative keyword lists</li>
+          <li>Cross-negative ad groups so campaigns stop competing with each other</li>
+          <li>Shift to Maximize Conversions once we hit 20&ndash;30 conversions in 30 days</li>
+          <li>Fine-tune ad scheduling around when your team can actually answer</li>
+        </ul>
+        <span class="roadmap-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#FF9FD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="roadmap-card">
+        <div class="roadmap-num">03</div>
+        <div class="roadmap-days">Days 61&ndash;90</div>
+        <h3>Scale &amp; Expand</h3>
+        <ul>
+          <li>Layer in Target CPA, set 10&ndash;15% above your real cost per lead from Phase 2</li>
+          <li>Test Broad Match on your top ad group now that negatives are established</li>
+          <li>Feed CRM lead values back into Google Ads for value-based optimization</li>
+          <li>Add Local Services Ads for map-pack placement alongside Search</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="roadmap-cta">
+      <p>Want us to run this playbook for you while you focus on the IT side of things?</p>
+      <a href="#cta" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
   </div>
 </section>
