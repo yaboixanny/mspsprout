@@ -196,6 +196,7 @@
   .post-body li{font-size:17px;color:#333;margin-bottom:10px;line-height:1.65;}
   .post-body strong{color:var(--heading-navy);}
   .post-body a{color:var(--sprout-dark);font-weight:600;text-decoration:underline;text-decoration-color:var(--sprout-light);text-underline-offset:2px;}
+  .post-body a.btn{color:#fff;text-decoration:none;}
   .post-body a:hover{color:var(--sprout);}
   .post-body hr{border:none;border-top:1px solid var(--border-gray);margin:44px 0;}
 
@@ -241,6 +242,15 @@
   }
   .fix-callout p{margin:0;font-size:15.5px;color:#1a3a24;line-height:1.65;}
   .fix-callout strong{color:var(--sprout-dark);}
+
+  .inline-cta{
+    background:var(--lavender);border-radius:16px;padding:26px 30px;margin:0 0 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  }
+  .inline-cta p{margin:0;font-size:16px;color:var(--heading-navy);font-weight:600;flex:1 1 260px;line-height:1.4;}
+  .inline-cta .btn{flex-shrink:0;padding:13px 26px;font-size:14px;}
+  .inline-cta .btn span.sub{font-size:12px;}
+  @media (max-width:560px){.inline-cta{padding:22px;}}
 
   .post-cta{
     max-width:760px;margin:20px auto 0;background:var(--sprout-mint-bg);border:2px dashed var(--sprout-mint-border);
@@ -357,7 +367,9 @@
 
 <section class="post-body">
   <div class="wrap">
-    <p>We look at a lot of MSP websites, and the same handful of SEO mistakes show up over and over. None of them are complicated to fix. Most of them just take being a little more specific, a little more consistent, and a little more honest about what you&rsquo;re actually measuring&mdash;which is exactly what our <a href="../../seo/index.html">SEO for MSPs</a> service is built to sort out.</p>
+    <p>We look at a lot of MSP websites, and the same handful of SEO mistakes show up over and over.</p>
+    <p>None of them are complicated to fix. Most of them just take being a little more specific, a little more consistent, and a little more honest about what you&rsquo;re actually measuring.</p>
+    <p>That&rsquo;s exactly what our <a href="../../seo/index.html">SEO for MSPs</a> service is built to sort out.</p>
     <p>Here are the five we see most often, and exactly what to do instead.</p>
 
     <h2><span class="mistake-num">1</span>Trying to Be Everything to Everyone</h2>
@@ -376,6 +388,11 @@
     <p><strong>Specialists charge more and convert better than generalists.</strong> That&rsquo;s not a branding opinion, that&rsquo;s just how buyers behave.</p>
     <p>Someone searching for &ldquo;HIPAA compliant IT support for healthcare&rdquo; already knows what they need. If your site speaks directly to that&mdash;using their language, naming their compliance requirements, calling out their specific pain points&mdash;you immediately look like the safer, more credible choice, before you&rsquo;ve said a single word to them on a call.</p>
     <p>You don&rsquo;t have to abandon your other clients to do this. Pick one or two verticals where you already have real experience (healthcare, legal, finance, whatever it is) and build dedicated pages, dedicated messaging, and dedicated proof points around them. You can still serve everyone. You just don&rsquo;t have to market to everyone the same way.</p>
+
+    <div class="inline-cta">
+      <p>Not sure if your positioning is actually working? We&rsquo;ll take a look.</p>
+      <a href="#cta" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
+    </div>
 
     <h2><span class="mistake-num">2</span>Ignoring Mobile Optimization</h2>
     <div class="stat-callout">
@@ -406,6 +423,11 @@
     <p>Page views, time on site, and bounce rate tell you how people are browsing. They don&rsquo;t tell you whether any of it is turning into revenue. You can have a beautifully &ldquo;engaging&rdquo; site that nobody ever calls.</p>
     <p>Track what actually matters: inquiries from qualified prospects in your service area. That means form submissions, phone calls, and ideally how many of those inquiries turn into real conversations and proposals.</p>
     <p>If you&rsquo;re only reporting on traffic, you&rsquo;re optimizing for the wrong outcome&mdash;and you&rsquo;ll keep making decisions based on numbers that don&rsquo;t connect to whether your pipeline is actually growing.</p>
+
+    <div class="inline-cta">
+      <p>Want us to fix these for you instead of tackling it solo?</p>
+      <a href="#cta" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
+    </div>
 
     <h2><span class="mistake-num">4</span>Inconsistent Content Publishing</h2>
     <p>Publishing five blog posts in one month, then nothing for three months, is worse than publishing one post consistently every month.</p>
