@@ -426,6 +426,54 @@
   .faq-item[open] .faq-toggle::after{transform:rotate(90deg);opacity:0;}
   .faq-item .faq-answer{padding:0 0 24px;font-size:15px;color:var(--text-gray);line-height:1.65;}
 
+  /* ---------- 90-day roadmap ---------- */
+  .roadmap-section{background:var(--navy);position:relative;overflow:hidden;}
+  .roadmap-section::before{
+    content:"";position:absolute;top:-40%;right:-10%;width:60%;height:140%;
+    background:radial-gradient(circle, rgba(30,158,82,.18) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .roadmap-section::after{
+    content:"";position:absolute;bottom:-40%;left:-10%;width:50%;height:120%;
+    background:radial-gradient(circle, rgba(255,52,164,.12) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .roadmap-section .wrap{position:relative;z-index:1;}
+  .roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:60px;}
+  .roadmap-card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:18px;
+    padding:30px 24px;position:relative;transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .roadmap-card:hover{transform:translateY(-8px);border-color:var(--sprout-light);background:rgba(255,255,255,.08);}
+  .roadmap-card.beyond{border-style:dashed;}
+  .roadmap-num{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:14px;color:#fff;margin-bottom:18px;background:var(--grad-sprout);
+    box-shadow:0 8px 24px rgba(30,158,82,.4);
+  }
+  .roadmap-card:nth-child(2) .roadmap-num{background:var(--grad-pink-yellow);box-shadow:0 8px 24px rgba(255,52,164,.35);}
+  .roadmap-card:nth-child(3) .roadmap-num{background:var(--grad-green-blue);box-shadow:0 8px 24px rgba(11,180,255,.35);}
+  .roadmap-card:nth-child(4) .roadmap-num{background:rgba(255,255,255,.1);box-shadow:none;}
+  .roadmap-days{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sprout-light);margin-bottom:6px;}
+  .roadmap-card h3{color:#fff;font-size:18px;margin-bottom:14px;line-height:1.3;}
+  .roadmap-card ul{display:flex;flex-direction:column;gap:9px;}
+  .roadmap-card li{color:#cfcfe0;font-size:13.5px;line-height:1.5;padding-left:18px;position:relative;}
+  .roadmap-card li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--sprout-light);font-weight:700;font-size:11px;}
+  .roadmap-arrow{
+    position:absolute;top:23px;right:-28px;width:24px;height:14px;z-index:2;
+    animation:roadmapArrowNudge 1.6s ease-in-out infinite;
+  }
+  .roadmap-arrow svg{width:100%;height:100%;display:block;}
+  @keyframes roadmapArrowNudge{
+    0%,100%{transform:translateX(0);opacity:.55;}
+    50%{transform:translateX(6px);opacity:1;}
+  }
+  @media (max-width:1100px){.roadmap-grid{grid-template-columns:repeat(2,1fr);}.roadmap-card:nth-child(2) .roadmap-arrow{display:none;}}
+  @media (max-width:900px){
+    .roadmap-grid{grid-template-columns:1fr;gap:26px;}
+    .roadmap-arrow{display:none;}
+  }
+
   /* ---------- pricing ---------- */
   .pricing-toggle-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:36px 0 10px;font-weight:600;color:var(--heading-navy);}
   .switch{position:relative;width:54px;height:28px;background:#ddd;border-radius:20px;cursor:pointer;transition:background .25s;}
@@ -1019,6 +1067,70 @@
         <summary>Do you require a long-term contract?<span class="faq-toggle"></span></summary>
         <div class="faq-answer">We recommend at least a few months to let rankings start moving, but there&rsquo;s no multi-year lock-in&mdash;you can adjust or pause the program as your needs change.</div>
       </details>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h3 style="color:var(--orange);font-size:16px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Not Sure Where to Start?</h3>
+      <h2 style="color:#fff;">The 90-Day SEO Quick-Start Roadmap</h2>
+      <p style="color:#cfcfe0;">You don&rsquo;t need to do everything at once. This is the order we&rsquo;d work through it in&mdash;the handful of moves that get you most of the way there without trying to boil the ocean.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <div class="roadmap-num">01</div>
+        <div class="roadmap-days">Days 1&ndash;30</div>
+        <h3>Lay the Foundation</h3>
+        <ul>
+          <li>Research target keywords and size up what competitors already rank for</li>
+          <li>Optimize the homepage and core service pages around those keywords</li>
+          <li>Fully build out and verify your Google Business Profile</li>
+          <li>Publish your first month of blog content</li>
+        </ul>
+        <span class="roadmap-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#8FE3A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="roadmap-card">
+        <div class="roadmap-num">02</div>
+        <div class="roadmap-days">Days 31&ndash;60</div>
+        <h3>Build Out Content</h3>
+        <ul>
+          <li>Build landing pages for each industry or service line you target</li>
+          <li>Develop lead magnets and on-site tools that turn visitors into leads</li>
+        </ul>
+        <span class="roadmap-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#FF9FD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="roadmap-card">
+        <div class="roadmap-num">03</div>
+        <div class="roadmap-days">Days 61&ndash;90</div>
+        <h3>Build Authority</h3>
+        <ul>
+          <li>Kick off local networking and a link-building push</li>
+          <li>Layer in conversion tracking and ongoing on-page optimization</li>
+        </ul>
+        <span class="roadmap-arrow" aria-hidden="true">
+          <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7H28M28 7L21 1M28 7L21 13" stroke="#7DD6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+      </div>
+
+      <div class="roadmap-card beyond">
+        <div class="roadmap-num">&infin;</div>
+        <div class="roadmap-days">Beyond Day 90</div>
+        <h3>Scale What&rsquo;s Working</h3>
+        <ul>
+          <li>Expand coverage into new service areas</li>
+          <li>Keep building out industry-specific content</li>
+          <li>Add more advanced tools and resources to the site</li>
+          <li>Start building a referral partner network</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
