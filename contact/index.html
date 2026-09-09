@@ -226,6 +226,12 @@
   }
   .contact-card .btn{width:100%;padding:16px;margin-top:6px;}
   .form-note{font-size:12.5px;color:var(--text-gray);margin-top:14px;text-align:center;}
+  .contact-success{
+    background:var(--sprout-mint-bg);border:1.5px solid var(--sprout-mint-border);border-radius:14px;
+    padding:24px 26px;text-align:center;
+  }
+  .contact-success p{margin:0;font-size:15px;color:#1a3a24;line-height:1.6;}
+  .contact-success strong{color:var(--sprout-dark);}
 
   .contact-info h2{font-size:22px;margin-bottom:14px;}
   .contact-info p{color:#333;font-size:16px;margin-bottom:24px;}
@@ -351,7 +357,11 @@
         <div class="contact-card">
           <h2>Send Us a Message</h2>
           <p>Fill out the form and a real person from our team will get back to you within one business day.</p>
-          <form onsubmit="return false;">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/?submitted=true" id="contactForm">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="position:absolute;left:-9999px;" aria-hidden="true">
+              <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="form-row">
               <div class="form-group">
                 <label for="cf-name">Full Name</label>
@@ -378,6 +388,9 @@
             </div>
             <button type="submit" class="btn btn-sprout">Send Message<span class="sub">We Reply Within 1 Business Day</span></button>
           </form>
+          <div id="contactSuccess" class="contact-success" hidden>
+            <p><strong>Thanks&mdash;your message is in.</strong> We&rsquo;ll get back to you within one business day.</p>
+          </div>
           <p class="form-note">Prefer to talk live? <a href="#cta" style="color:var(--sprout-dark);font-weight:600;">Schedule a Growth Call instead &rarr;</a></p>
         </div>
       </div>
@@ -492,6 +505,15 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
+
+  if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('contactSuccess');
+    if (form && success) {
+      form.hidden = true;
+      success.hidden = false;
+    }
+  }
 </script>
 
 </body>
