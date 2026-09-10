@@ -199,6 +199,49 @@
   .post-body a:hover{color:var(--sprout);}
   .post-body a.btn{color:#fff;text-decoration:none;}
 
+  .mistake-num{
+    display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+    border-radius:9px;background:var(--grad-sprout);color:#fff;font-weight:800;font-size:15px;
+    margin-right:12px;vertical-align:middle;
+  }
+
+  .compare-row{display:flex;gap:16px;margin:0 0 28px;}
+  .compare-row > div{flex:1;border-radius:14px;padding:20px 22px;}
+  .compare-row .wrong{background:#FFF4F3;border:1.5px solid #FFD3D0;}
+  .compare-row .right{background:var(--sprout-mint-bg);border:1.5px solid var(--sprout-mint-border);}
+  .compare-row .compare-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    margin-bottom:8px;display:flex;align-items:center;gap:6px;
+  }
+  .compare-row .wrong .compare-label{color:var(--red);}
+  .compare-row .right .compare-label{color:var(--sprout-dark);}
+  .compare-row .compare-icon{
+    width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:800;color:#fff;flex-shrink:0;
+  }
+  .compare-row .wrong .compare-icon{background:var(--red);}
+  .compare-row .right .compare-icon{background:var(--sprout);}
+  .compare-row p{font-family:var(--font-quote);font-style:italic;font-size:15px;color:#333;margin:0;line-height:1.5;}
+  @media (max-width:600px){.compare-row{flex-direction:column;}}
+
+  .stat-callout{
+    display:flex;align-items:center;gap:20px;background:var(--lavender);border-radius:16px;
+    padding:26px 28px;margin:0 0 28px;
+  }
+  .stat-callout .stat-num{
+    font-size:38px;font-weight:800;background-image:var(--grad-sprout);-webkit-background-clip:text;
+    background-clip:text;color:transparent;flex-shrink:0;line-height:1;
+  }
+  .stat-callout p{margin:0;font-size:15px;color:#333;line-height:1.5;}
+  @media (max-width:600px){.stat-callout{flex-direction:column;align-items:flex-start;gap:10px;}}
+
+  .fix-callout{
+    background:var(--sprout-mint-bg);border-left:4px solid var(--sprout);border-radius:0 12px 12px 0;
+    padding:20px 24px;margin:0 0 28px;
+  }
+  .fix-callout p{margin:0;font-size:15.5px;color:#1a3a24;line-height:1.65;}
+  .fix-callout strong{color:var(--sprout-dark);}
+
   .inline-cta{
     background:var(--lavender);border-radius:16px;padding:26px 30px;margin:0 0 28px;
     display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
@@ -316,7 +359,7 @@
   <div class="wrap">
     <span class="post-tag">Paid Ads</span>
     <h1>MSP LinkedIn Ads Strategy: What Actually Works (And What&rsquo;s a Waste of Budget)</h1>
-    <p class="post-meta">By Alex <span>|</span> Published <time datetime="2026-09-10">September 10, 2026</time> <span>|</span> 11 min read</p>
+    <p class="post-meta">By Alex <span>|</span> Published <time datetime="2026-09-10">September 10, 2026</time> <span>|</span> 9 min read</p>
   </div>
 </section>
 
@@ -325,47 +368,85 @@
     <p>I get asked this constantly by MSP owners, usually some version of: should we be running LinkedIn ads?</p>
     <p>My honest answer disappoints most people, because it&rsquo;s usually &ldquo;probably not yet.&rdquo; I say that having watched it play out across our own clients&rsquo; ad accounts often enough to trust the pattern. If you&rsquo;re already confident your foundation is solid, our <a href="../../linkedin-ads/index.html">LinkedIn Ads for MSPs</a> service is built around exactly this playbook.</p>
     <p>That&rsquo;s not me being anti-LinkedIn. The targeting is genuinely excellent. You can put your message in front of IT decision-makers and filter down to the company size and industry you actually sell to, which for a B2B sales cycle this long and this specific is rare. So the platform itself is not the problem.</p>
-    <p>The problem is what happens after someone clicks.</p>
+    <p>The problem is what happens after someone clicks. Here are the six mistakes we see MSPs make over and over, and exactly what to do instead.</p>
 
     <h2>Quick Answers</h2>
     <p><strong>Do LinkedIn ads work for MSPs?</strong> Yes, when the basics behind them are solid. The targeting is excellent for reaching IT decision-makers, but the ads only convert once your message, landing page, and follow-up speed are ready to receive that traffic.</p>
     <p><strong>How much should an MSP budget for LinkedIn ads?</strong> Enough to test over a few months rather than a quick burst. LinkedIn clicks cost more than most channels, and the IT buying cycle is long, so plan for patient spend tied to a real follow-up process rather than instant leads.</p>
     <p><strong>What should I fix before running LinkedIn ads?</strong> Start with your positioning: one clear sentence on who you help and the outcome you create. Then make sure the page your ad points to speaks to that exact buyer and asks for one clear action. Follow-up speed is the third piece, and the one most MSPs underrate.</p>
 
-    <h2>Why LinkedIn Ads Fail for So Many MSPs</h2>
+    <h2><span class="mistake-num">1</span>Fuzzy Positioning</h2>
+    <div class="compare-row">
+      <div class="wrong">
+        <div class="compare-label"><span class="compare-icon">&times;</span> Wrong</div>
+        <p>&ldquo;We provide comprehensive managed IT solutions.&rdquo;</p>
+      </div>
+      <div class="right">
+        <div class="compare-label"><span class="compare-icon">&#10003;</span> Right</div>
+        <p>&ldquo;We run IT for Montana accounting firms sick of waiting three days for a callback.&rdquo;</p>
+      </div>
+    </div>
     <p>Here&rsquo;s the pattern we see over and over with MSPs who tried LinkedIn ads and walked away feeling like they lit money on fire.</p>
     <p>The ad does its job. Someone clicks. Then they land on a website that reads like a brochure the business wrote for itself, with a contact form feeding an inbox nobody checks until Thursday. The ad spent real money to earn that click, and everything after it let the click leak straight back out.</p>
     <p>Almost always, the leak starts with the message. If your positioning is fuzzy, ads just help more people bounce off it faster, at a higher cost per bounce than any other channel would charge you.</p>
-    <p>Before spending a dollar on LinkedIn, you should be able to answer one question in a single clear sentence: who is this for, and what changes for them once they work with you?</p>
-    <p>Something like &ldquo;we run IT for Montana accounting firms sick of waiting three days for a callback&rdquo; lands. &ldquo;We provide comprehensive managed IT solutions&rdquo; does not. Closing that gap costs nothing but a bit of honest thinking about your ideal client before the campaign goes live.</p>
+    <p>Before spending a dollar on LinkedIn, you should be able to answer one question in a single clear sentence: who is this for, and what changes for them once they work with you? Closing that gap costs nothing but a bit of honest thinking about your ideal client before the campaign goes live.</p>
 
-    <h2>Niche Targeting Beats Generic Targeting Every Time</h2>
-    <p>Avoid generic targeting like &ldquo;companies with 10+ employees.&rdquo; That kind of broad net feels safe, but it just means your ad spend gets spread across a huge pool of people who mostly aren&rsquo;t your buyer.</p>
+    <h2><span class="mistake-num">2</span>Generic Targeting Instead of Niche Targeting</h2>
+    <div class="compare-row">
+      <div class="wrong">
+        <div class="compare-label"><span class="compare-icon">&times;</span> Too Broad</div>
+        <p>Companies with 10+ employees</p>
+      </div>
+      <div class="right">
+        <div class="compare-label"><span class="compare-icon">&#10003;</span> Niche</div>
+        <p>COOs at healthcare practices in your service area</p>
+      </div>
+    </div>
+    <p>That kind of broad net feels safe, but it just means your ad spend gets spread across a huge pool of people who mostly aren&rsquo;t your buyer.</p>
     <p>Instead, focus on specific verticals (healthcare, legal, finance, whatever you actually have proof points in) and exact buyer personas within those verticals: COOs, CFOs, office managers, whoever is actually making or influencing the IT decision at that kind of company.</p>
     <p>The tighter you get, the more your ad copy can speak directly to a real person&rsquo;s real problem instead of a generic &ldquo;business owner.&rdquo; That specificity is what makes someone stop scrolling.</p>
 
-    <h2>Skip the Acronyms, Talk About Outcomes</h2>
+    <h2><span class="mistake-num">3</span>Talking in Acronyms Instead of Outcomes</h2>
+    <div class="compare-row">
+      <div class="wrong">
+        <div class="compare-label"><span class="compare-icon">&times;</span> Acronym</div>
+        <p>&ldquo;Managed Detection and Response&rdquo;</p>
+      </div>
+      <div class="right">
+        <div class="compare-label"><span class="compare-icon">&#10003;</span> Outcome</div>
+        <p>&ldquo;Stop ransomware from shutting down your office for a week&rdquo;</p>
+      </div>
+    </div>
     <p>This one trips up a lot of MSPs because it&rsquo;s second nature to talk in your own shorthand. Avoid internal tech acronyms like RMM, PSA, or SD-WAN in ad copy. Your buyer doesn&rsquo;t know what those mean, and even if they did, acronyms don&rsquo;t sell anything.</p>
     <p>Focus on business outcomes, risk reduction, and plain-language risk education instead. Nobody wakes up wanting &ldquo;managed detection and response.&rdquo; They want to stop worrying about ransomware shutting down their office for a week. Speak to that.</p>
 
-    <h2>Thought Leadership Ads Outperform Company Page Ads</h2>
-    <p>LinkedIn heavily favors content from real individuals over faceless company pages, and this shows up clearly in ad performance too.</p>
-    <p>If you or your founder has organic content that&rsquo;s already performing well on a personal profile, sponsor that post rather than starting from scratch with a company-page ad. It carries more trust out of the gate because it reads as a real person sharing a real opinion, not a business running an ad. This is one of the easiest wins in the whole LinkedIn playbook, and most MSPs never try it.</p>
-
-    <h2>Where the Click Lands Matters Almost as Much</h2>
-    <p>A LinkedIn ad should never drop someone on your homepage and cross its fingers. It should send them to a page built for the exact thing the ad promised, with one obvious next step.</p>
-    <p>If your ad talks about a security assessment, the click should land on the security assessment, not a general services menu where they have to go hunting for it themselves.</p>
-    <p>This is the part MSPs skip most often, mostly because it feels like extra work for a single campaign. It is not extra work. It&rsquo;s the whole reason the campaign converts or does not.</p>
-    <p>Before you launch anything, audit your website and conversion paths. Sending paid traffic to an unoptimized page with generic stock photos and a vague headline wastes every dollar you spent getting the click in the first place.</p>
-
     <div class="inline-cta">
-      <p>Not sure your site is ready to receive paid clicks? We&rsquo;ll take a look.</p>
+      <p>Not sure if your positioning is actually working? We&rsquo;ll take a look.</p>
       <a href="#cta" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Then There&rsquo;s the Follow-Up Nobody Wants to Admit To</h2>
-    <p>We have watched MSPs pay good money for a lead, get the form fill, and then take four days to reply. By then the prospect has already talked to two other providers and half-forgotten they filled anything out. The ad worked perfectly. The follow-up is what fell over.</p>
+    <h2><span class="mistake-num">4</span>Running Company-Page Ads Instead of Sponsoring Real Content</h2>
+    <p>LinkedIn heavily favors content from real individuals over faceless company pages, and this shows up clearly in ad performance too.</p>
+    <div class="fix-callout">
+      <p><strong>The fix:</strong> if you or your founder has organic content that&rsquo;s already performing well on a personal profile, sponsor that post rather than starting from scratch with a company-page ad. It carries more trust out of the gate because it reads as a real person sharing a real opinion, not a business running an ad. This is one of the easiest wins in the whole LinkedIn playbook, and most MSPs never try it.</p>
+    </div>
+
+    <h2><span class="mistake-num">5</span>Sending Clicks to Your Homepage Instead of a Landing Page</h2>
+    <p>A LinkedIn ad should never drop someone on your homepage and cross its fingers. It should send them to a page built for the exact thing the ad promised, with one obvious next step.</p>
+    <p>If your ad talks about a security assessment, the click should land on the security assessment, not a general services menu where they have to go hunting for it themselves. This is the part MSPs skip most often, mostly because it feels like extra work for a single campaign. It is not extra work. It&rsquo;s the whole reason the campaign converts or does not.</p>
+    <p>Before you launch anything, audit your website and conversion paths. Sending paid traffic to an unoptimized page with generic stock photos and a vague headline wastes every dollar you spent getting the click in the first place.</p>
+
+    <h2><span class="mistake-num">6</span>Slow Follow-Up</h2>
+    <div class="stat-callout">
+      <div class="stat-num">4 days</div>
+      <p>is how long it took one MSP to reply to a lead from their LinkedIn campaign. By then the prospect had already talked to two other providers and half-forgotten they filled anything out. The ad worked perfectly. The follow-up is what fell over.</p>
+    </div>
     <p>None of this is glamorous, which is exactly why we push back when an owner wants to jump straight to ad spend. Ads do not fix a fuzzy message, a weak landing page, or a slow follow-up process. They just push more traffic through the same cracks, faster and at a higher price.</p>
+
+    <div class="inline-cta">
+      <p>Not sure your site and follow-up process are ready to receive paid clicks? We&rsquo;ll take a look.</p>
+      <a href="#cta" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
+    </div>
 
     <h2>Pair LinkedIn With Intent-Based Channels</h2>
     <p>LinkedIn is genuinely strong for early-stage awareness and getting your name in front of the right accounts before they&rsquo;re actively searching. But it&rsquo;s rarely where someone converts the moment they see your ad.</p>
