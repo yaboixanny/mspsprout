@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://mspsprout.netlify.app/blog/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -105,6 +105,12 @@
   <url>
     <loc>https://mspsprout.netlify.app/facebook-ads/</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mspsprout.netlify.app/fractional-cmo/</loc>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
