@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scaling Your MSP: A 3-Year MSP Growth Roadmap | MSP Sprout</title>
+<meta name="description" content="A realistic 3-year MSP growth roadmap from zero to $100K MRR: what actually matters in month one, how the channels stack year over year, and why tech decisions come second to visibility.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scaling Your MSP: A 3-Year MSP Growth Roadmap">
+<meta property="og:description" content="A realistic 3-year MSP growth roadmap from zero to $100K MRR: what actually matters in month one, how the channels stack year over year, and why tech decisions come second to visibility.">
+<link rel="canonical" href="https://mspsprout.netlify.app/blog/scaling-your-msp-3-year-growth-roadmap/">
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- core palette ---- */
+    --navy:#1F1C35;            /* header / dark section bg */
+    --navy-deep:#141223;       /* footer bg */
+    --heading-navy:#22355F;    /* heading text color */
+    --text-gray:#6D6E71;       /* body copy gray */
+    --pink:#FF34A4;
+    --orange:#FF6E47;
+    --blue:#03A2E9;
+    --blue-bright:#0BB4FF;
+    --green:#6DDB8B;
+    --red:#FF4F51;
+    --cream:#FEF9F3;
+    --lavender:#F1F3FE;
+    --lavender-2:#F1F6FE;
+    --lightblue-bg:#F0F6F9;
+    --border-gray:#D6D8D9;
+    --white:#ffffff;
+
+    /* ---- MSP Sprout brand green (replaces the old purple accent) ---- */
+    --sprout:#1E9E52;
+    --sprout-dark:#147A3F;
+    --sprout-light:#8FE3A8;
+    --sprout-lime:#9AD84B;
+    --sprout-mint-bg:#F4FBF6;
+    --sprout-mint-border:#B9E6C6;
+
+    --grad-pink-yellow: linear-gradient(90deg, #FF34A4 0%, #FEBC24 180%);
+    --grad-sprout: linear-gradient(90deg, #147A3F 0%, #9AD84B 100%);
+    --grad-green-blue: linear-gradient(90deg, #6DDB8B 0%, #0BB4FF 100%);
+
+    --font-head:'Poppins', sans-serif;
+    --font-body:'Poppins', sans-serif;
+    --font-quote:'Merriweather', serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:#111;
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  .wrap{max-width:1170px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3,h4,h5,h6{font-family:var(--font-head);margin:0;font-weight:700;color:var(--heading-navy);}
+  p{margin:0;line-height:1.6;}
+
+  /* ---------- gradient button ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;flex-direction:column;
+    gap:2px;
+    font-family:var(--font-head);
+    font-weight:600;
+    color:#fff;
+    padding:18px 44px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    text-align:center;
+    transition:transform .25s ease, box-shadow .25s ease;
+    line-height:1.2;
+  }
+  .btn span.sub{display:block;font-size:14px;font-weight:400;opacity:.85;margin-top:4px;}
+  .btn:hover{transform:translateY(-2px) scale(1.02);}
+  .btn-pink-yellow{background:var(--grad-pink-yellow);}
+  .btn-sprout{background:var(--grad-sprout);}
+  .btn-outline{
+    background:transparent;border:2px solid rgba(0,0,0,.15);color:var(--heading-navy);
+    padding:12px 28px;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.5px;
+  }
+
+  /* ---------- header ---------- */
+  header.site-header{background:var(--navy);padding:18px 0;position:sticky;top:0;z-index:50;}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-word{font-size:20px;font-weight:700;color:#fff;letter-spacing:.2px;}
+  .logo-word .accent{
+    background-image:var(--grad-sprout);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  nav.main-nav ul{display:flex;align-items:center;gap:2px;}
+  nav.main-nav a{
+    color:#fff;font-size:15px;font-weight:500;padding:10px 13px;display:block;
+    transition:color .2s ease;white-space:nowrap;
+  }
+  nav.main-nav a:hover{color:var(--sprout-light);}
+  nav.main-nav li.cta-item a{
+    background:var(--grad-pink-yellow);
+    color:#fff;border-radius:50px;padding:10px 28px;font-weight:600;
+  }
+  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;transition:opacity .2s ease;}
+  .menu-toggle.hidden{opacity:0;pointer-events:none;}
+  .menu-close-item{display:none;}
+  .nav-backdrop{display:none;}
+
+  /* ---------- services dropdown (mega menu) ---------- */
+  nav.main-nav li.has-sub{position:relative;}
+  nav.main-nav .sub-toggle{
+    background:none;border:none;font:inherit;color:#fff;font-size:15px;font-weight:500;
+    padding:10px 13px;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap;
+  }
+  nav.main-nav .sub-toggle:hover{color:var(--sprout-light);}
+  nav.main-nav .sub-toggle .caret{font-size:10px;transition:transform .2s ease;}
+  nav.main-nav .sub-menu{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:4px 30px;
+    position:absolute;top:100%;left:50%;width:min(760px,92vw);
+    background:#1F1C35;border:1px solid rgba(255,255,255,.12);border-radius:14px;
+    padding:26px 28px;margin-top:10px;box-shadow:0 24px 50px rgba(0,0,0,.4);
+    opacity:0;visibility:hidden;transform:translate(-50%,6px);
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;z-index:60;
+  }
+  nav.main-nav li.has-sub:hover .sub-menu,
+  nav.main-nav li.has-sub.open .sub-menu{opacity:1;visibility:visible;transform:translate(-50%,0);}
+  nav.main-nav li.has-sub:hover .sub-toggle .caret{transform:rotate(180deg);}
+  nav.main-nav .sub-menu-col{display:flex;flex-direction:column;}
+  nav.main-nav .sub-menu-heading{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    color:var(--sprout-light);padding:0 12px;margin-bottom:8px;
+  }
+  nav.main-nav .sub-menu a{padding:9px 12px;border-radius:6px;font-size:14px;}
+  nav.main-nav .sub-menu a:hover{background:rgba(255,255,255,.07);}
+
+  @media (max-width:900px){
+    nav.main-nav ul{
+      position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;height:100vh;overflow-y:auto;
+      background:rgba(17,16,28,.98);flex-direction:column;align-items:flex-start;
+      padding:24px 30px 80px;gap:2px;transform:translateX(100%);transition:transform .3s ease;
+      z-index:60;
+    }
+    nav.main-nav ul.open{transform:translateX(0);}
+    .nav-backdrop{
+      display:block;position:fixed;inset:0;background:rgba(10,9,20,.55);
+      opacity:0;visibility:hidden;transition:opacity .3s ease;z-index:55;pointer-events:none;
+    }
+    .nav-backdrop.open{opacity:1;visibility:visible;pointer-events:auto;}
+    nav.main-nav a{width:100%;padding:12px 0;}
+    .menu-toggle{display:block;}
+    .menu-close-item{display:block;width:100%;text-align:right;margin-bottom:10px;}
+    .menu-close{background:none;border:none;color:#fff;font-size:30px;line-height:1;cursor:pointer;padding:6px;}
+    .menu-close:hover{color:var(--sprout-light);}
+    nav.main-nav li.has-sub{width:100%;}
+    nav.main-nav .sub-toggle{width:100%;justify-content:space-between;padding:12px 0;}
+    nav.main-nav .sub-menu{
+      position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+      border:none;background:transparent;margin:0 0 6px;padding:0 0 0 14px;display:none;
+      grid-template-columns:1fr;width:auto;gap:0;
+    }
+    nav.main-nav li.has-sub.open .sub-menu{display:flex;flex-direction:column;transform:none;}
+    nav.main-nav .sub-menu-col{margin-bottom:12px;}
+    nav.main-nav .sub-menu-heading{color:#8a8ab0;}
+    nav.main-nav li.has-sub.open .sub-toggle .caret{transform:rotate(180deg);}
+    nav.main-nav .sub-menu a{padding:9px 0;}
+  }
+
+  /* ---------- blog post hero ---------- */
+  .post-hero{padding:64px 20px 10px;background:#fff;text-align:center;}
+  .post-hero .wrap{max-width:760px;}
+  .post-tag{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout);margin-bottom:16px;display:block;}
+  .post-hero h1{font-size:40px;line-height:1.25;margin-bottom:18px;}
+  .post-meta{color:var(--text-gray);font-size:14px;}
+  .post-meta span{color:var(--border-gray);margin:0 8px;}
+  @media (max-width:700px){.post-hero h1{font-size:28px;}}
+
+  /* ---------- article body ---------- */
+  .post-body{padding:40px 20px 20px;}
+  .post-body .wrap{max-width:760px;}
+  .post-body h2{font-size:27px;margin:46px 0 18px;line-height:1.3;}
+  .post-body h3{font-size:20px;margin:34px 0 14px;color:var(--heading-navy);}
+  .post-body p{font-size:17px;color:#333;margin-bottom:24px;line-height:1.8;}
+  .post-body ul,.post-body ol{margin:0 0 20px;padding-left:22px;}
+  .post-body ul{list-style:disc;}
+  .post-body ol{list-style:decimal;}
+  .post-body li{font-size:17px;color:#333;margin-bottom:10px;line-height:1.65;}
+  .post-body strong{color:var(--heading-navy);}
+  .post-body a{color:var(--sprout-dark);font-weight:600;text-decoration:underline;text-decoration-color:var(--sprout-light);text-underline-offset:2px;}
+  .post-body a:hover{color:var(--sprout);}
+  .post-body a.btn{color:#fff;text-decoration:none;}
+
+  .mistake-num{
+    display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+    border-radius:9px;background:var(--grad-sprout);color:#fff;font-weight:800;font-size:15px;
+    margin-right:12px;vertical-align:middle;
+  }
+
+  .stat-callout{
+    display:flex;align-items:center;gap:20px;background:var(--lavender);border-radius:16px;
+    padding:26px 28px;margin:0 0 28px;
+  }
+  .stat-callout .stat-num{
+    font-size:38px;font-weight:800;background-image:var(--grad-sprout);-webkit-background-clip:text;
+    background-clip:text;color:transparent;flex-shrink:0;line-height:1;
+  }
+  .stat-callout p{margin:0;font-size:15px;color:#333;line-height:1.5;}
+  @media (max-width:600px){.stat-callout{flex-direction:column;align-items:flex-start;gap:10px;}}
+
+  .fix-callout{
+    background:var(--sprout-mint-bg);border-left:4px solid var(--sprout);border-radius:0 12px 12px 0;
+    padding:20px 24px;margin:0 0 28px;
+  }
+  .fix-callout p{margin:0;font-size:15.5px;color:#1a3a24;line-height:1.65;}
+  .fix-callout p+p{margin-top:10px;}
+  .fix-callout ul{margin:0;padding-left:20px;list-style:disc;}
+  .fix-callout li{font-size:15.5px;color:#1a3a24;margin-bottom:8px;line-height:1.55;}
+  .fix-callout li:last-child{margin-bottom:0;}
+  .fix-callout strong{color:var(--sprout-dark);}
+
+  .inline-cta{
+    background:var(--lavender);border-radius:16px;padding:26px 30px;margin:0 0 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  }
+  .inline-cta p{margin:0;font-size:16px;color:var(--heading-navy);font-weight:600;flex:1 1 260px;line-height:1.4;}
+  .inline-cta .btn{flex-shrink:0;padding:13px 26px;font-size:14px;}
+  .inline-cta .btn span.sub{font-size:12px;}
+  @media (max-width:560px){.inline-cta{padding:22px;}}
+
+  .post-cta{
+    max-width:760px;margin:20px auto 0;background:var(--sprout-mint-bg);border:2px dashed var(--sprout-mint-border);
+    border-radius:16px;padding:34px;text-align:center;
+  }
+  .post-cta p{font-size:16px;color:#333;margin-bottom:18px;}
+
+  /* ---------- sections generic ---------- */
+  section{padding:80px 20px;}
+  .section-lavender{background:var(--lavender);}
+  .section-cream{background:var(--cream);}
+  .section-lightblue{background:var(--lightblue-bg);}
+  .section-navy{background:var(--navy);color:#fff;}
+  .section-navy h2,.section-navy h3,.section-navy p{color:#fff;}
+  .section-head{max-width:820px;margin:0 auto 50px;text-align:center;}
+  .section-head h2{font-size:34px;line-height:1.3;margin-bottom:16px;}
+  .section-head p{font-size:17px;color:var(--text-gray);}
+
+  /* ---------- CTA dark ---------- */
+  .cta-dark{
+    background:var(--navy);color:#fff;text-align:center;padding:90px 20px;position:relative;overflow:hidden;
+  }
+  .cta-dark::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(30deg, rgba(30,158,82,.16) 0%, rgba(20,40,30,.22) 100%);
+  }
+  .cta-dark .wrap{position:relative;z-index:1;}
+  .cta-dark h2{color:#fff;font-size:32px;max-width:800px;margin:0 auto 20px;line-height:1.35;}
+  .cta-dark p{color:#e8e8f0;max-width:640px;margin:0 auto 34px;font-size:16px;}
+
+  /* ---------- footer ---------- */
+  .footer-legal{background:var(--navy);color:#cfcfe0;padding:60px 20px 30px;}
+  .footer-legal .btn{display:block;width:fit-content;margin:0 auto 40px;}
+  .footer-legal p{font-size:12px;line-height:1.7;color:#9a9ab8;max-width:900px;margin:0 auto 14px;}
+
+  .footer-sitemap{display:flex;flex-wrap:wrap;justify-content:center;gap:36px;margin:0 auto 40px;text-align:left;}
+  .footer-sitemap .footer-col{display:flex;flex-direction:column;gap:11px;min-width:145px;}
+  .footer-sitemap .label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#6f6f95;margin-bottom:4px;}
+  .footer-sitemap a{color:#cfcfe0;font-size:14px;font-weight:600;}
+  .footer-sitemap a:hover{color:var(--sprout-light);}
+  @media (max-width:700px){.footer-sitemap{justify-content:flex-start;gap:32px;}}
+
+  .footer-bottom{background:var(--navy-deep);color:#fff;padding:22px 20px;text-align:center;font-size:13px;}
+  .footer-bottom span{color:#5e7e9f;}
+  .footer-bottom a{margin:0 4px;}
+  .footer-bottom a:hover{color:var(--sprout-light);}
+  .social-row{display:flex;justify-content:center;gap:16px;margin-bottom:14px;}
+  .social-row a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="../../index.html">
+      <img src="../../assets/logo.png" alt="MSP Sprout logo" width="30" height="30">
+      <span class="logo-word">MSP <span class="accent">Sprout</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+        <nav class="main-nav">
+      <ul id="navList">
+        <li class="menu-close-item"><button type="button" class="menu-close" id="menuClose" aria-label="Close menu">&times;</button></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false">Services <span class="caret">&#9662;</span></button>
+          <div class="sub-menu">
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">SEO</span>
+              <a href="../../seo/index.html">SEO</a>
+              <a href="../../ai-seo/index.html">AI SEO</a>
+              <a href="../../google-business-profile/index.html">Google Business Profile</a>
+              <a href="../../content-marketing/index.html">Content Marketing</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Paid Media</span>
+              <a href="../../google-ads-ppc/index.html">Google Ads</a>
+              <a href="../../facebook-ads/index.html">Facebook Ads</a>
+              <a href="../../bing-ads/index.html">Bing Ads</a>
+              <a href="../../chatgpt-ads/index.html">ChatGPT Ads</a>
+              <a href="../../linkedin-ads/index.html">LinkedIn Ads</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Outbound</span>
+              <a href="../../cold-email-outreach/index.html">Cold Email Outreach</a>
+              <a href="../../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
+              <a href="../../appointment-setting/index.html">Appointment Setting</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Website &amp; Growth</span>
+              <a href="../../web-design/index.html">Web Design</a>
+              <a href="../../demand-generation/index.html">Demand Gen</a>
+              <a href="../../msp-lead-generation/index.html">MSP Lead Gen</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../about/index.html">About</a></li>
+        <li><a href="../../results/index.html">Results</a></li>
+        <li><a href="../index.html">Blog</a></li>
+        <li><a href="../../contact/index.html">Contact</a></li>
+        <li class="cta-item"><a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener">Schedule a Call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="post-hero">
+  <div class="wrap">
+    <span class="post-tag">Growth</span>
+    <h1>Scaling Your MSP: A 3-Year MSP Growth Roadmap</h1>
+    <p class="post-meta">By Alex <span>|</span> Published <time datetime="2026-09-14">September 14, 2026</time> <span>|</span> 7 min read</p>
+  </div>
+</section>
+
+<section class="post-body">
+  <div class="wrap">
+    <p>Every technician who starts an MSP makes the same first move. They pick the RMM, lock in the PSA, spend a week comparing ticketing tools, and treat the tech stack like the foundation everything else gets built on.</p>
+    <p>I get why. It&rsquo;s the part they&rsquo;re actually good at. It&rsquo;s also the part that matters least in year one.</p>
+    <p>I&rsquo;ve watched this play out dozens of times across clients in this space: a genuinely skilled technician starts an MSP, spends two years being the best in the market at the actual work, and is still stuck around $5K MRR while a mediocre technician down the street is pulling in five times that.</p>
+    <p>The market doesn&rsquo;t pay for who&rsquo;s best at fixing things. It pays for who&rsquo;s most visible when someone&rsquo;s looking for help.</p>
+    <p>So here&rsquo;s the version of this I&rsquo;d actually run, if I were building an MSP from zero. Not a stack-first plan. A visibility-first one, with the tech decisions coming second.</p>
+
+    <h2>The Real Job in Month One Isn&rsquo;t Technical</h2>
+    <p>Before you touch a single tool decision, there are three things that matter more, and none of them are expensive.</p>
+
+    <div class="fix-callout">
+      <p><strong>Get a real brand built.</strong> Not a logo you made in Canva at midnight and a Facebook page you post to once a month. Pay someone to put together an actual brand guide. This is the single most skipped step, and it&rsquo;s the reason so many MSPs look and sound identical to each other for years.</p>
+      <p><strong>Get your site up yourself.</strong> WordPress and Elementor, a weekend, and a few YouTube tutorials will get you something that looks legitimate without spending money you don&rsquo;t have yet. It doesn&rsquo;t need to be fancy. It needs to not look like it was built for free, even though it was.</p>
+      <p><strong>Claim every local listing that exists.</strong> Google Business Profile and Bing Places first, filled out completely. Don&rsquo;t write &ldquo;computer repair&rdquo; in the category field. Write IT services, cybersecurity, networking, the actual breadth of what you do, because that&rsquo;s what determines what you show up for.</p>
+    </div>
+
+    <p>Then comes the part most new MSP owners skip entirely: picking a lane. Not one vertical, and definitely not &ldquo;any business with a computer.&rdquo; Pick three industries you actually understand well enough to talk about their specific pains without googling them first, and only market to those three for now.</p>
+
+    <h2>Trade Your Time for Proof, Because Your Time Is Worth Nothing Yet</h2>
+    <p>Here&rsquo;s a move that feels backwards to a lot of new owners: offer completely free projects to companies inside those three verticals. Not discounted. Free. Your only ask back is a 5-star review and a video testimonial.</p>
+    <p>The math on this is simple. Right now, your hour is worth close to nothing in the market, you have no clients, no case studies, and no proof you can actually deliver.</p>
+    <p>A real testimonial from a real business in your target vertical is worth more to your next twelve months than that same hour spent on a ticket would be. Once you have paying clients, this trade stops making sense. Right now, it&rsquo;s the best trade available to you.</p>
+    <p>All of the above is realistic inside 90 days, and none of it requires outside capital. It requires actually doing it instead of getting three weeks into researching RMM platforms and calling that progress.</p>
+
+    <h2>From $2K to $15K: What the First Year Actually Looks Like</h2>
+    <p>Say one of those free-project clients converts to a paid monthly agreement around the three-month mark. You&rsquo;re at roughly $2,000 MRR. Small number, but it&rsquo;s not nothing, it&rsquo;s fuel for the next stage.</p>
+    <p>This is when I&rsquo;d join the Chamber of Commerce and Rotary, and treat attendance as non-negotiable. Every person you meet goes into your CRM that same week, and every one of them gets added to a weekly email that&rsquo;s actually worth opening: a Microsoft update, a piece of cybersecurity news, a quick tip, nothing salesy.</p>
+    <p>Most local competitors either don&rsquo;t do this at all or do it so inconsistently it never compounds.</p>
+    <p>Layer in a content platform to keep something going out consistently. You don&rsquo;t have hours to spend writing content from scratch this early, and the ROI on just staying visible is bigger than the ROI on any one piece being perfect.</p>
+
+    <div class="stat-callout">
+      <div class="stat-num">$15K</div>
+      <p>MRR across three clients is a realistic number by month eight, not an optimistic one, once you&rsquo;ve stacked consistent networking, some early <a href="../../seo/index.html">local SEO</a> traction, a direct mail and calling push into one target vertical, and roughly $20 a day in hyperlocal YouTube and Facebook ads.</p>
+    </div>
+
+    <p>That&rsquo;s the point where a part-time technician at around $2,500 a month starts to make sense, purely so your own time goes back into selling instead of getting pulled into tickets.</p>
+    <p>Worth sitting with this: if you showed up to Rotary every single week for five months straight, would you close a deal out of it? Yes, essentially every time. The channel isn&rsquo;t the variable. Whether you actually show up consistently is.</p>
+
+    <div class="inline-cta">
+      <p>Not sure which channel to stack first for your MSP? We&rsquo;ll help you figure it out.</p>
+      <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
+    </div>
+
+    <h2>Year Two Is Where the Channels Start Stacking</h2>
+    <p>By month 18 in this scenario, you&rsquo;re around $35,000 MRR, with a full-time engineer on payroll and the business clearing about $10,000 a month in profit.</p>
+    <p>Look at where the leads are actually coming from at this stage and you&rsquo;ll usually see something like this: one lead a month from local SEO, one from networking, one from <a href="../../cold-email-outreach/index.html">outbound</a> sequences, and the rest from referrals, both direct client asks and a growing network of larger MSPs and telecom providers sending you the accounts too small for them.</p>
+
+    <div class="stat-callout">
+      <div class="stat-num">5:1</div>
+      <p>Five leads a month, closing one. That&rsquo;s the entire engine behind $35K MRR in a year and a half from a standing start. Nothing about that is a lucky break. It&rsquo;s five boring channels running at the same time, none of them individually impressive.</p>
+    </div>
+
+    <p>Heading into year two proper, $60,000 MRR with around 600 endpoints across two technicians is a reasonable target. This is where I&rsquo;d bring on a marketing coordinator, get them trained on the system that&rsquo;s already producing results, and hand it off, so my own time shifts almost entirely to vision, retention, and growth.</p>
+    <p>Anything short of that is a poor use of an owner&rsquo;s time at this stage.</p>
+
+    <h2>By Year Three, You&rsquo;re Not Running the Marketing Anymore, You&rsquo;re Managing It</h2>
+    <p>By the end of year three, a business built this way looks something like this:</p>
+    <ul>
+      <li>$100,000 in monthly recurring revenue</li>
+      <li>The owner, four technicians, a full-time marketing manager, and an account manager</li>
+      <li>Bookkeeping outsourced, admin kept lean everywhere else</li>
+      <li>An outside SEO company reinforcing local search</li>
+      <li>An outbound lead gen company running sequences the internal team designed</li>
+      <li>Roughly $5,500 a month in additional marketing spend, expected to pay for itself within 9 to 12 months</li>
+    </ul>
+
+    <div class="stat-callout">
+      <div class="stat-num">$100K</div>
+      <p>MRR in three years is realistic on this path. Guaranteed? No. More likely than winging it with no structure? By a wide margin.</p>
+    </div>
+
+    <p>The reason outside vendors come in at year three and not year one comes down to the value of your own time. Early on, your hour is nearly free, so it makes sense to do the work yourself.</p>
+    <p>By year three, your hour is expensive enough that managing an in-house SEO or outbound function stops being worth it compared to handing it to someone who already does it well. Keep re-asking that question as you grow, because the right answer changes every year, even if the activity itself doesn&rsquo;t.</p>
+
+    <h2>Four Things That Actually Carried This the Whole Way</h2>
+    <p>Pull this roadmap apart and the same four ideas show up at every stage, not just once.</p>
+
+    <h2><span class="mistake-num">1</span>Growth Gets Prioritized Over Tech</h2>
+    <p>Every time there&rsquo;s a real tradeoff between the two. Tech decisions follow the sales and brand strategy, they don&rsquo;t set the direction themselves.</p>
+
+    <h2><span class="mistake-num">2</span>Nothing Here Gets Bought Early</h2>
+    <p>It gets earned with time and consistency, because there&rsquo;s no budget in year one to shortcut it with, and pretending otherwise just delays the real work.</p>
+
+    <h2><span class="mistake-num">3</span>Networking Never Stops</h2>
+    <p>Not after the first few deals close, not once referrals start coming in on their own. The lunch and learns and the weekly emails feel unglamorous the entire time. Most competitors quietly stop doing them. That gap is where the advantage lives.</p>
+
+    <h2><span class="mistake-num">4</span>New Channels Get Stacked, Never Swapped In</h2>
+    <p>Local SEO doesn&rsquo;t retire networking. Outbound doesn&rsquo;t retire referrals. Each one keeps reinforcing the others, and three years of small, boring layers is what actually adds up to something real.</p>
+
+    <div class="inline-cta">
+      <p>Want help building out any single piece of this roadmap?</p>
+      <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
+    </div>
+
+    <h2>Where This Leaves You</h2>
+    <p>None of this requires a big team or a big budget on day one. It requires a plan you actually follow and the discipline to keep doing the unglamorous parts of it long after they stop feeling new.</p>
+    <p>If you want a second opinion on where your MSP actually sits against this roadmap, or help building out any single piece of the <a href="../../msp-lead-generation/index.html">marketing engine</a>, <a href="../../seo/index.html">local SEO</a>, <a href="../../google-ads-ppc/index.html">Google Ads</a>, or <a href="../../cold-email-outreach/index.html">outbound</a>, feel free to book a call. Happy to walk through it with you.</p>
+
+    <div class="post-cta">
+      <p>If you want a second opinion on where your MSP actually sits against this roadmap, we&rsquo;re happy to walk through it with you.</p>
+      <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Schedule a Growth Call<span class="sub">Talk to a Growth Specialist</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-dark" id="cta">
+  <div class="wrap">
+    <h2>You already have what it takes to grow your MSP; you just need the system to unlock it.</h2>
+    <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Schedule a Growth Call<span class="sub">Yes! I want more clients</span></a>
+  </div>
+</section>
+
+<footer class="footer-legal">
+  <div class="wrap">
+        <nav class="footer-sitemap">
+      <div class="footer-col">
+        <span class="label">Company</span>
+        <a href="../../index.html">Home</a>
+        <a href="../../about/index.html">About</a>
+        <a href="../../case-studies/index.html">Case Studies</a>
+        <a href="../../results/index.html">Results</a>
+        <a href="../../pricing/index.html">Pricing</a>
+        <a href="../../packages/index.html">Packages</a>
+        <a href="../index.html">Blog</a>
+        <a href="../../contact/index.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">SEO</span>
+        <a href="../../seo/index.html">SEO</a>
+        <a href="../../ai-seo/index.html">AI SEO</a>
+        <a href="../../google-business-profile/index.html">Google Business Profile</a>
+        <a href="../../content-marketing/index.html">Content Marketing</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Paid Media</span>
+        <a href="../../google-ads-ppc/index.html">Google Ads</a>
+        <a href="../../facebook-ads/index.html">Facebook Ads</a>
+        <a href="../../bing-ads/index.html">Bing Ads</a>
+        <a href="../../chatgpt-ads/index.html">ChatGPT Ads</a>
+        <a href="../../linkedin-ads/index.html">LinkedIn Ads</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Outbound</span>
+        <a href="../../cold-email-outreach/index.html">Cold Email Outreach</a>
+        <a href="../../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
+        <a href="../../appointment-setting/index.html">Appointment Setting</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Website &amp; Growth</span>
+        <a href="../../web-design/index.html">Web Design</a>
+        <a href="../../demand-generation/index.html">Demand Gen</a>
+        <a href="../../fractional-cmo/index.html">Fractional CMO</a>
+        <a href="../../msp-lead-generation/index.html">MSP Lead Gen</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="social-row">
+    <a href="https://www.youtube.com/@mspsprout" aria-label="YouTube" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5l6.3 3.5-6.3 3.5Z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/company/msp-sprout/" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3ZM6.5 8.7A1.7 1.7 0 1 1 8.2 7a1.7 1.7 0 0 1-1.7 1.7ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.5V19h-3v-9h2.9v1.2h.04a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.5Z"/></svg>
+    </a>
+  </div>
+  <img src="../../assets/logo.png" alt="MSP Sprout logo" width="18" height="18" style="vertical-align:middle;border-radius:4px;margin-right:6px;" loading="lazy"> &copy; Copyright MSP Sprout.
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navList');
+  const menuClose = document.getElementById('menuClose');
+  const navBackdrop = document.getElementById('navBackdrop');
+  function openNav(){ navList.classList.add('open'); navBackdrop.classList.add('open'); menuToggle.classList.add('hidden'); }
+  function closeNav(){ navList.classList.remove('open'); navBackdrop.classList.remove('open'); menuToggle.classList.remove('hidden'); }
+  menuToggle.addEventListener('click', () => { navList.classList.contains('open') ? closeNav() : openNav(); });
+  menuClose.addEventListener('click', closeNav);
+  navBackdrop.addEventListener('click', closeNav);
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  document.querySelectorAll('.sub-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('.has-sub');
+      const isOpen = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+</script>
+
+</body>
+</html>
