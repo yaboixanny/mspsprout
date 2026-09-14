@@ -243,11 +243,31 @@
   .post-cta p{font-size:16px;color:#333;margin-bottom:18px;}
 
   .roadmap-card{
-    background:var(--lavender);border-radius:20px;padding:36px 28px 30px;margin:8px 0 40px;
+    background:var(--lavender);border-radius:20px;padding:36px 28px 6px;margin:8px 0 40px;
   }
-  .roadmap-card h3{font-size:19px;text-align:center;margin:0 0 22px;color:var(--heading-navy);}
-  .roadmap-card svg{display:block;width:100%;height:auto;}
-  @media (max-width:560px){.roadmap-card{padding:26px 16px 22px;}}
+  .roadmap-card h3{font-size:19px;text-align:center;margin:0 0 6px;color:var(--heading-navy);}
+  .roadmap-card .roadmap-sub{text-align:center;font-size:14px;color:var(--text-gray);margin:0 0 28px;}
+  .roadmap-list{list-style:none;margin:0;padding:0;position:relative;}
+  .roadmap-list::before{content:"";position:absolute;left:19px;top:4px;bottom:4px;width:4px;background:var(--grad-sprout);border-radius:2px;}
+  .roadmap-list li{display:flex;gap:18px;align-items:flex-start;position:relative;padding-bottom:28px;}
+  .roadmap-list li:last-child{padding-bottom:6px;}
+  .roadmap-num{
+    position:relative;z-index:1;flex-shrink:0;width:40px;height:40px;border-radius:50%;
+    background:var(--grad-sprout);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-head);font-weight:800;font-size:16px;
+  }
+  .roadmap-content{padding-top:4px;}
+  .roadmap-content h4{font-size:18px;margin:0 0 5px;color:var(--heading-navy);line-height:1.3;}
+  .roadmap-content p{font-size:14.5px;color:var(--text-gray);margin:0;line-height:1.55;}
+  @media (max-width:560px){
+    .roadmap-card{padding:28px 18px 4px;}
+    .roadmap-list::before{left:16px;}
+    .roadmap-list li{gap:13px;}
+    .roadmap-num{width:34px;height:34px;font-size:14px;}
+    .roadmap-content{padding-top:2px;}
+    .roadmap-content h4{font-size:16.5px;}
+    .roadmap-content p{font-size:14px;}
+  }
 
   /* ---------- sections generic ---------- */
   section{padding:80px 20px;}
@@ -366,45 +386,51 @@
 
     <div class="roadmap-card">
       <h3>The 3-Year MSP Growth Roadmap, At a Glance</h3>
-      <svg viewBox="0 0 680 665" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline showing MSP growth from Month 1 foundation work through Year 3 at $100K MRR">
-        <defs>
-          <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#147A3F"/>
-            <stop offset="100%" stop-color="#9AD84B"/>
-          </linearGradient>
-        </defs>
-        <line x1="50" y1="70" x2="50" y2="595" stroke="url(#roadGrad)" stroke-width="5" stroke-linecap="round"/>
-
-        <circle cx="50" cy="70" r="19" fill="url(#roadGrad)"/>
-        <text x="50" y="76" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#fff">1</text>
-        <text x="90" y="66" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#22355F">Month 1 &mdash; Foundation</text>
-        <text x="90" y="90" font-family="Poppins, sans-serif" font-size="14" fill="#6D6E71">Brand, website, and local listings live</text>
-
-        <circle cx="50" cy="175" r="19" fill="url(#roadGrad)"/>
-        <text x="50" y="181" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#fff">2</text>
-        <text x="90" y="171" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#22355F">Month 3 &mdash; $2K MRR</text>
-        <text x="90" y="195" font-family="Poppins, sans-serif" font-size="14" fill="#6D6E71">First free-project client converts to paid</text>
-
-        <circle cx="50" cy="280" r="19" fill="url(#roadGrad)"/>
-        <text x="50" y="286" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#fff">3</text>
-        <text x="90" y="276" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#22355F">Month 8 &mdash; $15K MRR</text>
-        <text x="90" y="300" font-family="Poppins, sans-serif" font-size="14" fill="#6D6E71">3 clients, 5 channels stacked and running</text>
-
-        <circle cx="50" cy="385" r="19" fill="url(#roadGrad)"/>
-        <text x="50" y="391" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#fff">4</text>
-        <text x="90" y="381" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#22355F">Month 18 &mdash; $35K MRR</text>
-        <text x="90" y="405" font-family="Poppins, sans-serif" font-size="14" fill="#6D6E71">Full-time engineer on payroll</text>
-
-        <circle cx="50" cy="490" r="19" fill="url(#roadGrad)"/>
-        <text x="50" y="496" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#fff">5</text>
-        <text x="90" y="486" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#22355F">Year 2 &mdash; $60K MRR</text>
-        <text x="90" y="510" font-family="Poppins, sans-serif" font-size="14" fill="#6D6E71">600 endpoints, 2 technicians, marketing hire</text>
-
-        <circle cx="50" cy="595" r="19" fill="url(#roadGrad)"/>
-        <text x="50" y="601" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#fff">6</text>
-        <text x="90" y="591" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#22355F">Year 3 &mdash; $100K MRR</text>
-        <text x="90" y="615" font-family="Poppins, sans-serif" font-size="14" fill="#6D6E71">Team of 6, vendors handling SEO and outbound</text>
-      </svg>
+      <p class="roadmap-sub">Same MSP, six checkpoints, zero shortcuts.</p>
+      <ul class="roadmap-list">
+        <li>
+          <span class="roadmap-num">1</span>
+          <div class="roadmap-content">
+            <h4>Month 1 &mdash; Foundation</h4>
+            <p>Real brand, a DIY website, and every local listing filled out completely. Nothing to sell yet, so this stage runs on time instead of money.</p>
+          </div>
+        </li>
+        <li>
+          <span class="roadmap-num">2</span>
+          <div class="roadmap-content">
+            <h4>Month 3 &mdash; $2K MRR</h4>
+            <p>First free-project client converts to a paid, ongoing agreement. Chamber of Commerce and Rotary attendance starts here, and it doesn&rsquo;t stop.</p>
+          </div>
+        </li>
+        <li>
+          <span class="roadmap-num">3</span>
+          <div class="roadmap-content">
+            <h4>Month 8 &mdash; $15K MRR</h4>
+            <p>Three clients from networking, early local SEO, direct mail into one vertical, and about $20 a day in hyperlocal ads. Five boring channels, stacked.</p>
+          </div>
+        </li>
+        <li>
+          <span class="roadmap-num">4</span>
+          <div class="roadmap-content">
+            <h4>Month 18 &mdash; $35K MRR</h4>
+            <p>Five leads a month closing one client is the whole engine. First full-time engineer comes on so selling stops competing with tickets.</p>
+          </div>
+        </li>
+        <li>
+          <span class="roadmap-num">5</span>
+          <div class="roadmap-content">
+            <h4>Year 2 &mdash; $60K MRR</h4>
+            <p>Roughly 600 endpoints across two technicians. A marketing coordinator gets hired and trained on the system that&rsquo;s already producing results.</p>
+          </div>
+        </li>
+        <li>
+          <span class="roadmap-num">6</span>
+          <div class="roadmap-content">
+            <h4>Year 3 &mdash; $100K MRR</h4>
+            <p>Owner, four technicians, a marketing manager, and an account manager, with outside SEO and outbound vendors reinforcing what the in-house team already built.</p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <h2>The Real Job in Month One Isn&rsquo;t Technical</h2>
