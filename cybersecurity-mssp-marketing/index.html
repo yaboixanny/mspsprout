@@ -922,53 +922,6 @@
   </div>
 </section>
 
-<section class="section-lightblue">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Pricing</h2>
-      <p>We know you&rsquo;re tired of jumping through hoops just to get a straight answer on pricing. At MSP Sprout, we believe in radical transparency, which is why we lay out our pricing upfront &mdash; no surprises, no fine print.</p>
-    </div>
-
-    <div class="pricing-toggle-row">
-      <span>Billed Monthly</span>
-      <div class="switch" id="billingSwitch" role="button" aria-label="Toggle annual billing"></div>
-      <span>Billed Annually <span style="color:var(--sprout);font-weight:700;">(2 months free)</span></span>
-    </div>
-
-    <div class="pricing-grid-2">
-      <div class="price-card">
-        <h3>Visibility</h3>
-        <div class="price"><span class="amt" data-monthly="2497" data-annual="2081">$2,497</span><span> USD / month</span></div>
-        <ul>
-          <li>Technical &amp; Site Audit</li>
-          <li>Compliance &amp; Buyer-Intent Keyword Research</li>
-          <li>On-Page &amp; Technical SEO Fixes</li>
-          <li>Local Listings &amp; Citation Building</li>
-          <li>Rank &amp; Traffic Tracking</li>
-          <li>Monthly Reporting</li>
-          <li>30 Day Money Back Guarantee</li>
-        </ul>
-        <button class="btn btn-outline">Get Started</button>
-      </div>
-
-      <div class="price-card featured">
-        <h3>Full Coverage</h3>
-        <div class="price"><span class="amt" data-monthly="4997" data-annual="4164">$4,997</span><span> USD / month</span></div>
-        <ul>
-          <li>Everything in Visibility, plus:</li>
-          <li>Google Ads Campaign Build &amp; Management</li>
-          <li>Outbound Lead Generation &amp; Appointment Setting</li>
-          <li>Conversion-Focused Web Design Refresh</li>
-          <li>Dedicated Call &amp; Lead Tracking</li>
-          <li>Priority Optimization Cycles</li>
-        </ul>
-        <button class="btn btn-sprout">Sign Up Now</button>
-      </div>
-    </div>
-    <p style="text-align:center;color:var(--text-gray);font-size:13.5px;margin-top:30px;">We only take on a handful of new cybersecurity and MSSP clients per month to keep every account properly staffed.</p>
-  </div>
-</section>
-
 <section class="section-cream">
   <div class="wrap">
     <div class="section-head">
@@ -1162,18 +1115,6 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
-
-  const sw = document.getElementById('billingSwitch');
-  const amts = document.querySelectorAll('.amt');
-  let annual = false;
-  function renderPricing(){
-    amts.forEach(el => {
-      el.textContent = '$' + Number(el.dataset[annual ? 'annual' : 'monthly']).toLocaleString('en-US');
-    });
-    sw.classList.toggle('on', annual);
-  }
-  sw.addEventListener('click', () => { annual = !annual; renderPricing(); });
-  renderPricing();
 </script>
 
 </body>
