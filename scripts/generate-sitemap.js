@@ -4,17 +4,17 @@
  * actually exist in the repo. Runs as the Netlify build command, so it
  * re-runs — and the sitemap stays current — on every deploy.
  *
- * Site URL comes from Netlify's own env vars at build time (URL /
- * DEPLOY_PRIME_URL), so it never needs hand-editing if a custom domain
- * gets attached later. Falls back to the known netlify.app URL for local
- * runs.
+ * Site URL is the canonical custom domain. Netlify's URL env var is
+ * deliberately NOT used: it can resolve to the netlify.app address, which
+ * would put the wrong host in sitemap.xml and robots.txt. Override with
+ * SITE_URL only if the primary domain ever changes.
  */
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
-const SITE_URL = (process.env.URL || process.env.DEPLOY_PRIME_URL || 'https://mspsprout.netlify.app').replace(/\/$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://mspsprout.com').replace(/\/$/, '');
 
 const IGNORE_DIRS = new Set(['.git', 'node_modules', 'scripts', '.netlify']);
 
