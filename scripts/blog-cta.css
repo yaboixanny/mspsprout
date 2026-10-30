@@ -1,0 +1,46 @@
+  /* ---------- discovery call banner ---------- */
+  .disc-cta{
+    padding:0;background:linear-gradient(to bottom,#fff 0%,#fff 50%,var(--navy) 50%,var(--navy) 100%);
+    margin-top:30px;
+  }
+  .disc-cta-inner{
+    position:relative;overflow:hidden;
+    background:linear-gradient(115deg,#C4EE7B 0%,#9AD84B 38%,#6DDB8B 72%,#3FBF73 100%);
+    clip-path:polygon(0 70px,100% 0,100% 100%,0 100%);
+    border-radius:0 0 90px 90px;
+    padding:150px 20px 100px;
+  }
+  .disc-cta-inner::before,.disc-cta-inner::after{
+    content:"";position:absolute;pointer-events:none;background:rgba(255,255,255,.14);
+  }
+  .disc-cta-inner::before{width:46%;height:120%;left:18%;top:-10%;clip-path:polygon(30% 0,100% 12%,70% 100%,0 70%);}
+  .disc-cta-inner::after{width:34%;height:90%;right:-4%;top:10%;background:rgba(20,122,63,.12);clip-path:polygon(0 18%,100% 0,85% 100%,20% 82%);}
+  .disc-cta-grid{
+    position:relative;z-index:1;max-width:1170px;margin:0 auto;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;
+  }
+  .disc-eyebrow{font-size:14px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--sprout-dark);margin-bottom:14px;display:block;}
+  .disc-cta h2{font-size:54px;line-height:1.1;margin:0 0 26px;color:var(--navy);}
+  .disc-lead{font-size:19px;color:#1a2a1f;margin-bottom:22px;line-height:1.5;}
+  .disc-lead strong{color:var(--navy);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
+  .disc-list{display:flex;flex-direction:column;gap:14px;}
+  .disc-list li{display:flex;align-items:center;gap:12px;font-size:17px;color:#1a2a1f;}
+  .disc-list svg{flex-shrink:0;}
+  .disc-card{
+    background:#fff;border-radius:26px;padding:38px 34px 34px;text-align:center;
+    box-shadow:0 24px 60px rgba(20,40,30,.22);
+  }
+  .disc-script{
+    display:inline-flex;align-items:flex-end;gap:6px;font-family:'Caveat',cursive;font-weight:600;
+    font-size:29px;color:var(--heading-navy);margin-bottom:12px;line-height:1;
+  }
+  .disc-script svg{margin-bottom:-6px;}
+  .disc-card .btn{width:100%;max-width:420px;padding:20px 28px;font-size:16px;letter-spacing:.8px;text-transform:uppercase;}
+  .disc-note{font-size:14.5px;font-style:italic;color:var(--text-gray);margin:20px 0 0;}
+  @media (max-width:900px){
+    .disc-cta-inner{clip-path:polygon(0 36px,100% 0,100% 100%,0 100%);border-radius:0 0 48px 48px;padding:90px 20px 70px;}
+    .disc-cta-grid{grid-template-columns:1fr;gap:36px;}
+    .disc-cta h2{font-size:38px;}
+    .disc-card{padding:30px 22px 26px;}
+    .disc-card .btn{font-size:14.5px;padding:18px 20px;}
+  }
