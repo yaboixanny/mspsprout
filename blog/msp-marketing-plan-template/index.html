@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSP Marketing Plan (With Template) | MSP Sprout</title>
+<meta name="description" content="How to build an MSP marketing plan in seven steps: goals, target client, SWOT, channels, budget, calendar, and metrics, with a fill-in template.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MSP Marketing Plan (With Template): How to Build One That Brings in Clients">
+<meta property="og:description" content="How to build an MSP marketing plan in seven steps: goals, target client, SWOT, channels, budget, calendar, and metrics, with a fill-in template.">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://mspsprout.com/blog/msp-marketing-plan-template/">
+<link rel="icon" href="../../assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- core palette ---- */
+    --navy:#1F1C35;            /* header / dark section bg */
+    --navy-deep:#141223;       /* footer bg */
+    --heading-navy:#22355F;    /* heading text color */
+    --text-gray:#6D6E71;       /* body copy gray */
+    --pink:#FF34A4;
+    --orange:#FF6E47;
+    --blue:#03A2E9;
+    --blue-bright:#0BB4FF;
+    --green:#6DDB8B;
+    --red:#FF4F51;
+    --cream:#FEF9F3;
+    --lavender:#F1F3FE;
+    --lavender-2:#F1F6FE;
+    --lightblue-bg:#F0F6F9;
+    --border-gray:#D6D8D9;
+    --white:#ffffff;
+
+    /* ---- MSP Sprout brand green (replaces the old purple accent) ---- */
+    --sprout:#1E9E52;
+    --sprout-dark:#147A3F;
+    --sprout-light:#8FE3A8;
+    --sprout-lime:#9AD84B;
+    --sprout-mint-bg:#F4FBF6;
+    --sprout-mint-border:#B9E6C6;
+
+    --grad-pink-yellow: linear-gradient(90deg, #FF34A4 0%, #FEBC24 180%);
+    --grad-sprout: linear-gradient(90deg, #147A3F 0%, #9AD84B 100%);
+    --grad-green-blue: linear-gradient(90deg, #6DDB8B 0%, #0BB4FF 100%);
+
+    --font-head:'Poppins', sans-serif;
+    --font-body:'Poppins', sans-serif;
+    --font-quote:'Merriweather', serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:#111;
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  .wrap{max-width:1170px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3,h4,h5,h6{font-family:var(--font-head);margin:0;font-weight:700;color:var(--heading-navy);}
+  p{margin:0;line-height:1.6;}
+
+  /* ---------- gradient button ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;flex-direction:column;
+    gap:2px;
+    font-family:var(--font-head);
+    font-weight:600;
+    color:#fff;
+    padding:18px 44px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    text-align:center;
+    transition:transform .25s ease, box-shadow .25s ease;
+    line-height:1.2;
+  }
+  .btn span.sub{display:block;font-size:14px;font-weight:400;opacity:.85;margin-top:4px;}
+  .btn:hover{transform:translateY(-2px) scale(1.02);}
+  .btn-pink-yellow{background:var(--grad-pink-yellow);}
+  .btn-sprout{background:var(--grad-sprout);}
+  .btn-outline{
+    background:transparent;border:2px solid rgba(0,0,0,.15);color:var(--heading-navy);
+    padding:12px 28px;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.5px;
+  }
+
+  /* ---------- header ---------- */
+  header.site-header{background:var(--navy);padding:18px 0;position:sticky;top:0;z-index:50;}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-word{font-size:20px;font-weight:700;color:#fff;letter-spacing:.2px;}
+  .logo-word .accent{
+    background-image:var(--grad-sprout);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  nav.main-nav ul{display:flex;align-items:center;gap:2px;}
+  nav.main-nav a{
+    color:#fff;font-size:15px;font-weight:500;padding:10px 13px;display:block;
+    transition:color .2s ease;white-space:nowrap;
+  }
+  nav.main-nav a:hover{color:var(--sprout-light);}
+  nav.main-nav li.cta-item a{
+    background:var(--grad-pink-yellow);
+    color:#fff;border-radius:50px;padding:10px 28px;font-weight:600;
+  }
+  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;transition:opacity .2s ease;}
+  .menu-toggle.hidden{opacity:0;pointer-events:none;}
+  .menu-close-item{display:none;}
+  .nav-backdrop{display:none;}
+
+  /* ---------- services dropdown (mega menu) ---------- */
+  nav.main-nav li.has-sub{position:relative;}
+  nav.main-nav .sub-toggle{
+    background:none;border:none;font:inherit;color:#fff;font-size:15px;font-weight:500;
+    padding:10px 13px;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap;
+  }
+  nav.main-nav .sub-toggle:hover{color:var(--sprout-light);}
+  nav.main-nav .sub-toggle .caret{font-size:10px;transition:transform .2s ease;}
+  nav.main-nav .sub-menu{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:4px 30px;
+    position:absolute;top:100%;left:50%;width:min(760px,92vw);
+    background:#1F1C35;border:1px solid rgba(255,255,255,.12);border-radius:14px;
+    padding:26px 28px;margin-top:10px;box-shadow:0 24px 50px rgba(0,0,0,.4);
+    opacity:0;visibility:hidden;transform:translate(-50%,6px);
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;z-index:60;
+  }
+  nav.main-nav li.has-sub:hover .sub-menu,
+  nav.main-nav li.has-sub.open .sub-menu{opacity:1;visibility:visible;transform:translate(-50%,0);}
+  nav.main-nav li.has-sub:hover .sub-toggle .caret{transform:rotate(180deg);}
+  nav.main-nav .sub-menu-col{display:flex;flex-direction:column;}
+  nav.main-nav .sub-menu-heading{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    color:var(--sprout-light);padding:0 12px;margin-bottom:8px;
+  }
+  nav.main-nav .sub-menu a{padding:9px 12px;border-radius:6px;font-size:14px;}
+  nav.main-nav .sub-menu a:hover{background:rgba(255,255,255,.07);}
+
+  @media (max-width:900px){
+    nav.main-nav ul{
+      position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;height:100vh;overflow-y:auto;
+      background:rgba(17,16,28,.98);flex-direction:column;align-items:flex-start;
+      padding:24px 30px 80px;gap:2px;transform:translateX(100%);transition:transform .3s ease;
+      z-index:60;
+    }
+    nav.main-nav ul.open{transform:translateX(0);}
+    .nav-backdrop{
+      display:block;position:fixed;inset:0;background:rgba(10,9,20,.55);
+      opacity:0;visibility:hidden;transition:opacity .3s ease;z-index:55;pointer-events:none;
+    }
+    .nav-backdrop.open{opacity:1;visibility:visible;pointer-events:auto;}
+    nav.main-nav a{width:100%;padding:12px 0;}
+    .menu-toggle{display:block;}
+    .menu-close-item{display:block;width:100%;text-align:right;margin-bottom:10px;}
+    .menu-close{background:none;border:none;color:#fff;font-size:30px;line-height:1;cursor:pointer;padding:6px;}
+    .menu-close:hover{color:var(--sprout-light);}
+    nav.main-nav li.has-sub{width:100%;}
+    nav.main-nav .sub-toggle{width:100%;justify-content:space-between;padding:12px 0;}
+    nav.main-nav .sub-menu{
+      position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;
+      border:none;background:transparent;margin:0 0 6px;padding:0 0 0 14px;display:none;
+      grid-template-columns:1fr;width:auto;gap:0;
+    }
+    nav.main-nav li.has-sub.open .sub-menu{display:flex;flex-direction:column;transform:none;}
+    nav.main-nav .sub-menu-col{margin-bottom:12px;}
+    nav.main-nav .sub-menu-heading{color:#8a8ab0;}
+    nav.main-nav li.has-sub.open .sub-toggle .caret{transform:rotate(180deg);}
+    nav.main-nav .sub-menu a{padding:9px 0;}
+  }
+
+  /* ---------- blog post hero ---------- */
+  .post-hero{padding:64px 20px 10px;background:#fff;text-align:center;}
+  .post-hero .wrap{max-width:760px;}
+  .post-tag{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout);margin-bottom:16px;display:block;}
+  .post-hero h1{font-size:40px;line-height:1.25;margin-bottom:18px;}
+  .post-meta{color:var(--text-gray);font-size:14px;}
+  .post-meta span{color:var(--border-gray);margin:0 8px;}
+  @media (max-width:700px){.post-hero h1{font-size:28px;}}
+
+  /* ---------- article body ---------- */
+  .post-body{padding:40px 20px 20px;}
+  .post-body .wrap{max-width:760px;}
+  .post-body h2{font-size:27px;margin:46px 0 18px;line-height:1.3;}
+  .post-body h3{font-size:20px;margin:34px 0 14px;color:var(--heading-navy);}
+  .post-body p{font-size:17px;color:#333;margin-bottom:24px;line-height:1.8;}
+  .post-body ul,.post-body ol{margin:0 0 20px;padding-left:22px;}
+  .post-body ul{list-style:disc;}
+  .post-body ol{list-style:decimal;}
+  .post-body li{font-size:17px;color:#333;margin-bottom:10px;line-height:1.65;}
+  .post-body strong{color:var(--heading-navy);}
+  .post-body a{color:var(--sprout-dark);font-weight:600;text-decoration:underline;text-decoration-color:var(--sprout-light);text-underline-offset:2px;}
+  .post-body a:hover{color:var(--sprout);}
+  .post-body a.btn{color:#fff;text-decoration:none;}
+
+  .mistake-num{
+    display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+    border-radius:9px;background:var(--grad-sprout);color:#fff;font-weight:800;font-size:15px;
+    margin-right:12px;vertical-align:middle;
+  }
+
+  .compare-row{display:flex;gap:16px;margin:0 0 28px;}
+  .compare-row > div{flex:1;border-radius:14px;padding:20px 22px;}
+  .compare-row .wrong{background:#FFF4F3;border:1.5px solid #FFD3D0;}
+  .compare-row .right{background:var(--sprout-mint-bg);border:1.5px solid var(--sprout-mint-border);}
+  .compare-row .compare-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    margin-bottom:8px;display:flex;align-items:center;gap:6px;
+  }
+  .compare-row .wrong .compare-label{color:var(--red);}
+  .compare-row .right .compare-label{color:var(--sprout-dark);}
+  .compare-row .compare-icon{
+    width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:800;color:#fff;flex-shrink:0;
+  }
+  .compare-row .wrong .compare-icon{background:var(--red);}
+  .compare-row .right .compare-icon{background:var(--sprout);}
+  .compare-row p{font-family:var(--font-quote);font-style:italic;font-size:15px;color:#333;margin:0;line-height:1.5;}
+  @media (max-width:600px){.compare-row{flex-direction:column;}}
+
+  .stat-callout{
+    display:flex;align-items:center;gap:20px;background:var(--lavender);border-radius:16px;
+    padding:26px 28px;margin:0 0 28px;
+  }
+  .stat-callout .stat-num{
+    font-size:38px;font-weight:800;background-image:var(--grad-sprout);-webkit-background-clip:text;
+    background-clip:text;color:transparent;flex-shrink:0;line-height:1;
+  }
+  .stat-callout p{margin:0;font-size:15px;color:#333;line-height:1.5;}
+  @media (max-width:600px){.stat-callout{flex-direction:column;align-items:flex-start;gap:10px;}}
+
+  .fix-callout{
+    background:var(--sprout-mint-bg);border-left:4px solid var(--sprout);border-radius:0 12px 12px 0;
+    padding:20px 24px;margin:0 0 28px;
+  }
+  .fix-callout p{margin:0;font-size:15.5px;color:#1a3a24;line-height:1.65;}
+  .fix-callout p+p{margin-top:10px;}
+  .fix-callout ul{margin:0;padding-left:20px;list-style:disc;}
+  .fix-callout li{font-size:15.5px;color:#1a3a24;margin-bottom:8px;line-height:1.55;}
+  .fix-callout li:last-child{margin-bottom:0;}
+  .fix-callout strong{color:var(--sprout-dark);}
+
+  .tldr-box{
+    background:var(--lavender);border-radius:16px;padding:26px 30px;margin:0 0 28px;
+  }
+  .tldr-box .tldr-label{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sprout-dark);
+    margin-bottom:12px;display:block;
+  }
+  .tldr-box ol{margin:0;padding-left:22px;list-style:decimal;}
+  .tldr-box li{font-size:15.5px;color:#1a1a2e;margin-bottom:8px;line-height:1.55;}
+  .tldr-box li:last-child{margin-bottom:0;}
+
+  .inline-cta{
+    background:var(--lavender);border-radius:16px;padding:26px 30px;margin:0 0 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  }
+  .inline-cta p{margin:0;font-size:16px;color:var(--heading-navy);font-weight:600;flex:1 1 260px;line-height:1.4;}
+  .inline-cta .btn{flex-shrink:0;padding:13px 26px;font-size:14px;}
+  .inline-cta .btn span.sub{font-size:12px;}
+  @media (max-width:560px){.inline-cta{padding:22px;}}
+
+
+  /* ---------- sections generic ---------- */
+  section{padding:80px 20px;}
+  .section-lavender{background:var(--lavender);}
+  .section-cream{background:var(--cream);}
+  .section-lightblue{background:var(--lightblue-bg);}
+  .section-navy{background:var(--navy);color:#fff;}
+  .section-navy h2,.section-navy h3,.section-navy p{color:#fff;}
+  .section-head{max-width:820px;margin:0 auto 50px;text-align:center;}
+  .section-head h2{font-size:34px;line-height:1.3;margin-bottom:16px;}
+  .section-head p{font-size:17px;color:var(--text-gray);}
+
+
+  /* ---------- discovery call banner ---------- */
+  .disc-cta{
+    padding:0;background:linear-gradient(to bottom,#fff 0%,#fff 50%,var(--navy) 50%,var(--navy) 100%);
+    margin-top:30px;
+  }
+  .disc-cta-inner{
+    position:relative;overflow:hidden;
+    background:linear-gradient(115deg,#C4EE7B 0%,#9AD84B 38%,#6DDB8B 72%,#3FBF73 100%);
+    clip-path:polygon(0 70px,100% 0,100% 100%,0 100%);
+    border-radius:0 0 90px 90px;
+    padding:150px 20px 100px;
+  }
+  .disc-cta-inner::before,.disc-cta-inner::after{
+    content:"";position:absolute;pointer-events:none;background:rgba(255,255,255,.14);
+  }
+  .disc-cta-inner::before{width:46%;height:120%;left:18%;top:-10%;clip-path:polygon(30% 0,100% 12%,70% 100%,0 70%);}
+  .disc-cta-inner::after{width:34%;height:90%;right:-4%;top:10%;background:rgba(20,122,63,.12);clip-path:polygon(0 18%,100% 0,85% 100%,20% 82%);}
+  .disc-cta-grid{
+    position:relative;z-index:1;max-width:1170px;margin:0 auto;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;
+  }
+  .disc-eyebrow{font-size:14px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--sprout-dark);margin-bottom:14px;display:block;}
+  .disc-cta h2{font-size:54px;line-height:1.1;margin:0 0 26px;color:var(--navy);}
+  .disc-lead{font-size:19px;color:#1a2a1f;margin-bottom:22px;line-height:1.5;}
+  .disc-lead strong{color:var(--navy);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
+  .disc-list{display:flex;flex-direction:column;gap:14px;}
+  .disc-list li{display:flex;align-items:center;gap:12px;font-size:17px;color:#1a2a1f;}
+  .disc-list svg{flex-shrink:0;}
+  .disc-card{
+    background:#fff;border-radius:26px;padding:38px 34px 34px;text-align:center;
+    box-shadow:0 24px 60px rgba(20,40,30,.22);
+  }
+  .disc-script{
+    display:inline-flex;align-items:flex-end;gap:6px;font-family:'Caveat',cursive;font-weight:600;
+    font-size:29px;color:var(--heading-navy);margin-bottom:12px;line-height:1;
+  }
+  .disc-script svg{margin-bottom:-6px;}
+  .disc-card .btn{width:100%;max-width:420px;padding:20px 28px;font-size:16px;letter-spacing:.8px;text-transform:uppercase;}
+  .disc-note{font-size:14.5px;font-style:italic;color:var(--text-gray);margin:20px 0 0;}
+  @media (max-width:900px){
+    .disc-cta-inner{clip-path:polygon(0 36px,100% 0,100% 100%,0 100%);border-radius:0 0 48px 48px;padding:90px 20px 70px;}
+    .disc-cta-grid{grid-template-columns:1fr;gap:36px;}
+    .disc-cta h2{font-size:38px;}
+    .disc-card{padding:30px 22px 26px;}
+    .disc-card .btn{font-size:14.5px;padding:18px 20px;}
+  }
+
+  /* ---------- footer ---------- */
+  .footer-legal{background:var(--navy);color:#cfcfe0;padding:60px 20px 30px;}
+  .footer-legal .btn{display:block;width:fit-content;margin:0 auto 40px;}
+  .footer-legal p{font-size:12px;line-height:1.7;color:#9a9ab8;max-width:900px;margin:0 auto 14px;}
+
+  .footer-sitemap{display:flex;flex-wrap:wrap;justify-content:center;gap:36px;margin:0 auto 40px;text-align:left;}
+  .footer-sitemap .footer-col{display:flex;flex-direction:column;gap:11px;min-width:145px;}
+  .footer-sitemap .label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#6f6f95;margin-bottom:4px;}
+  .footer-sitemap a{color:#cfcfe0;font-size:14px;font-weight:600;}
+  .footer-sitemap a:hover{color:var(--sprout-light);}
+  @media (max-width:700px){.footer-sitemap{justify-content:flex-start;gap:32px;}}
+
+  .footer-bottom{background:var(--navy-deep);color:#fff;padding:22px 20px;text-align:center;font-size:13px;}
+  .footer-bottom span{color:#5e7e9f;}
+  .footer-bottom a{margin:0 4px;}
+  .footer-bottom a:hover{color:var(--sprout-light);}
+  .social-row{display:flex;justify-content:center;gap:16px;margin-bottom:14px;}
+  .social-row a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+  .footer-tagline{margin:0 0 14px;font-weight:700;font-size:13px;color:#fff;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="../../index.html">
+      <img src="../../assets/logo.webp" alt="MSP Sprout logo" width="30" height="30">
+      <span class="logo-word">MSP <span class="accent">Sprout</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+        <nav class="main-nav">
+      <ul id="navList">
+        <li class="menu-close-item"><button type="button" class="menu-close" id="menuClose" aria-label="Close menu">&times;</button></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false">Services <span class="caret">&#9662;</span></button>
+          <div class="sub-menu">
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">SEO</span>
+              <a href="../../seo/index.html">SEO</a>
+              <a href="../../ai-seo/index.html">AI SEO</a>
+              <a href="../../google-business-profile/index.html">Google Business Profile</a>
+              <a href="../../content-marketing/index.html">Content Marketing</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Paid Media</span>
+              <a href="../../google-ads-ppc/index.html">Google Ads</a>
+              <a href="../../facebook-ads/index.html">Facebook Ads</a>
+              <a href="../../bing-ads/index.html">Bing Ads</a>
+              <a href="../../chatgpt-ads/index.html">ChatGPT Ads</a>
+              <a href="../../linkedin-ads/index.html">LinkedIn Ads</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Outbound</span>
+              <a href="../../cold-email-outreach/index.html">Cold Email Outreach</a>
+              <a href="../../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
+              <a href="../../appointment-setting/index.html">Appointment Setting</a>
+              <span class="sub-menu-heading" style="margin-top:14px;">Who We Help</span>
+              <a href="../../cybersecurity-mssp-marketing/index.html">Cybersecurity Companies</a>
+              <a href="../../saas-software-marketing/index.html">SaaS &amp; Software</a>
+              <a href="../../it-services-marketing/index.html">IT Services &amp; Consulting</a>
+              <a href="../../telecom-voip-marketing/index.html">Telecom, VoIP &amp; UCaaS</a>
+              <a href="../../var-reseller-marketing/index.html">VARs &amp; Solution Providers</a>
+            </div>
+            <div class="sub-menu-col">
+              <span class="sub-menu-heading">Website &amp; Growth</span>
+              <a href="../../web-design/index.html">Web Design</a>
+              <a href="../../demand-generation/index.html">Demand Gen</a>
+              <a href="../../msp-lead-generation/index.html">MSP Lead Gen</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../about/index.html">About</a></li>
+        <li><a href="../../results/index.html">Results</a></li>
+        <li><a href="../index.html">Blog</a></li>
+        <li><a href="../../contact/index.html">Contact</a></li>
+        <li class="cta-item"><a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener">Schedule a Call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="post-hero">
+  <div class="wrap">
+    <span class="post-tag">MSP Marketing</span>
+    <h1>MSP Marketing Plan (With Template): How to Build One That Brings in Clients</h1>
+    <p class="post-meta">By Alex <span>|</span> Published <time datetime="2026-10-30">October 30, 2026</time> <span>|</span> 12 min read</p>
+  </div>
+</section>
+
+<section class="post-body">
+  <div class="wrap">
+    <p>An MSP marketing plan is a written document that covers your goals, your target clients, your positioning, your channels, your budget, and the metrics you&rsquo;ll use to decide whether any of it is working.</p>
+    <p>That&rsquo;s it. It&rsquo;s not a 40-page strategy deck, and it&rsquo;s not a list of tactics you&rsquo;ve been meaning to try.</p>
+    <p>Most MSPs don&rsquo;t have one. They have a website, a LinkedIn page they post to when they remember, a few referral partners, and a vague plan to &ldquo;do more marketing&rdquo; once things slow down.</p>
+    <p>Then they wonder why leads show up in bursts and disappear for months.</p>
+    <p>I put together a simple <a href="#template">MSP marketing plan template</a> that walks through every step in this post, with worked examples filled in so you&rsquo;re never staring at a blank page. Use the rest of this guide to fill it out.</p>
+
+    <div class="tldr-box">
+      <span class="tldr-label">The 7 Steps, In Order</span>
+      <ol>
+        <li>Set measurable goals</li>
+        <li>Choose a target client and build a persona</li>
+        <li>Do a SWOT analysis</li>
+        <li>Pick your channels</li>
+        <li>Set a budget</li>
+        <li>Build a 12-month calendar</li>
+        <li>Track and adjust</li>
+      </ol>
+    </div>
+
+    <h2>What Is an MSP Marketing Plan?</h2>
+    <p>Think of it as the answer to five questions, written down where your whole team can see them:</p>
+    <ul>
+      <li>Who exactly are we trying to win as clients?</li>
+      <li>Why should they pick us over the other MSP in town?</li>
+      <li>Where will we show up to reach them?</li>
+      <li>How much are we willing to spend, and what do we expect back?</li>
+      <li>How will we know in 90 days whether it&rsquo;s working?</li>
+    </ul>
+    <p>If you can&rsquo;t answer all five in a sentence or two each, you don&rsquo;t have a plan yet. You have activity.</p>
+    <p>Activity feels productive, but it doesn&rsquo;t compound the way a plan does.</p>
+
+    <h2>Why MSPs Need a Marketing Plan</h2>
+    <p>Because MSP revenue is recurring, a single good client is worth a huge amount over its lifetime. That&rsquo;s the upside.</p>
+    <p>The downside is that the sales cycle is long, trust matters more than price, and almost every prospect already has an IT provider they&rsquo;re at least tolerating.</p>
+    <p>Without a plan, three things happen:</p>
+    <ul>
+      <li>You chase whatever channel looked exciting this month and drop it before it works</li>
+      <li>You can&rsquo;t tell which marketing dollars produced clients, so you can&rsquo;t cut the waste</li>
+      <li>You end up relying on referrals alone, which are great when they show up and completely out of your control when they don&rsquo;t</li>
+    </ul>
+    <p>A plan fixes that by forcing a few decisions up front. Once those are made, execution gets boring in the best possible way, which is exactly what you want.</p>
+
+    <h2>Key Components of an MSP Marketing Plan</h2>
+    <p>If someone asks what the five components of a marketing plan are, the honest answer for an MSP is six, because budget deserves its own line:</p>
+    <ol>
+      <li><strong>Goals.</strong> What number are you trying to move, and by when?</li>
+      <li><strong>Target client.</strong> Which industries, company sizes, and buyers you&rsquo;re built to serve.</li>
+      <li><strong>Positioning.</strong> The one sentence on who you help and what changes for them.</li>
+      <li><strong>Channels.</strong> Where you&rsquo;ll show up to reach that target client.</li>
+      <li><strong>Budget.</strong> What you&rsquo;ll spend, split across those channels.</li>
+      <li><strong>Metrics.</strong> The handful of numbers you&rsquo;ll review every month.</li>
+    </ol>
+    <p>Everything else in the plan is detail underneath one of those six.</p>
+
+    <h2>How to Build Your MSP Marketing Plan, Step by Step</h2>
+
+    <h3><span class="mistake-num">1</span>Set measurable goals</h3>
+    <p>&ldquo;Get more clients&rdquo; isn&rsquo;t a goal. A goal has a number and a date. The most useful way to build one is to work backward from the clients you actually want.</p>
+    <p>Say you want six new clients this year. If you close roughly one in four booked calls, you need about 24 calls. If half your leads book a call, you need about 48 leads.</p>
+    <p>Now you know what your marketing has to produce, and you can judge every channel against it.</p>
+    <div class="fix-callout">
+      <p><strong>The fix:</strong> set three numbers for almost every MSP: leads, booked calls, and cost per client.</p>
+      <p>Cost per client is total marketing spend divided by new clients won. It&rsquo;s the only number that tells you whether the whole thing is worth it.</p>
+    </div>
+
+    <h3><span class="mistake-num">2</span>Choose a target client and build a persona</h3>
+    <p>Pick two or three verticals where you already have real experience, then build a persona for the person who actually makes the buying decision. Here&rsquo;s a quick worked example:</p>
+    <div class="tldr-box">
+      <span class="tldr-label">Example Persona: Dana</span>
+      <ul>
+        <li><strong>Who:</strong> Dana, office manager and de facto IT person at a 35-person accounting firm</li>
+        <li><strong>What she&rsquo;s worried about:</strong> Tax season downtime, client data getting leaked, and being the one blamed when something breaks</li>
+        <li><strong>What she&rsquo;s doing now:</strong> Calling a part-time IT guy who takes a day to respond</li>
+        <li><strong>What she needs to hear:</strong> Fast response, fixed monthly cost, and proof you understand accounting software</li>
+        <li><strong>Where she looks:</strong> Google, local referrals, and her peers in the state CPA society</li>
+      </ul>
+    </div>
+    <p>Notice how specific that is. A persona like that tells you exactly what your service page, your ad copy, and your case studies should say.</p>
+    <div class="compare-row">
+      <div class="wrong">
+        <div class="compare-label"><span class="compare-icon">&times;</span>Too Vague</div>
+        <p>&ldquo;SMBs that need IT.&rdquo;</p>
+      </div>
+      <div class="right">
+        <div class="compare-label"><span class="compare-icon">&#10003;</span>Specific</div>
+        <p>&ldquo;Office managers at 20 to 50 person accounting firms who need fast support during tax season.&rdquo;</p>
+      </div>
+    </div>
+
+    <h3><span class="mistake-num">3</span>Do a SWOT analysis</h3>
+    <p>A SWOT is just an honest look at your strengths, weaknesses, opportunities, and threats. Keep it short. Here&rsquo;s what one might look like for a 12-person MSP:</p>
+    <div class="tldr-box">
+      <span class="tldr-label">Sample SWOT: 12-Person MSP</span>
+      <ul>
+        <li><strong>Strengths:</strong> Fast ticket response, strong reviews, deep experience with accounting and legal clients</li>
+        <li><strong>Weaknesses:</strong> No consistent content, a website that hasn&rsquo;t been updated in three years, no one owning marketing</li>
+        <li><strong>Opportunities:</strong> Few local competitors specialize in accounting firms, cyber insurance requirements pushing buyers to look for help</li>
+        <li><strong>Threats:</strong> Larger MSPs bidding on the same keywords, a client base concentrated in a few accounts</li>
+      </ul>
+    </div>
+    <p>The point of a SWOT isn&rsquo;t the grid. It&rsquo;s that your weaknesses become your first fixes and your strengths become your messaging.</p>
+
+    <div class="inline-cta">
+      <p>Want a second opinion on your goals, persona, or SWOT before you commit to a plan?</p>
+      <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk Through My Plan<span class="sub">Schedule a Call</span></a>
+    </div>
+
+    <h3><span class="mistake-num">4</span>Pick your channels</h3>
+    <p>Don&rsquo;t pick all of them. Pick the two or three that match where your target client actually looks, and do those properly.</p>
+    <p>I&rsquo;ll break the main options down in the next section.</p>
+
+    <h3><span class="mistake-num">5</span>Set a budget</h3>
+    <p>A common rule of thumb is to put somewhere around 5 to 10 percent of revenue into marketing, with the higher end making sense when you&rsquo;re actively trying to grow.</p>
+    <p>In my <a href="../scaling-your-msp-3-year-growth-roadmap/index.html">3-year growth roadmap</a>, the example business spends around $5,500 a month in additional marketing at $100K MRR, which is roughly that range.</p>
+    <p>For ad spend specifically, here&rsquo;s what I&rsquo;d consider a realistic floor:</p>
+    <div class="stat-callout">
+      <div class="stat-num">~$100/day</div>
+      <p>is the practical starting point for Google Ads in most markets, and $150 or more in larger cities. Below that, you rarely collect enough data to learn anything.</p>
+    </div>
+    <p><strong>LinkedIn Ads:</strong> plan on a few months of patient spend. Clicks cost more than most channels and the buying cycle is long.</p>
+    <p>If your budget is below those numbers, you&rsquo;re usually better off starting with SEO, your Google Business Profile, and referrals, and adding paid channels later.</p>
+
+    <h3><span class="mistake-num">6</span>Build a 12-month calendar</h3>
+    <p>Map your channels across the year so you&rsquo;re not trying to launch everything in January. A simple version looks like this:</p>
+    <ul>
+      <li><strong>Months 1 to 3:</strong> fix the website and landing pages, and launch your first paid campaign</li>
+      <li><strong>Months 4 to 6:</strong> publish content consistently and build reviews</li>
+      <li><strong>Months 7 to 12:</strong> double down on whatever&rsquo;s producing and cut what isn&rsquo;t</li>
+    </ul>
+    <p>Consistency beats intensity here. One piece of content a month, every month, will outperform five posts in January and nothing until June.</p>
+
+    <h3><span class="mistake-num">7</span>Track and adjust</h3>
+    <p>Review your numbers monthly, make one or two changes, and let them run long enough to see an effect.</p>
+    <p>I&rsquo;ll cover which numbers matter in the measurement section below.</p>
+
+    <h2>MSP Marketing Channels and Where to Put Your Budget</h2>
+    <p>Here are the main options, and what each one is actually good for.</p>
+
+    <h3>Google Ads</h3>
+    <p>The fastest way to reach people who are searching for managed IT right now. It&rsquo;s also where budget gets wasted fastest if your landing pages aren&rsquo;t built to convert.</p>
+    <p>I walk through the full setup in <a href="../how-to-run-google-ads-for-your-msp/index.html">how to run Google Ads for your MSP</a>, and the broader service is covered on our <a href="../../google-ads-ppc/index.html">Google Ads and PPC page</a>.</p>
+    <p>If you&rsquo;ve already got visitors who left without booking, retargeting is a cheap way to bring them back, and it&rsquo;s covered under the same service.</p>
+
+    <h3>SEO</h3>
+    <p>Slower to build, but it produces cheaper, more durable leads once it&rsquo;s working. This is where most MSPs should be investing alongside paid. See our <a href="../../seo/index.html">SEO services</a> for how we approach it.</p>
+    <p>Two quick answers worth knowing:</p>
+    <ul>
+      <li><strong>Local or national SEO?</strong> For most MSPs serving a metro area, local wins. Start with your Google Business Profile, location-specific service pages, and reviews. National only makes sense if you sell a specialized, remote-deliverable service like compliance for one specific industry.</li>
+      <li><strong>Technical SEO?</strong> It&rsquo;s making sure search engines can actually crawl and understand your site: fast load times, clean URLs, mobile-friendly pages, no broken links. If your site is slow or confusing, nothing else you do in SEO works as well.</li>
+    </ul>
+
+    <h3>LinkedIn and social</h3>
+    <p>Excellent targeting for reaching IT decision-makers, but it works best once your message and landing page are solid. I cover the full approach in the <a href="../msp-linkedin-ads-strategy/index.html">MSP LinkedIn ads strategy</a>.</p>
+    <p>Facebook is worth considering mainly for local community presence and lower-cost ads. For social media in general, pick one or two platforms and do them consistently instead of spreading thin across five.</p>
+
+    <h3>Email</h3>
+    <p>The cheapest channel you have, because you&rsquo;re reaching people who already know you.</p>
+    <p>A short weekly or monthly note with something actually useful (a security alert, a Microsoft update, a quick tip) keeps you top of mind until they&rsquo;re ready to switch.</p>
+
+    <h3>Referrals</h3>
+    <p>Valuable, but hard to control. Make it systematic by asking happy clients directly and building relationships with other MSPs, telecom providers, and accountants who see businesses outgrow their IT.</p>
+
+    <h3>Reviews</h3>
+    <p>Start with Google, then add the directories your buyers actually check.</p>
+    <p>Ask every happy client, respond to every review, and treat it as an ongoing habit instead of a one-time push.</p>
+
+    <h3>Events</h3>
+    <p>Trade shows can be worth it if the event is tied to one of your target verticals and you can follow up properly afterward.</p>
+    <p>For most smaller MSPs, local chamber and Rotary meetings, attended consistently, produce better returns for far less money.</p>
+
+    <div class="fix-callout">
+      <p><strong>A note on pricing and proof:</strong> should you publish pricing on your website? I&rsquo;d say yes, at least a &ldquo;starting from&rdquo; range or a breakdown of what drives cost. Buyers hate walking into a call blind on budget.</p>
+      <p>Pair it with real case studies that show the problem, the fix, and a specific outcome, because proof does more to build trust than any claim you can make about yourself. Your website needs to support all of this, which is where good <a href="../../web-design/index.html">web design</a> matters.</p>
+    </div>
+
+    <div class="inline-cta">
+      <p>Know which channels fit your budget but don&rsquo;t have time to run them?</p>
+      <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">See How We Can Help<span class="sub">Book a Growth Call</span></a>
+    </div>
+
+    <h2>How to Measure It</h2>
+    <p>You don&rsquo;t need a dashboard with 40 metrics. Track these monthly:</p>
+    <ul>
+      <li><strong>Leads:</strong> form fills and phone calls, separately</li>
+      <li><strong>Booked calls:</strong> how many leads turned into a real conversation</li>
+      <li><strong>Close rate:</strong> how many of those calls became clients</li>
+      <li><strong>Cost per lead:</strong> channel spend divided by leads from that channel</li>
+      <li><strong>Cost per client:</strong> total marketing spend divided by new clients</li>
+      <li><strong>Lead response time:</strong> how fast you reply, since slow follow-up quietly kills good campaigns</li>
+    </ul>
+    <p>The most common mistake is reporting on page views and impressions because they&rsquo;re easy to pull. They feel good and tell you almost nothing.</p>
+    <p>If a number doesn&rsquo;t connect back to clients or the leads that become clients, it&rsquo;s decoration.</p>
+    <p>Also give new channels time. SEO and LinkedIn in particular take months, not weeks, so judge them against a three to six month window.</p>
+
+    <h2>In-House or Outsourced?</h2>
+    <p>It depends on where you are. In the early stages, your time is the cheapest resource you have, so it makes sense for you to do much of the marketing yourself while you&rsquo;re small.</p>
+    <p>Once your time is better spent on sales and client retention, you&rsquo;ll want help. A practical progression looks like this:</p>
+    <ul>
+      <li><strong>Early:</strong> you handle networking, reviews, and basic content, and outsource specialized work like Google Ads or SEO</li>
+      <li><strong>Growing:</strong> a marketing coordinator handles execution on a plan that&rsquo;s already working</li>
+      <li><strong>Established:</strong> a marketing manager plus outside specialists for SEO and outbound</li>
+    </ul>
+    <p>I lay out that timeline in more detail in the <a href="../scaling-your-msp-3-year-growth-roadmap/index.html">3-year MSP growth roadmap</a>.</p>
+    <p>The main point is to hire marketing help only once there&rsquo;s a plan for them to execute, because a coordinator without a plan just produces activity.</p>
+
+    <h2 id="template">The Template: What&rsquo;s Inside and How to Use It</h2>
+    <p>The MSP marketing plan template is a fill-in-the-blank document that follows the same seven steps above. Inside you&rsquo;ll find:</p>
+    <ul>
+      <li>A goals worksheet that works backward from the number of clients you want</li>
+      <li>A persona builder with the Dana example filled in as a model</li>
+      <li>A SWOT grid with a sample for a 12-person MSP</li>
+      <li>A channel selection table with space for budget per channel</li>
+      <li>A 12-month calendar, month by month</li>
+      <li>A monthly scorecard for the metrics above</li>
+    </ul>
+    <p>To use it, block out a couple of hours, fill in each section in order, and share it with whoever&rsquo;s responsible for marketing. Then put a monthly review on the calendar.</p>
+    <p>A plan nobody looks at again after the first week isn&rsquo;t a plan.</p>
+
+    <h2>FAQ</h2>
+
+    <h3>What is MSP in marketing?</h3>
+    <p>MSP stands for managed service provider. MSP marketing is the set of activities an MSP uses to find and win new clients, such as SEO, paid ads, content, referrals, and networking.</p>
+
+    <h3>What are the 5 main marketing strategies?</h3>
+    <p>Content marketing, search engine optimization, paid advertising, email marketing, and social media are the five most common. For MSPs, referrals and reviews usually deserve a place on that list too.</p>
+
+    <h3>What is the 3-3-3 rule in marketing?</h3>
+    <p>It&rsquo;s a simple guideline suggesting you have about three seconds to catch attention, three key messages to communicate, and three follow-ups to land the conversation.</p>
+    <p>It&rsquo;s not a formal framework, but it&rsquo;s a useful reminder to keep your messaging short and specific.</p>
+
+    <h3>How much should an MSP spend on ads per day?</h3>
+    <p>Roughly $100 a day is the practical starting point for Google Ads in most markets, and higher in larger cities. Below that, you rarely collect enough data to optimize anything.</p>
+
+    <h3>What share of revenue should go to marketing?</h3>
+    <p>A common rule of thumb is around 5 to 10 percent of revenue, with more when you&rsquo;re actively pushing growth.</p>
+
+    <h3>Are trade shows worth it for an MSP?</h3>
+    <p>Sometimes. They work best when the event is tied to a specific vertical you serve and you have a plan for following up. For many smaller MSPs, local networking events offer a better return.</p>
+
+    <h2>Where This Leaves You</h2>
+    <p>A marketing plan doesn&rsquo;t need to be complicated. It needs to be written down, specific enough to act on, and reviewed often enough to adjust.</p>
+    <p>Use the <a href="#template">template</a>, fill it out this week, and you&rsquo;ll already be ahead of most MSPs in your market.</p>
+    <p>If you&rsquo;d like a second set of eyes on your plan, or help running the channels in it, our <a href="../../msp-lead-generation/index.html">MSP lead generation</a> service is built for exactly that. Feel free to book a call and I&rsquo;m happy to walk through it with you.</p>
+
+  </div>
+</section>
+
+<section class="disc-cta" aria-labelledby="disc-cta-title">
+  <div class="disc-cta-inner">
+    <div class="disc-cta-grid">
+      <div>
+        <span class="disc-eyebrow">See what&rsquo;s possible</span>
+        <h2 id="disc-cta-title">Ready to grow your MSP?</h2>
+        <p class="disc-lead">Book your <strong>discovery call</strong> where we will:</p>
+        <ul class="disc-list">
+          <li><svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="13" stroke="#1F1C35" stroke-width="2"/><path d="M9 15.5l4.2 4.2L21 11.5" stroke="#1F1C35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Learn about your MSP</li>
+          <li><svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="13" stroke="#1F1C35" stroke-width="2"/><path d="M9 15.5l4.2 4.2L21 11.5" stroke="#1F1C35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Review your MSP marketing plan</li>
+          <li><svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="13" stroke="#1F1C35" stroke-width="2"/><path d="M9 15.5l4.2 4.2L21 11.5" stroke="#1F1C35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Identify areas of opportunity</li>
+        </ul>
+      </div>
+      <div class="disc-card">
+        <div class="disc-script"><svg width="34" height="40" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M30 4C14 4 6 12 6 28" stroke="#22355F" stroke-width="2.2" stroke-linecap="round"/><path d="M1.5 22.5L6 30l5.5-7" stroke="#22355F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pick a time that works!</span></div>
+        <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Schedule a Discovery Call</a>
+        <p class="disc-note">No pitch decks. No pressure. Just a useful conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-legal">
+  <div class="wrap">
+        <nav class="footer-sitemap">
+      <div class="footer-col">
+        <span class="label">Company</span>
+        <a href="../../index.html">Home</a>
+        <a href="../../about/index.html">About</a>
+        <a href="../../case-studies/index.html">Case Studies</a>
+        <a href="../../results/index.html">Results</a>
+        <a href="../../pricing/index.html">Pricing</a>
+        <a href="../index.html">Blog</a>
+        <a href="../../contact/index.html">Contact</a>
+        <a href="../../privacy-policy/index.html">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">SEO</span>
+        <a href="../../seo/index.html">SEO</a>
+        <a href="../../ai-seo/index.html">AI SEO</a>
+        <a href="../../google-business-profile/index.html">Google Business Profile</a>
+        <a href="../../content-marketing/index.html">Content Marketing</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Paid Media</span>
+        <a href="../../google-ads-ppc/index.html">Google Ads</a>
+        <a href="../../facebook-ads/index.html">Facebook Ads</a>
+        <a href="../../bing-ads/index.html">Bing Ads</a>
+        <a href="../../chatgpt-ads/index.html">ChatGPT Ads</a>
+        <a href="../../linkedin-ads/index.html">LinkedIn Ads</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Outbound</span>
+        <a href="../../cold-email-outreach/index.html">Cold Email Outreach</a>
+        <a href="../../linkedin-lead-generation/index.html">LinkedIn Lead Gen</a>
+        <a href="../../appointment-setting/index.html">Appointment Setting</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Who We Help</span>
+        <a href="../../cybersecurity-mssp-marketing/index.html">Cybersecurity Companies</a>
+        <a href="../../saas-software-marketing/index.html">SaaS &amp; Software</a>
+        <a href="../../it-services-marketing/index.html">IT Services &amp; Consulting</a>
+        <a href="../../telecom-voip-marketing/index.html">Telecom, VoIP &amp; UCaaS</a>
+        <a href="../../var-reseller-marketing/index.html">VARs &amp; Solution Providers</a>
+      </div>
+      <div class="footer-col">
+        <span class="label">Website &amp; Growth</span>
+        <a href="../../web-design/index.html">Web Design</a>
+        <a href="../../demand-generation/index.html">Demand Gen</a>
+        <a href="../../fractional-cmo/index.html">Fractional CMO</a>
+        <a href="../../msp-lead-generation/index.html">MSP Lead Gen</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="social-row">
+    <a href="https://www.youtube.com/@mspsprout" aria-label="YouTube" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5l6.3 3.5-6.3 3.5Z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/company/msp-sprout/" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3ZM6.5 8.7A1.7 1.7 0 1 1 8.2 7a1.7 1.7 0 0 1-1.7 1.7ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.5V19h-3v-9h2.9v1.2h.04a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.5Z"/></svg>
+    </a>
+  </div>
+  <p class="footer-tagline">The #1 Marketing Agency for MSPs.</p>
+  <img src="../../assets/logo.webp" alt="MSP Sprout logo" width="18" height="18" style="vertical-align:middle;border-radius:4px;margin-right:6px;" loading="lazy"> &copy; Copyright MSP Sprout.
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navList');
+  const menuClose = document.getElementById('menuClose');
+  const navBackdrop = document.getElementById('navBackdrop');
+  function openNav(){ navList.classList.add('open'); navBackdrop.classList.add('open'); menuToggle.classList.add('hidden'); }
+  function closeNav(){ navList.classList.remove('open'); navBackdrop.classList.remove('open'); menuToggle.classList.remove('hidden'); }
+  menuToggle.addEventListener('click', () => { navList.classList.contains('open') ? closeNav() : openNav(); });
+  menuClose.addEventListener('click', closeNav);
+  navBackdrop.addEventListener('click', closeNav);
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  document.querySelectorAll('.sub-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('.has-sub');
+      const isOpen = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+</script>
+
+</body>
+</html>
