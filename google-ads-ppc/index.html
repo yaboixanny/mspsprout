@@ -184,6 +184,7 @@
   .hero-img{flex:1 1 54%;position:relative;}
   @media (max-width:900px){
     .hero .wrap{flex-direction:column;}
+    .hero-img{width:100%;}
     .hero-copy h1{font-size:30px;}
     .hero-mock-badge{display:none;}
   }
@@ -202,6 +203,21 @@
   .mock-chart{display:flex;align-items:flex-end;gap:14px;height:150px;}
   .mock-chart .bar{flex:1;border-radius:8px 8px 0 0;background:var(--grad-sprout);}
   .mock-chart .bar:nth-child(even){opacity:.7;}
+  .mock-chart{position:relative;}
+  .mock-trend{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;}
+  .mock-trend .trend-glow{fill:none;stroke:rgba(30,158,82,.22);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;}
+  .mock-trend .trend-line{fill:none;stroke:var(--sprout-dark);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;}
+  .mock-trend .trend-dot{fill:var(--sprout-dark);stroke:#fff;stroke-width:2.5;transform-box:fill-box;transform-origin:center;}
+  @media (prefers-reduced-motion:no-preference){
+    .mock-trend.is-animated .trend-line,.mock-trend.is-animated .trend-glow{stroke-dasharray:1;stroke-dashoffset:1;animation:trendDraw 6s cubic-bezier(.45,.05,.4,1) infinite;}
+    .mock-trend.is-animated .trend-dot{opacity:0;transform:scale(0);}
+  }
+  @keyframes trendDraw{
+    0%,5%{stroke-dashoffset:1;opacity:1;}
+    55%{stroke-dashoffset:0;opacity:1;}
+    90%{stroke-dashoffset:0;opacity:1;}
+    100%{stroke-dashoffset:0;opacity:0;}
+  }
   .hero-mock-badge{
     position:absolute;top:-14px;right:14px;background:#fff;border-radius:14px;padding:10px 18px;
     box-shadow:0 10px 30px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--heading-navy);
@@ -1274,6 +1290,64 @@
       btn.setAttribute('aria-expanded', isOpen);
     });
   });
+</script>
+
+<script>
+  /* Hero chart: a bouncing trend line that hops from bar to bar and keeps climbing. */
+  (function(){
+    var chart = document.querySelector('.hero-mock .mock-chart');
+    if(!chart) return;
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'mock-trend');
+    svg.setAttribute('aria-hidden', 'true');
+    chart.appendChild(svg);
+    var style = document.createElement('style');
+    document.head.appendChild(style);
+    var HOP = 20;
+
+    function el(name, attrs){
+      var n = document.createElementNS(NS, name);
+      for(var k in attrs) n.setAttribute(k, attrs[k]);
+      return n;
+    }
+
+    function build(){
+      var cr = chart.getBoundingClientRect();
+      if(!cr.width) return;
+      var pts = [].map.call(chart.querySelectorAll('.bar'), function(b){
+        var r = b.getBoundingClientRect();
+        return [r.left - cr.left + r.width / 2, r.top - cr.top - 2];
+      });
+      var d = 'M' + pts[0][0] + ' ' + pts[0][1];
+      for(var i = 1; i < pts.length; i++){
+        var a = pts[i - 1], b = pts[i];
+        var apex = Math.min(a[1], b[1]) - HOP;
+        var cy = 2 * apex - (a[1] + b[1]) / 2;
+        d += ' Q' + ((a[0] + b[0]) / 2) + ' ' + cy + ' ' + b[0] + ' ' + b[1];
+      }
+      svg.setAttribute('viewBox', '0 0 ' + cr.width + ' ' + cr.height);
+      svg.innerHTML = '';
+      svg.appendChild(el('path', {'class': 'trend-glow', d: d, pathLength: 1}));
+      svg.appendChild(el('path', {'class': 'trend-line', d: d, pathLength: 1}));
+      var css = '';
+      pts.forEach(function(p, i){
+        var t = 0.05 + 0.5 * (i / (pts.length - 1));
+        var f = function(x){ return (x * 100).toFixed(1) + '%'; };
+        css += '@keyframes trendDot' + i + '{0%,' + f(t - 0.01) + '{opacity:0;transform:scale(0);}' +
+          f(t + 0.025) + '{opacity:1;transform:scale(1.6);}' + f(t + 0.06) + '{opacity:1;transform:scale(1);}' +
+          '90%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(1);}}';
+        css += '.mock-trend.is-animated .trend-dot' + i + '{animation:trendDot' + i + ' 6s linear infinite;}';
+        svg.appendChild(el('circle', {'class': 'trend-dot trend-dot' + i, cx: p[0], cy: p[1], r: i === pts.length - 1 ? 6.5 : 5}));
+      });
+      style.textContent = css;
+      svg.classList.add('is-animated');
+    }
+
+    build();
+    if(window.ResizeObserver){ new ResizeObserver(build).observe(chart); }
+    else { window.addEventListener('resize', build); }
+  })();
 </script>
 
 </body>
