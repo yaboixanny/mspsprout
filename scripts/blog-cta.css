@@ -31,10 +31,10 @@
     box-shadow:0 24px 60px rgba(20,40,30,.22);
   }
   .disc-script{
-    display:inline-flex;align-items:flex-end;gap:6px;font-family:'Caveat',cursive;font-weight:600;
-    font-size:29px;color:var(--heading-navy);margin-bottom:12px;line-height:1;
+    display:inline-flex;align-items:flex-end;gap:6px;font-family:'Poppins',sans-serif;font-weight:600;
+    font-size:20px;color:var(--heading-navy);margin-bottom:14px;line-height:1.2;
   }
-  .disc-script svg{margin-bottom:-6px;}
+  .disc-script svg{margin-bottom:-4px;}
   .disc-card .btn{width:100%;max-width:420px;padding:20px 28px;font-size:16px;letter-spacing:.8px;text-transform:uppercase;}
   .disc-note{font-size:14.5px;font-style:italic;color:var(--text-gray);margin:20px 0 0;}
   @media (max-width:900px){
@@ -43,4 +43,5 @@
     .disc-cta h2{font-size:38px;}
     .disc-card{padding:30px 22px 26px;}
     .disc-card .btn{font-size:14.5px;padding:18px 20px;}
+    .disc-script{font-size:15px;}
   }
