@@ -291,6 +291,11 @@
   .social-row a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
   .footer-tagline{margin:0 0 14px;font-weight:700;font-size:13px;color:#fff;}
 </style>
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_wZvmA7WiRXhNFQvE2RrewCuQuV6skAgMgh7yz6TdXYdj',{api_host:'https://us.i.posthog.com',defaults:'2025-05-24',person_profiles:'identified_only',cookieless_mode:'always',disable_session_recording:true});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="cal.com"]');if(a&&window.posthog){posthog.capture('booking_click',{link_text:(a.textContent||'').trim().slice(0,80),page:location.pathname});}});
+</script>
 </head>
 <body>
 
@@ -358,7 +363,7 @@
   <div class="wrap">
     <span class="post-tag">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="post-meta">Last updated <time datetime="2026-10-22">October 22, 2026</time></p>
+    <p class="post-meta">Last updated <time datetime="2026-11-10">November 10, 2026</time></p>
   </div>
 </section>
 
@@ -395,6 +400,7 @@
     <h2>Cookies, Analytics, and Advertising Technologies</h2>
     <p>Cookies are small files stored on your device. We and our service providers may use cookies and similar technologies to remember preferences, understand traffic, and measure advertising performance.</p>
     <p>We may use tools such as Google Analytics and Google Ads conversion tracking. These tools can collect information about your visit and use it to report on traffic and ad results. They may also be used to show you our ads on other sites.</p>
+    <p>We also use PostHog for product analytics. It records which pages are viewed and which buttons and links are clicked, such as our booking links. We run it in a cookieless mode, so it doesn&rsquo;t store cookies or other identifiers on your device. Session recordings are turned off.</p>
     <p>You can control this in several ways:</p>
     <ul>
       <li>Change your browser settings to block or delete cookies. Some parts of the Site may not work as well if you do.</li>
@@ -407,7 +413,7 @@
     <ul>
       <li><strong>Netlify:</strong> hosts the Site and receives contact form submissions.</li>
       <li><strong>Cal.com:</strong> runs our call scheduling.</li>
-      <li><strong>Google Fonts:</strong> the Site loads fonts from Google, which may receive your IP address and browser details when it does.</li>
+      <li><strong>PostHog:</strong> provides our site analytics, as described above.</li>
       <li><strong>YouTube:</strong> some blog posts embed YouTube videos. YouTube may set cookies and collect data when you play a video.</li>
       <li><strong>Google Analytics and Google Ads:</strong> used for analytics and ad measurement, as described above.</li>
     </ul>
