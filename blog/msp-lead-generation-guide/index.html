@@ -379,6 +379,12 @@
   .social-row{display:flex;justify-content:center;gap:16px;margin-bottom:14px;}
   .social-row a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
   .footer-tagline{margin:0 0 14px;font-weight:700;font-size:13px;color:#fff;}
+  .yt-lite{position:relative;display:block;width:100%;aspect-ratio:16/9;margin:24px 0;padding:0;border:0;border-radius:16px;overflow:hidden;background:#000;cursor:pointer;box-shadow:0 24px 50px rgba(20,40,30,.16);}
+  .yt-lite img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;}
+  .yt-lite:hover img{opacity:1;}
+  .yt-lite .yt-play{position:absolute;top:50%;left:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;}
+  .yt-lite .yt-play:after{content:"";margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff;}
+  .yt-lite iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 </style>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -669,6 +675,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Google Ads is the fastest way to reach someone who is already searching for what you sell. When a business types “IT support near me” or “managed IT services” plus a city, they’re looking for a provider right now.</p>
     <p>In the searches I look at, most MSP ads send people to a homepage or a general service page instead of a page built for that one search. Many don’t name the city or the service in the ad at all. That gap is the opportunity: an ad that matches the search, sent to a page built to turn a click into a call or a form, beats most of what’s out there.</p>
     <p>It’s also the most expensive channel on this list. Clicks for IT services keywords are pricey, so the budget has to be big enough to get real data, and you need to be ready to answer the phone and follow up quickly. If you can’t do both, put your money into outbound, referrals, and local search first.</p>
+    <button type="button" class="yt-lite" data-yt="SXhmHHh_NZ4" aria-label="Play video: Why Google Ads beats relying on referrals for your MSP"><img src="https://i.ytimg.com/vi/SXhmHHh_NZ4/hqdefault.jpg" alt="Video thumbnail: Google Ads for MSPs compared with relying on referrals" width="480" height="360" loading="lazy"><span class="yt-play" aria-hidden="true"></span></button>
     <p>In my experience, the leads that cost more per click are usually the ones closer to buying, so I’d judge ads on booked calls and closed clients, not on the cheapest click. I walk through live examples of competitor ads and how to size a starting budget in this video: <a href="https://www.youtube.com/watch?v=SXhmHHh_NZ4" target="_blank" rel="noopener">why Google Ads beats relying on referrals for your MSP</a>. For the setup itself, use the <a href="../how-to-run-google-ads-for-your-msp/index.html">Google Ads for MSPs guide</a>.</p>
     <p>Inbound shows up when the buyer is already moving, so treat it as reinforcement for outbound and referrals. When it’s your only source, the team feels busy while the pipeline stays uneven.</p>
 
@@ -1060,6 +1067,9 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   window.addEventListener('resize',update);
   update();
 })();
+</script>
+<script>
+document.querySelectorAll('.yt-lite').forEach(function(b){b.addEventListener('click',function(){var i=document.createElement('iframe');i.src='https://www.youtube.com/embed/'+b.dataset.yt+'?autoplay=1';i.title='Why Google Ads beats relying on referrals for your MSP';i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';i.allowFullscreen=true;b.innerHTML='';b.appendChild(i);},{once:true});});
 </script>
 </body>
 </html>
