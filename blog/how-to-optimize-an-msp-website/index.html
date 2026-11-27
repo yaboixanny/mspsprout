@@ -26,6 +26,15 @@
   .post-table th{background:var(--lavender);color:var(--heading-navy);text-align:left;font-weight:700;padding:12px 14px;font-size:13px;}
   .post-table td{padding:12px 14px;border-top:1px solid var(--border-gray);color:#333;vertical-align:top;line-height:1.5;}
   .post-table td:first-child{font-weight:600;color:var(--heading-navy);}
+  .checklist{list-style:none;padding-left:0!important;margin:0 0 24px;}
+  .checklist li{margin:0 0 8px;}
+  .checklist label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:12px 14px;border:1px solid var(--border-gray);border-radius:10px;background:#fff;font-size:16.5px;line-height:1.5;color:#333;}
+  .checklist label:hover{border-color:var(--sprout);}
+  .checklist input{width:20px;height:20px;margin-top:2px;flex-shrink:0;accent-color:#147A3F;cursor:pointer;}
+  .checklist input:checked+span{color:#6b7280;text-decoration:line-through;}
+  .checklist label:has(input:checked){background:#f0f9f3;border-color:#bfe3cb;}
+  .ck-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 18px;padding:12px 16px;border-radius:10px;background:#f0f9f3;font-weight:700;color:#147A3F;font-size:15px;}
+  .ck-bar button{border:1px solid #147A3F;background:#fff;color:#147A3F;border-radius:20px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;}
 </style>
 <style>
   :root{
@@ -618,42 +627,43 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>If you&rsquo;re buying traffic with ads, fix the site first. Otherwise you&rsquo;re paying to send people to a page that doesn&rsquo;t convert. Our <a href="../../google-ads-ppc/index.html">Google Ads for MSPs</a> page covers that side.</p>
 
     <h2 id="checklist">MSP Website Optimization Checklist</h2>
-    <p>Copy this list and work through it one item at a time.</p>
+    <p>Work through it one item at a time. Tick each box as you finish it. Your progress is saved in this browser.</p>
+    <div class="ck-bar" id="ck-bar"><span id="ck-count">0 of 21 done</span><button type="button" id="ck-reset">Reset</button></div>
     <h3>Measure</h3>
-    <ul>
-      <li>Google Analytics and Search Console are set up and working</li>
-      <li>Calls and form submissions are tracked as conversions</li>
-      <li>You&rsquo;ve written down your current monthly leads and conversion rate</li>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-ck="1"><span>Google Analytics and Search Console are set up and working</span></label></li>
+      <li><label><input type="checkbox" data-ck="2"><span>Calls and form submissions are tracked as conversions</span></label></li>
+      <li><label><input type="checkbox" data-ck="3"><span>You&rsquo;ve written down your current monthly leads and conversion rate</span></label></li>
     </ul>
     <h3>Speed and basics</h3>
-    <ul>
-      <li>Homepage and top service page tested in PageSpeed Insights (mobile first)</li>
-      <li>Images compressed, unused plugins and scripts removed</li>
-      <li>Site works on a real phone</li>
-      <li>Every page loads over HTTPS</li>
-      <li>No broken links or 404 pages</li>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-ck="4"><span>Homepage and top service page tested in PageSpeed Insights (mobile first)</span></label></li>
+      <li><label><input type="checkbox" data-ck="5"><span>Images compressed, unused plugins and scripts removed</span></label></li>
+      <li><label><input type="checkbox" data-ck="6"><span>Site works on a real phone</span></label></li>
+      <li><label><input type="checkbox" data-ck="7"><span>Every page loads over HTTPS</span></label></li>
+      <li><label><input type="checkbox" data-ck="8"><span>No broken links or 404 pages</span></label></li>
     </ul>
     <h3>Message and calls to action</h3>
-    <ul>
-      <li>Homepage headline says who you help, what you do and what to do next</li>
-      <li>Jargon replaced with plain words</li>
-      <li>One clear main CTA at the top of each key page</li>
-      <li>CTA button wording says what happens next</li>
-      <li>CTA after proof and at the end of every page</li>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-ck="9"><span>Homepage headline says who you help, what you do and what to do next</span></label></li>
+      <li><label><input type="checkbox" data-ck="10"><span>Jargon replaced with plain words</span></label></li>
+      <li><label><input type="checkbox" data-ck="11"><span>One clear main CTA at the top of each key page</span></label></li>
+      <li><label><input type="checkbox" data-ck="12"><span>CTA button wording says what happens next</span></label></li>
+      <li><label><input type="checkbox" data-ck="13"><span>CTA after proof and at the end of every page</span></label></li>
     </ul>
     <h3>Forms</h3>
-    <ul>
-      <li>Form asks for name, email and one question</li>
-      <li>Phone number is click-to-call on mobile</li>
-      <li>Thank-you page explains what happens next</li>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-ck="14"><span>Form asks for name, email and one question</span></label></li>
+      <li><label><input type="checkbox" data-ck="15"><span>Phone number is click-to-call on mobile</span></label></li>
+      <li><label><input type="checkbox" data-ck="16"><span>Thank-you page explains what happens next</span></label></li>
     </ul>
     <h3>Trust and SEO</h3>
-    <ul>
-      <li>Real reviews on service pages</li>
-      <li>Team photos and names</li>
-      <li>Certifications and partner logos shown</li>
-      <li>One page per service, with internal links between related pages</li>
-      <li>Simple main navigation</li>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-ck="17"><span>Real reviews on service pages</span></label></li>
+      <li><label><input type="checkbox" data-ck="18"><span>Team photos and names</span></label></li>
+      <li><label><input type="checkbox" data-ck="19"><span>Certifications and partner logos shown</span></label></li>
+      <li><label><input type="checkbox" data-ck="20"><span>One page per service, with internal links between related pages</span></label></li>
+      <li><label><input type="checkbox" data-ck="21"><span>Simple main navigation</span></label></li>
     </ul>
 
     <h2 id="faq">FAQ</h2>
@@ -793,5 +803,21 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var boxes=document.querySelectorAll('.checklist input[data-ck]'),KEY='msp-website-checklist',saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  function update(){
+    var d=0;boxes.forEach(function(b){if(b.checked)d++});
+    var c=document.getElementById('ck-count');if(c)c.textContent=d+' of '+boxes.length+' done';
+    var o={};boxes.forEach(function(b){if(b.checked)o[b.dataset.ck]=1});
+    try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}
+  }
+  boxes.forEach(function(b){b.checked=!!saved[b.dataset.ck];b.addEventListener('change',update)});
+  var r=document.getElementById('ck-reset');
+  if(r)r.addEventListener('click',function(){boxes.forEach(function(b){b.checked=false});update()});
+  var c=document.getElementById('ck-count');if(c){var d=0;boxes.forEach(function(b){if(b.checked)d++});c.textContent=d+' of '+boxes.length+' done'}
+})();
+</script>
 </body>
 </html>
