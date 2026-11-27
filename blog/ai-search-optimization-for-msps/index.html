@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -424,8 +439,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#whats-actually-changing-with-google-ai-overviews">What&amp;rsquo;s Actually Changing With Google AI Overviews</a></li><li><a href="#aeo-geo-and-google-ai-overviews-what-each-one-actually-means">AEO, GEO, and Google AI Overviews: What Each One Actually Means</a></li><li><a href="#the-new-buyer-journey-is-basically-an-ai-prompt-journey">The New Buyer Journey Is Basically an AI Prompt Journey</a></li><li><a href="#aeo-and-geo-only-work-if-your-seo-foundation-is-actually-sol">AEO and GEO Only Work If Your SEO Foundation Is Actually Solid</a></li><li><a href="#what-to-publish-first-the-aeo-geo-content-stack-for-msps">What to Publish First: The AEO/GEO Content Stack for MSPs</a></li><li><a href="#the-citable-block-how-to-write-content-ai-can-actually-quote">The Citable Block: How to Write Content AI Can Actually Quote Accurately</a></li><li><a href="#your-first-30-days-a-hands-on-implementation-checklist">Your First 30 Days: A Hands-On Implementation Checklist</a></li><li><a href="#proof-and-trust-signals-the-layer-most-msps-skip-entirely">Proof and Trust Signals: The Layer Most MSPs Skip Entirely</a></li><li><a href="#a-real-example-earning-ai-visibility-through-local-trust-and">A Real Example: Earning AI Visibility Through Local Trust and Technical SEO</a></li><li><a href="#the-90-day-geo-plan-for-msps">The 90-Day GEO Plan for MSPs</a></li><li><a href="#aeo-and-geo-questions-answered">AEO and GEO Questions, Answered</a></li><li><a href="#where-this-leaves-you">Where This Leaves You</a></li></ol></aside>
+    <div class="post-content">
     <p>If your MSP&rsquo;s growth still depends on ranking a page and hoping someone clicks it, you&rsquo;re already a step behind where search is heading.</p>
     <p>Google AI Overviews now answer a huge chunk of queries directly on the results page. Someone searches &ldquo;what does managed IT include,&rdquo; and Google just tells them, pulling from a handful of sources it trusts enough to summarize.</p>
     <p>That means a prospect can learn, compare, and build a shortlist without ever visiting your site, or your competitor&rsquo;s.</p>
@@ -442,7 +459,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       </ul>
     </div>
 
-    <h2>What&rsquo;s Actually Changing With Google AI Overviews</h2>
+    <h2 id="whats-actually-changing-with-google-ai-overviews">What&rsquo;s Actually Changing With Google AI Overviews</h2>
     <p>Google AI Overviews summarize an answer right at the top of the search results, before any of the traditional blue links even show up. The practical effect: fewer people are clicking through to any single page, even the ones ranking well.</p>
     <p>Here&rsquo;s the part that matters for you: Google still cites its sources when it builds these summaries. The MSPs that win from here forward are the ones whose content is easy for Google to extract cleanly and easy for a buyer to trust once they land on it.</p>
     <p><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google&rsquo;s own guidance</a> treats AI Overviews and AI Mode as &ldquo;AI features&rdquo; and encourages site owners to build content that genuinely helps users, content that&rsquo;s structured well enough to be pulled into those experiences.</p>
@@ -458,7 +475,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <li>Add proof blocks to those pages so the summary that gets pulled isn&rsquo;t just another generic paragraph.</li>
     </ul>
 
-    <h2>AEO, GEO, and Google AI Overviews: What Each One Actually Means</h2>
+    <h2 id="aeo-geo-and-google-ai-overviews-what-each-one-actually-means">AEO, GEO, and Google AI Overviews: What Each One Actually Means</h2>
     <p>These terms get thrown around loosely, so let&rsquo;s be precise about them.</p>
     <p><strong>AEO (Answer Engine Optimization)</strong> is structuring your content so answer engines can pull a direct, accurate response straight from your site.</p>
     <p><strong>GEO (Generative Engine Optimization)</strong> is optimizing your brand and content so generative AI systems actually recommend or cite you by name, not just pull a fact from you anonymously.</p>
@@ -475,7 +492,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <li>Layer in GEO by backing those answers with real proof, so both AI systems and human readers trust the claims you&rsquo;re making.</li>
     </ul>
 
-    <h2>The New Buyer Journey Is Basically an AI Prompt Journey</h2>
+    <h2 id="the-new-buyer-journey-is-basically-an-ai-prompt-journey">The New Buyer Journey Is Basically an AI Prompt Journey</h2>
     <p>Buyers increasingly evaluate vendors by asking AI a question and seeing what comes back. That means a meaningful share of your prospects arrive at your site already pre-educated, but only on whatever information was easy for AI to extract and verify from someone&rsquo;s content.</p>
     <p>If your content doesn&rsquo;t match the actual prompts buyers are typing, you lose the narrative before you even know they were shopping.</p>
     <p>The old model was research, then shortlist, then call. It&rsquo;s increasingly become: ask, shortlist, validate, then call.</p>
@@ -497,7 +514,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>AEO and GEO Only Work If Your SEO Foundation Is Actually Solid</h2>
+    <h2 id="aeo-and-geo-only-work-if-your-seo-foundation-is-actually-sol">AEO and GEO Only Work If Your SEO Foundation Is Actually Solid</h2>
     <p>AEO and GEO both depend on the fundamentals: is your site indexable, well-structured, and genuinely useful. If your pages load slowly, read as confusing, or say very little in a lot of words, AI engines are far less likely to cite them, no matter how well you&rsquo;ve tagged your headers.</p>
     <p>So here&rsquo;s the unglamorous truth: the real cheat code is publishing content that&rsquo;s actually helpful to the person reading it. Helpful content naturally improves clarity, engagement, and trust, and all three of those support SEO and AI visibility at the same time. There&rsquo;s no separate hack.</p>
     <p>Most MSP websites don&rsquo;t lose because the owner lacks tools or budget. They lose because the site lacks clarity. Service pages blur together and start to sound interchangeable. Location pages feel like a template with the city name swapped out. Blog posts talk in generalities instead of specifics.</p>
@@ -511,7 +528,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <li>Add real author and expertise signals: who wrote this, and why should anyone believe they know what they&rsquo;re talking about.</li>
     </ul>
 
-    <h2>What to Publish First: The AEO/GEO Content Stack for MSPs</h2>
+    <h2 id="what-to-publish-first-the-aeo-geo-content-stack-for-msps">What to Publish First: The AEO/GEO Content Stack for MSPs</h2>
     <p>MSPs win AI visibility with a fairly simple stack: answer hubs, proof assets, and distribution.</p>
     <p>Answer hubs target the high-intent questions buyers are actually asking, written to be quoted directly. Proof assets back up your claims and reduce the risk a buyer feels while evaluating you. Distribution, especially email, compounds your reach and reinforces authority over time instead of letting a good piece of content disappear after one week.</p>
     <p>Most MSPs default to &ldquo;we should just write more blog posts.&rdquo; That instinct is risky, because it creates volume without actually moving the needle. Instead, start where the revenue actually lives.</p>
@@ -532,7 +549,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>Publish three answer hubs and two proof assets before you write ten random blog posts nobody asked for. Put a proof block, a mini story plus a real metric, on every single answer hub. And internally link your hubs to your services and your proof pages so authority actually flows between them instead of sitting isolated on an island.</p>
 
-    <h2>The Citable Block: How to Write Content AI Can Actually Quote Accurately</h2>
+    <h2 id="the-citable-block-how-to-write-content-ai-can-actually-quote">The Citable Block: How to Write Content AI Can Actually Quote Accurately</h2>
     <p>AI-friendly content is written in extractable chunks: a direct answer, short paragraphs, and scannable lists. Your goal is to make it as easy as possible for an AI Overview to summarize you without twisting what you actually meant.</p>
     <p>The formula is simple. A clear definition comes first. Proof comes next to keep the claim credible. One clear next step closes it out.</p>
     <p>Here&rsquo;s what that looks like in practice, on a co-managed IT page for example:</p>
@@ -551,7 +568,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <li>One next step, one CTA, not three competing for attention</li>
     </ul>
 
-    <h2>Your First 30 Days: A Hands-On Implementation Checklist</h2>
+    <h2 id="your-first-30-days-a-hands-on-implementation-checklist">Your First 30 Days: A Hands-On Implementation Checklist</h2>
     <p>Your fastest path to real AI visibility is a focused 30-day sprint on fundamentals: technical readiness, a couple of strong answer hubs, and real trust assets.</p>
     <p>Don&rsquo;t start by planning out dozens of blog posts. Start by publishing a handful of genuinely high-value pages that match what buyers are actually asking, and that prove you can deliver on what you&rsquo;re claiming.</p>
     <p>If you&rsquo;re the owner or the person running sales, it helps to think of your website as a sales rep that never sleeps. It needs a sharp, specific pitch. It needs evidence to back that pitch up. And it needs to not confuse the visitor with five competing calls to action on one page.</p>
@@ -570,7 +587,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <p>After that first month, settle into a simple, sustainable cadence: two answer hubs a month until you&rsquo;ve genuinely covered your core buyer questions.</p>
 
-    <h2>Proof and Trust Signals: The Layer Most MSPs Skip Entirely</h2>
+    <h2 id="proof-and-trust-signals-the-layer-most-msps-skip-entirely">Proof and Trust Signals: The Layer Most MSPs Skip Entirely</h2>
     <p>Both AI systems and human buyers are looking for the same thing under the surface: trust signals. For an MSP, that means reviews, documented processes, real case studies, and scope that&rsquo;s actually defined instead of implied.</p>
     <p>Without proof, &ldquo;we&rsquo;re proactive&rdquo; reads exactly like every other MSP&rsquo;s homepage. With proof behind it, the same claim becomes believable, and that&rsquo;s usually where your conversion rate actually starts to move.</p>
     <p>Here&rsquo;s the frustrating part: most MSPs genuinely do great work. They just don&rsquo;t document any of it. So a prospect can&rsquo;t verify it, and neither can an AI system trying to summarize why you&rsquo;d be a good choice.</p>
@@ -585,7 +602,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Build a lightweight &ldquo;trust center&rdquo; section on your site: three to five micro case summaries, a process overview, the key tools and standards you actually use, and your best review highlights linked back to the source.</p>
     <p>That single addition upgrades the credibility of every other page on your site, because now there&rsquo;s somewhere for a skeptical reader (or an AI system) to go check your claims.</p>
 
-    <h2>A Real Example: Earning AI Visibility Through Local Trust and Technical SEO</h2>
+    <h2 id="a-real-example-earning-ai-visibility-through-local-trust-and">A Real Example: Earning AI Visibility Through Local Trust and Technical SEO</h2>
     <p>We worked with a service-based business to build AI-driven discovery by combining local trust signals with technical SEO and real speed improvements, and it&rsquo;s worth walking through because the principle applies directly to MSPs.</p>
     <p>The approach combined a handful of specific moves: building up Google reviews, optimizing the Google Business Profile, tightening up consistent business citations across the web, and cleaning up the on-page structure so it was actually clear what the business did and for whom.</p>
     <p>We also moved the site to a better-fit WordPress hosting setup (SiteGround, in this case) and tuned page speed, since a slow site undermines every other signal you&rsquo;re trying to send.</p>
@@ -606,7 +623,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>AI favors the brands that make verification easy. That&rsquo;s really the whole game.</p>
 
-    <h2>The 90-Day GEO Plan for MSPs</h2>
+    <h2 id="the-90-day-geo-plan-for-msps">The 90-Day GEO Plan for MSPs</h2>
     <p>A 90-day plan here is a focused sprint aimed at improving both AI visibility and actual conversion, not just impressions. It builds out answer hubs, proof assets, and the technical foundation that supports SEO and AEO/GEO together.</p>
     <p>The goal was never &ldquo;get more traffic.&rdquo; The goal is more qualified conversations and a better close rate once those conversations happen. When your marketing content actually aligns with the objections your sales team hears, results stop being abstract and start being measurable.</p>
     <p>Owners tend to like this plan because it produces real sales enablement assets along the way, not just blog posts. Sales leaders like it because it answers objections before the call even happens. Marketing leads like it because, once it&rsquo;s built, it&rsquo;s genuinely repeatable month over month.</p>
@@ -628,18 +645,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>AEO and GEO Questions, Answered</h2>
+    <h2 id="aeo-and-geo-questions-answered">AEO and GEO Questions, Answered</h2>
     <p><strong>Does AEO/GEO replace SEO?</strong> No. SEO is still the foundation everything else sits on. AEO and GEO amplify strong SEO by making your best pages extractable, citable, and genuinely trusted once someone lands on them. If you need that foundation built, that&rsquo;s what our <a href="../../seo/index.html">MSP SEO services</a> cover.</p>
     <p><strong>What should an MSP publish first for AI Overviews?</strong> Start with two or three answer hubs tied directly to revenue: pricing, co-managed IT, onboarding, Microsoft 365 security hardening, or cyber insurance readiness.</p>
     <p><strong>How do we actually know if AI visibility is working?</strong> Track conversion rate on your answer hub pages, any lift in branded search, assisted conversions in your analytics, and the simplest signal of all, qualitative feedback like &ldquo;I found you through an AI summary&rdquo; on a discovery call.</p>
     <p><strong>Can smaller MSPs actually compete here?</strong> Yes, and often faster than larger ones. Smaller MSPs can publish clearer positioning and more specific, practitioner-level proof without layers of internal approval slowing everything down. That speed is a real advantage right now.</p>
 
-    <h2>Where This Leaves You</h2>
+    <h2 id="where-this-leaves-you">Where This Leaves You</h2>
     <p>AI Overviews and generative search aren&rsquo;t replacing the buyer journey, they&rsquo;re compressing the early research phase and raising the bar on what counts as credible by the time a prospect reaches out.</p>
     <p>The MSPs that show up in that compressed research phase won&rsquo;t be the ones publishing the most content. They&rsquo;ll be the ones publishing the clearest, most provable answers to the exact questions their buyers are already asking.</p>
     <p>For a closer look at one specific platform, see our walkthrough on <a href="../how-to-rank-your-msp-on-chatgpt/index.html">how to rank your MSP on ChatGPT</a>. If you also want to advertise inside ChatGPT, here is how we approach <a href="../../chatgpt-ads/index.html">ChatGPT Ads for MSPs</a>.</p>
     <p>If you want help building this out, from the technical foundation through the answer hubs and proof assets, our <a href="../../ai-seo/index.html">AI search optimization for MSPs</a> service is built around exactly this playbook. Feel free to book a call and we can walk through where your site actually stands today.</p>
 
+    </div>
   </div>
 </section>
 
@@ -752,5 +770,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

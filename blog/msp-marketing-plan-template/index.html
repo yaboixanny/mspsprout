@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -427,8 +442,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#what-is-an-msp-marketing-plan">What Is an MSP Marketing Plan?</a></li><li><a href="#why-msps-need-a-marketing-plan">Why MSPs Need a Marketing Plan</a></li><li><a href="#key-components-of-an-msp-marketing-plan">Key Components of an MSP Marketing Plan</a></li><li><a href="#how-to-build-your-msp-marketing-plan-step-by-step">How to Build Your MSP Marketing Plan, Step by Step</a></li><li><a href="#msp-marketing-channels-and-where-to-put-your-budget">MSP Marketing Channels and Where to Put Your Budget</a></li><li><a href="#how-to-measure-it">How to Measure It</a></li><li><a href="#in-house-or-outsourced">In-House or Outsourced?</a></li><li><a href="#template">The Template: What&amp;rsquo;s Inside and How to Use It</a></li><li><a href="#faq">FAQ</a></li><li><a href="#where-this-leaves-you">Where This Leaves You</a></li></ol></aside>
+    <div class="post-content">
     <p>An MSP marketing plan is a written document that covers your goals, your target clients, your positioning, your channels, your budget, and the metrics you&rsquo;ll use to decide whether any of it is working.</p>
     <p>That&rsquo;s it. It&rsquo;s not a 40-page strategy deck, and it&rsquo;s not a list of tactics you&rsquo;ve been meaning to try.</p>
     <p>Most MSPs don&rsquo;t have one. They have a website, a LinkedIn page they post to when they remember, a few referral partners, and a vague plan to &ldquo;do more marketing&rdquo; once things slow down.</p>
@@ -448,7 +465,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       </ol>
     </div>
 
-    <h2>What Is an MSP Marketing Plan?</h2>
+    <h2 id="what-is-an-msp-marketing-plan">What Is an MSP Marketing Plan?</h2>
     <p>Think of it as the answer to five questions, written down where your whole team can see them:</p>
     <ul>
       <li>Who exactly are we trying to win as clients?</li>
@@ -460,7 +477,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>If you can&rsquo;t answer all five in a sentence or two each, you don&rsquo;t have a plan yet. You have activity.</p>
     <p>Activity feels productive, but it doesn&rsquo;t compound the way a plan does.</p>
 
-    <h2>Why MSPs Need a Marketing Plan</h2>
+    <h2 id="why-msps-need-a-marketing-plan">Why MSPs Need a Marketing Plan</h2>
     <p>Because MSP revenue is recurring, a single good client is worth a huge amount over its lifetime. That&rsquo;s the upside.</p>
     <p>The downside is that the sales cycle is long, trust matters more than price, and almost every prospect already has an IT provider they&rsquo;re at least tolerating.</p>
     <p>Without a plan, three things happen:</p>
@@ -471,7 +488,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>A plan fixes that by forcing a few decisions up front. Once those are made, execution gets boring in the best possible way, which is exactly what you want.</p>
 
-    <h2>Key Components of an MSP Marketing Plan</h2>
+    <h2 id="key-components-of-an-msp-marketing-plan">Key Components of an MSP Marketing Plan</h2>
     <p>If someone asks what the five components of a marketing plan are, the honest answer for an MSP is six, because budget deserves its own line:</p>
     <ol>
       <li><strong>Goals.</strong> What number are you trying to move, and by when?</li>
@@ -483,7 +500,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ol>
     <p>Everything else in the plan is detail underneath one of those six.</p>
 
-    <h2>How to Build Your MSP Marketing Plan, Step by Step</h2>
+    <h2 id="how-to-build-your-msp-marketing-plan-step-by-step">How to Build Your MSP Marketing Plan, Step by Step</h2>
 
     <h3><span class="mistake-num">1</span>Set measurable goals</h3>
     <p>&ldquo;Get more clients&rdquo; isn&rsquo;t a goal. A goal has a number and a date. The most useful way to build one is to work backward from the clients you actually want.</p>
@@ -559,7 +576,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Review your numbers monthly, make one or two changes, and let them run long enough to see an effect.</p>
     <p>I&rsquo;ll cover which numbers matter in the measurement section below.</p>
 
-    <h2>MSP Marketing Channels and Where to Put Your Budget</h2>
+    <h2 id="msp-marketing-channels-and-where-to-put-your-budget">MSP Marketing Channels and Where to Put Your Budget</h2>
     <p>Here are the main options, and what each one is actually good for.</p>
 
     <h3>Google Ads</h3>
@@ -608,7 +625,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">See How We Can Help<span class="sub">Book a Growth Call</span></a>
     </div>
 
-    <h2>How to Measure It</h2>
+    <h2 id="how-to-measure-it">How to Measure It</h2>
     <p>You don&rsquo;t need a dashboard with 40 metrics. Track these monthly:</p>
     <ul>
       <li><strong>Leads:</strong> form fills and phone calls, separately</li>
@@ -622,7 +639,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>If a number doesn&rsquo;t connect back to clients or the leads that become clients, it&rsquo;s decoration.</p>
     <p>Also give new channels time. SEO and LinkedIn in particular take months, not weeks, so judge them against a three to six month window.</p>
 
-    <h2>In-House or Outsourced?</h2>
+    <h2 id="in-house-or-outsourced">In-House or Outsourced?</h2>
     <p>It depends on where you are. In the early stages, your time is the cheapest resource you have, so it makes sense for you to do much of the marketing yourself while you&rsquo;re small.</p>
     <p>Once your time is better spent on sales and client retention, you&rsquo;ll want help. A practical progression looks like this:</p>
     <ul>
@@ -646,7 +663,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>To use it, block out a couple of hours, fill in each section in order, and share it with whoever&rsquo;s responsible for marketing. Then put a monthly review on the calendar.</p>
     <p>A plan nobody looks at again after the first week isn&rsquo;t a plan.</p>
 
-    <h2>FAQ</h2>
+    <h2 id="faq">FAQ</h2>
 
     <h3>What is MSP in marketing?</h3>
     <p>MSP stands for managed service provider. MSP marketing is the set of activities an MSP uses to find and win new clients, such as SEO, paid ads, content, referrals, and networking.</p>
@@ -667,11 +684,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <h3>Are trade shows worth it for an MSP?</h3>
     <p>Sometimes. They work best when the event is tied to a specific vertical you serve and you have a plan for following up. For many smaller MSPs, local networking events offer a better return.</p>
 
-    <h2>Where This Leaves You</h2>
+    <h2 id="where-this-leaves-you">Where This Leaves You</h2>
     <p>A marketing plan doesn&rsquo;t need to be complicated. It needs to be written down, specific enough to act on, and reviewed often enough to adjust.</p>
     <p>Use the <a href="#template">template</a>, fill it out this week, and you&rsquo;ll already be ahead of most MSPs in your market.</p>
     <p>If you&rsquo;d like a second set of eyes on your plan, or help running the channels in it, our <a href="../../msp-lead-generation/index.html">MSP lead generation</a> service is built for exactly that. Feel free to book a call and I&rsquo;m happy to walk through it with you.</p>
 
+    </div>
   </div>
 </section>
 
@@ -784,5 +802,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

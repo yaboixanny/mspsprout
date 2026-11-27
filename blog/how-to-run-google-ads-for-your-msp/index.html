@@ -17,7 +17,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -372,11 +387,13 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#why-google-ads-works-so-well-for-msps">Why Google Ads Works So Well for MSPs</a></li><li><a href="#step-1-start-a-new-campaign">Step 1: Start a New Campaign</a></li><li><a href="#step-2-choose-a-bidding-strategy">Step 2: Choose a Bidding Strategy</a></li><li><a href="#step-3-set-your-location-targeting">Step 3: Set Your Location Targeting</a></li><li><a href="#step-4-languages-ad-schedule-and-networks">Step 4: Languages, Ad Schedule, and Networks</a></li><li><a href="#step-5-keyword-research">Step 5: Keyword Research</a></li><li><a href="#step-6-build-the-ad-and-use-a-landing-page-not-your-homepage">Step 6: Build the Ad (and Use a Landing Page, Not Your Homepage)</a></li><li><a href="#step-7-set-your-budget">Step 7: Set Your Budget</a></li><li><a href="#step-8-add-sitelinks-and-callouts">Step 8: Add Sitelinks and Callouts</a></li><li><a href="#why-managed-it-clicks-are-expensive">Why Managed IT Clicks Are Expensive</a></li><li><a href="#structure-that-works-for-an-msp">Structure That Works for an MSP</a></li><li><a href="#why-landing-pages-are-the-whole-game">Why Landing Pages Are the Whole Game</a></li><li><a href="#conversion-tracking-that-means-something">Conversion Tracking That Means Something</a></li><li><a href="#what-to-expect">What to Expect</a></li><li><a href="#putting-it-all-together">Putting It All Together</a></li></ol></aside>
+    <div class="post-content">
     <p>If you&rsquo;re an MSP, Google Ads is one of the best ways to generate leads reliably, consistently, and cost-effectively. In this post, we&rsquo;ll walk you through exactly how to set up a Google Ads campaign for your MSP so you can start getting leads right away&mdash;or if you&rsquo;d rather have it done for you, that&rsquo;s exactly what our <a href="../../google-ads-ppc/index.html">MSP Google Ads management</a> service is built for.</p>
 
-    <h2>Why Google Ads Works So Well for MSPs</h2>
+    <h2 id="why-google-ads-works-so-well-for-msps">Why Google Ads Works So Well for MSPs</h2>
     <p>Before we get into the setup, let&rsquo;s look at why we recommend this in the first place.</p>
     <p>Search &ldquo;Calgary IT support&rdquo; on Google and here&rsquo;s what you&rsquo;ll see: four ads at the top of the page, a map pack with local Google Business Profiles below that, and then, after scrolling past more than half the page, the organic results (with even more ads mixed in).</p>
     <p>Most of the click volume goes to those top ads. And here&rsquo;s the thing: your competitors generally have no idea what they&rsquo;re doing, which works in your favor.</p>
@@ -385,7 +402,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Then there&rsquo;s the one ad that gets it right: &ldquo;IT Services Company in Calgary.&rdquo; Specific, relevant, everything filled out. That&rsquo;s the one getting the clicks.</p>
     <p>If you want to show up at the top of the page, get people onto your website, and get them filling out a form or picking up the phone, you need to be running Google Ads. Here&rsquo;s how to actually set it up.</p>
 
-    <h2>Step 1: Start a New Campaign</h2>
+    <h2 id="step-1-start-a-new-campaign">Step 1: Start a New Campaign</h2>
     <p>Open your Google Ads dashboard and click <strong>New Campaign</strong>.</p>
     <p>For the <strong>campaign objective</strong>, choose <strong>Leads</strong>.</p>
     <p>For <strong>conversion goals</strong>, don&rsquo;t just leave the default (page views). You want to optimize for <strong>phone calls</strong> if you&rsquo;re able to take them, and <strong>form submissions</strong> if not.</p>
@@ -393,19 +410,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>For <strong>campaign type</strong>, go with a <strong>Search campaign</strong>. This gives you standard text ads at the top of the search results, the same format we looked at above.</p>
     <p>Name your campaign something clear, like &ldquo;IT Support: Calgary,&rdquo; and click <strong>Continue</strong>.</p>
 
-    <h2>Step 2: Choose a Bidding Strategy</h2>
+    <h2 id="step-2-choose-a-bidding-strategy">Step 2: Choose a Bidding Strategy</h2>
     <p>You&rsquo;ll see a handful of bidding strategy options here, and there&rsquo;s a lot of debate about which one to use. In our experience, <strong>Maximize Conversions</strong> is your best bet for the first month.</p>
     <p>Why? Because after 30 days, you&rsquo;ll actually have a baseline of performance data to work from. Once you have that, you can switch to a <strong>Target CPA</strong> strategy and set a real cost-per-acquisition goal based on what you&rsquo;ve actually seen.</p>
     <p>So: Maximize Conversions for month one, then reassess and consider Target CPA from month two onward. (You can also A/B test this down the line with a Google Ads experiment, but that&rsquo;s a topic for another post.)</p>
     <p>Skip &ldquo;Customer Acquisition&rdquo; for now, and make sure you <strong>opt out of the Search and Display Network partners</strong>. These are lower-quality networks and not where you want your budget going.</p>
 
-    <h2>Step 3: Set Your Location Targeting</h2>
+    <h2 id="step-3-set-your-location-targeting">Step 3: Set Your Location Targeting</h2>
     <p>This step matters more than most people realize.</p>
     <p>Under location targeting, always choose <strong>&ldquo;Presence&rdquo;</strong>, meaning people who are in or regularly in your target location. If you leave it on &ldquo;Presence or interest,&rdquo; you&rsquo;ll start showing ads to people outside your actual service area who just happen to be <em>interested</em> in that location. That&rsquo;s wasted spend on leads you can&rsquo;t service.</p>
     <p>When entering your location, click <strong>Advanced Search</strong> so you can define things more precisely. In a lot of cities, the default targeting radius doesn&rsquo;t map cleanly to how people actually search.</p>
     <p>So we&rsquo;ll usually switch to a <strong>radius</strong> setting and adjust the kilometers (or miles) to match how far out we&rsquo;re actually willing to service. For most local IT services, something in the range of 20-30 km is a reasonable starting point, but adjust based on your actual service area.</p>
 
-    <h2>Step 4: Languages, Ad Schedule, and Networks</h2>
+    <h2 id="step-4-languages-ad-schedule-and-networks">Step 4: Languages, Ad Schedule, and Networks</h2>
     <p>Set your <strong>language</strong> to match your audience: English, or Spanish if that&rsquo;s who you&rsquo;re targeting.</p>
     <p>For the EU political ads question, select <strong>No</strong> unless that applies to you.</p>
     <p>Leave <strong>audience segments</strong> and <strong>ad rotation</strong> alone for now.</p>
@@ -415,7 +432,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Don&rsquo;t run ads 24/7. Let your competitors burn budget on 4 a.m. leads nobody&rsquo;s going to follow up on.</p>
     <p>On the next screen, <strong>opt out of Search Partners</strong> (sometimes labeled AIAX or similar). It tends to burn ad spend without much to show for it. You can always test it later, but we don&rsquo;t recommend starting there.</p>
 
-    <h2>Step 5: Keyword Research</h2>
+    <h2 id="step-5-keyword-research">Step 5: Keyword Research</h2>
     <p>This is the part that actually determines whether your campaign works: keyword research.</p>
     <p>Open <strong>Google Ads Keyword Planner</strong> in a new tab, add your target location, and enter a few core services: &ldquo;IT services,&rdquo; &ldquo;IT support,&rdquo; &ldquo;managed IT services.&rdquo; Run the report.</p>
     <p>You&rsquo;ll typically see three natural ad group themes emerge, and a wide range of costs per click. In a market like Calgary, for example, broad terms like &ldquo;IT support&rdquo; or &ldquo;managed IT services&rdquo; might run anywhere from $7 to $150+ CAD per click.</p>
@@ -425,7 +442,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Hyper-targeted terms like these tend to have meaningfully lower costs per click, and they&rsquo;re a much more realistic starting point for a $100/day budget. You won&rsquo;t get a flood of leads at that spend level, but it&rsquo;ll work.</p>
     <p>Take that keyword, add it as both <strong>phrase match</strong> and <strong>exact match</strong>. Phrase match will pick up close variations (like &ldquo;managed IT services company Calgary&rdquo;), while exact match captures people searching that exact phrase.</p>
 
-    <h2>Step 6: Build the Ad (and Use a Landing Page, Not Your Homepage)</h2>
+    <h2 id="step-6-build-the-ad-and-use-a-landing-page-not-your-homepage">Step 6: Build the Ad (and Use a Landing Page, Not Your Homepage)</h2>
     <p>This is where a lot of MSPs mess up.</p>
     <p>If you look at most competitor ads, they link straight to a generic service page on their website, not a dedicated landing page. There&rsquo;s a real difference between the two.</p>
     <p>A landing page is built specifically to convert paid traffic: the headline matches the ad and the search intent exactly (&ldquo;Managed IT Services Provider in Calgary&rdquo; or &ldquo;Looking for Managed IT Services in Calgary?&rdquo;), and every section, from bullet points to images to copy, speaks directly to that searcher&rsquo;s pain points, features, and benefits.</p>
@@ -458,7 +475,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>Don&rsquo;t add sitelinks, callouts, or images at the ad level. Those get added at the campaign level, which we&rsquo;ll cover next.</p>
 
-    <h2>Step 7: Set Your Budget</h2>
+    <h2 id="step-7-set-your-budget">Step 7: Set Your Budget</h2>
     <p>This is the part where we can&rsquo;t give you an exact number, because it depends entirely on what you&rsquo;re comfortable spending and how confident you are going in.</p>
     <p>As a general rule: if you&rsquo;re working with under $100/day, you might actually get more mileage out of Facebook Ads or a different lead gen strategy. $100/day is really the practical starting point for Google Ads in this space.</p>
     <p>If you want to compare, here’s how we run <a href="../../facebook-ads/index.html">Facebook Ads for MSPs</a>, and how the same search campaigns work on Microsoft’s network with <a href="../../bing-ads/index.html">Bing Ads for MSPs</a>.</p>
@@ -466,7 +483,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>But go in with realistic expectations: this is a competitive, expensive space from a pure ad-cost standpoint, even if it&rsquo;s less competitive operationally. Build in enough budget padding, especially in the first few months while Google is still learning your account.</p>
     <p>Submit your campaign for review. This can take a few minutes to a few hours.</p>
 
-    <h2>Step 8: Add Sitelinks and Callouts</h2>
+    <h2 id="step-8-add-sitelinks-and-callouts">Step 8: Add Sitelinks and Callouts</h2>
     <p>Once your campaign is live, go into your ad group and consider adding a second ad group for broader, non-location-specific terms (like &ldquo;managed IT services&rdquo; or &ldquo;IT support near me&rdquo;) to do some prospecting and see what search terms actually convert.</p>
     <p>Let the real search term data guide how you structure future ad groups, whether by service, by location, or by intent.</p>
     <p>Then head into <strong>Assets</strong> to add:</p>
@@ -487,19 +504,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>Every sitelink should point to a specific, relevant landing page or section, never your homepage. Someone curious about pricing should land on a pricing section, not have to go hunting for it.</p>
 
-    <h2>Why Managed IT Clicks Are Expensive</h2>
+    <h2 id="why-managed-it-clicks-are-expensive">Why Managed IT Clicks Are Expensive</h2>
     <p>The keywords are commercially valuable, and the competition is well funded. Someone typing &ldquo;managed IT services&rdquo; has budget and urgency behind that search, so every provider in the metro is bidding on it. That&rsquo;s just the nature of the space.</p>
     <p>Here&rsquo;s why that&rsquo;s actually fine: an MSP client is worth $30,000 to $120,000 over its lifetime. Against a $60,000 client, a $2,500 cost per lead is a good trade at almost any close rate you&rsquo;re likely to hit.</p>
     <p>So the click price was never really the problem. The real issue is when a meaningful chunk of your budget goes toward queries that could never buy from you in the first place.</p>
 
-    <h2>Structure That Works for an MSP</h2>
+    <h2 id="structure-that-works-for-an-msp">Structure That Works for an MSP</h2>
     <p>Keep this simpler than most agency dashboards make it look.</p>
     <p><strong>Build your campaigns by service line.</strong> Managed IT, cybersecurity, and cloud have different buyers and different values, so they shouldn&rsquo;t be lumped into one campaign.</p>
     <p><strong>Keep ad groups tightly themed.</strong> Every ad group should have one intent, so the ad itself can speak directly to that searcher instead of trying to cover three things at once.</p>
     <p><strong>Set location targeting to presence, not interest.</strong> &ldquo;People in your area&rdquo; and &ldquo;people interested in your area&rdquo; are two very different audiences, and the default setting will waste money if you leave it as is.</p>
     <p>Then there&rsquo;s the part most accounts get wrong: every ad group needs to point at a page that actually answers the query it&rsquo;s targeting. If you send &ldquo;managed IT services Dallas&rdquo; to your homepage, you just wasted the $30 click you paid for. This is exactly where dedicated location pages earn their keep twice over&mdash;once for SEO and once for paid traffic.</p>
 
-    <h2>Why Landing Pages Are the Whole Game</h2>
+    <h2 id="why-landing-pages-are-the-whole-game">Why Landing Pages Are the Whole Game</h2>
     <p>I want to slow down on this point because it&rsquo;s the single biggest lever in the entire account, and it&rsquo;s the one most MSPs skip.</p>
     <p>A landing page isn&rsquo;t a nice-to-have add-on to your Google Ads campaign. It&rsquo;s arguably more important than the ad itself. You can write a great headline, target the right keyword, and still lose the client entirely if the page someone lands on doesn&rsquo;t close the loop.</p>
     <p>Think about what actually happens when someone clicks your ad. They searched &ldquo;managed IT services Calgary,&rdquo; they saw an ad that matched exactly what they typed, and now they&rsquo;re one click away from either filling out a form or bouncing. That page has maybe five seconds to convince them they&rsquo;re in the right place.</p>
@@ -511,23 +528,24 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>A generic service page might convert at 2%. A tightly built landing page targeting that exact query can convert at 8% or higher. That&rsquo;s not a small difference&mdash;that&rsquo;s the difference between a channel that works and one you give up on.</p>
     <p>If you only fix one thing in your account, fix this. Better keywords and better ad copy get you the click. The landing page is what turns that click into a client.</p>
 
-    <h2>Conversion Tracking That Means Something</h2>
+    <h2 id="conversion-tracking-that-means-something">Conversion Tracking That Means Something</h2>
     <p>Counting form fills tells you your cost per form. It does not tell you your cost per client, and those two numbers can differ by an order of magnitude.</p>
     <p><strong>Track calls alongside forms.</strong> A large share of MSP inquiries come in by phone, and if you&rsquo;re only measuring forms, you&rsquo;re blind to most of what&rsquo;s actually happening in the account.</p>
     <p><strong>Push conversions into the CRM,</strong> even manually if that&rsquo;s what it takes. Track which inquiries turned into conversations, which turned into proposals, and which actually closed. Without that, you end up optimizing for the cheapest form fill, and that reliably produces more of your worst leads, not your best ones.</p>
     <p><strong>Report on cost per client every single month.</strong> It&rsquo;s the only number that actually tells you whether the channel is working.</p>
 
-    <h2>What to Expect</h2>
+    <h2 id="what-to-expect">What to Expect</h2>
     <p><strong>Immediately:</strong> clicks and impressions. Also immediately: spend. This part happens fast, so don&rsquo;t panic when the dashboard starts moving before anything else does.</p>
     <p><strong>Two to four weeks:</strong> you&rsquo;ll have enough search term data to run your first real negative keyword pass. Expect to block a lot. This is normal and it&rsquo;s actually a good sign&mdash;it means Google is showing your ads for a wide enough range of searches that you can now start tightening things up.</p>
     <p><strong>One to three months:</strong> your cost per lead starts to stabilize, and you&rsquo;ll finally have enough conversions for the platform&rsquo;s bidding to actually learn from. Before this point, don&rsquo;t put too much weight on any single week&rsquo;s numbers.</p>
     <p><strong>Three months plus:</strong> now you&rsquo;re looking at cost per client, and that&rsquo;s really the number that tells you whether this is working.</p>
     <p>Budget realistically here. If you&rsquo;re spending under about $1,500 a month on managed IT campaigns, you&rsquo;re not going to gather enough data to optimize anything. You&rsquo;ll end up concluding the channel doesn&rsquo;t work for you, when what actually happened is you never got far enough past the noise to find out.</p>
 
-    <h2>Putting It All Together</h2>
+    <h2 id="putting-it-all-together">Putting It All Together</h2>
     <p>That&rsquo;s the full setup: campaign structure, bidding, location targeting, ad scheduling, keyword research, ad copy, budget, and extensions. Get these right and you&rsquo;re already ahead of the vast majority of MSPs running (or not running) Google Ads in your market.</p>
     <p>If you run a cybersecurity company or MSSP specifically, buyer behavior is different enough that it&rsquo;s worth reading our dedicated guide on <a href="../how-to-run-google-ads-for-cybersecurity-mssp/index.html">running Google Ads for cybersecurity companies and MSSPs</a>. And if you want a channel that builds awareness before someone starts searching, pair this with our <a href="../msp-linkedin-ads-strategy/index.html">LinkedIn Ads strategy for MSPs</a>.</p>
 
+    </div>
   </div>
 </section>
 
@@ -640,5 +658,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

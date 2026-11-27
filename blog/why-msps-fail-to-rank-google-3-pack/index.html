@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -429,8 +444,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#running-on-one-category">Running on One Category</a></li><li><a href="#setting-up-your-address-wrong">Setting Up Your Address Wrong</a></li><li><a href="#sending-profile-traffic-to-your-homepage">Sending Profile Traffic to Your Homepage</a></li><li><a href="#collecting-reviews-with-no-system">Collecting Reviews With No System</a></li><li><a href="#putting-it-all-together">Putting It All Together</a></li></ol></aside>
+    <div class="post-content">
     <p>Pull out your phone and search “IT support near me.”</p>
     <p>Three businesses show up in the map pack. Odds are, yours isn’t one of them.</p>
     <p>And that’s a problem, because those three listings get most of the calls from local businesses that are actively looking for a provider. That includes the ones who want co-managed IT, a one-off project, or just a better MSP than the one they have.</p>
@@ -448,7 +465,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       </ol>
     </div>
 
-    <h2><span class="mistake-num">1</span>Running on One Category</h2>
+    <h2 id="running-on-one-category"><span class="mistake-num">1</span>Running on One Category</h2>
     <p>Your categories tell Google what kind of business you are, and so what searches you should show up for.</p>
     <p>Your profile gets one primary category and up to nine additional ones. Most MSPs use the primary slot and leave the rest empty.</p>
     <div class="stat-callout">
@@ -482,7 +499,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p>Category names change from time to time, so check the live list inside your profile when you edit.</p>
     </div>
 
-    <h2><span class="mistake-num">2</span>Setting Up Your Address Wrong</h2>
+    <h2 id="setting-up-your-address-wrong"><span class="mistake-num">2</span>Setting Up Your Address Wrong</h2>
     <p>This is the one that gets profiles suspended, and it’s the one MSPs get wrong most often.</p>
     <p>Many MSPs don’t have a storefront where clients walk in. So they grab a virtual office address, or a coworking space, or they use the owner’s home address, and then set it up the wrong way.</p>
     <p>Here’s what <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google’s guidelines</a> say. A virtual office or a mailbox isn’t eligible just because you can receive mail there.</p>
@@ -503,7 +520,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </div>
     <p>If your profile is already suspended, fix the underlying problem first, then go through <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google’s guidelines</a> before you reinstate it. Resubmitting without fixing it just gets you suspended again.</p>
 
-    <h2><span class="mistake-num">3</span>Sending Profile Traffic to Your Homepage</h2>
+    <h2 id="sending-profile-traffic-to-your-homepage"><span class="mistake-num">3</span>Sending Profile Traffic to Your Homepage</h2>
     <p>Look at the website link on your profile. Where does it go?</p>
     <p>For most MSPs, it’s the homepage. That’s a missed opportunity.</p>
     <p>Think about who clicks that link. Someone searched “managed IT services” in your city, saw your listing, and tapped through.</p>
@@ -532,7 +549,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Pair that with the performance numbers inside the profile itself, like calls and direction requests, and you can finally see what this channel is worth.</p>
     <p>Two quick notes. Keep the UTM names consistent, because “GBP,” “gbp,” and “google-profile” will show up as three different campaigns. And only use one UTM link per page, so your data doesn’t get split.</p>
 
-    <h2><span class="mistake-num">4</span>Collecting Reviews With No System</h2>
+    <h2 id="collecting-reviews-with-no-system"><span class="mistake-num">4</span>Collecting Reviews With No System</h2>
     <p>Reviews are one of the biggest reasons the top three look the way they do. And most MSPs treat them as an afterthought.</p>
     <p>They ask for one when a client happens to say something nice, and then go quiet for six months. Then they wonder why the competitor down the road has 90 reviews.</p>
     <p>What matters isn’t just the total. It’s review velocity, meaning how steadily new reviews come in, and how recent they are.</p>
@@ -560,7 +577,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p><strong>The fix:</strong> trigger the review ask from closed tickets, send it to everyone, reply to every review, and let your service and city show up naturally in your responses.</p>
     </div>
 
-    <h2>Putting It All Together</h2>
+    <h2 id="putting-it-all-together">Putting It All Together</h2>
     <p>If your profile isn’t showing in the 3-pack, you probably don’t need more tricks. You need to fix the basics you skipped.</p>
     <ul>
       <li>Set a primary category that matches your core offer, and add a few real additional categories.</li>
@@ -571,6 +588,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Do these four things and you’ll be ahead of most MSPs in your market.</p>
     <p>And if you don’t have time to manage GBP categories, posts, geotagged photos, and review responses while you’re handling client tickets, check out our <a href="../../google-business-profile/index.html">managed Google Business Profile service for MSPs</a>.</p>
 
+    </div>
   </div>
 </section>
 
@@ -683,5 +701,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>
