@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -424,8 +439,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#the-real-job-in-month-one-isnt-technical">The Real Job in Month One Isn&amp;rsquo;t Technical</a></li><li><a href="#trade-your-time-for-proof-because-your-time-is-worth-nothing">Trade Your Time for Proof, Because Your Time Is Worth Nothing Yet</a></li><li><a href="#from-2k-to-15k-what-the-first-year-actually-looks-like">From $2K to $15K: What the First Year Actually Looks Like</a></li><li><a href="#year-two-is-where-the-channels-start-stacking">Year Two Is Where the Channels Start Stacking</a></li><li><a href="#by-year-three-youre-not-running-the-marketing-anymore-youre">By Year Three, You&amp;rsquo;re Not Running the Marketing Anymore, You&amp;rsquo;re Managing It</a></li><li><a href="#four-things-that-actually-carried-this-the-whole-way">Four Things That Actually Carried This the Whole Way</a></li><li><a href="#growth-gets-prioritized-over-tech">Growth Gets Prioritized Over Tech</a></li><li><a href="#nothing-here-gets-bought-early">Nothing Here Gets Bought Early</a></li><li><a href="#networking-never-stops">Networking Never Stops</a></li><li><a href="#new-channels-get-stacked-never-swapped-in">New Channels Get Stacked, Never Swapped In</a></li><li><a href="#where-this-leaves-you">Where This Leaves You</a></li></ol></aside>
+    <div class="post-content">
     <p>Every technician who starts an MSP makes the same first move. They pick the RMM, lock in the PSA, spend a week comparing ticketing tools, and treat the tech stack like the foundation everything else gets built on, instead of bringing in an <a href="../../index.html">MSP marketing agency</a> to handle the part that actually grows the business.</p>
     <p>I get why. It&rsquo;s the part they&rsquo;re actually good at. It&rsquo;s also the part that matters least in year one.</p>
     <p>I&rsquo;ve watched this play out dozens of times across clients in this space: a genuinely skilled technician starts an MSP, spends two years being the best in the market at the actual work, and is still stuck around $5K MRR while a mediocre technician down the street is pulling in five times that.</p>
@@ -481,7 +498,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       </ul>
     </div>
 
-    <h2>The Real Job in Month One Isn&rsquo;t Technical</h2>
+    <h2 id="the-real-job-in-month-one-isnt-technical">The Real Job in Month One Isn&rsquo;t Technical</h2>
     <p>Before you touch a single tool decision, there are three things that matter more, and none of them are expensive.</p>
 
     <div class="fix-callout">
@@ -492,13 +509,13 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <p>Then comes the part most new MSP owners skip entirely: picking a lane. Not one vertical, and definitely not &ldquo;any business with a computer.&rdquo; Pick three industries you actually understand well enough to talk about their specific pains without googling them first, and only market to those three for now.</p>
 
-    <h2>Trade Your Time for Proof, Because Your Time Is Worth Nothing Yet</h2>
+    <h2 id="trade-your-time-for-proof-because-your-time-is-worth-nothing">Trade Your Time for Proof, Because Your Time Is Worth Nothing Yet</h2>
     <p>Here&rsquo;s a move that feels backwards to a lot of new owners: offer completely free projects to companies inside those three verticals. Not discounted. Free. Your only ask back is a 5-star review and a video testimonial.</p>
     <p>The math on this is simple. Right now, your hour is worth close to nothing in the market, you have no clients, no case studies, and no proof you can actually deliver.</p>
     <p>A real testimonial from a real business in your target vertical is worth more to your next twelve months than that same hour spent on a ticket would be. Once you have paying clients, this trade stops making sense. Right now, it&rsquo;s the best trade available to you.</p>
     <p>All of the above is realistic inside 90 days, and none of it requires outside capital. It requires actually doing it instead of getting three weeks into researching RMM platforms and calling that progress.</p>
 
-    <h2>From $2K to $15K: What the First Year Actually Looks Like</h2>
+    <h2 id="from-2k-to-15k-what-the-first-year-actually-looks-like">From $2K to $15K: What the First Year Actually Looks Like</h2>
     <p>Say one of those free-project clients converts to a paid monthly agreement around the three-month mark. You&rsquo;re at roughly $2,000 MRR. Small number, but it&rsquo;s not nothing, it&rsquo;s fuel for the next stage.</p>
     <p>This is when I&rsquo;d join the Chamber of Commerce and Rotary, and treat attendance as non-negotiable. Every person you meet goes into your CRM that same week, and every one of them gets added to a weekly email that&rsquo;s actually worth opening: a Microsoft update, a piece of cybersecurity news, a quick tip, nothing salesy.</p>
     <p>Most local competitors either don&rsquo;t do this at all or do it so inconsistently it never compounds.</p>
@@ -517,7 +534,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Year Two Is Where the Channels Start Stacking</h2>
+    <h2 id="year-two-is-where-the-channels-start-stacking">Year Two Is Where the Channels Start Stacking</h2>
     <p>By month 18 in this scenario, you&rsquo;re around $35,000 MRR, with a full-time engineer on payroll and the business clearing about $10,000 a month in profit.</p>
     <p>Look at where the leads are actually coming from at this stage and you&rsquo;ll usually see something like this: one lead a month from local SEO, one from networking, one from <a href="../../cold-email-outreach/index.html">outbound</a> sequences, and the rest from referrals, both direct client asks and a growing network of larger MSPs and telecom providers sending you the accounts too small for them.</p>
 
@@ -529,7 +546,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Heading into year two proper, $60,000 MRR with around 600 endpoints across two technicians is a reasonable target. This is where I&rsquo;d bring on a marketing coordinator, get them trained on the system that&rsquo;s already producing results, and hand it off, so my own time shifts almost entirely to vision, retention, and growth.</p>
     <p>Anything short of that is a poor use of an owner&rsquo;s time at this stage.</p>
 
-    <h2>By Year Three, You&rsquo;re Not Running the Marketing Anymore, You&rsquo;re Managing It</h2>
+    <h2 id="by-year-three-youre-not-running-the-marketing-anymore-youre">By Year Three, You&rsquo;re Not Running the Marketing Anymore, You&rsquo;re Managing It</h2>
     <p>By the end of year three, a business built this way looks something like this:</p>
     <ul>
       <li>$100,000 in monthly recurring revenue</li>
@@ -548,19 +565,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>The reason outside vendors come in at year three and not year one comes down to the value of your own time. Early on, your hour is nearly free, so it makes sense to do the work yourself.</p>
     <p>By year three, your hour is expensive enough that managing an in-house SEO or outbound function stops being worth it compared to handing it to someone who already does it well. Keep re-asking that question as you grow, because the right answer changes every year, even if the activity itself doesn&rsquo;t.</p>
 
-    <h2>Four Things That Actually Carried This the Whole Way</h2>
+    <h2 id="four-things-that-actually-carried-this-the-whole-way">Four Things That Actually Carried This the Whole Way</h2>
     <p>Pull this roadmap apart and the same four ideas show up at every stage, not just once.</p>
 
-    <h2><span class="mistake-num">1</span>Growth Gets Prioritized Over Tech</h2>
+    <h2 id="growth-gets-prioritized-over-tech"><span class="mistake-num">1</span>Growth Gets Prioritized Over Tech</h2>
     <p>Every time there&rsquo;s a real tradeoff between the two. Tech decisions follow the sales and brand strategy, they don&rsquo;t set the direction themselves.</p>
 
-    <h2><span class="mistake-num">2</span>Nothing Here Gets Bought Early</h2>
+    <h2 id="nothing-here-gets-bought-early"><span class="mistake-num">2</span>Nothing Here Gets Bought Early</h2>
     <p>It gets earned with time and consistency, because there&rsquo;s no budget in year one to shortcut it with, and pretending otherwise just delays the real work.</p>
 
-    <h2><span class="mistake-num">3</span>Networking Never Stops</h2>
+    <h2 id="networking-never-stops"><span class="mistake-num">3</span>Networking Never Stops</h2>
     <p>Not after the first few deals close, not once referrals start coming in on their own. The lunch and learns and the weekly emails feel unglamorous the entire time. Most competitors quietly stop doing them. That gap is where the advantage lives.</p>
 
-    <h2><span class="mistake-num">4</span>New Channels Get Stacked, Never Swapped In</h2>
+    <h2 id="new-channels-get-stacked-never-swapped-in"><span class="mistake-num">4</span>New Channels Get Stacked, Never Swapped In</h2>
     <p>Local SEO doesn&rsquo;t retire networking. Outbound doesn&rsquo;t retire referrals. Each one keeps reinforcing the others, and three years of small, boring layers is what actually adds up to something real.</p>
 
     <div class="inline-cta">
@@ -568,11 +585,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Where This Leaves You</h2>
+    <h2 id="where-this-leaves-you">Where This Leaves You</h2>
     <p>None of this requires a big team or a big budget on day one. It requires a plan you actually follow and the discipline to keep doing the unglamorous parts of it long after they stop feeling new.</p>
     <p>If you want a second opinion on where your MSP actually sits against this roadmap, or help building out any single piece of the <a href="../../msp-lead-generation/index.html">marketing engine</a>, <a href="../../seo/index.html">local SEO</a>, <a href="../../google-ads-ppc/index.html">Google Ads</a>, or <a href="../../cold-email-outreach/index.html">outbound</a>, feel free to book a call. Happy to walk through it with you.</p>
     <p>If you want the short version of what to fix first, see our checklist of <a href="../how-to-improve-your-msp-marketing/index.html">6 ways to improve your MSP marketing</a>.</p>
 
+    </div>
   </div>
 </section>
 
@@ -685,5 +703,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

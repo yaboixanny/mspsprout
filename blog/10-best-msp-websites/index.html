@@ -16,7 +16,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -365,8 +380,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#how-we-chose-the-best-msp-website-examples">How We Chose the Best MSP Website Examples</a></li><li><a href="#1-jmark">1. JMARK</a></li><li><a href="#2-techvera">2. Techvera</a></li><li><a href="#3-evenstar-msp">3. Evenstar MSP</a></li><li><a href="#4-taurent-it-services">4. Taurent IT Services</a></li><li><a href="#5-viti-security">5. Viti Security</a></li><li><a href="#6-logically">6. Logically</a></li><li><a href="#7-vc3">7. VC3</a></li><li><a href="#8-highgate-it">8. Highgate IT</a></li><li><a href="#9-com3-it-solutions">9. COM3 IT Solutions</a></li><li><a href="#10-it-hands-free">10. IT Hands Free</a></li><li><a href="#more-msp-website-examples-worth-studying">More MSP Website Examples Worth Studying</a></li><li><a href="#what-the-best-msp-websites-have-in-common">What the Best MSP Websites Have in Common</a></li><li><a href="#what-should-an-msp-website-include">What Should an MSP Website Include?</a></li><li><a href="#the-biggest-mistake-msp-websites-make">The Biggest Mistake MSP Websites Make</a></li><li><a href="#final-thoughts">Final Thoughts</a></li></ol></aside>
+    <div class="post-content">
     <p>Most MSP websites look surprisingly similar.</p>
     <p>You get the stock photo of someone staring at a laptop, a headline about &ldquo;technology solutions,&rdquo; a long list of IT services, and a button that says <strong>Learn More</strong>.</p>
     <p>The problem is that none of that gives a prospective client much reason to choose one managed service provider over another.</p>
@@ -375,7 +392,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Here are 10 of the best MSP website examples and what you can learn from each one.</p>
     <p><em>Updated October 2026: we re-checked every site, swapped in fresh examples where a site had changed or gone offline, added screenshots, and added more MSP website examples at the end. Sites change often, so some details may look different by the time you visit.</em></p>
 
-    <h2>How We Chose the Best MSP Website Examples</h2>
+    <h2 id="how-we-chose-the-best-msp-website-examples">How We Chose the Best MSP Website Examples</h2>
     <p>We&rsquo;re not judging these websites purely on whether they look good.</p>
     <p>A beautiful MSP website that doesn&rsquo;t generate conversations isn&rsquo;t doing its job.</p>
     <p>Instead, we looked for several things that directly influence whether a website can turn traffic into qualified leads:</p>
@@ -393,7 +410,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>1. <a href="https://www.jmark.com/" target="_blank" rel="noopener noreferrer">JMARK</a></h2>
+    <h2 id="1-jmark">1. <a href="https://www.jmark.com/" target="_blank" rel="noopener noreferrer">JMARK</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/jmark.webp" alt="Screenshot of the JMARK homepage with the headline about high-performance IT for security-focused industries" loading="lazy" width="900"><figcaption>JMARK homepage, captured October 2026.</figcaption></figure>
     <p>JMARK is one of the strongest examples of an MSP website built around positioning rather than simply listing IT services.</p>
     <p>Instead of trying to appeal to every business imaginable, the website communicates a much clearer message around <strong>high-performance IT for security-focused organizations</strong>.</p>
@@ -414,7 +431,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>2. <a href="https://www.techvera.com/" target="_blank" rel="noopener noreferrer">Techvera</a></h2>
+    <h2 id="2-techvera">2. <a href="https://www.techvera.com/" target="_blank" rel="noopener noreferrer">Techvera</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/techvera.webp" alt="Screenshot of the Techvera homepage hero: The IT Partner That Keeps You Compliant and Secure" loading="lazy" width="900"><figcaption>Techvera homepage, captured October 2026.</figcaption></figure>
     <p>Techvera&rsquo;s website is a great example of what an MSP homepage should look like when the primary objective is generating sales conversations.</p>
     <p>There isn&rsquo;t much ambiguity about what the visitor should do next.</p>
@@ -436,7 +453,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>3. <a href="https://evenstarmsp.com/" target="_blank" rel="noopener noreferrer">Evenstar MSP</a></h2>
+    <h2 id="3-evenstar-msp">3. <a href="https://evenstarmsp.com/" target="_blank" rel="noopener noreferrer">Evenstar MSP</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/evenstar.webp" alt="Screenshot of the Evenstar MSP homepage: Your business doubled. Your tech stack didn't." loading="lazy" width="900"><figcaption>Evenstar MSP homepage, captured October 2026.</figcaption></figure>
     <p>Evenstar MSP demonstrates just how valuable one strong line of copy can be.</p>
     <p>Its headline:</p>
@@ -460,7 +477,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>4. <a href="https://taurent.com/" target="_blank" rel="noopener noreferrer">Taurent IT Services</a></h2>
+    <h2 id="4-taurent-it-services">4. <a href="https://taurent.com/" target="_blank" rel="noopener noreferrer">Taurent IT Services</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/taurent.webp" alt="Screenshot of the Taurent IT Services homepage with a dashboard showing devices protected and new hires onboarded" loading="lazy" width="900"><figcaption>Taurent IT Services homepage, captured October 2026.</figcaption></figure>
     <p>Taurent IT Services has one of the more interesting visual approaches to MSP website design.</p>
     <p>Rather than making the website feel like a traditional IT company, Taurent gives it more of a modern SaaS-style interface.</p>
@@ -490,7 +507,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>5. <a href="https://vitisecurity.com/" target="_blank" rel="noopener noreferrer">Viti Security</a></h2>
+    <h2 id="5-viti-security">5. <a href="https://vitisecurity.com/" target="_blank" rel="noopener noreferrer">Viti Security</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/viti-security.webp" alt="Screenshot of the VITI Security homepage with the headline The pentest report and audit readiness your customers ask for" loading="lazy" width="900"><figcaption>Viti Security homepage, captured October 2026.</figcaption></figure>
     <p>Viti Security stands out for something most MSPs are afraid to put on their websites: <strong>pricing.</strong></p>
     <p>The company makes it easier for prospects to understand the available packages, what is included, endpoint limitations, expected response times, and where additional charges may apply.</p>
@@ -511,7 +528,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>6. <a href="https://www.logically.com/" target="_blank" rel="noopener noreferrer">Logically</a></h2>
+    <h2 id="6-logically">6. <a href="https://www.logically.com/" target="_blank" rel="noopener noreferrer">Logically</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/logically.webp" alt="Screenshot of the Logically homepage: Close the gap between IT and cybersecurity with one partner" loading="lazy" width="900"><figcaption>Logically homepage, captured October 2026.</figcaption></figure>
     <p>Logically is a good example of what happens when an MSP picks one clear idea and builds the whole homepage around it.</p>
     <p>The headline:</p>
@@ -534,7 +551,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>7. <a href="https://www.vc3.com/" target="_blank" rel="noopener noreferrer">VC3</a></h2>
+    <h2 id="7-vc3">7. <a href="https://www.vc3.com/" target="_blank" rel="noopener noreferrer">VC3</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/vc3.webp" alt="Screenshot of the VC3 homepage: Get IT and cybersecurity out of sight, out of mind, and out of your way" loading="lazy" width="900"><figcaption>VC3 homepage, captured October 2026.</figcaption></figure>
     <p>VC3 shows how much a strong headline can do when you serve a very specific kind of customer.</p>
     <p>The headline:</p>
@@ -556,7 +573,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>8. <a href="https://highgate-it.co.uk/" target="_blank" rel="noopener noreferrer">Highgate IT</a></h2>
+    <h2 id="8-highgate-it">8. <a href="https://highgate-it.co.uk/" target="_blank" rel="noopener noreferrer">Highgate IT</a></h2>
     <p>Highgate IT demonstrates how much stronger a case study becomes when you show the actual transformation.</p>
     <p>Many MSP case studies aren&rsquo;t really case studies at all.</p>
     <p>They&rsquo;re testimonials.</p>
@@ -577,7 +594,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>9. <a href="https://com3it.com/" target="_blank" rel="noopener noreferrer">COM3 IT Solutions</a></h2>
+    <h2 id="9-com3-it-solutions">9. <a href="https://com3it.com/" target="_blank" rel="noopener noreferrer">COM3 IT Solutions</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/com3.webp" alt="Screenshot of the COM3 IT Solutions homepage with an operations dashboard showing response time, healthy endpoints, and open risks" loading="lazy" width="900"><figcaption>COM3 IT Solutions homepage, captured October 2026.</figcaption></figure>
     <p>COM3 IT Solutions does something that more MSP websites should copy:</p>
     <p>It shows prospects what managed IT actually looks like operationally.</p>
@@ -605,7 +622,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>10. <a href="https://ithandsfree.com/" target="_blank" rel="noopener noreferrer">IT Hands Free</a></h2>
+    <h2 id="10-it-hands-free">10. <a href="https://ithandsfree.com/" target="_blank" rel="noopener noreferrer">IT Hands Free</a></h2>
     <figure class="site-shot"><img src="../../assets/msp-websites/it-hands-free.webp" alt="Screenshot of the IT Hands Free homepage: Managed IT, hands free" loading="lazy" width="900"><figcaption>IT Hands Free homepage, captured October 2026.</figcaption></figure>
     <p>IT Hands Free makes its target customer unusually clear.</p>
     <p>Rather than trying to appeal to every organization from two employees to 20,000, the company positions itself as a <strong>boutique MSP for businesses with roughly 5&ndash;150 employees</strong>.</p>
@@ -627,7 +644,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <hr>
 
-    <h2>More MSP Website Examples Worth Studying</h2>
+    <h2 id="more-msp-website-examples-worth-studying">More MSP Website Examples Worth Studying</h2>
     <p>These two didn&rsquo;t make the main 10, but both are strong MSP website examples with ideas worth borrowing.</p>
 
     <h3><a href="https://www.ntiva.com/" target="_blank" rel="noopener noreferrer">Ntiva</a></h3>
@@ -646,7 +663,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Right below it is a third-party credential, a spot on the 2026 MSP501 list of top managed service providers, and the page backs that up with numbers like 300+ five-star reviews and an initial response time under 15 minutes.</p>
     <p><strong>Takeaway:</strong> Make every way to contact you obvious, and lead with an offer instead of a tagline.</p>
 
-    <h2>What the Best MSP Websites Have in Common</h2>
+    <h2 id="what-the-best-msp-websites-have-in-common">What the Best MSP Websites Have in Common</h2>
     <p>These 10 websites look different, but several patterns appear repeatedly.</p>
     <p>And they&rsquo;re worth paying attention to if you&rsquo;re redesigning your own MSP website.</p>
 
@@ -718,7 +735,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>They want employees to stop complaining about IT. They want someone to answer support tickets. They want ransomware protection. They need Cyber Insurance requirements handled. They&rsquo;re opening another office and don&rsquo;t want the transition to become a disaster. They need someone to manage Microsoft 365. They want predictable costs.</p>
     <p>Talk about those problems. Technical expertise should support your messaging, not bury it.</p>
 
-    <h2>What Should an MSP Website Include?</h2>
+    <h2 id="what-should-an-msp-website-include">What Should an MSP Website Include?</h2>
     <p>If you&rsquo;re building or redesigning an MSP website, you don&rsquo;t need to copy any of these websites section for section.</p>
     <p>You do, however, need to answer the core questions every potential client has.</p>
     <p>A strong MSP homepage should usually communicate:</p>
@@ -744,7 +761,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <h3>A Clear Next Step</h3>
     <p>Give visitors one obvious action to take.</p>
 
-    <h2>The Biggest Mistake MSP Websites Make</h2>
+    <h2 id="the-biggest-mistake-msp-websites-make">The Biggest Mistake MSP Websites Make</h2>
     <p>The biggest problem with most MSP websites isn&rsquo;t bad design.</p>
     <p>It&rsquo;s <strong>generic positioning</strong>.</p>
     <p>You could often take the logo off one MSP website, replace it with another company&rsquo;s logo, and almost nothing else would need to change.</p>
@@ -755,7 +772,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Whatever it is, make that part of the website.</p>
     <p>Don&rsquo;t hide your strongest differentiator halfway down your About page.</p>
 
-    <h2>Final Thoughts</h2>
+    <h2 id="final-thoughts">Final Thoughts</h2>
     <p>The best MSP websites aren&rsquo;t necessarily the websites with the most animations, the most expensive photography, or the most complicated designs.</p>
     <p>They&rsquo;re the ones that make buying easier.</p>
     <p>They tell prospects:</p>
@@ -765,6 +782,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Because getting more traffic to a website that doesn&rsquo;t convert just means paying to lose prospects faster.</p>
     <p>At <strong>MSP Sprout</strong>, we focus on helping MSPs build marketing systems that generate qualified managed IT opportunities&mdash;not just traffic, impressions, and rankings. Your website should be one of the strongest sales assets in that system, which is exactly what our <a href="../../web-design/index.html">web design for MSPs</a> service is built to deliver. Already have a site that needs to convert better? Read <a href="../how-to-optimize-an-msp-website/index.html">how to optimize an MSP website for more leads</a>.</p>
 
+    </div>
   </div>
 </section>
 
@@ -877,5 +895,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

@@ -17,7 +17,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -372,12 +387,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#why-cybersecurity-companies-should-be-running-google-ads">Why Cybersecurity Companies Should Be Running Google Ads</a></li><li><a href="#step-1-start-a-new-campaign">Step 1: Start a New Campaign</a></li><li><a href="#step-2-choose-a-bidding-strategy">Step 2: Choose a Bidding Strategy</a></li><li><a href="#step-3-set-your-location-targeting">Step 3: Set Your Location Targeting</a></li><li><a href="#step-4-set-your-ad-schedule">Step 4: Set Your Ad Schedule</a></li><li><a href="#step-5-keyword-research">Step 5: Keyword Research</a></li><li><a href="#step-6-build-the-ad-and-use-a-landing-page-not-your-website">Step 6: Build the Ad (and Use a Landing Page, Not Your Website)</a></li><li><a href="#step-7-set-your-budget">Step 7: Set Your Budget</a></li><li><a href="#step-8-build-out-additional-ad-groups">Step 8: Build Out Additional Ad Groups</a></li><li><a href="#step-9-add-sitelinks-and-callouts">Step 9: Add Sitelinks and Callouts</a></li><li><a href="#putting-it-all-together">Putting It All Together</a></li></ol></aside>
+    <div class="post-content">
     <p>For cybersecurity companies and MSSPs, Google Ads is one of the best ways to generate leads reliably, fairly, and cost-effectively, without having to lean on referrals or whatever inbound happens to show up.</p>
     <p>In this post, I want to show you why it works and exactly how to set it up&mdash;or if you&rsquo;d rather have it done for you, that&rsquo;s exactly what our <a href="../../google-ads-ppc/index.html">Google Ads for MSPs</a> service is built for.</p>
 
-    <h2>Why Cybersecurity Companies Should Be Running Google Ads</h2>
+    <h2 id="why-cybersecurity-companies-should-be-running-google-ads">Why Cybersecurity Companies Should Be Running Google Ads</h2>
     <p>About 90% of people looking for a service like this are heading straight to Google. For cybersecurity specifically, they&rsquo;re typically searching one of two ways:</p>
     <ul>
       <li>&ldquo;Cybersecurity near me&rdquo;</li>
@@ -389,7 +406,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>So Google Ads gets you right to the top of the page. As long as everything is structured correctly, and your inbound process can actually handle what comes in, this becomes one of the most consistent lead sources you can build.</p>
     <p>Here&rsquo;s how to actually set it up.</p>
 
-    <h2>Step 1: Start a New Campaign</h2>
+    <h2 id="step-1-start-a-new-campaign">Step 1: Start a New Campaign</h2>
     <p>Head into your Google Ads dashboard and click <strong>New Campaign</strong>.</p>
     <ul>
       <li><strong>Objective:</strong> Leads</li>
@@ -399,7 +416,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p><strong>Campaign type:</strong> The vast majority of you will get the best results with a <strong>Search campaign</strong>. If your budget is north of $30k a month, you can start experimenting with Performance Max or Display. But for 99% of cybersecurity companies and MSSPs, Search is the right call.</p>
     <p>Name your campaign whatever makes sense, something like &ldquo;Cybersecurity Company: Phoenix,&rdquo; and set your location. You don&rsquo;t need to select any of the extra targeting options here.</p>
 
-    <h2>Step 2: Choose a Bidding Strategy</h2>
+    <h2 id="step-2-choose-a-bidding-strategy">Step 2: Choose a Bidding Strategy</h2>
     <p>Google gives you a handful of bidding options.</p>
     <p><strong>Maximize Conversions</strong> is one of their smart bidding algorithms, and I like leaving it there for about the first month.</p>
     <p>One thing to watch for: every once in a while you might get hit with an unusually expensive click. If that happens two or three times, you can set a portfolio bid limit to keep it from happening again.</p>
@@ -411,14 +428,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>You don&rsquo;t want your ads showing up in Gmail or on some random website. You want to be in the actual search results, right where someone is typing in &ldquo;cybersecurity company&rdquo; or &ldquo;MSSP.&rdquo;</p>
 
-    <h2>Step 3: Set Your Location Targeting</h2>
+    <h2 id="step-3-set-your-location-targeting">Step 3: Set Your Location Targeting</h2>
     <p>Location targeting matters a lot here, so pay attention to this step.</p>
     <p>Choose <strong>Presence</strong>, which limits your ads to people who are actually in or regularly in your target area. Then click &ldquo;Enter another location&rdquo; and use <strong>Advanced Search</strong> to set up <strong>radius targeting</strong>.</p>
     <p>How wide you go depends on your city, but radius is usually the best bet, and for MSSPs and cybersecurity companies, you can often go a bit broader than you&rsquo;d think.</p>
     <p>Here&rsquo;s the important part: you&rsquo;ll eventually build separate ad groups for the surrounding cities too. If your main city is Phoenix, that also means Glendale, Scottsdale, Mesa, Gilbert, and Chandler. Smaller businesses in those areas search the same way, just with their own city attached, like &ldquo;cybersecurity company Chandler.&rdquo;</p>
     <p>Volume won&rsquo;t be huge for any single one of these, but if your ad actually says &ldquo;Chandler&rdquo; back to them, you&rsquo;re going to get the click over a competitor running something vague like &ldquo;third-party monitoring, real-time data breach protection.&rdquo; That kind of language doesn&rsquo;t mean anything to most people searching for this stuff.</p>
 
-    <h2>Step 4: Set Your Ad Schedule</h2>
+    <h2 id="step-4-set-your-ad-schedule">Step 4: Set Your Ad Schedule</h2>
     <p>A lot of businesses just run their ads 24/7. Don&rsquo;t do that.</p>
     <p>You want ads running during hours when you can actually get back to leads fast. As soon as someone fills out a form, you want to call or email them almost immediately. Speed to lead is one of the biggest factors in whether a lead actually turns into a booked call or a closed deal.</p>
     <p>For most of you, a simple schedule works well:</p>
@@ -428,7 +445,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </ul>
     <p>Click next, and opt out of AI Max. It&rsquo;s not in a good place right now. It might improve over time, but I wouldn&rsquo;t run it currently. Skip the other Google AI feature on the next screen too.</p>
 
-    <h2>Step 5: Keyword Research</h2>
+    <h2 id="step-5-keyword-research">Step 5: Keyword Research</h2>
     <p>This is where the account actually gets built: keywords and ads.</p>
     <p>One mistake I see constantly when auditing accounts: businesses cramming 40 keywords into a single ad group. That&rsquo;s about 38 too many. Keep it to one or two keywords per ad group, grouped by search theme, not by throwing everything into one bucket.</p>
     <p>The easiest way to do this research is right inside Google Ads:</p>
@@ -444,7 +461,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Realistically, expect something closer to <strong>$60&ndash;$70 per click</strong> for a term like &ldquo;cybersecurity firms.&rdquo; Ideally you&rsquo;re getting five to ten clicks a day, and once you can sustain a couple hundred dollars a day in spend, that&rsquo;s when Google Ads really starts to make sense.</p>
     <p>For this example, &ldquo;cybersecurity company near me&rdquo; pulling 10 to 100 searches a month is plenty of volume for a service like this. Add it as a keyword, along with a close variation like &ldquo;cybersecurity firm,&rdquo; just to cover your bases without going overboard.</p>
 
-    <h2>Step 6: Build the Ad (and Use a Landing Page, Not Your Website)</h2>
+    <h2 id="step-6-build-the-ad-and-use-a-landing-page-not-your-website">Step 6: Build the Ad (and Use a Landing Page, Not Your Website)</h2>
     <p>Before we get into headlines, let&rsquo;s talk about the final URL, because this is the single biggest mistake companies make in this space.</p>
     <p>Hover over most competitor ads and you&rsquo;ll see they&rsquo;re sending traffic to their homepage, a generic services or industries page, or in some cases something completely irrelevant to the search at all. That&rsquo;s a wasted click.</p>
     <p>A landing page is built specifically to turn that paid traffic into leads. Someone sees an ad that says &ldquo;Cybersecurity Company Phoenix&rdquo; or &ldquo;Number One Cybersecurity Company in Phoenix,&rdquo; they click it, and the page needs to immediately confirm that: &ldquo;Phoenix&rsquo;s Number One Cybersecurity Company.&rdquo; From there it should:</p>
@@ -479,7 +496,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>The more your ad reads as a genuine local business, the easier it is to earn that click and get someone to actually convert.</p>
     <p>Make sure your business is verified so your business name and logo show up on the ad. Don&rsquo;t add sitelinks or callouts at the ad level, we&rsquo;ll cover where those actually go. Unless you&rsquo;re running a promotion or offering upfront pricing (unlikely in this space), that&rsquo;s really all you need for your first ad.</p>
 
-    <h2>Step 7: Set Your Budget</h2>
+    <h2 id="step-7-set-your-budget">Step 7: Set Your Budget</h2>
     <p>For average daily budget, $100 a day is going to be tough, and honestly I wouldn&rsquo;t even recommend starting there in a city the size of Phoenix.</p>
     <p>It&rsquo;s always worth testing, but realistically:</p>
     <ul>
@@ -490,11 +507,11 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>It&rsquo;s not that it doesn&rsquo;t work. It&rsquo;s that it never had enough budget or enough time to actually work. Budget and reasonable expectations solve that.</p>
     <p>Set your budget to something minimal like $0.01 while the campaign goes through review so you don&rsquo;t get charged accidentally, and make sure your Google Tag is set up so conversions actually get tracked properly.</p>
 
-    <h2>Step 8: Build Out Additional Ad Groups</h2>
+    <h2 id="step-8-build-out-additional-ad-groups">Step 8: Build Out Additional Ad Groups</h2>
     <p>Once your campaign is live, head into your campaign and rename your first ad group to something clear, like &ldquo;Near Me,&rdquo; since that&rsquo;s the keyword theme it&rsquo;s built around.</p>
     <p>To build out your surrounding city ad groups (Tempe, Scottsdale, Chandler, wherever else applies), don&rsquo;t recreate everything from scratch. Just copy the ad group, paste it into the campaign, and then go in and swap out the copy, the landing page, and the keywords for that specific city. It&rsquo;s a lot faster than building each one manually.</p>
 
-    <h2>Step 9: Add Sitelinks and Callouts</h2>
+    <h2 id="step-9-add-sitelinks-and-callouts">Step 9: Add Sitelinks and Callouts</h2>
     <p>Head into <strong>Assets</strong> to add these, always at the <strong>campaign level</strong>, never the ad group level (adding them at the ad group level makes duplicating ad groups later a mess).</p>
     <p><strong>Sitelinks:</strong></p>
     <ul>
@@ -511,7 +528,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <li>A few more short phrases like this that add a bit of extra text and relevance to the bottom of your ad</li>
     </ul>
 
-    <h2>Putting It All Together</h2>
+    <h2 id="putting-it-all-together">Putting It All Together</h2>
     <p>At this point, you&rsquo;re ready to launch. To recap:</p>
     <ul>
       <li>Structure campaigns by service and location</li>
@@ -523,6 +540,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>I&rsquo;m Alex, I run MSP Sprout, and we help MSPs, MSSPs, and cybersecurity firms get leads reliably and consistently, without the feast-or-famine cycle that comes from relying purely on referrals. Google Ads is just one piece of that, our <a href="../../cybersecurity-mssp-marketing/index.html">marketing built for cybersecurity companies and MSSPs</a> covers SEO, lead generation, and web design too.</p>
     <p>If you want help setting any of this up, or you&rsquo;d just rather focus on the cybersecurity side of your business while someone else handles the marketing, feel free to book a call. Happy to answer any questions you&rsquo;ve got.</p>
 
+    </div>
   </div>
 </section>
 
@@ -635,5 +653,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

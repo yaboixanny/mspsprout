@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -427,8 +442,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#lock-in-your-positioning-and-target-market-first">Lock In Your Positioning and Target Market First</a></li><li><a href="#fix-your-website-so-it-actually-converts">Fix Your Website So It Actually Converts</a></li><li><a href="#build-real-seo-and-content-not-just-a-blog-nobody-reads">Build Real SEO and Content, Not Just a Blog Nobody Reads</a></li><li><a href="#decide-deliberately-on-paid-search-not-by-accident">Decide Deliberately on Paid Search, Not by Accident</a></li><li><a href="#build-a-lead-generation-engine-with-more-than-one-moving-par">Build a Lead Generation Engine With More Than One Moving Part</a></li><li><a href="#track-what-actually-matters-not-just-whats-easy-to-measure">Track What Actually Matters, Not Just What&amp;rsquo;s Easy to Measure</a></li><li><a href="#putting-it-all-together">Putting It All Together</a></li></ol></aside>
+    <div class="post-content">
     <p>Most MSPs I talk to aren&rsquo;t actually short on marketing ideas. They&rsquo;ve tried SEO, they&rsquo;ve dabbled in LinkedIn, maybe they ran a few Google Ads campaigns last year.</p>
     <p>The problem isn&rsquo;t a lack of tactics. It&rsquo;s that most of those tactics were run in isolation, for a few weeks, without ever being tied together into something that actually compounds.</p>
     <p>This checklist is the six things I&rsquo;d actually fix first if you handed me your MSP marketing today. Not forty tactics. Six, done properly, in the right order.</p>
@@ -445,7 +462,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       </ol>
     </div>
 
-    <h2><span class="mistake-num">1</span>Lock In Your Positioning and Target Market First</h2>
+    <h2 id="lock-in-your-positioning-and-target-market-first"><span class="mistake-num">1</span>Lock In Your Positioning and Target Market First</h2>
     <p>I&rsquo;ll say this bluntly: most of what looks like a &ldquo;marketing problem&rdquo; at an MSP is actually a positioning problem wearing a marketing costume.</p>
     <p>If your messaging still reads as &ldquo;comprehensive IT solutions for businesses of all sizes,&rdquo; none of the other five items on this list are going to work as well as they should. You&rsquo;re spending money and effort to be generically visible instead of specifically chosen.</p>
 
@@ -468,7 +485,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p>This single decision makes every other item on this list cheaper and more effective, because you&rsquo;re no longer paying to reach everyone in order to convince a fraction of them.</p>
     </div>
 
-    <h2><span class="mistake-num">2</span>Fix Your Website So It Actually Converts</h2>
+    <h2 id="fix-your-website-so-it-actually-converts"><span class="mistake-num">2</span>Fix Your Website So It Actually Converts</h2>
     <p>A lot of MSP websites were built once, three or four years ago, and never touched again except for the occasional team photo update. Meanwhile, the way buyers actually use a website has changed considerably.</p>
     <p>MSP website essentials come down to a handful of things that matter more than they get credit for:</p>
     <ul>
@@ -491,7 +508,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2><span class="mistake-num">3</span>Build Real SEO and Content, Not Just a Blog Nobody Reads</h2>
+    <h2 id="build-real-seo-and-content-not-just-a-blog-nobody-reads"><span class="mistake-num">3</span>Build Real SEO and Content, Not Just a Blog Nobody Reads</h2>
     <p>Content marketing and SEO show up on almost every MSP marketing list you&rsquo;ll ever read, and for good reason. But the execution is where most MSPs go wrong.</p>
     <p>They publish generically, inconsistently, or purely for keyword volume instead of for the specific questions their buyers are actually asking.</p>
     <p>Search intent matters more here than most MSPs realize. Someone searching &ldquo;managed IT services pricing&rdquo; is at a completely different stage than someone searching &ldquo;what does managed IT include,&rdquo; and your content needs to match that intent instead of funneling every visitor toward the same generic &ldquo;contact us&rdquo; page.</p>
@@ -510,7 +527,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p><a href="../../ai-seo/index.html">AI SEO for MSPs</a> isn&rsquo;t a separate discipline requiring new tools. It&rsquo;s the same clear, specific, well-structured content rewarded by traditional SEO, now also being read and cited by language models deciding who to mention.</p>
     <p>Vague, generic pages get skipped by both audiences for the same reason: there&rsquo;s nothing in them specific enough to pull out and trust. For the step-by-step version, see <a href="../how-to-rank-your-msp-on-chatgpt/index.html">how to rank your MSP on ChatGPT</a>.</p>
 
-    <h2><span class="mistake-num">4</span>Decide Deliberately on Paid Search, Not by Accident</h2>
+    <h2 id="decide-deliberately-on-paid-search-not-by-accident"><span class="mistake-num">4</span>Decide Deliberately on Paid Search, Not by Accident</h2>
     <p><strong>Is paid search actually worth it for MSPs?</strong> Yes, but only once the groundwork above is in place.</p>
     <p>I&rsquo;ve watched plenty of MSPs spend real money on Google Ads only to send that traffic to a generic homepage with no clear next step, and then conclude the channel &ldquo;doesn&rsquo;t work.&rdquo; The channel worked fine. The landing page it pointed to didn&rsquo;t.</p>
     <p>Paid search and PPC advertising are genuinely one of the fastest ways for an MSP to generate new leads, because you&rsquo;re reaching people actively searching for exactly what you offer, right now, rather than waiting for organic content to build authority over months.</p>
@@ -523,7 +540,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p>Your budget is almost always better spent on channels where you can target by intent (search) or by specific company attributes (<a href="../msp-linkedin-ads-strategy/index.html">LinkedIn</a>), rather than by sheer geographic reach.</p>
     </div>
 
-    <h2><span class="mistake-num">5</span>Build a Lead Generation Engine With More Than One Moving Part</h2>
+    <h2 id="build-a-lead-generation-engine-with-more-than-one-moving-par"><span class="mistake-num">5</span>Build a Lead Generation Engine With More Than One Moving Part</h2>
     <p>Lead generation strategies for MSPs work best stacked, not swapped. A lot of owners chase whichever channel is trendiest this quarter, drop whatever they were doing before, and wonder why nothing ever compounds.</p>
     <p>A real engine usually includes local SEO, a consistent referral and networking presence, LinkedIn content and outreach aimed at the right personas, and some form of paid search or social advertising layered on top once the fundamentals are solid.</p>
     <p>None of these need to be huge individually.</p>
@@ -548,7 +565,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Layer in consistent business information across every directory you&rsquo;re listed on, actively collect and respond to reviews, and build location-specific content if you serve more than one city or region.</p>
     <p>Review directories worth prioritizing are the ones your actual buyers check before calling: Google, your industry-specific directories, and any local chamber of commerce listings that carry real weight in your market.</p>
 
-    <h2><span class="mistake-num">6</span>Track What Actually Matters, Not Just What&rsquo;s Easy to Measure</h2>
+    <h2 id="track-what-actually-matters-not-just-whats-easy-to-measure"><span class="mistake-num">6</span>Track What Actually Matters, Not Just What&rsquo;s Easy to Measure</h2>
     <p>Tracking and measuring marketing performance is where a lot of MSPs either skip the work entirely or measure the wrong things.</p>
     <p>Page views and impressions feel good to report on, but they don&rsquo;t pay your bills. Qualified leads, booked calls, and closed clients do.</p>
     <p>Your CRM and PSA tools matter more here than people give them credit for.</p>
@@ -567,7 +584,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p><strong>Should MSPs invest in brand awareness marketing on top of all this?</strong> In small doses, yes, mostly through consistent content and social presence rather than big broad campaigns.</p>
     <p>Brand awareness compounds slowly in the background while your more direct channels (search, outbound, referrals) do the immediate heavy lifting. It&rsquo;s a long-term multiplier, not a lead generation tactic on its own, so it should never be the first thing you invest in if your pipeline is currently thin.</p>
 
-    <h2>Putting It All Together</h2>
+    <h2 id="putting-it-all-together">Putting It All Together</h2>
     <p>None of these six things work especially well in isolation:</p>
     <ul>
       <li>Positioning without a converting website wastes the clarity you built</li>
@@ -578,6 +595,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Fix these six in order, and most of the &ldquo;marketing doesn&rsquo;t work for MSPs&rdquo; feeling disappears, because the problem usually was never the channel. It was the sequence.</p>
     <p>If you want a second set of eyes on where your MSP&rsquo;s marketing actually stands against this list, that&rsquo;s what an <a href="../../index.html">MSP marketing agency</a> like ours is for. Feel free to book a call. Happy to walk through it with you.</p>
 
+    </div>
   </div>
 </section>
 
@@ -690,5 +708,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

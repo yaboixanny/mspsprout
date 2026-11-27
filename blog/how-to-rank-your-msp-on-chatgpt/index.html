@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -408,14 +423,16 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#why-chatgpt-ranks-anyone-in-the-first-place">Why ChatGPT &amp;ldquo;Ranks&amp;rdquo; Anyone in the First Place</a></li><li><a href="#prompt-research">Prompt Research</a></li><li><a href="#results-analysis">Results Analysis</a></li><li><a href="#create-content">Create Content</a></li><li><a href="#build-authority">Build Authority</a></li><li><a href="#track-results">Track Results</a></li><li><a href="#the-part-nobody-wants-to-hear">The Part Nobody Wants to Hear</a></li></ol></aside>
+    <div class="post-content">
     <p>An MSP owner asked me recently, &ldquo;How do I actually rank on ChatGPT?&rdquo;</p>
     <p>That question is really about <a href="../../ai-seo/index.html">AI search optimization for MSPs</a>, just phrased around one specific platform.</p>
     <p>My answer was short: it comes down to authority and presence.</p>
     <p>Let me walk through what that actually means, and how to build both.</p>
 
-    <h2>Why ChatGPT &ldquo;Ranks&rdquo; Anyone in the First Place</h2>
+    <h2 id="why-chatgpt-ranks-anyone-in-the-first-place">Why ChatGPT &ldquo;Ranks&rdquo; Anyone in the First Place</h2>
     <p>ChatGPT and other LLMs don&rsquo;t have some secret internal database of the best MSPs in your city.</p>
     <p>They rely on the internet to make inferences about your question, the same way a search engine does, just with an extra step.</p>
     <p>Ask ChatGPT something like &ldquo;what&rsquo;s the best managed IT provider in Denver,&rdquo; and it goes and scours the internet for content relevant to that exact question.</p>
@@ -424,7 +441,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>It&rsquo;s not personal, and it&rsquo;s not random either. It&rsquo;s a direct reflection of your presence and authority on the web.</p>
     <p>Here&rsquo;s the five-step process I&rsquo;d actually run for this.</p>
 
-    <h2><span class="mistake-num">1</span>Prompt Research</h2>
+    <h2 id="prompt-research"><span class="mistake-num">1</span>Prompt Research</h2>
     <p>Before you touch your website, figure out what your ideal buyer is actually typing into ChatGPT.</p>
     <p>Start by brainstorming the questions your ICP would realistically ask. Something like &ldquo;best cybersecurity company for a law firm in Phoenix&rdquo; or &ldquo;managed IT provider that handles HIPAA compliance.&rdquo;</p>
     <p>Then ask ChatGPT itself to generate similar prompts you might not have thought of. It&rsquo;s genuinely good at expanding a seed list like this.</p>
@@ -435,7 +452,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p><strong>The payoff:</strong> This step alone tells you more about your real competitive landscape than most paid tools will.</p>
     </div>
 
-    <h2><span class="mistake-num">2</span>Results Analysis</h2>
+    <h2 id="results-analysis"><span class="mistake-num">2</span>Results Analysis</h2>
     <p>Now go deeper into what you found.</p>
     <p>Analyze the answers themselves and note exactly who&rsquo;s being mentioned, and just as importantly, what content ChatGPT seems to be pulling that mention from.</p>
     <p>Is it a &ldquo;best MSPs in [city]&rdquo; roundup? A directory listing? A competitor&rsquo;s own site?</p>
@@ -443,7 +460,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>There&rsquo;s usually heavy overlap between what ranks well organically and what ChatGPT ends up citing, since both are ultimately reading the same web.</p>
     <p>While you&rsquo;re in there, keep a running list of content ideas and &ldquo;best of&rdquo; lists you come across. These are worth targeting directly, and we&rsquo;ll get into exactly how in a minute.</p>
 
-    <h2><span class="mistake-num">3</span>Create Content</h2>
+    <h2 id="create-content"><span class="mistake-num">3</span>Create Content</h2>
     <p>This is where most MSPs either do too little or completely overthink it.</p>
     <p>Start by building out the service pages and blog content that actually answer the prompts you researched in step one.</p>
     <p>If your ICP is asking &ldquo;how do I know if my MSP is HIPAA compliant,&rdquo; you need a page that answers that directly, not a vague &ldquo;our services&rdquo; page that dances around it.</p>
@@ -459,7 +476,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2><span class="mistake-num">4</span>Build Authority</h2>
+    <h2 id="build-authority"><span class="mistake-num">4</span>Build Authority</h2>
     <p>Content alone isn&rsquo;t enough. ChatGPT (and Google, for that matter) is trying to judge how credible a source actually is, not just whether it technically answers the question.</p>
     <p>Find the &ldquo;best MSP&rdquo; or &ldquo;best IT provider in [city]&rdquo; lists that already exist and reach out directly to get your business included.</p>
     <p>A lot of these lists are more open to pitches than people assume, especially if you come with a specific, relevant reason you belong on it.</p>
@@ -471,7 +488,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p><strong>Without it:</strong> everything else in this list is working with one hand tied behind its back.</p>
     </div>
 
-    <h2><span class="mistake-num">5</span>Track Results</h2>
+    <h2 id="track-results"><span class="mistake-num">5</span>Track Results</h2>
     <p>None of this works if you do it once and check back in six months.</p>
     <p>Every two to four weeks, go back and search the exact prompts you started with in step one.</p>
     <p>Take note of anything that&rsquo;s changed: new competitors showing up, content sources shifting, and most importantly, whether your own brand has started appearing anywhere in the answer.</p>
@@ -486,7 +503,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>The Part Nobody Wants to Hear</h2>
+    <h2 id="the-part-nobody-wants-to-hear">The Part Nobody Wants to Hear</h2>
     <p>Ranking on LLMs and ChatGPT comes back to SEO. There&rsquo;s no separate shortcut hiding behind a different name.</p>
     <p>You won&rsquo;t magically rank on ChatGPT without real content and real authority behind your brand. If the SEO side is where you&rsquo;re stuck, our <a href="../../seo/index.html">MSP SEO services</a> cover the content and authority work.</p>
     <p>The mechanism is different from a traditional Google search results page, but the underlying inputs are the same: relevant content that actually answers the question, and enough credible signals pointing back at you that a model (or a person) has reason to trust what it&rsquo;s reading.</p>
@@ -503,6 +520,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <p>If you want help building out the content and authority side of this as part of a wider <a href="../../msp-lead-generation/index.html">lead generation for MSPs</a> engine, feel free to book a call. Happy to walk through where you actually stand today.</p>
 
+    </div>
   </div>
 </section>
 
@@ -615,5 +633,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

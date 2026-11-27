@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -416,15 +431,17 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#its-a-timing-business-not-a-volume-business">It&amp;rsquo;s a Timing Business, Not a Volume Business</a></li><li><a href="#every-msp-cold-call-is-secretly-a-displacement-call">Every MSP Cold Call Is Secretly a Displacement Call</a></li><li><a href="#who-you-call-changes-completely-by-company-size">Who You Call Changes Completely by Company Size</a></li><li><a href="#the-two-windows-that-actually-convert">The Two Windows That Actually Convert</a></li><li><a href="#contract-anniversaries">Contract Anniversaries</a></li><li><a href="#failure-events">Failure Events</a></li><li><a href="#what-a-qualified-first-appointment-actually-costs">What a Qualified First Appointment Actually Costs</a></li><li><a href="#putting-it-all-together">Putting It All Together</a></li></ol></aside>
+    <div class="post-content">
     <p>Managed services is a crowded market right now, and most MSPs are pitching the same stack with the same handful of talking points.</p>
     <p>Despite that, the phone is still the highest-converting new-logo channel out there, and the reason comes down to psychology more than tactics.</p>
     <p>Switching IT providers is a considered, slightly nerve-wracking decision for a business owner. Nobody fires their current IT company off the back of a clever email sequence.</p>
     <p>They do it after talking to a real, credible human who gave them a reason to actually consider it. That&rsquo;s a conversation, not a drip campaign.</p>
     <p>The MSPs actually growing profitably this year have figured out something most haven&rsquo;t: cold calling for managed services is a timing business, not a volume business.</p>
 
-    <h2>It&rsquo;s a Timing Business, Not a Volume Business</h2>
+    <h2 id="its-a-timing-business-not-a-volume-business">It&rsquo;s a Timing Business, Not a Volume Business</h2>
     <p>The owners getting results track incumbent contract anniversaries the same way an insurance broker tracks renewal dates.</p>
     <p>They watch for failure events too: a competitor&rsquo;s outage making local news, a breach hitting a company in a similar industry, anything that cracks open a window of doubt. Then they concentrate their dials directly into those windows instead of spreading them evenly across the year.</p>
     <p>Flat, year-round &ldquo;we do IT support&rdquo; calling is exactly how most MSPs burn through a calling budget and walk away concluding the phone just doesn&rsquo;t work anymore.</p>
@@ -440,7 +457,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       </ul>
     </div>
 
-    <h2>Every MSP Cold Call Is Secretly a Displacement Call</h2>
+    <h2 id="every-msp-cold-call-is-secretly-a-displacement-call">Every MSP Cold Call Is Secretly a Displacement Call</h2>
     <p>Here&rsquo;s the mental shift that changes everything about how you should be calling.</p>
     <p>Roughly 95% of the people you&rsquo;re dialing already have an IT provider, an internal person handling it, or a brother-in-law who&rsquo;s &ldquo;pretty good with computers.&rdquo;</p>
     <p>You&rsquo;re not selling managed services to someone with no IT support. You&rsquo;re selling a switch.</p>
@@ -468,7 +485,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Who You Call Changes Completely by Company Size</h2>
+    <h2 id="who-you-call-changes-completely-by-company-size">Who You Call Changes Completely by Company Size</h2>
     <p>The pitch that wins under 50 seats will actively lose you the deal at 150 seats, and vice versa. These are two different sales motions wearing the same company logo.</p>
 
     <h3>Under 50 seats: call the owner</h3>
@@ -486,9 +503,9 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p><strong>The rule:</strong> never pitch full outsourcing to a company that already has internal IT. You&rsquo;re not selling against a competitor at that point, you&rsquo;re selling against the actual person on the phone with you.</p>
     </div>
 
-    <h2>The Two Windows That Actually Convert</h2>
+    <h2 id="the-two-windows-that-actually-convert">The Two Windows That Actually Convert</h2>
 
-    <h2><span class="mistake-num">1</span>Contract Anniversaries</h2>
+    <h2 id="contract-anniversaries"><span class="mistake-num">1</span>Contract Anniversaries</h2>
     <p>Contract timing is the cleanest signal available to you, and it&rsquo;s almost entirely underused.</p>
     <p>Most managed services agreements run 12 to 36 months, and buyers start quietly looking around for alternatives somewhere in the 60 to 120 days before that contract actually expires.</p>
     <p>Start tracking contract anniversaries from your very first conversation with any prospect, even when the answer you get is vague (&ldquo;we signed a while back, maybe two years ago now&rdquo;).</p>
@@ -499,12 +516,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <p>days before an incumbent&rsquo;s contract renews is when buyers quietly start looking around. That&rsquo;s the window to concentrate your re-calls into.</p>
     </div>
 
-    <h2><span class="mistake-num">2</span>Failure Events</h2>
+    <h2 id="failure-events"><span class="mistake-num">2</span>Failure Events</h2>
     <p>Failure events are the sharper signal of the two, but they require you to actually be watching for them.</p>
     <p>A local competitor&rsquo;s outage making the news, a ransomware story hitting a company in a peer industry, a compliance fine, the sudden departure of a prospect&rsquo;s internal IT person. Any of these can compress a three-year consideration cycle down into three weeks.</p>
     <p>MSPs that keep an eye on local business news and LinkedIn for these triggers, and call within days of them happening, book meetings at multiples of their normal baseline rate.</p>
 
-    <h2>What a Qualified First Appointment Actually Costs</h2>
+    <h2 id="what-a-qualified-first-appointment-actually-costs">What a Qualified First Appointment Actually Costs</h2>
     <p>In 2026, expect to pay $250 to $420 per qualified first appointment when you&rsquo;re working with a strong, senior on-shore caller.</p>
     <p>Qualified means the right size band, real pain or a real upcoming contract event behind it, and the actual decision maker or a genuine influencer sitting in the meeting.</p>
     <p>That number runs higher than what you&rsquo;d see in lighter B2B verticals, because MSP buyers are skeptical by nature and the decision itself carries real weight. It runs lower than enterprise tech sales, because at least the owners actually pick up their own phones.</p>
@@ -525,7 +542,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Putting It All Together</h2>
+    <h2 id="putting-it-all-together">Putting It All Together</h2>
     <p>MSP selling is displacement selling, full stop.</p>
     <ul>
       <li>Time your dials to contract anniversaries and failure events, not to an arbitrary calendar quarter</li>
@@ -537,6 +554,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>For the bigger picture on where calling fits, start with our checklist of <a href="../how-to-improve-your-msp-marketing/index.html">6 ways to improve your MSP marketing</a>.</p>
     <p>If you want help figuring out whether a calling program like this actually makes sense for where your MSP is right now, feel free to book a call with us at MSP Sprout. Happy to walk through your numbers with you.</p>
 
+    </div>
   </div>
 </section>
 
@@ -649,5 +667,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

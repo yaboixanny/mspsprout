@@ -16,7 +16,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -410,8 +425,10 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#quick-answers">Quick Answers</a></li><li><a href="#fuzzy-positioning">Fuzzy Positioning</a></li><li><a href="#generic-targeting-instead-of-niche-targeting">Generic Targeting Instead of Niche Targeting</a></li><li><a href="#talking-in-acronyms-instead-of-outcomes">Talking in Acronyms Instead of Outcomes</a></li><li><a href="#running-company-page-ads-instead-of-sponsoring-real-content">Running Company-Page Ads Instead of Sponsoring Real Content</a></li><li><a href="#sending-clicks-to-your-homepage-instead-of-a-landing-page">Sending Clicks to Your Homepage Instead of a Landing Page</a></li><li><a href="#slow-follow-up">Slow Follow-Up</a></li><li><a href="#pair-linkedin-with-intent-based-channels">Pair LinkedIn With Intent-Based Channels</a></li><li><a href="#so-when-does-it-actually-make-sense-to-run-linkedin-ads">So When Does It Actually Make Sense to Run LinkedIn Ads?</a></li><li><a href="#what-should-you-actually-budget">What Should You Actually Budget?</a></li><li><a href="#your-90-day-linkedin-ads-roadmap">Your 90-Day LinkedIn Ads Roadmap</a></li><li><a href="#putting-it-all-together">Putting It All Together</a></li></ol></aside>
+    <div class="post-content">
     <p>I get asked this constantly by MSP owners, usually some version of: should we be running LinkedIn ads?</p>
     <p>My honest answer disappoints most people, because it&rsquo;s usually &ldquo;probably not yet.&rdquo; I say that having watched it play out across our own clients&rsquo; ad accounts often enough to trust the pattern.</p>
     <p>If you&rsquo;re already confident your foundation is solid, our <a href="../../linkedin-ads/index.html">LinkedIn Ads for MSPs</a> service is built around exactly this playbook.</p>
@@ -419,7 +436,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>You can put your message in front of IT decision-makers and filter down to the company size and industry you actually sell to, which for a B2B sales cycle this long and this specific is rare. So the platform itself is not the problem.</p>
     <p>The problem is what happens after someone clicks. Here are the six mistakes we see MSPs make over and over, and exactly what to do instead.</p>
 
-    <h2>Quick Answers</h2>
+    <h2 id="quick-answers">Quick Answers</h2>
     <p><strong>Do LinkedIn ads work for MSPs?</strong> Yes, when the basics behind them are solid.</p>
     <p>The targeting is excellent for reaching IT decision-makers, but the ads only convert once your message, landing page, and follow-up speed are ready to receive that traffic.</p>
     <p><strong>How much should an MSP budget for LinkedIn ads?</strong> Enough to test over a few months rather than a quick burst.</p>
@@ -427,7 +444,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p><strong>What should I fix before running LinkedIn ads?</strong> Start with your positioning: one clear sentence on who you help and the outcome you create.</p>
     <p>Then make sure the page your ad points to speaks to that exact buyer and asks for one clear action. Follow-up speed is the third piece, and the one most MSPs underrate.</p>
 
-    <h2><span class="mistake-num">1</span>Fuzzy Positioning</h2>
+    <h2 id="fuzzy-positioning"><span class="mistake-num">1</span>Fuzzy Positioning</h2>
     <div class="compare-row">
       <div class="wrong">
         <div class="compare-label"><span class="compare-icon">&times;</span> Wrong</div>
@@ -445,7 +462,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Before spending a dollar on LinkedIn, you should be able to answer one question in a single clear sentence: who is this for, and what changes for them once they work with you?</p>
     <p>Closing that gap costs nothing but a bit of honest thinking about your ideal client before the campaign goes live.</p>
 
-    <h2><span class="mistake-num">2</span>Generic Targeting Instead of Niche Targeting</h2>
+    <h2 id="generic-targeting-instead-of-niche-targeting"><span class="mistake-num">2</span>Generic Targeting Instead of Niche Targeting</h2>
     <div class="compare-row">
       <div class="wrong">
         <div class="compare-label"><span class="compare-icon">&times;</span> Too Broad</div>
@@ -461,7 +478,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>Then get just as specific with the buyer persona: COOs, CFOs, office managers, whoever is actually making or influencing the IT decision at that kind of company.</p>
     <p>The tighter you get, the more your ad copy can speak directly to a real person&rsquo;s real problem instead of a generic &ldquo;business owner.&rdquo; That specificity is what makes someone stop scrolling.</p>
 
-    <h2><span class="mistake-num">3</span>Talking in Acronyms Instead of Outcomes</h2>
+    <h2 id="talking-in-acronyms-instead-of-outcomes"><span class="mistake-num">3</span>Talking in Acronyms Instead of Outcomes</h2>
     <div class="compare-row">
       <div class="wrong">
         <div class="compare-label"><span class="compare-icon">&times;</span> Acronym</div>
@@ -482,20 +499,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2><span class="mistake-num">4</span>Running Company-Page Ads Instead of Sponsoring Real Content</h2>
+    <h2 id="running-company-page-ads-instead-of-sponsoring-real-content"><span class="mistake-num">4</span>Running Company-Page Ads Instead of Sponsoring Real Content</h2>
     <p>LinkedIn heavily favors content from real individuals over faceless company pages, and this shows up clearly in ad performance too.</p>
     <div class="fix-callout">
       <p><strong>The fix:</strong> if you or your founder has organic content that&rsquo;s already performing well on a personal profile, sponsor that post rather than starting from scratch with a company-page ad.</p>
       <p>It carries more trust out of the gate because it reads as a real person sharing a real opinion, not a business running an ad. This is one of the easiest wins in the whole LinkedIn playbook, and most MSPs never try it.</p>
     </div>
 
-    <h2><span class="mistake-num">5</span>Sending Clicks to Your Homepage Instead of a Landing Page</h2>
+    <h2 id="sending-clicks-to-your-homepage-instead-of-a-landing-page"><span class="mistake-num">5</span>Sending Clicks to Your Homepage Instead of a Landing Page</h2>
     <p>A LinkedIn ad should never drop someone on your homepage and cross its fingers. It should send them to a page built for the exact thing the ad promised, with one obvious next step.</p>
     <p>If your ad talks about a security assessment, the click should land on the security assessment, not a general services menu where they have to go hunting for it themselves.</p>
     <p>This is the part MSPs skip most often, mostly because it feels like extra work for a single campaign. It is not extra work. It&rsquo;s the whole reason the campaign converts or does not.</p>
     <p>Before you launch anything, audit your website and conversion paths. Sending paid traffic to an unoptimized page with generic stock photos and a vague headline wastes every dollar you spent getting the click in the first place.</p>
 
-    <h2><span class="mistake-num">6</span>Slow Follow-Up</h2>
+    <h2 id="slow-follow-up"><span class="mistake-num">6</span>Slow Follow-Up</h2>
     <div class="stat-callout">
       <div class="stat-num">4 days</div>
       <p>is how long it took one MSP to reply to a lead from their LinkedIn campaign. By then the prospect had already talked to two other providers and half-forgotten they filled anything out. The ad worked perfectly. The follow-up is what fell over.</p>
@@ -511,7 +528,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Pair LinkedIn With Intent-Based Channels</h2>
+    <h2 id="pair-linkedin-with-intent-based-channels">Pair LinkedIn With Intent-Based Channels</h2>
     <p>LinkedIn is genuinely strong for early-stage awareness and getting your name in front of the right accounts before they&rsquo;re actively searching.</p>
     <p>A study by PathFactory and Heinz Marketing found <a href="https://business.linkedin.com/en-uk/marketing-solutions/blog/posts/B2B-Marketing/2020/Data-shows-half-of-all-businesses-using-linkedin-for-marketing1" target="_blank" rel="noopener">LinkedIn is used by 50% of B2B decision-makers to research vendors</a>, at least twice as many as any other social platform, and separate Oktopost data shows 58% of all social media-driven B2B leads in the US and UK come from LinkedIn.</p>
     <p>But it&rsquo;s rarely where someone converts the moment they see your ad.</p>
@@ -519,7 +536,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>LinkedIn builds the familiarity. Google catches the moment they&rsquo;re ready to act. Run them together and each one makes the other work harder.</p>
     <p>Paid ads aren&rsquo;t the only way to work LinkedIn either. Outbound <a href="../../linkedin-lead-generation/index.html">LinkedIn lead generation</a> targeting the same accounts directly is often the stronger complement to a smaller ad budget than scaling ad spend alone.</p>
 
-    <h2>So When Does It Actually Make Sense to Run LinkedIn Ads?</h2>
+    <h2 id="so-when-does-it-actually-make-sense-to-run-linkedin-ads">So When Does It Actually Make Sense to Run LinkedIn Ads?</h2>
     <p>Once your message and your landing page are both doing their job. That&rsquo;s the real bar, not a perfect website or a big budget, just a message the right buyer recognizes as theirs and a page built to convert instead of inform.</p>
     <p>Speed is what turns that setup into results.</p>
     <p>We worked with an MSP last year whose ad account looked fine on paper.</p>
@@ -531,11 +548,11 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p><a href="https://www.gartner.com/en/documents/5733083" target="_blank" rel="noopener">Gartner research</a> shows B2B buyers spend only 17% of their total purchase time actually meeting with potential suppliers, with the rest going to independent research and internal stakeholder alignment, over a buying cycle that runs roughly 10 months on average.</p>
     <p>Treat LinkedIn as a way to start conversations you nurture over that timeline, not a vending machine for instant leads, and your expectations will match reality.</p>
 
-    <h2>What Should You Actually Budget?</h2>
+    <h2 id="what-should-you-actually-budget">What Should You Actually Budget?</h2>
     <p>Enough to test properly over a few months rather than in a single burst. LinkedIn clicks cost more than most channels, and a rushed two-week test tells you almost nothing about a sales cycle that runs longer than that.</p>
     <p>If you haven&rsquo;t sat down and mapped out what a realistic marketing budget looks like against your growth goals, that&rsquo;s worth doing before you touch an ad account at all.</p>
 
-    <h2>Your 90-Day LinkedIn Ads Roadmap</h2>
+    <h2 id="your-90-day-linkedin-ads-roadmap">Your 90-Day LinkedIn Ads Roadmap</h2>
     <p>Here&rsquo;s how I&rsquo;d actually sequence this over the first 90 days, in order.</p>
 
     <h3>Days 1&ndash;14: Fix the Foundation, Before You Spend a Dollar on Ads</h3>
@@ -577,7 +594,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Putting It All Together</h2>
+    <h2 id="putting-it-all-together">Putting It All Together</h2>
     <p>LinkedIn ads for MSPs work. The targeting is some of the best available for reaching IT decision-makers.</p>
     <p>But the platform gets blamed for problems it didn&rsquo;t cause: a fuzzy message, a homepage doing a landing page&rsquo;s job, and a follow-up process that takes days instead of hours.</p>
     <ul>
@@ -593,6 +610,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>I&rsquo;m Alex, I run MSP Sprout, and we help MSPs get leads reliably and consistently, without the feast-or-famine cycle that comes from relying purely on referrals.</p>
     <p>If you want a second set of eyes on whether your message, landing page, and follow-up process can actually hold the weight of paid traffic, feel free to book a call. Happy to walk through it with you.</p>
 
+    </div>
   </div>
 </section>
 
@@ -705,5 +723,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>

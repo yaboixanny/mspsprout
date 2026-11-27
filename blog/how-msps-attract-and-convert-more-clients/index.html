@@ -19,7 +19,22 @@
 <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800.woff2) format('woff2');}@font-face{font-family:'Poppins';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-italic.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400.woff2) format('woff2');}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/merriweather-400-italic.woff2) format('woff2');}@font-face{font-family:'Poppins Fallback';src:local('Arial');size-adjust:112.5%;ascent-override:93.33%;descent-override:31.11%;line-gap-override:8.89%;}  .post-body h2,.post-body h3{scroll-margin-top:92px;}
+  .post-body.has-toc .wrap{max-width:1080px;display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;justify-content:center;}
+  .toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;font-size:14px;}
+  .toc-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sprout-dark);display:block;margin-bottom:12px;}
+  .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border-gray);}
+  .toc li{margin:0;}
+  .post-body .toc a{display:block;padding:7px 0 7px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--text-gray);font-weight:500;text-decoration:none;line-height:1.35;}
+  .post-body .toc a:hover{color:var(--heading-navy);}
+  .post-body .toc a.active{color:var(--sprout-dark);border-left-color:var(--sprout);font-weight:600;}
+  @media (max-width:1100px){
+    .post-body.has-toc .wrap{display:block;max-width:760px;}
+    .toc{position:static;max-height:none;background:var(--lavender);border-radius:16px;padding:22px 24px;margin:0 0 28px;}
+    .toc ol{border-left:none;}
+    .post-body .toc a{padding:5px 0;margin-left:0;border-left:none;}
+  }
+</style>
 <style>
   :root{
     /* ---- core palette ---- */
@@ -405,15 +420,17 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
-<section class="post-body">
+<section class="post-body has-toc">
   <div class="wrap">
+    <aside class="toc" aria-label="Table of contents"><span class="toc-label">In this post</span><ol><li><a href="#authority-does-the-selling-before-you-ever-show-up">Authority Does the Selling Before You Ever Show Up</a></li><li><a href="#the-mistake-writing-only-for-people-who-already-agree-with-y">The Mistake: Writing Only for People Who Already Agree With You</a></li><li><a href="#what-actually-makes-content-read-as-credible">What Actually Makes Content Read as Credible</a></li><li><a href="#depth-beats-breadth-every-time">Depth Beats Breadth, Every Time</a></li><li><a href="#having-an-actual-opinion-helps-more-than-it-should">Having an Actual Opinion Helps More Than It Should</a></li><li><a href="#real-examples-carry-the-most-weight-of-all">Real Examples Carry the Most Weight of All</a></li><li><a href="#answer-the-questions-people-are-actually-asking">Answer the Questions People Are Actually Asking</a></li><li><a href="#this-matters-more-than-it-did-two-years-ago">This Matters More Than It Did Two Years Ago</a></li><li><a href="#where-to-actually-start">Where to Actually Start</a></li><li><a href="#when-its-worth-bringing-someone-in">When It&amp;rsquo;s Worth Bringing Someone In</a></li></ol></aside>
+    <div class="post-content">
     <p>Almost every MSP owner I talk to can tell me, in about ninety seconds and completely unprompted, exactly why a prospect should hire them.</p>
     <p>It&rsquo;s usually a genuinely good answer too, specific, confident, clearly earned from doing the work for years.</p>
     <p>Then I go look at their website and find three paragraphs about being a &ldquo;trusted technology partner.&rdquo;</p>
     <p>That gap is the whole problem. You can explain your value perfectly in a room, and I believe you do.</p>
     <p>The issue is that most buying decisions get made well before anyone&rsquo;s actually in that room with you.</p>
 
-    <h2>Authority Does the Selling Before You Ever Show Up</h2>
+    <h2 id="authority-does-the-selling-before-you-ever-show-up">Authority Does the Selling Before You Ever Show Up</h2>
     <p>When a business needs a new managed IT provider, they don&rsquo;t call three MSPs and run a side-by-side comparison call.</p>
     <p>They look you up first. They read your site, skim whatever reviews they can find, maybe ask an AI assistant who&rsquo;s actually good in their area.</p>
     <p>By the time they reach out to you, they&rsquo;ve largely already decided whether you&rsquo;re worth the conversation.</p>
@@ -424,7 +441,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <p>You read what they&rsquo;ve actually written, check whether it sounds like someone who&rsquo;s genuinely done the work, and quietly form a judgment before you ever pick up the phone.</p>
     <p>Your prospects are doing exactly that to you right now, possibly while reading this very sentence about a completely different MSP.</p>
 
-    <h2>The Mistake: Writing Only for People Who Already Agree With You</h2>
+    <h2 id="the-mistake-writing-only-for-people-who-already-agree-with-y">The Mistake: Writing Only for People Who Already Agree With You</h2>
     <p>A lot of MSPs skip content entirely because they assume their clients already know the basics.</p>
     <p>Why write about phishing when every business owner alive has already sat through some phishing training?</p>
     <p>Because they&rsquo;re not reading it to learn what phishing is. They&rsquo;re reading it to find out whether you, specifically, actually know what you&rsquo;re talking about.</p>
@@ -449,26 +466,26 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Talk to Our Team<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>What Actually Makes Content Read as Credible</h2>
+    <h2 id="what-actually-makes-content-read-as-credible">What Actually Makes Content Read as Credible</h2>
     <p>Four things separate content that actually builds trust from content that just exists.</p>
 
-    <h2><span class="mistake-num">1</span>Depth Beats Breadth, Every Time</h2>
+    <h2 id="depth-beats-breadth-every-time"><span class="mistake-num">1</span>Depth Beats Breadth, Every Time</h2>
     <p>One article that goes properly deep on a real problem your clients face will outperform ten posts that skim the surface of everything.</p>
     <p>Nobody&rsquo;s trust gets built by a 400-word overview of &ldquo;5 cybersecurity tips.&rdquo;</p>
 
-    <h2><span class="mistake-num">2</span>Having an Actual Opinion Helps More Than It Should</h2>
+    <h2 id="having-an-actual-opinion-helps-more-than-it-should"><span class="mistake-num">2</span>Having an Actual Opinion Helps More Than It Should</h2>
     <p>Mostly because so few MSPs are willing to risk one.</p>
     <p>If you genuinely think co-managed IT is oversold for businesses under fifty seats, say that, and explain your reasoning.</p>
     <p>Someone who agrees will trust you instantly. Someone who disagrees will at least remember your name, which is a lot more than another generic listicle has ever done for anyone.</p>
 
-    <h2><span class="mistake-num">3</span>Real Examples Carry the Most Weight of All</h2>
+    <h2 id="real-examples-carry-the-most-weight-of-all"><span class="mistake-num">3</span>Real Examples Carry the Most Weight of All</h2>
     <p>And I don&rsquo;t mean testimonials, every MSP on earth already has three of those sitting on their homepage.</p>
     <p>I mean the actual shape of a real problem and exactly how you solved it. Anonymize the client if you need to. The specific details are what make it believable.</p>
 
-    <h2><span class="mistake-num">4</span>Answer the Questions People Are Actually Asking</h2>
+    <h2 id="answer-the-questions-people-are-actually-asking"><span class="mistake-num">4</span>Answer the Questions People Are Actually Asking</h2>
     <p>The ones your prospects bring up on discovery calls are the exact same ones they&rsquo;re typing into Google, and increasingly, into an AI assistant, before they ever call you.</p>
 
-    <h2>This Matters More Than It Did Two Years Ago</h2>
+    <h2 id="this-matters-more-than-it-did-two-years-ago">This Matters More Than It Did Two Years Ago</h2>
     <p>When someone asks an AI assistant to recommend an MSP in their area, that answer gets assembled from whatever sources the model can actually understand and trust.</p>
     <p>Specific, well-structured content that clearly answers a real question is what gets pulled into those answers. Vague content never gets cited, because there&rsquo;s genuinely nothing in it worth citing.</p>
     <p>That means the same writing that builds authority with a human reader now also decides whether you show up in an AI-generated answer at all.</p>
@@ -481,7 +498,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <a href="https://cal.com/alexanderstefanseo/mspsprout" target="_blank" rel="noopener" class="btn btn-sprout">Let&rsquo;s Talk<span class="sub">Schedule a Call</span></a>
     </div>
 
-    <h2>Where to Actually Start</h2>
+    <h2 id="where-to-actually-start">Where to Actually Start</h2>
     <p>You don&rsquo;t need a content calendar. You definitely don&rsquo;t need a publishing schedule you&rsquo;ll quietly abandon after six weeks, most MSPs already have one of those sitting untouched somewhere.</p>
     <p>What you need is to start writing down what you&rsquo;re already saying out loud, for free, on the phone, every single week.</p>
     <p>The next time you wrap up a discovery call, jot down the exact questions you were asked. Those questions are your first five articles.</p>
@@ -498,7 +515,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <p>None of this requires a marketing team. It requires deciding that the things you already know are actually worth writing down, which is a harder sell internally than it sounds, mostly because expertise you use every single day quietly stops feeling like expertise to you.</p>
 
-    <h2>When It&rsquo;s Worth Bringing Someone In</h2>
+    <h2 id="when-its-worth-bringing-someone-in">When It&rsquo;s Worth Bringing Someone In</h2>
     <p>If you&rsquo;ve been publishing consistently and it still isn&rsquo;t converting, the problem usually isn&rsquo;t your writing.</p>
     <p>It&rsquo;s structure: whether the content is actually findable, whether it&rsquo;s organized in a way search engines and AI systems can parse cleanly, and whether a real path from &ldquo;read the article&rdquo; to &ldquo;send an inquiry&rdquo; even exists on the page.</p>
     <p>That&rsquo;s the point where a second set of eyes genuinely earns its cost.</p>
@@ -516,6 +533,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
     <p>If you&rsquo;d rather get a quick read on where you stand first, feel free to book a call. Happy to walk through what you&rsquo;ve already got and tell you honestly which of these gaps applies to you.</p>
 
+    </div>
   </div>
 </section>
 
@@ -628,5 +646,22 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   });
 </script>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.toc a');
+  if(!links.length)return;
+  var heads=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function update(){
+    var current=heads[0]&&heads[0].id;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<=140)current=h.id;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(map[current])map[current].classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
 </body>
 </html>
